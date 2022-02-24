@@ -5,7 +5,7 @@
 Flutter provides a way to view the accessibility features of the underlying platform. We can obtain [AccessibilityFeatures](https://api.flutter.dev/flutter/dart-ui/AccessibilityFeatures-class.html) class from the `window` top-level property and listen to its changes with `WidgetsBindingObserver`. 
 
 ```dart
-final accessibilityFeatures = window.accessibilityFeaturs;
+final accessibilityFeatures = window.accessibilityFeatures;
 
 accessibilityFeatures.accessibleNavigation;
 accessibilityFeatures.boldText;
