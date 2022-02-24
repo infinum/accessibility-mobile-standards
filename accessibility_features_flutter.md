@@ -81,7 +81,7 @@ Semantics(
 )
 ```
 
-Use `MegeSemantics`, to explicitly group semantic information. To combine widgets that logically represent the same thing. VoiceOver will read the example as "Dark mode, switch on". Without MergeSemantics, VoiceOver would read it as two separate things "Switch on"  and "DarkMode".
+Use `MegeSemantics`, to explicitly group semantic information. To combine widgets that semantically represent the same thing. VoiceOver will read the example as "Dark mode, switch on". Without `MergeSemantics`, VoiceOver would read it as two separate things "Switch on"  and "DarkMode".
 
 ```dart
 MergeSemantics(
@@ -167,6 +167,6 @@ testWidgets('Test semantics', (tester) async {
   await tester.pumpWidget(MyWidget());
   final finder = find.bySemanticsLabel('Add');
   final semantics = tester.getSemantics(finder);
-  expect(semantics, matchesSemantics(isButton: true, hasEnabledState: true /*...*/));
+  expect(semantics, matchesSemantics(isButton: true, hasEnabledState: true));
 });
 ```
