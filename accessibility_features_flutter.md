@@ -16,7 +16,7 @@ accessibilityFeatures.disableAnimations;
 Some accessibility features (`boldText`, `highContrast`...) are only supported on iOS.
 
 There are some discrepancies between platforms:
-* `accessibleNavigation`: on iOS checks whether VoiceOver or Switch Control are enabled. on Android it checks if the user enabled an accessibility app that provides `touchExploration`, meaning that with TalkBack, the property will be `true`, but `false` when using Switch Access.
+* `accessibleNavigation`: on iOS checks whether VoiceOver or Switch Control are enabled. On Android it checks if the user enabled an accessibility app that provides [touchExploration](https://developer.android.com/reference/android/view/accessibility/AccessibilityManager#isTouchExplorationEnabled()), meaning that with TalkBack, the property will be `true`, but `false` when using Switch Access.
 * When reduce motion is enabled on iOS, `reduceMotion` in Flutter is `true` and `disableAnimation` is `false`. When animations are disabled on Android, `reduceMotion` is `false`, and `disableAnimations` is `true`.
 
 Another accessibility setting, the [textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html), is not provided in `AccessibilityFeatures`. We can instead, obtain it from the `MediaQuery`.
@@ -45,23 +45,24 @@ Semantics(
 
 Most of the built-in Flutter widgets automatically provide semantic information or have a property for describing it.
 
+In the example, the button and the image don't need to be wrapped in `Semantics`, as this is already done under the hood. VoiceOver will announce the button as "Add button" and the image as "Profile image".
+
 ```dart
-// ElevatedButton does not need to be wrapped with Semantics, as this is already done under the hood.
 ElevatedButton(
-  // ...
+  child: Text('Add'),
 )
 
-/// Some widgets have a shorthand for descibing semantics.
 Image.asset(
   // ...
-  semanticLabel: 'Profile image'
+  semanticLabel: 'Profile',
 )
 ```
 
-Under the hood, the semantic properties get stored in [SemanticsNodes](https://api.flutter.dev/flutter/semantics/SemanticsNode-class.html). The `Semantics` widget is a way to give the properties to the node. By default, the `Semantics` widget does not create a new node, so properties from different Semantics widgets might get merged.
+The descriptions provided to the `Semantics` widget get combined into a [SemanticsProperties](https://api.flutter.dev/flutter/semantics/SemanticsProperties-class.html) object. This object then gets stored in a [SemanticsNode](https://api.flutter.dev/flutter/semantics/SemanticsNode-class.html). By default, the `Semantics` widget does not create a new node, so properties from different `Semantics` widgets might get merged in the parent node.
 
 
 Use `container` property to explicitly create a new node. VoiceOver will read the example as "Colors red, green".
+
 ```dart
 Semantics(
   label: 'Colors',
@@ -115,7 +116,7 @@ Stack(
 );
 ```
 
-Use `OrdinalSortKeys` to change the semantic order. In the example, VoiceOver will first announce the Remove button, then the Add Button.
+Use `OrdinalSortKeys` to change the semantic order. In the example, VoiceOver will first announce the Remove Button, then the Add Button.
 
 ```dart
 Column(
@@ -160,7 +161,7 @@ testWidgets('Test contrast', (tester) async {
 });
 ```
 
-We can use semantic properties to find widgets. With `matchesSemantics` we can ensure semantic properties meet our expectations.
+We can use semantic properties to find widgets. With `matchesSemantics` we can ensure that semantic properties meet our expectations.
 
 ```dart
 testWidgets('Test semantics', (tester) async {
