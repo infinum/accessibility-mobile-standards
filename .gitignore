@@ -1,0 +1,8 @@
+# Editors
+.idea/
+.vscode/
+.atom/
+
+# OS files
+.DS_Store
+Thumbs.db
