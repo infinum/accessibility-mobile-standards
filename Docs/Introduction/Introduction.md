@@ -11,3 +11,5 @@ Fortunately, mobile devices today are equipped with assistive technologies that 
 When talking about accessibility, it is essential to consider the framework or guidelines written for accessibility in general. Even with that, we must try to understand all areas of accessibility we want to cover. The most common areas (defined by Apple) are; cognitive, motor, vision, and hearing.
 
 Currently, there is no standardization for most used platforms or frameworks when talking about mobile platforms. Still, as a base for accessibility on mobile is used [Web Content Accessibility Guidelines for Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/).
+
+[Next](../Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20per%20mobile%20platform.md)
