@@ -4,7 +4,7 @@ This repository contains mobile standards created for mobile platforms. It inclu
 
 ## Table of contents
 
-1. Introduction
+1. [Introduction](Docs/Introduction/Introduction.md)
 
 2. Accessibility features per mobile platform
 
