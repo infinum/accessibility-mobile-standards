@@ -6,10 +6,10 @@ This repository contains mobile standards created for mobile platforms. It inclu
 
 1. [Introduction](Docs/Introduction/Introduction.md)
 
-2. Accessibility features per mobile platform
+2. [Accessibility features per mobile platform](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20per%20mobile%20platform.md)
 
     1. Android
-    2. iOS
+    2. [iOS](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20on%20iOS.md)
     3. Flutter
 
 3. Accessibility guidelines
