@@ -28,7 +28,7 @@ To change the accessibility label of the element, there are different ways; chan
 
 ### Accessibility value
 
-The accessibility value represents the current value of the element. The value can represent a different state based on the component and even a different value type. E.g., text field accessibility value is value inside the text field (as a text), while a slider provides a value as a numerical number.
+The accessibility value represents the current value of the element. The value can represent a different state based on the component and even a different value type. E.g., text field accessibility value is value inside the text field (as a text), while a slider provides a value as a number.
 
 The important thing here is to understand how to create custom components and define the accessibility value and its type for that component. Also, when talking about VoiceOver, it is important to know that VoiceOver reads the accessibility value after the accessibility label.
 The value can be provided (or changed) via `accessibilityValue` property, in SwiftUI with modifier `accessibility(value:)` or via interface builder.
