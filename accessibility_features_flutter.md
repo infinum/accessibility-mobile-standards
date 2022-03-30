@@ -2,10 +2,10 @@
 
 ## Determining accessibility
 
-Flutter provides a way to view the accessibility features of the underlying platform. We can obtain [AccessibilityFeatures](https://api.flutter.dev/flutter/dart-ui/AccessibilityFeatures-class.html) class from the `window` top-level property and listen to its changes with `WidgetsBindingObserver`. 
+Flutter provides a way to view the accessibility features of the underlying platform. We can obtain the [AccessibilityFeatures](https://api.flutter.dev/flutter/dart-ui/AccessibilityFeatures-class.html) class from the [WidgetsBinding](https://api.flutter.dev/flutter/widgets/WidgetsBinding-mixin.html) or form the top-level [window](https://api.flutter.dev/flutter/dart-ui/window.html) property. By adding an observer to `WidgetsBinding` we can listen to changes.
 
 ```dart
-final accessibilityFeatures = window.accessibilityFeatures;
+final accessibilityFeatures = WidgetsBinding.instance!.accessibilityFeatures;
 
 accessibilityFeatures.accessibleNavigation;
 accessibilityFeatures.boldText;
@@ -19,12 +19,13 @@ There are some discrepancies between platforms:
 * `accessibleNavigation`: on iOS checks whether VoiceOver or Switch Control are enabled. On Android it checks if the user enabled an accessibility app that provides [touchExploration](https://developer.android.com/reference/android/view/accessibility/AccessibilityManager#isTouchExplorationEnabled()), meaning that with TalkBack, the property will be `true`, but `false` when using Switch Access.
 * When reduce motion is enabled on iOS, `reduceMotion` in Flutter is `true` and `disableAnimation` is `false`. When animations are disabled on Android, `reduceMotion` is `false`, and `disableAnimations` is `true`.
 
-Another accessibility setting, the [textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html), is not provided in `AccessibilityFeatures`. We can instead, obtain it from the `MediaQuery`.
+Another accessibility setting, the [textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html), is not provided in `AccessibilityFeatures`. We can instead, obtain it from the `WidgetsBinding` or `MediaQuery`.
 
 ```dart
+WidgetsBinding.instance!.platformDispatcher.textScaleFactor;
 MediaQuery.of(context).textScaleFactor;
 
-// Some accessibility features can also be obtained from MediaQuery.
+// Some accessibility features are also provided by MediaQuery
 MediaQuery.of(context).accessibleNavigation;
 ```
 
@@ -33,7 +34,7 @@ MediaQuery.of(context).accessibleNavigation;
 Use the [Semantics](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget to describe a part of the widget tree. Accessibility tools rely on the provided properities to assist the user.
 
 ```dart
-// Child described as a "Welcome header".
+// Child described as a "Welcome header"
 Semantics(
   label: 'Welcome',
   header: true
@@ -82,7 +83,7 @@ Semantics(
 )
 ```
 
-Use `MegeSemantics`, to explicitly group semantic information. To combine widgets that semantically represent the same thing. VoiceOver will read the example as "Dark mode, switch on". Without `MergeSemantics`, VoiceOver would read it as two separate things "Switch on"  and "DarkMode".
+Use `MegeSemantics`, to explicitly group semantic information,to combine widgets that semantically represent the same thing. VoiceOver will read the example as "Dark mode, switch on". Without `MergeSemantics`, VoiceOver would read it as two separate things "Switch on"  and "DarkMode".
 
 ```dart
 MergeSemantics(
@@ -95,7 +96,7 @@ MergeSemantics(
 )
 ```
 
-Use `ExcludeSemantics`, to mark the sub-tree as not having any semantic importance, such as when using images just for decoration. In the example, VoiceOver will not announce the image.
+Use `ExcludeSemantics`, to mark the sub-tree as not having any semantic importance. This can be useful when using images just for decoration. In the example, VoiceOver will not announce the image.
 
 ```dart
 ExcludeSemantics(
@@ -134,7 +135,7 @@ Column(
 ```
 
 Use semantic actions to provide a convenient way for people with disabilities to perform certain tasks.
-In the example, the user can use a specially configured hardware button to perform the increase task. VoiceOver will also announce custom actions.
+In the example, the user can use a specially configured hardware button to perform the increase task. VoiceOver will anounce semantics actions.
 
 ```dart
 Semantics(
