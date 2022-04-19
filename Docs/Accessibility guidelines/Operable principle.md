@@ -21,3 +21,5 @@ The app's navigation structure should be concise and easy to understand. Users s
 ## Input Modalities
 
 Some users might have trouble moving the device, themselves or performing complex gestures. Strive for the app to be operable using a variety of input methods. If possible, the user should have a way to undo the interaction and disable the input methods he might trigger accidentally.
+
+[Previous] | [[Next](Understandable%20principle.md)]

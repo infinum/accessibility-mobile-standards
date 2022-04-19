@@ -8,18 +8,21 @@ This repository contains mobile standards created for mobile platforms. It inclu
 
 2. [Accessibility features per mobile platform](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20per%20mobile%20platform.md)
 
-    1. Android
-    2. [iOS](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20on%20iOS.md)
-    3. Flutter
+    * Android
+    * [iOS](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20on%20iOS.md)
+    * [Flutter](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20in%20Flutter.md)
 
 3. [Accessibility guidelines](Docs/Accessibility%20guidelines/Accessibility%20guidelines.md)
 
-    1. Accessibility principles
-    2. [Guidelines for mobile developers](Docs/Accessibility%20guidelines/Guidelines%20for%20mobile%20developers.md)
-       1. Android
-       2. iOS
-       3. Flutter
-    3. Testing accessibility features
-    4. Miscellaneous
+    * [Accessibility principles and examples](Docs/Accessibility%20guidelines/Accessibility%20principles%20and%20examples.md)
 
-4. Additional notes
+       * Perceivable
+       * [Operable](Docs/Accessibility%20guidelines/Operable%20principle.md)
+       * [Understandable](Docs/Accessibility%20guidelines/Understandable%20principle.md)
+       * [Robust](Docs/Accessibility%20guidelines/Robust%20principle.md)
+       * Additional notes
+
+    * Testing accessibility features
+    * Miscellaneous
+
+4. Conclusion

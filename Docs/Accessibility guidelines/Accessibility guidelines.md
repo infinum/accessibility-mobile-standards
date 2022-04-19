@@ -43,4 +43,4 @@ Another important thing about WCAG is definition of levels - A, AA, and AAA. The
 
 In the following chapters, every principle with its guidelines will be described in a more details.
 
-[[Previous](“TODO”)] | [[Next](“TODO”)]
+[Previous] | [[Next](Accessibility%20principles%20and%20examples.md)]
