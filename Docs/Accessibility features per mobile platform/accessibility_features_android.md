@@ -40,9 +40,23 @@ The user has the ability to change weight of text, too. The weight of text is de
 
 **Color correction**
 
+Color correction is Android 12 feature available for individual users with color vision deficiency that is also referred as color blindness. People that face these type of visual challenge are unable to distinguish certain color or shades of color. The rarest, but still possible case is when the person is completely color blind. 
 
+Average color blind individual is able to distinguish around 20 color hues while people with normal vision can distinguish up to 100 different colors effortlessly. 
+
+Color blindness is commonly divided into three types: 
+
+1. Red-Green color blindness - a condition where an individual is unable to tell the difference between red and green and also the most common type of color blindness
+
+2. Blue-Yellow color blindness - a condition where an individual finds it hard to differentiate between yellow and red, and likewise, blue and green
+
+3. Total color blindness - a condition where an individual does not see color at all and also very rare type of color deficiency
+
+User can, depending on the type of deficiency, choose appropriate option for color correction in phone settings. After choosing appropriate option color correction feature changes how colors are displayed in order to help users to more easily distinguish differences. 
 
 **Color inversion**
+
+
 
 **Remove animations**
 
@@ -50,7 +64,7 @@ The user has the ability to change weight of text, too. The weight of text is de
 
 ### Magnification
 
-- **How it works**
+**How it works**
 
 ## Mobility support features
 
