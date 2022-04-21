@@ -32,7 +32,7 @@ It is important that applications support font changes and its design to remain 
 
 **Display size**
 
-
+The user has ability to change size of his display (screen zoom in/out) in order to improve visibility of items on the screen. 
 
 **Bold fonts**
 
@@ -56,15 +56,21 @@ User can, depending on the type of deficiency, choose appropriate option for col
 
 **Color inversion**
 
-
+// TBD
 
 **Remove animations**
 
+// TBD
+
 **High contrast text**
+
+// TBD
 
 ### Magnification
 
 **How it works**
+
+// TBD
 
 ## Mobility support features
 
