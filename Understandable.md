@@ -6,13 +6,14 @@ Information and the operation of the user interface must be understandable.
 
 Make text content readable and understandable.
 
+
 ### Language of Page
 
 The default human language of an App can be programmatically determined.
 
 #### Success technique(s)
 
-Specify the default language of the application in the headers of the API calls. This would allow for the app language to be changed dynamically by any back-end response, which would for example allow users from a certain location to get the app in their own language even if they want to keep using their device in a different language. We should also provide an option for the user to choose this option in the in-app settings, or maybe even display a popup reminding them that the app uses a default language based on their location/region settings, and that if they want to override this setting they can do so in the in-app setting. Users should also be able to allow the app to follow the device settings for the language preference.
+Specify the default language of the application in the HTTP headers of the API calls. This would allow for the app language to be changed dynamically by any back-end response, which would for example allow users from a certain location to get the app in their own language even if they want to keep using their device in a different language. We should also provide an option for the user to choose this option in the in-app settings, or maybe even display a popup reminding them that the app uses a default language based on their location/region settings, and that if they want to override this setting they can do so in the in-app setting. Users should also be able to allow the app to follow the device settings for the language preference.
 
 #### Failures
 
@@ -27,6 +28,7 @@ This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standar
 ## Predictable
 
 Make mobile apps appear and operate in predictable ways.
+
 
 ### On Focus & On Input
 
@@ -50,6 +52,7 @@ This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A
 
 Help users avoid and correct mistakes when interacting with the app.
 
+
 ### Error Identification
 
 If an input error is automatically detected, the item that is in error is identified and the error is clearly described to the user in text.
@@ -69,6 +72,7 @@ Preventing some action or flow from continuing because an error was detected but
 #### Additional notes
 
 This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.
+
 
 ### Labels or Instructions
 

@@ -6,6 +6,7 @@ Content must be robust enough that it can be interpreted by a wide variety of mo
 
 Maximize compatibility with current and future devices, taking into account the accessibility features that they might be using.
 
+
 ### Parsing
 
 All user-visible content be grouped logically and assigned identifiers appropriately.
