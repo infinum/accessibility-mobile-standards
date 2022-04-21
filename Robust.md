@@ -1,0 +1,48 @@
+# Robust
+
+Content must be robust enough that it can be interpreted by a wide variety of mobile devices including those which use accessibility features.
+
+## Compatible
+
+Maximize compatibility with current and future devices, taking into account the accessibility features that they might be using.
+
+### Parsing
+
+All user-visible content be grouped logically and assigned identifiers appropriately.
+
+#### Success technique(s)
+
+Every user interface element should have a unique identifier which will define it. Identifiers should not be reused, except where this is by design (i.e. the same exact element exists in several different locations).
+
+#### Failures
+
+Duplicate identifiers used for elements which are essentially different in their action or role.
+
+Elements are not grouped or are badly organized on the screen which prevents accessibility features from quickly and efficiently moving through them.
+
+#### Additional notes
+
+This guideline covers point 4.1.1 Parsing - Level A of the WCAG standard.
+
+
+### Name, Role, Value
+
+User interface elements should be clearly defined by their name (identifier), the role that they have, and the value they carry. The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's identifier), so that the user remains aware of what this element does at all times.
+
+#### Success technique(s)
+
+Every user interface element should have a unique accessibility identifier which can be used by VoiceOver.
+
+#### Failures
+
+Not providing accessibility identifiers for user interface elements.
+
+Implementing custom controls which are unfamiliar to the users and don't carry the necessary accessibility identifying information as defined in this guideline.
+
+Changing the value or role of a user interface element without adjusting it's identifier programmatically.
+
+#### Additional notes
+
+This guideline covers point 4.1.2 Name, Role, Value - Level A of the WCAG standard.
+
+---
