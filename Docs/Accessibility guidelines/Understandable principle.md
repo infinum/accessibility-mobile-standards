@@ -1,4 +1,4 @@
-# Understandable
+# Understandable principle
 
 The understandable principle from the [WCAG](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_overview&levels=aa%2Caaa&technologies=smil%2Cpdf%2Cflash%2Csl#principle3) describes how elements of the user interface should be understandable to the users. In this case, it should be understandable and clear from the content, design, and action point of view - no matter if the application is used with or without assistive technology.
 

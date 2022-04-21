@@ -1,4 +1,4 @@
-# Robust
+# Robust principle
 
 This principle describes that the content of the application should be robust enough to be interpreted by the user but also by different user agents, including assistive technologies.
 
