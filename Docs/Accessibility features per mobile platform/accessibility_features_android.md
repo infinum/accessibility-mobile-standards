@@ -6,11 +6,11 @@ Accessibility is very important part of any app and it should be considered duri
 
 ### TalkBack
 
-**Overview**
+- **Overview**
 
 The TalkBack is the Google screen reader available on Android devices that allows you to control your app eyes-free.
 
-**How it works**
+- **How it works**
 
 When you [turn on TalkBack on your android device](https://support.google.com/accessibility/android/answer/6007100), you will be able to explore your app using touches and swipes.
 
@@ -26,31 +26,31 @@ Detailed description of all TalkBack configuration could be found on official [A
 
 ### Display size and font size
 
-**Overview**
+- **Overview**
 
-**How it works**
+- **How it works**
 
 ### Magnification
 
-**Overview**
+- **Overview**
 
-**How it works**
+- **How it works**
 
 ### Contrast and color options
 
-**Overview**
+- **Overview**
 
-**How it works**
+- **How it works**
 
 ## Mobility support features
 
 ### Switch Access
 
-**Overview**
+- **Overview**
 
 The Switch Access application lets you interact with your Android device using one or more switches or a keyboard instead of the touchscreen. Switch Access is primarily designed to help users with limited dexterity.
 
-**How it works**
+- **How it works**
 
 The application works in a way that is scans the items on the screen, highlighting each item in a turn, until you make a selection.
 
@@ -58,19 +58,19 @@ In order to use Switch Access, you will need one or more switches.
 
 There are three different types of switches:
 
-- external switch - This is a device that sends keystroke signal to your Android device. These devices connect to your Android device via Bluetooth or USB.
+1. external switch - This is a device that sends keystroke signal to your Android device. These devices connect to your Android device via Bluetooth or USB.
 
-- external keyboard - You could convert a standard USB or Bluetooth keyboard and use it as switch device by assigning one or more of its keys to actions
+2. external keyboard - You could convert a standard USB or Bluetooth keyboard and use it as switch device by assigning one or more of its keys to actions
 
-- buttons on your device - You could also use built-in buttons on Android device, such as the volume up and down buttons, and set up that they trigger actions. This option is mainly intended for developers.
+3. buttons on your device - You could also use built-in buttons on Android device, such as the volume up and down buttons, and set up that they trigger actions. This option is mainly intended for developers.
 
 Detailed description of all Switch Access configuration could be found on official [Android Accessibility Help - Switch Access page](https://support.google.com/accessibility/android/answer/6122836?hl=en&ref_topic=6151780).
 
 ### Voice Access
 
-**Overview**
+- **Overview**
 
 
 
-**How it works**
+- **How it works**
 
