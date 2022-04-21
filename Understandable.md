@@ -38,9 +38,15 @@ Receiving focus on or interacting with any component should not initiate a chang
 
 Users need to be able to consume content without any sudden interruptions and/or changes of context. Interacting with any UI component doesn't automatically cause a change of context unless the user has been previously advised of the behavior _before_ using the component.
 
+Changes of focus and thus context should only ever be done intentionally and consciously.
+
 #### Failures
 
 Showing programmatically pre-planned popups, modals, or any unusual navigation not directly initiated by the user is considered a change of context.
+
+A form is submitted automatically when a certain UI element receives focus.
+
+Focus is automatically moved to a different UI element when a given UI element receives focus.
 
 #### Additional notes
 
