@@ -6,11 +6,9 @@ Accessibility is very important part of any app and it should be considered duri
 
 ### TalkBack
 
-- **Overview**
-
 The TalkBack is the Google screen reader available on Android devices that allows you to control your app eyes-free.
 
-- **How it works**
+**How it works**
 
 When you [turn on TalkBack on your android device](https://support.google.com/accessibility/android/answer/6007100), you will be able to explore your app using touches and swipes.
 
@@ -24,21 +22,33 @@ You can interact with focused item mostly with double tap. Double tapping curren
 
 Detailed description of all TalkBack configuration could be found on official [Android Accessibility Help - TalkBack page](https://support.google.com/accessibility/android/answer/6006598?hl=en&ref_topic=10601571).
 
-### Display size and font size
+### Text and display settings
 
-- **Overview**
+**Font size**
 
-- **How it works**
+The user has the ability to change the font size of the text that will be displayed on his Android device. The regular scale of font is 1.0. Maximum scale that Android devices support is 2.0 and the minimum is ??.
+
+It is important that applications support font changes and its design to remain consistent after the changes are applied in order to help users with vision impairments. 
+
+**Display size**
+
+
+
+**Bold fonts**
+
+The user has the ability to change weight of text, too. The weight of text is defined on scale from 100 to 1000. The default or regular weight is set to 400. 
+
+**Color correction**
+
+
+
+**Color inversion**
+
+**Remove animations**
+
+**High contrast text**
 
 ### Magnification
-
-- **Overview**
-
-- **How it works**
-
-### Contrast and color options
-
-- **Overview**
 
 - **How it works**
 
@@ -46,11 +56,9 @@ Detailed description of all TalkBack configuration could be found on official [A
 
 ### Switch Access
 
-- **Overview**
-
 The Switch Access application lets you interact with your Android device using one or more switches or a keyboard instead of the touchscreen. Switch Access is primarily designed to help users with limited dexterity.
 
-- **How it works**
+**How it works**
 
 The application works in a way that is scans the items on the screen, highlighting each item in a turn, until you make a selection.
 
@@ -68,9 +76,7 @@ Detailed description of all Switch Access configuration could be found on offici
 
 ### Voice Access
 
-- **Overview**
+// TBD
 
 
-
-- **How it works**
 
