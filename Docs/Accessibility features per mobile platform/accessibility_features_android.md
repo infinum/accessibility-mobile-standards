@@ -54,9 +54,13 @@ Color blindness is commonly divided into three types:
 
 User can, depending on the type of deficiency, choose appropriate option for color correction in phone settings. After choosing appropriate option color correction feature changes how colors are displayed in order to help users to more easily distinguish differences. 
 
-**Color inversion**
+**Color inversion and dark theme**
 
-// TBD
+Some users find it easier to read light text on a dark background either in the long run or in some special conditions (example: when it is really bright outside). 
+
+On Android version 10 and up there is an option to turn on Dark theme on your device. Enabling dark theme on your device will automatically convert existing system colors to their dark alternatives. This option does not apply to pictures to videos. Also, applications that do not support dark theme will also not be converted.
+
+That is why there is another option with similar effect called color inversion. But in this case inversion of colors will be applied to everything on your device, including media. 
 
 **Remove animations**
 
@@ -64,7 +68,7 @@ User can, depending on the type of deficiency, choose appropriate option for col
 
 **High contrast text**
 
-// TBD
+High contrast has similar effect to text as dark theme to whole device UI. This feature changes the text color to either black or white, depending on the original text color. 
 
 ### Magnification
 
