@@ -8,4 +8,4 @@ Mobile standards provide information about accessibility features and implementa
 
 Even those platforms are a bit different; the main idea is to provide the same experience to our mobile apps on all platforms. The following paragraphs provide detailed information about accessibility features per supported platforms.
 
-[Previous](../Introduction/Introduction.md) | Next
+[[Previous](../Introduction/Introduction.md)] | [Next]
