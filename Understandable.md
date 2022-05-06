@@ -1,11 +1,10 @@
-# Understandable
+# Understandable guidelines for iOS
 
 Information and the operation of the user interface must be understandable.
 
 ## Readable
 
 Make text content readable and understandable.
-
 
 ### Language of Page
 
@@ -22,8 +21,6 @@ Hard-coding a language code inside an app should be avoided. Also, every app sho
 #### Additional notes
 
 This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.
-
----
 
 ## Predictable
 
@@ -52,12 +49,9 @@ Focus is automatically moved to a different UI element when a given UI element r
 
 This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.
 
----
-
 ## Input Assistance
 
 Help users avoid and correct mistakes when interacting with the app.
-
 
 ### Error Identification
 
@@ -79,7 +73,6 @@ Preventing some action or flow from continuing because an error was detected but
 
 This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.
 
-
 ### Labels or Instructions
 
 Labels or instructions are provided when content requires user input.
@@ -97,4 +90,3 @@ User enters some data into a user interface element without knowing what the end
 #### Additional notes
 
 This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.
-
