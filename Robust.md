@@ -1,4 +1,4 @@
-# Robust
+# Robust guidelines for iOS
 
 Content must be robust enough that it can be interpreted by a wide variety of mobile devices including those which use accessibility features.
 
@@ -6,14 +6,39 @@ Content must be robust enough that it can be interpreted by a wide variety of mo
 
 Maximize compatibility with current and future devices, taking into account the accessibility features that they might be using.
 
-
 ### Parsing
 
 All user-visible content be grouped logically and assigned identifiers appropriately.
 
 #### Success technique(s)
 
-Every user interface element should have a unique identifier which will define it. Identifiers should not be reused, except where this is by design (i.e. the same exact element exists in several different locations).
+##### Using accessibility identifiers
+
+Every user interface element should have a unique [accessibility identifier](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification/1623132-accessibilityidentifier) which will define it. Identifiers should not be reused, except where this is by design (i.e. the same exact element exists in several different locations).
+
+```swift
+submitFormButton.accessibilityIdentifier = "submit-form-button"
+```
+
+For iterative elements, such as lists and tables there are two approaches: if the elements don't need to be distinguishable from each other for UI testing purposes (or some other explicit need) then using a single accessibility identifier for all elements is acceptable, otherwise the identifier could be suffixed with an index or more concrete information regarding it's meaning.
+
+```swift
+func tableView(_ tableView: UITableView,
+               cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: identifier)
+    ...
+
+    cell.accesibilityIdentifier = "login-form-cell"
+
+    // or
+
+    cell.accesibilityIdentifier = "login-form-cell-\(indexPath.row)"
+    
+    ...
+    
+    return cell
+}
+```
 
 #### Failures
 
@@ -25,14 +50,25 @@ Elements are not grouped or are badly organized on the screen which prevents acc
 
 This guideline covers point 4.1.1 Parsing - Level A of the WCAG standard.
 
-
 ### Name, Role, Value
 
-User interface elements should be clearly defined by their name (identifier), the role that they have, and the value they carry. The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's identifier), so that the user remains aware of what this element does at all times.
+User interface elements should be clearly defined by their name ([accessibility label](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel) & [accessibility hint](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)), the role that they have (accessibility identifier), and the value they carry([accesibility value](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)). The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's accessibility attributes), so that the user remains aware of what this element does at all times.
 
 #### Success technique(s)
 
-Every user interface element should have a unique accessibility identifier which can be used by VoiceOver.
+Every user interface element should have a unique accessibility label which can be used by VoiceOver.
+
+```swift
+ addButton.accessibilityLabel = "Add"
+ addButton.accessibilityHint = "Adds an entry in the list."
+ ```
+
+ For elements which carry a value, such as a label, the accessibility value should be used to represent this value.
+
+ ```swift
+ titleLabel.text = "Entries list"
+ titleLabel.accessibilityValue = "Entries list"
+ ```
 
 #### Failures
 
@@ -45,5 +81,3 @@ Changing the value or role of a user interface element without adjusting it's id
 #### Additional notes
 
 This guideline covers point 4.1.2 Name, Role, Value - Level A of the WCAG standard.
-
----
