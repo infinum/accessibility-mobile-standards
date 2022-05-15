@@ -202,7 +202,7 @@ It is important that the content provided in your app is easily understandable t
 
 The example is given in the screenshots down below.
 
-| ![a1-bills.jpg](https://imgur.com/1hCzIKx.png) | ![tomato-bills.jpg](https://imgur.com/pWejQkl.png) |
+| ![a1-bills.jpg](https://imgur.com/RcsRuYf.png) | ![tomato-bills.jpg](https://imgur.com/pWejQkl.png) |
 |:--:|:--:|
 | <b>A1 App - Bills</b> | <b>Tomato App - Bills</b>|
 
