@@ -206,6 +206,10 @@ The example is given in the screenshots down below. On the left screenshot there
 |:--:|:--:|
 | <b>A1 App - Bills</b> | <b>Tomato App - Bills</b>|
 
+### Distinguishable
+
+// TO-DO add distinguishable section
+
 
 
 
