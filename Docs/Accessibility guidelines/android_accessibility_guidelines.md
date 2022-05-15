@@ -14,21 +14,22 @@ If an element exists on the UI only for decorative purposes it is recommended th
 
 #### Label elements
 
-In most cases you can include required description in the layout resource file as the element's `contentDescription`. The example is shown on the following snippet:
+In most cases you can include required description in the layout resource file as the element's `contentDescription`. It is recommended to use string resources for defining all required descriptions for easier localization.
+
+The example is shown on the following snippet:
 
 ```
-<!-- Use string resources for easier localization. -->
 <!-- The en-US value for the following string is "Inspect". -->
 <ImageView
     ...
     android:contentDescription="@string/inspect" />
 ```
 
-_Note:_ You should not provide descriptions forTextView elements because Android accessibility services automatically announce the text itself as required description.
+_Note:_ You should not provide descriptions for TextView elements because Android accessibility services automatically announce the text itself as required description.
 
 - Editable elements
 
-When thinking about describing editable elements such as EditText objects, it is usually helpful to provide text that gives examples of valid input in the element itself, in addition to making this example text available to screen readers.
+When thinking about describing editable elements such as EditText objects, it is usually helpful to provide text that give examples of valid input in the element itself. That way, users who navigate through the app using screen readers, could get a bit more info about the required input when they focus the editable element. 
 
 In these situations it is recommended to use `android:hint` attribute: 
 
@@ -42,9 +43,9 @@ In these situations it is recommended to use `android:hint` attribute:
 
 - Elements in the collection
 
-When working with collections, it is very important that provided labels are unique for each item. That way, the system accessibility services can refer to exactly one specific item when announcing the label. 
+When working with collections, it is very important that provided labels **are unique for each item**. That way, the system accessibility services can refer to exactly one specific item when announcing the label. 
 
-This will help users to get general idea when they've cycled through the complete UI.
+This will help users to get general idea when they've cycled through the complete UI of your app.
 
 In particular, you should provide additional text or contextual information in elements within reused layouts, such as RecyclerView or ListView objects, so that each child element is uniquely identified.
 
@@ -85,34 +86,11 @@ If the app you are building includes media content such as video clip or audio r
 
 ### Info and Relationships
 
-- Pairs od elements where one describes the other
+- Groups of related content
 
-It is common case that given EditText has corresponding View that describes the content that the user should enter within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
+If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually subclass of ViewGroup. Also, you should set the **container object's** `android:screenReaderFocusable` (for devices running Android 8.1. - API level 27) or `android:focusable` to true. Furthermore, you should set `android:focusable` attribute of each inner object to `false` because doing so, accessibility services can present the inner element's content descriptions one after the other, in a single announcement.
 
-That way, services such as TalkBack will read defined relationship to the user to give him a bit more context when EditText is in focus.
-
-An example of labeling such element pair is given in the following snippet:
-
-```
-<!-- Label text for en-US locale would be "Username:" -->
-<TextView
-   android:id="@+id/usernameLabel" ...
-   android:text="@string/username"
-   android:labelFor="@+id/usernameEntry" />
-
-<EditText
-   android:id="@+id/usernameEntry" ... />
-```
-
-In the given example, services such as TalkBack will read - "EditBox for username" when user sets focus to EditText.
-
-### Meaningful sequence
-
-- Groups of related content 
-
-If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually subclass of ViewGroup. Also, you should set the **container object's** `android:screenReaderFocusable` (for devices running Android 8.1. - API level 27) or `android:focusable` to true. Furthermore, you should set `android:focusable` attribute of each inner object to `false` because doing so, accessibility services can present the inner element's content descriptions one after the other, in a single announcement. 
-
-Grouping elements based on the context helps users that benefit from using accessibility services to discover the information that is on the screen more efficiently. 
+Grouping elements based on the context helps users that benefit from using accessibility services to discover the information that is on the screen more efficiently.
 
 The example of grouping elements is given in the following snippet:
 
@@ -134,11 +112,11 @@ The example of grouping elements is given in the following snippet:
 </ConstraintLayout>
 ```
 
-_Note:_ In cases like this it is recommended to define content descriptions as short as possible considering that accessibility services will read them one after the other. 
+_Note:_ In cases like this it is recommended to define content descriptions as short as possible considering that accessibility services will read them one after the other.
 
 - Custom group label
 
-It is possible to override the platform's default grouping and ordering of a group's inner element descriptions by providing a content description for the group itself. 
+It is possible to override the platform's default grouping and ordering of a group's inner element descriptions by providing a content description for the group itself.
 
 The example is given in the snippet down below:
 
@@ -162,9 +140,9 @@ android:contentDescription="@string/title_artist_best_song">
 </ConstraintLayout>
 ```
 
-- Nested groups 
+- Nested groups
 
-If the app you are building provides multi-dimensional information, it is recommended to use the `android:screenReaderFocusable` attribute on the inner group containers. That kind of grouping and labeling will provide good balance between number of announcements needed to discover the screen's content and the length of each announcement. 
+If the app you are building provides multi-dimensional information, it is recommended to use the `android:screenReaderFocusable` attribute on the inner group containers. That kind of grouping and labeling will provide good balance between number of announcements needed to discover the screen's content and the length of each announcement.
 
 The example is given in the snippet down below:
 
@@ -189,13 +167,44 @@ The example is given in the snippet down below:
 </ConstraintLayout>
 ```
 
-- Headings within text 
+- Headings within text
 
 It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark some view to be treated as heading you can set `android:accessibilityHeading` to true.
 
-That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience. 
+That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
 
+### Meaningful sequence
 
+- Pairs od elements where one describes the other
+
+It is common case that given EditText has corresponding View that describes the content that the user should enter within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
+
+That way, services such as TalkBack will read defined relationship to the user to give him a bit more context when EditText is in focus.
+
+An example of labeling such element pair is given in the following snippet:
+
+```
+<!-- Label text for en-US locale would be "Username:" -->
+<TextView
+   android:id="@+id/usernameLabel" ...
+   android:text="@string/username"
+   android:labelFor="@+id/usernameEntry" />
+
+<EditText
+   android:id="@+id/usernameEntry" ... />
+```
+
+In the given example, services such as TalkBack will read - "EditBox for username" when user sets focus to EditText.
+
+### Sensory characteristics
+
+It is important that the content provided in your app is easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different view and different actions that those views provide. That way users with color vision deficiencies could also easily understand the whole UI. 
+
+The example is given in the screenshots down below.
+
+| ![a1-bills.jpg](https://imgur.com/1hCzIKx.png) | ![tomato-bills.jpg](https://imgur.com/pWejQkl.png) |
+|:--:|:--:|
+| <b>A1 App - Bills</b> | <b>Tomato App - Bills</b>|
 
 
 
