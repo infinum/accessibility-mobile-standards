@@ -1,4 +1,4 @@
-# Accessibility features Flutter
+# Accessibility features in Flutter
 
 ## Determining accessibility
 
@@ -172,3 +172,5 @@ testWidgets('Test semantics', (tester) async {
   expect(semantics, matchesSemantics(isButton: true, hasEnabledState: true));
 });
 ```
+
+[[Previous](Accessibility%20features%20on%20iOS.md)] | [[Next](../Accessibility%20guidelines/Accessibility%20guidelines.md)]

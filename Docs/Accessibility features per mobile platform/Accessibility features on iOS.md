@@ -1,4 +1,4 @@
-# iOS
+# Accessibility features on iOS
 
 ## The fundamentals
 
@@ -180,3 +180,5 @@ The main idea is to navigate through interactive elements - like buttons. And wh
 Some apps are more interactive, some aren't, but there should be custom actions available for switch control for some of them. This can also be done, so users can use our app in a smaller number of interactions, which benefits users with motor disabilities.
 
 State of this feature can be checked via `UIAccessibility.isSwitchControlRunning` or via notification `UIAccessibility.switchControlStatusDidChangeNotificatication`.
+
+[Previous] | [[Next](Accessibility%20features%20in%20Flutter.md)]
