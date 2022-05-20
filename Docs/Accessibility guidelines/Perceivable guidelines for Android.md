@@ -220,7 +220,7 @@ It is important that the content provided in your app is easily understandable t
 
 The example is given in the screenshots down below. On the left screenshot there is example of the bills UI in MojA1 app. The only difference between paid and unpaid bills in the list is the color. Unpaid bills are presented in red color instead of the regular black. For users with color vision deficiencies this could be a problem. A better solution is provided on the right screenshot. There is example of the bills UI in MojTomato app. As you can see, unpaid bills are presented there with different symbol instead of color and that way users could more easily distinguish there is difference between items presented in the list.
 
-| <img src="https://imgur.com/RcsRuYf.png" width="30%"> | <img src="https://imgur.com/pWejQkl.png" width="30%"> |
+| <img src="https://imgur.com/RcsRuYf.png" width="50%"> | <img src="https://imgur.com/pWejQkl.png" width="50%"> |
 |:--:|:--:|
 | <b>A1 App - Bills</b> | <b>Tomato App - Bills</b>|
 
