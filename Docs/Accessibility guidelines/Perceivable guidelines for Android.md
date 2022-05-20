@@ -218,9 +218,9 @@ In the given example, services such as TalkBack will read - "EditBox for usernam
 
 It is important that the content provided in your app is easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different view and different actions that those views provide. That way users with color vision deficiencies could also easily understand the whole UI. 
 
-The example is given in the screenshots down below. On the left screenshot there is example of the bills UI in MojA1 app. The only difference between paid and unpaid bills in the list is the color. Unpaid bills are presented in red color instead of the regular black. For users with color vision deficiencies this could be a problem. A better solution is provided on the right screenshot. There is example of the bills UI in MojTomato app. As you can see, unpaid bills are presented there with different symbol instead of color and that way users could more easily distinguish there is difference between items presented in the list. 
+The example is given in the screenshots down below. On the left screenshot there is example of the bills UI in MojA1 app. The only difference between paid and unpaid bills in the list is the color. Unpaid bills are presented in red color instead of the regular black. For users with color vision deficiencies this could be a problem. A better solution is provided on the right screenshot. There is example of the bills UI in MojTomato app. As you can see, unpaid bills are presented there with different symbol instead of color and that way users could more easily distinguish there is difference between items presented in the list.
 
-| ![a1-bills.jpg](https://imgur.com/RcsRuYf.png) | ![tomato-bills.jpg](https://imgur.com/pWejQkl.png) |
+| <img src="https://imgur.com/RcsRuYf.png" width="30%"> | <img src="https://imgur.com/pWejQkl.png" width="30%"> |
 |:--:|:--:|
 | <b>A1 App - Bills</b> | <b>Tomato App - Bills</b>|
 
