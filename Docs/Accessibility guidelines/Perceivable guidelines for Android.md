@@ -27,6 +27,7 @@ The example is shown on the following snippet:
 
 _Note:_ You should not provide descriptions for TextView elements because Android accessibility services automatically announce the text itself as required description.
 
+
 - Editable elements
 
 When thinking about describing editable elements such as EditText objects, it is usually helpful to provide text that give examples of valid input in the element itself. That way, users who navigate through the app using screen readers, could get a bit more info about the required input when they focus the editable element. 
@@ -40,6 +41,7 @@ In these situations it is recommended to use `android:hint` attribute:
    android:id="@+id/addressLine2"
    android:hint="@string/aptSuiteBuilding" ... />
 ```
+
 
 - Elements in the collection
 
@@ -70,6 +72,10 @@ class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
 }
 ```
 
+:white_check_mark: **Success criteria**
+
+:no_entry_sign: **Failure criteria**
+
 ## Time-based Media
 
 **Make media content more accessible**
@@ -81,6 +87,10 @@ If the app you are building includes media content such as video clip or audio r
 - if a video presents information that is vital to completing workflow, provide the same content in an alternative format, such as transcript
 
 // TO-DO ADD CODE examples
+
+:white_check_mark: **Success criteria**
+
+:no_entry_sign: **Failure criteria**
 
 ## Adaptable 
 
@@ -173,6 +183,10 @@ It is also possible to use _headings_ to summarize groups of text that appear on
 
 That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
 
+:white_check_mark: **Success criteria**
+
+:no_entry_sign: **Failure criteria**
+
 ### Meaningful sequence
 
 - Pairs od elements where one describes the other
@@ -196,6 +210,10 @@ An example of labeling such element pair is given in the following snippet:
 
 In the given example, services such as TalkBack will read - "EditBox for username" when user sets focus to EditText.
 
+:white_check_mark: **Success criteria**
+
+:no_entry_sign: **Failure criteria**
+
 ### Sensory characteristics
 
 It is important that the content provided in your app is easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different view and different actions that those views provide. That way users with color vision deficiencies could also easily understand the whole UI. 
@@ -206,9 +224,17 @@ The example is given in the screenshots down below. On the left screenshot there
 |:--:|:--:|
 | <b>A1 App - Bills</b> | <b>Tomato App - Bills</b>|
 
+:white_check_mark: **Success criteria**
+
+:no_entry_sign: **Failure criteria**
+
 ### Distinguishable
 
 // TO-DO add distinguishable section
+
+:white_check_mark: **Success criteria**
+
+:no_entry_sign: **Failure criteria**
 
 
 
