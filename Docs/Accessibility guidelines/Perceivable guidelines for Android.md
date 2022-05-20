@@ -222,7 +222,7 @@ The example is given in the screenshots down below. On the left screenshot there
 
 | <img src="https://imgur.com/RcsRuYf.png" width="50%"> | <img src="https://imgur.com/pWejQkl.png" width="50%"> |
 |:--:|:--:|
-| <b>**Screenshot 1.** MojA1 App bills</b> | <b>**Screenshot 2.** MojTomato App bills</b>|
+| **Screenshot 1.** MojA1 App bills | **Screenshot 2.** MojTomato App bills |
 
 :white_check_mark: **Success criteria**
 
