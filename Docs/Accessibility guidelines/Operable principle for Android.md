@@ -39,22 +39,23 @@ If the context of the text is not self-explanatory and clear, users of accessibi
 
 Some of the recommended techniques that could improve clarifying the context of the provided link are listed down below: 
 
-- pair the link with descriptive text element that provide more context of the link itself - Screenshot 1.
+- pair the link with descriptive text element that provide more context of the link itself - **Screenshot 1.**
 
-- set accessibility description (content description) for the link item that will provide more information about it - Screenshot 2.
+- set accessibility description (content description) for the link item that will provide more information about it - Screenshot 2.**
 
-- define self-explanatory link text labels - Screenshot 3. 
+- define self-explanatory link text labels - **Screenshot 3.** 
 
+// TO-DO add examples
 
 Situations that should be avoided when working with links:
 
-- defining links as part of the longer text where not all the content is related to the link - Screenshot 1. 
+- defining links as part of the longer text where not all the content is related to the link - **Screenshot 1.** 
 
 If the link is defined in a way that it is only a small part of longer text then it is impossible to distinguish it from the rest of the text. If no `contentDescription` is provided accessibility service would read it as regular text. On the other hand, if we set `contentDescription`, even if it is only for the, for example ClickableSpan that is used for opening provided link, then only provided `contentDescription` will be read and all the other part of the text will be ignored.  
 
 **Solution proposals:**
 
-- define text containing link as separate section - Screenshot 2.
+- define text containing link as separate section - **Screenshot 2.**
 
 If you define text containing link as separate section then you will be able to set `contentDescription` that will provide more information about the link and where it should navigate. That way, both users that use accessibility services and the ones that don't will have enough information to decide if they want to open the link or not.
 
