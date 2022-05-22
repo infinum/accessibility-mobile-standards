@@ -58,7 +58,7 @@ If the link is defined in a way that it is only a small part of longer text then
 
 If you define text containing link as separate section then you will be able to set `contentDescription` that will provide more information about the link and where it should navigate. That way, both users that use accessibility services and the ones that don't will have enough information to decide if they want to open the link or not.
 
-| <img src="https://imgur.com/xKXqPgj.png" width="50%"> | <img src="https://imgur.com/nu99Q3S.png" width="50%"> |
+| <img src="https://imgur.com/b833Hol.png" width="50%"> | <img src="https://imgur.com/D5HageW.png" width="50%"> |
 |:--:|:--:|
 | **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** Text containing link is separated from rest of the text |
 
