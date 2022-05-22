@@ -1,6 +1,8 @@
 # Perceivable guidelines for Android 
 
-All content that is displayed on the screen at some point must be presented to the user in a way that he can perceive.
+_All content that is displayed on the screen at some point must be presented to the user in a way that he can perceive._
+
+In this section we will describe guidelines and define examples of implementation that will help in making your application more perceivable.
 
 ## Text alternatives 
 
