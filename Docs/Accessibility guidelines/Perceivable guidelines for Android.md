@@ -4,7 +4,7 @@ All content that is displayed on the screen at some point must be presented to t
 
 ## Text alternatives 
 
-// TODO add simple description of this section
+_Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language._
 
 ### Non-text context
 
@@ -74,7 +74,19 @@ class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
 
 :white_check_mark: **Success criteria**
 
+- all the relevant UI views have unique, concise and self-explanatory description defined
+
+- all the descriptions are localized properly 
+
 :no_entry_sign: **Failure criteria**
+
+- there are relevant UI view with no description provided
+
+- descriptions provided for the relevant views are not unique and are repeated shortly one after another
+
+- descriptions provided for the relevant views are too long and too complex
+
+- descriptions provided for the relevant views are hardcoded and are not localized properly 
 
 ## Time-based Media
 
@@ -185,7 +197,11 @@ That way users of accessibility services can choose to navigate between headings
 
 :white_check_mark: **Success criteria**
 
+// TO-DO
+
 :no_entry_sign: **Failure criteria**
+
+// TO-DO
 
 ### Meaningful sequence
 
@@ -212,13 +228,17 @@ In the given example, services such as TalkBack will read - "EditBox for usernam
 
 :white_check_mark: **Success criteria**
 
+// TO-DO
+
 :no_entry_sign: **Failure criteria**
+
+// TO-DO
 
 ### Sensory characteristics
 
 It is important that the content provided in your app is easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different view and different actions that those views provide. That way users with color vision deficiencies could also easily understand the whole UI. 
 
-The example is given in the screenshots down below. On the left screenshot there is example of the bills UI in MojA1 app. The only difference between paid and unpaid bills in the list is the color. Unpaid bills are presented in red color instead of the regular black. For users with color vision deficiencies this could be a problem. A better solution is provided on the right screenshot. There is example of the bills UI in MojTomato app. As you can see, unpaid bills are presented there with different symbol instead of color and that way users could more easily distinguish there is difference between items presented in the list.
+The example is given in the screenshots down below. On the Screenshot 1. there is example of the bills UI in MojA1 app. The only difference between paid and unpaid bills in the list is the color. Unpaid bills are presented in red color instead of the regular black. For users with color vision deficiencies this could be a problem. A better solution is provided on theScreenshot 2.. There is example of the bills UI in MojTomato app. As you can see, unpaid bills are presented there with different symbol instead of color and that way users could more easily distinguish there is difference between items presented in the list.
 
 | <img src="https://imgur.com/RcsRuYf.png" width="50%"> | <img src="https://imgur.com/pWejQkl.png" width="50%"> |
 |:--:|:--:|
@@ -226,7 +246,11 @@ The example is given in the screenshots down below. On the left screenshot there
 
 :white_check_mark: **Success criteria**
 
+- difference in actions between similar items is described using both colors and graphics -> Screenshot 2.
+
 :no_entry_sign: **Failure criteria**
+
+- important difference between elements is stressed only with colors -> Screenshot 1. 
 
 ### Distinguishable
 
@@ -234,7 +258,11 @@ The example is given in the screenshots down below. On the left screenshot there
 
 :white_check_mark: **Success criteria**
 
+// TO-DO
+
 :no_entry_sign: **Failure criteria**
+
+// TO-DO
 
 
 
