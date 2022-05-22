@@ -41,13 +41,13 @@ Some of the recommended techniques that could improve clarifying the context of 
 
 - pair the link with descriptive text element that provide more context of the link itself - **Screenshot 1.**
 
-- set accessibility description (content description) for the link item that will provide more information about it - Screenshot 2.**
+- set accessibility description (content description) for the link item that will provide more information about it - **Screenshot 2.**
 
 - define self-explanatory link text labels - **Screenshot 3.** 
 
 // TO-DO add examples
 
-Situations that should be avoided when working with links:
+**Situations that should be avoided when working with links:**
 
 - defining links as part of the longer text where not all the content is related to the link - **Screenshot 1.** 
 
