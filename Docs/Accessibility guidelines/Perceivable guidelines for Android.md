@@ -250,19 +250,7 @@ The example is given in the screenshots down below. On the Screenshot 1. there i
 
 :no_entry_sign: **Failure criteria**
 
-- important difference between elements is stressed only with colors -> Screenshot 1. 
-
-### Distinguishable
-
-// TO-DO add distinguishable section
-
-:white_check_mark: **Success criteria**
-
-// TO-DO
-
-:no_entry_sign: **Failure criteria**
-
-// TO-DO
+- important difference between elements is stressed only with colors -> Screenshot 1.
 
 
 
