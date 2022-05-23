@@ -100,7 +100,6 @@ Some of the recommended techniques that could improve clarifying the context of 
 |:--:|:--:|
 | **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** If link item is implemented as regular TextView or Button, additional contentDescription should be provided that will stress that user is leaving the app |
 | <img src="https://imgur.com/6mI8z8W.png" width="50%"> | <img src="https://imgur.com/b833Hol.png" width="50%"> |
-|:--:|:--:|
 | **Screenshot 3.** If the label is implemented using URLSpan no additional contentDescription should be provided | **Screenshot 4.** Link as part of longer text should be implemented using URLSpan |
 
 :white_check_mark: **Success criteria**
