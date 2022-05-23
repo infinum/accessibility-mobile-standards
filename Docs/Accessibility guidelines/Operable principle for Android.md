@@ -88,20 +88,27 @@ If the context of the text is not self-explanatory and clear, users of accessibi
 
 Some of the recommended techniques that could improve clarifying the context of the provided link are listed down below: 
 
-- Pair the link with descriptive text element that provide more context of the link itself. - **Screenshot 1.**
+- Pair the link with descriptive text element that provide more context of the link itself. 
+  
+Example is given on the **Screenshot 1.** // TO-DO create this example
 
-- Set accessibility description (content description) for the link item that will provide more information about it. - **Screenshot 2.**
+- Set accessibility description (content description) for the link item that will provide more information about it. 
 
-- Define self-explanatory link text labels. - **Screenshot 3.**
+Example shown on the **Screenshot 2.** - If the link is implemented using If link item is implemented as regular TextView or Button, additional contentDescription should be provided give more information and stress that user is leaving the app.
 
-- If link is defined as part of the longer text **avoid using clickable spans** instead **use URLSpan** for adding link to specific part of text. That way accessibility service such as TalkBack will recognized there is link set somewhere in the text and user will know that he is able to perform action if he is interested in following link. - **Screenshot 4.**  
+- Define self-explanatory link text labels. 
 
-|||
-|:--:|:--:|
+Example shown on the **Screenshot 3.** - If the link text is well defined and implemented using URLSpan, no additional description is needed. Accessibility services will recognize the link and warn user that he will leave the app. 
+
+- If link is defined as part of the longer text use **URLSpan** for link implementation. 
+
+Example given on the **Screenshot 4.** - **Avoid using ClickableSpan** and instead **use URLSpan** for adding link to specific part of text. That way accessibility service such as TalkBack will recognized there is link set somewhere in the text and user will know that he is able to perform action if he is interested in following link.
+
 | <img src="https://imgur.com/b833Hol.png" width="50%"> | <img src="https://imgur.com/6mI8z8W.png" width="50%"> |
-| **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** If link item is implemented as regular TextView or Button, additional contentDescription should be provided that will stress that user is leaving the app |
-| <img src="https://imgur.com/6mI8z8W.png" width="50%"> | <img src="https://imgur.com/b833Hol.png" width="50%"> |
-| **Screenshot 3.** If the label is implemented using URLSpan no additional contentDescription should be provided | **Screenshot 4.** Link as part of longer text should be implemented using URLSpan |
+|:--:|:--:|
+| **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** Link implemented as regular TextView or Button |
+| <img src="https://imgur.com/wj8hWQy.png" width="50%"> | <img src="https://imgur.com/b833Hol.png" width="50%"> |
+| **Screenshot 3.** Link text implemented using URLSpan | **Screenshot 4.** Link as part of longer text should be implemented using URLSpan |
 
 :white_check_mark: **Success criteria**
 
