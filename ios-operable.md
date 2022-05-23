@@ -1,4 +1,5 @@
 
+
 # Operable
 
 User interface components and navigation must be operable.
@@ -18,6 +19,8 @@ Session inactivity timeout: Display a warning message that user is about to be s
 Auto-updating content (like news page): allow user to extend the time limit to 10 times longer.
 
 Real-time exception: time limit cannot be disabled/extended for a real-time event (e.g. an auction, booking movie tickets, watching live stream)
+
+In case you're using a custom modal presentation or a custom modal view, make sure that UIAccessibility is notified about the screen change.
 
 #### Failures
 
@@ -90,6 +93,13 @@ VoiceOver: A section of a screen containing numerous items should have those ite
 
 An element containing many labels or buttons should also have a summary accessibility label so it takes less swipes to skip over it.
 
+**Example:** VoiceOver In Instagram main feed
+Instagram stories are contained inside an "adjustable" accessibility group named "Stories Tray".
+1. User arrives to the "Stories Tray" by either tapping it or using right swipes.
+2. VoiceOver announces the name and quick summary of this group, with "adjustable" hint at the end.
+3. User can then iterate through items (adjust) by swiping up and down.
+4. Once done reviewing stories, user can then right swipe to skip onto the next element on the screen.
+
 #### Failures
 
 Not providing a way for user to quickly skip over sections with numerous items.
@@ -107,16 +117,24 @@ Screens have a clear, descriptive, and possibly unique title that describes topi
 
 #### Success technique(s)
 
-Make sure that each screen in the app has a title at or near the top.
 VoiceOver: when user requests entire screen to be read from the top, make sure that the title is one of the first things user will hear so they know whether they are on the right page or step.
-If using custom navigation bar, make sure that the title can be ready correctly by VoiceOver.
+
+Set title of each view controller by either setting it directly after `viewDidLoad` is called:
+ `title = "Home"`  or via navigation item:  `navigationItem.title = "Home"`. 
+
+If using custom title view, configure its accessibility label `navigationItem.titleView.accessibilityLabel = "Home"`.
+
+If using custom navigation bar, make sure that the title can be read correctly by VoiceOver.
+
 
 #### Failures
 
-Leaving the title empty
-Using a custom navigation bar without ensuring it's readable by VoiceOver.
-In document-editor screens: using a default title such as "Untitled Document" or "No Title", as well as just using file name like "report.pdf" or "DSC_0123.jpeg"
-Placeholder text like "Enter title..."
+- Leaving the title empty
+- Using a custom title view or custom navigation bar without ensuring it's readable by VoiceOver.
+- In document-editor screens avoid using:
+  - default titles like "Untitled Document" or "No Title"
+  - file names like "report.pdf" or "DSC_0123.jpeg"
+  - placeholder text like "Enter title..." or "Search..."
 
 #### Additional notes
 
@@ -133,13 +151,19 @@ VoiceOver: Ensure that information is read in an order consistent with the meani
 
 VoiceOver: When designing a new screen, make sure to test it with VoiceOver and see whether the elements are being read out in right, logical order. 
 
+Easiest way to achieve correct focus order is to layout elements inside a `UIStackView`. VoiceOver will read elements in the same order as in interface builder document outline.
+
+If placed outside of a stack view, elements positioned closer to the top are read first. If elements are near same vertical position, leading-side elements are read first.
+
+To change focus order, create an array of subviews and assign it to their parent container's `accessibilityElements`.
+
 In case of multiple text fields displayed, make sure that tapping "next" leads to the expected one.
 
 #### Failures
 
 VoiceOver: Elements are being read out in the wrong order, or some elements are skipped.
 
-Focus is trapped within the modal and cycles between the elements.
+Focus is trapped within the modal and cycles between the elements. For example: In forms, focus is switching between input fields but never onto an call-to-action button.
 
 #### Additional notes
 
@@ -150,20 +174,25 @@ This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.
 
 ### Link Purpose
 
-Purpose of a button or link is clear and easily understable by all users
+Purpose of a button or link is clear and easily understandable by all users
 
 #### Success technique(s)
 
-Create button with content that helps people instantly understand what it does. 
+Create button with content or title that helps people instantly understand what it does. 
 Use short, concise titles that succinctly describe buttons purpose.
-Start the title with a verb where possible.
+Start the title of a button or link with a verb where possible.
+
+If using custom elements that have a value that is not represented by its label (e.g. sliders, switches etc) make sure to update its `accessibilityValue` property each time value changes. Provide `accessibilityHint` where useful.
 
 When using toggle buttons, avoid relying solely on color to communicate its state - add a background shape or change the button’s content too.
+
+In dialogs, avoid using generic button titles like "Yes" and "No". Try to repeat verbs used in the question, for example:
+Are you sure you want to delete this message? 
+• Delete  • Cancel
 
 #### Failures
 
 Using custom shaped buttons that do not look like buttons.
-Generic button titles like "OK", or "Yes" and "No"
 Button titles with unclear result like "Ready to publish?"
 
 #### Additional notes
