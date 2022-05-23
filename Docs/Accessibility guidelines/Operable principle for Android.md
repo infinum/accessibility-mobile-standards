@@ -6,13 +6,62 @@ In this section we will describe guidelines and define examples of implementatio
 
 ## Enough time
 
+_Provide users enough time to read and use content._
 
+All the users should have ability to interact with the content displayed on the screen even if there is time limit defined for interaction with that specific view. Therefore, users should have the ability to turn off defined time-limit, adjust it or extend it.
+
+:white_check_mark: **Success criteria**
+
+- In case of session inactivity it is recommended to notify the user that he is about to be signed off with ability to extend that time-limit. The notification could be displayed in form of Alert or something similar. TalkBack service tells you about alerts and notifications so users using accessibility services would also be aware of the defined limit. 
+
+// TO-DO add example
+
+- In case of auto-updating content it is recommended to allow user to extend the defined time-limit to at least ten times the length of the default setting for everyone to be able to process the displayed information. 
+
+
+:no_entry_sign: **Failure criteria**
+
+// TO-DO
 
 ## Navigable 
 
-// TO-DO add sections before 
+_Provide ways to help users navigate, find content, and determine where they are._
 
-### Traversal order 
+### Bypass Blocks
+
+The app should be implemented in a way that it is possible to relatively easy skip the content that is repeated on the screen or  the content that is irrelevant to the user.
+
+This is feature is based on well on a good implementation of grouping the views that are displayed in the app. // TO-DO add link to section Adaptable in Perceivable guidelines
+
+- Headings within text
+
+It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark some view to be treated as heading you can set `android:accessibilityHeading` to true.
+
+That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
+
+// ADD SNIPPETS OF IMPLEMENTATION and example
+
+:white_check_mark: **Success criteria**
+
+// TO-DO
+
+:no_entry_sign: **Failure criteria**
+
+// TO-DO
+
+### Page Titles
+
+Each screen should have clear, descriptive, if possible unique title that describes purpose of that screen that will be understandable to all users.
+
+:white_check_mark: **Success criteria**
+
+// TO-DO
+
+:no_entry_sign: **Failure criteria**
+
+// TO-DO
+
+### Traversal Order 
 
 Order of the components that are displayed on the screen should have logical traversal order. That is very important for people using accessibility services such as TalkBack to get clearer picture of the content and possible actions on the current screen they are navigating through.
 
@@ -31,7 +80,7 @@ Example:
 
 
 
-### Link purpose 
+### Link Purpose 
 
 All the links that are displayed in the application's components and screens should explain its unique purpose. This is important because based on the provided descriptions users would get a better idea if they want to follow provided link or not. 
 
@@ -74,6 +123,8 @@ If you define text containing link as separate section then you will be able to 
 - link is only visually distinguished from other labels and has no additional description provided
 
 - link is part of the longer text and no additional description of its purpose is provided
+
+// TO DO check ClickableLinks
 
 
 

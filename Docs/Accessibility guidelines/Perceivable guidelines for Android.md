@@ -191,12 +191,6 @@ The example is given in the snippet down below:
 </ConstraintLayout>
 ```
 
-- Headings within text
-
-It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark some view to be treated as heading you can set `android:accessibilityHeading` to true.
-
-That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
-
 :white_check_mark: **Success criteria**
 
 // TO-DO
