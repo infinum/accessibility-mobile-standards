@@ -96,6 +96,7 @@ Some of the recommended techniques that could improve clarifying the context of 
 
 - If link is defined as part of the longer text **avoid using clickable spans** instead **use URLSpan** for adding link to specific part of text. That way accessibility service such as TalkBack will recognized there is link set somewhere in the text and user will know that he is able to perform action if he is interested in following link. - **Screenshot 4.**  
 
+|||
 |:--:|:--:|
 | <img src="https://imgur.com/b833Hol.png" width="50%"> | <img src="https://imgur.com/6mI8z8W.png" width="50%"> |
 | **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** If link item is implemented as regular TextView or Button, additional contentDescription should be provided that will stress that user is leaving the app |
