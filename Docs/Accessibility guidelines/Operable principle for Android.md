@@ -22,7 +22,9 @@ All the users should have ability to interact with the content displayed on the 
 
 :no_entry_sign: **Failure criteria**
 
-// TO-DO
+- logging out user without prior warning and possibility to extend session
+
+- define time-limited actions in the app with no ability to extend that limit
 
 ## Navigable 
 
