@@ -88,29 +88,20 @@ If the context of the text is not self-explanatory and clear, users of accessibi
 
 Some of the recommended techniques that could improve clarifying the context of the provided link are listed down below: 
 
-- pair the link with descriptive text element that provide more context of the link itself - **Screenshot 1.**
+- Pair the link with descriptive text element that provide more context of the link itself. - **Screenshot 1.**
 
-- set accessibility description (content description) for the link item that will provide more information about it - **Screenshot 2.**
+- Set accessibility description (content description) for the link item that will provide more information about it. - **Screenshot 2.**
 
-- define self-explanatory link text labels - **Screenshot 3.** 
+- Define self-explanatory link text labels. - **Screenshot 3.**
 
-// TO-DO add examples
+- If link is defined as part of the longer text **avoid using clickable spans** instead **use URLSpan** for adding link to specific part of text. That way accessibility service such as TalkBack will recognized there is link set somewhere in the text and user will know that he is able to perform action if he is interested in following link. - **Screenshot 4.**  
 
-**Situations that should be avoided when working with links:**
-
-- defining links as part of the longer text where not all the content is related to the link - **Screenshot 1.** 
-
-If the link is defined in a way that it is only a small part of longer text then it is impossible to distinguish it from the rest of the text. If no `contentDescription` is provided accessibility service would read it as regular text. On the other hand, if we set `contentDescription`, even if it is only for the, for example ClickableSpan that is used for opening provided link, then only provided `contentDescription` will be read and all the other part of the text will be ignored.  
-
-**Solution proposals:**
-
-- define text containing link as separate section - **Screenshot 2.**
-
-If you define text containing link as separate section then you will be able to set `contentDescription` that will provide more information about the link and where it should navigate. That way, both users that use accessibility services and the ones that don't will have enough information to decide if they want to open the link or not.
-
-| <img src="https://imgur.com/b833Hol.png" width="50%"> | <img src="https://imgur.com/D5HageW.png" width="50%"> |
+| <img src="https://imgur.com/b833Hol.png" width="50%"> | <img src="https://imgur.com/6mI8z8W.png" width="50%"> | 
 |:--:|:--:|
-| **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** Text containing link is separated from rest of the text |
+| **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** If link item is implemented as regular TextView or Button, additional contentDescription should be provided that will stress that user is leaving the app |
+| <img src="https://imgur.com/6mI8z8W.png" width="50%"> | <img src="https://imgur.com/b833Hol.png" width="50%"> |
+|:--:|:--:|
+| **Screenshot 3.** If the label is implemented using URLSpan no additional contentDescription should be provided | **Screenshot 4.** Link as part of longer text should be implemented using URLSpan |
 
 :white_check_mark: **Success criteria**
 
