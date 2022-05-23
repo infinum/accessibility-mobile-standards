@@ -10,14 +10,15 @@ _Provide users enough time to read and use content._
 
 All the users should have ability to interact with the content displayed on the screen even if there is time limit defined for interaction with that specific view. Therefore, users should have the ability to turn off defined time-limit, adjust it or extend it.
 
-:white_check_mark: **Success criteria**
-
 - In case of session inactivity it is recommended to notify the user that he is about to be signed off with ability to extend that time-limit. The notification could be displayed in form of Alert or something similar. TalkBack service tells you about alerts and notifications so users using accessibility services would also be aware of the defined limit. 
 
 // TO-DO add example
 
 - In case of auto-updating content it is recommended to allow user to extend the defined time-limit to at least ten times the length of the default setting for everyone to be able to process the displayed information. 
 
+:white_check_mark: **Success criteria**
+
+// TO-DO
 
 :no_entry_sign: **Failure criteria**
 
@@ -29,9 +30,11 @@ _Provide ways to help users navigate, find content, and determine where they are
 
 ### Bypass Blocks
 
-The app should be implemented in a way that it is possible to relatively easy skip the content that is repeated on the screen or  the content that is irrelevant to the user.
+The app should be implemented in a way that it is possible to relatively easy skip the content that is repeated on the screen or the content that is irrelevant to the user.
 
 This is feature is based on well on a good implementation of grouping the views that are displayed in the app. // TO-DO add link to section Adaptable in Perceivable guidelines
+
+For example, accessibility services users should be able to skip the whole RecyclerView list if the content is irrelevant to them without having to go through each item in the list. 
 
 - Headings within text
 
@@ -43,23 +46,29 @@ That way users of accessibility services can choose to navigate between headings
 
 :white_check_mark: **Success criteria**
 
-// TO-DO
+- content is properly grouped depending on the context as described in [link to perceivable guidelines]
+
+- user is possible to relatively easily skip specific sections on the screen
 
 :no_entry_sign: **Failure criteria**
 
-// TO-DO
+- user using accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation proccess
 
 ### Page Titles
 
-Each screen should have clear, descriptive, if possible unique title that describes purpose of that screen that will be understandable to all users.
+Each screen should have clear, descriptive, if possible unique title that describes purpose of that screen that will be understandable to all users. Also, it is important to make sure that title is the first thing that will be read when user enters the screen. This could be achieved following design guidelines or with help of setting `android:accessibilityTraversalBefore` attribute.
+
+If title is defined using toolbar with custom behavior or some other custom view it is important to insure that title will be read using accessibility services.
 
 :white_check_mark: **Success criteria**
 
-// TO-DO
+- each screen has descriptive title defined that is read when user enters the screen
 
 :no_entry_sign: **Failure criteria**
 
-// TO-DO
+- screens have no titles defined or the defined titles are not descriptive enough
+
+- defined titles are not the first thing that is read when user enters the screen and therefore users using accessibility services have no information which screen they opened
 
 ### Traversal Order 
 
@@ -69,11 +78,10 @@ The best solution would be to redesign the screen to create logical traversal or
 
 The example of using `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes is given down below:
 
-// TO - DO add screenshot of real app and set the attributes 
+// TO-DO add screenshot of real app and set the attributes 
 
 _Note 1. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes ina a way that does not create any loops or traps that will prevent users to interact with all relevant views displayed on the screen._
 
-//TO-DO check versioning
 _Note 2. _ 
 
 Example: 
@@ -118,11 +126,11 @@ Example given on the **Screenshot 4.** - **Avoid using ClickableSpan** and inste
 
 :no_entry_sign: **Failure criteria**
 
-- link is only visually distinguished from other labels and has no additional description provided
+- link is defined as unclear label or button and has no additional description provided
 
-- link is part of the longer text and no additional description of its purpose is provided
+- link is part of the longer text and implemented using ClickableSpan so TalkBack users are not aware of link existence
 
-// TO DO check ClickableLinks
+
 
 
 
