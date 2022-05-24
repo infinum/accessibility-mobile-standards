@@ -2,7 +2,15 @@
 
 ## Readable
 
-### Language of page
+### Language of the App
+
+App should be implemented in the way to reach the most users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It  should provide text alternative for, at least English language, if the one is not the default language of the app. 
+
+It is recommended that all text content used in the application, including `contentDescriptions`, is implemented using Android resource framework. 
+
+**Server-driven application**
+
+If the application is server driven and most of the content is depending on the backend output, it is important to create logic where the app will on launch send information about the current locale. In that scenario, backend should based on the received information about current locale, return the content in the corresponding language.
 
 ## Predictable 
 
@@ -16,7 +24,7 @@ If the content that is displayed on the screen is designed and implemented follo
 
 :white_check_mark: **Success criteria**
 
-- the content is grouped and labeled following [Perceivable guidelines]
+- the content is grouped and labeled following [Perceivable guidelines].
 
 :no_entry_sign: **Failure criteria**
 
