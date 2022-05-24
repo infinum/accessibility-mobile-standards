@@ -8,9 +8,19 @@ App should be implemented in the way to reach the most users. It should handle t
 
 It is recommended that all text content used in the application, including `contentDescriptions`, is implemented using Android resource framework. 
 
+It is also important to support localization because of accessibility services. even though TalkBack supports [various languages](https://support.google.com/accessibility/android/answer/11101402?hl=en), not all of the are supported on every Android version.
+
 **Server-driven application**
 
 If the application is server driven and most of the content is depending on the backend output, it is important to create logic where the app will on launch send information about the current locale. In that scenario, backend should based on the received information about current locale, return the content in the corresponding language.
+
+:white_check_mark: **Success criteria**
+
+- application's content  is localized based on the current locale
+
+:no_entry_sign: **Failure criteria**
+
+- the default language of the app is hardcoded and it is impossible to change it 
 
 ## Predictable 
 
