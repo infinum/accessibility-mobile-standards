@@ -48,6 +48,9 @@ _Help users avoid and correct mistakes._
 
 If an error occurs on the item that the user is interacting with, the one should be clearly defined and described to the user.
 
+It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible because the ones already have the most of accessibility capabilities that your app needs.
+
+// GO INTO DETAILS -> LOOK INTO CUSTOM ACCESSIBILITY EVENTS
 
 ### Labels or instruction
 
