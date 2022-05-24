@@ -4,6 +4,22 @@ _User interface components and navigation must be operable._
 
 In this section we will describe guidelines and define examples of implementation that will help in making your application more operable. 
 
+## Keyboard accessible
+
+Except on-screen keyboard, Android also supports physical keyboards that offer convenient way to input text but also to navigate and interact with the app. This is also of huge benefit for the users with motor difficulties that use Switch Access service to interact with the app. 
+
+- Handle tab navigation
+
+When the is navigating through he app **using Tab key** on the keyboard, the system passes focus based on the the order elements are appeared on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. 
+
+// EXAMPLE without relative layout 
+
+- Handle directional navigation
+
+When the user is navigating through the app **using arrow keys on the keyboard**, the system provides the best-guess as to which view should be given focus in the given direction based on the layout of the views on the screen. This behavior corresponds to navigating using D-pad or trackball. But, there are situation when the system could make wrong guess and in that case it is important to manually specify which view should receive focus. This could be achieved using following attributes: `android:nextFocusUp`, `android:nextFocusDown`, `android:nextFocusLeft` and `android:nextFocusRight`.
+
+// EXAMPLE
+
 ## Enough time
 
 _Provide users enough time to read and use content._
