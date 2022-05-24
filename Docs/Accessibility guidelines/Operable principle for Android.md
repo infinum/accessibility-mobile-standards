@@ -12,13 +12,54 @@ Except on-screen keyboard, Android also supports physical keyboards that offer c
 
 When the is navigating through he app **using Tab key** on the keyboard, the system passes focus based on the the order elements are appeared on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. 
 
-// EXAMPLE without relative layout 
+Example is given in the snippet down below: // TODO add other example with ConstraintLayout 
+
+```
+<RelativeLayout ...>
+    <Button
+        android:id="@+id/button1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:nextFocusForward="@+id/editText1"
+        ... />
+    <Button
+        android:id="@+id/button2"
+        android:layout_below="@id/button1"
+        android:nextFocusForward="@+id/button1"
+        ... />
+    <EditText
+        android:id="@id/editText1"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toLeftOf="@id/button2"
+        android:nextFocusForward="@+id/button2"
+        ...  />
+    ...
+</RelativeLayout>
+
+```
 
 - Handle directional navigation
 
 When the user is navigating through the app **using arrow keys on the keyboard**, the system provides the best-guess as to which view should be given focus in the given direction based on the layout of the views on the screen. This behavior corresponds to navigating using D-pad or trackball. But, there are situation when the system could make wrong guess and in that case it is important to manually specify which view should receive focus. This could be achieved using following attributes: `android:nextFocusUp`, `android:nextFocusDown`, `android:nextFocusLeft` and `android:nextFocusRight`.
 
-// EXAMPLE
+Example is given in the snippet down below: // TODO add other example
+
+```
+<Button
+    android:id="@+id/button1"
+    android:nextFocusRight="@+id/button2"
+    android:nextFocusDown="@+id/editText1"
+    ... />
+<Button
+    android:id="@id/button2"
+    android:nextFocusLeft="@id/button1"
+    android:nextFocusDown="@id/editText1"
+    ... />
+<EditText
+    android:id="@id/editText1"
+    android:nextFocusUp="@id/button1"
+    ...  />
+```
 
 ## Enough time
 
