@@ -108,7 +108,7 @@ If the app you are building includes media content such as video clip or audio r
 
 ## Adaptable 
 
-### Info and Relationships
+### Info and Relationships & Meaningful sequence
 
 - Groups of related content
 
@@ -190,37 +190,6 @@ The example is given in the snippet down below:
     </ConstraintLayout>
 </ConstraintLayout>
 ```
-
-:white_check_mark: **Success criteria**
-
-// TO-DO
-
-:no_entry_sign: **Failure criteria**
-
-// TO-DO
-
-### Meaningful sequence
-
-- Pairs od elements where one describes the other
-
-It is common case that given EditText has corresponding View that describes the content that the user should enter within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
-
-That way, services such as TalkBack will read defined relationship to the user to give him a bit more context when EditText is in focus.
-
-An example of labeling such element pair is given in the following snippet:
-
-```
-<!-- Label text for en-US locale would be "Username:" -->
-<TextView
-   android:id="@+id/usernameLabel" ...
-   android:text="@string/username"
-   android:labelFor="@+id/usernameEntry" />
-
-<EditText
-   android:id="@+id/usernameEntry" ... />
-```
-
-In the given example, services such as TalkBack will read - "EditBox for username" when user sets focus to EditText.
 
 :white_check_mark: **Success criteria**
 
