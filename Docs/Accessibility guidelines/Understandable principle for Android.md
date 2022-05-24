@@ -28,6 +28,9 @@ _Help users avoid and correct mistakes._
 
 ### Error identification
 
+If an error occurs on the item that the user is interacting with, the one should be clearly defined and described to the user.
+
+
 ### Labels or instruction
 
 When the accessibility services user focuses some sort of input view (for example in the form or login screen or something else) it is important to give him enough information about the type of input that is expected from him to provide.
@@ -55,11 +58,11 @@ In the given example, services such as TalkBack will read - "EditBox for usernam
 
 :white_check_mark: **Success criteria**
 
--- input views are paired with other description in a way that they provide meaningful information about required input type
+- input views are paired with other description in a way that they provide meaningful information about required input type
 
 :no_entry_sign: **Failure criteria**
 
--- input views have no additional descriptions provided about required input type 
+- input views have no additional descriptions provided about required input type 
 
 
 
