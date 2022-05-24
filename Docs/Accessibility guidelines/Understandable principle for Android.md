@@ -2,6 +2,8 @@
 
 ## Readable
 
+_Make text content readable and understandable._
+
 ### Language of the App
 
 App should be implemented in the way to reach the most users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It  should provide text alternative for, at least English language, if the one is not the default language of the app. 
