@@ -23,6 +23,6 @@ This repository contains mobile standards created for mobile platforms. It inclu
   
     * Common practices per mobile platform
 
-    * [Testing accessibility features](Docs/Accessibility%20guidelines/Testing%20accessibility%20feature.md)
+    * [Testing accessibility features](Docs/Accessibility%20guidelines/Testing%20accessibility%20features.md)
 
 4. Conclusion
