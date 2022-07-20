@@ -48,13 +48,15 @@ Provide alternatives for time-based media.
 
 ### Captions support for prerecorded media
 
-Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be prerecorded audio or video track. To make that content accessible to all users, in some cases, support for some accessibility features must be added.
+Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be prerecorded audio or video track. In some cases it is necessary to add support for some accessibility features to make this content accessible to all users.
 
 #### Success techniques
 
 ##### Using AVPlayer with captions
 
-One way of making the prerecorded media accessible is by adding captions. Most modern software supports adding captions to the video, and `AVPlayer` from `AVFoundation` automatically supports it. User should enable accessibility feature called *Closed Captions* by going to *Settings > Accessibility > Subtitles & Captioning > Closed Captions + SDH*. When it is enabled, captions will be shown in the media, which contains captions.
+One way of making the prerecorded media accessible is by adding captions. Most modern software supports adding captions to the video, and `AVPlayer` from `AVFoundation` automatically supports it.
+
+To be able to see captions in media that contains it, user needs to have *Closed Captions* enabled. This accessibility feature can be toggled in *Settings > Accessibility > Subtitles & Captioning > Closed Captions + SDH*.
 
 ##### Custom solution with accessibility notifications
 
@@ -97,7 +99,7 @@ final class VideoViewController: UIViewController {
 
 ##### Using transcripts
 
-To provide the information for the users for both prerecorded audio and prerecorded video, one way of providing the information is by transcripts (text). If defined correctly, text on the screen can be read by VoiceOver for people with visibility issues, while people with hearing issues can read the transcript. This way, both scenarios are satisfied without a need to provide captions.
+Supplying transcripts is another way of providing users with information in prerecorded audio or video. If defined correctly, text on the screen can be read by VoiceOver for people with visibility issues, while people with hearing issues can read the transcript. This way, both scenarios are satisfied without a need to provide captions.
 
 #### Additional notes
 
@@ -111,7 +113,7 @@ Create content that can be presented differently without losing information or s
 
 Every accessible element on the screen should hold information about itself, and it should be identifiable. From the web perspective, this is defined as a definition of the regions and elements on the page, while on the mobile side, this can be used to identify components or different areas of the page.
 
-On the other hand, when thinking about the application screen, it is important to make the screen structure logical and easy to use. With that in mind, semantic views may improve users’ user experience, which uses accessibility features like VoiceOver. With that in hand goes the definition of the relationship, or connected elements- to give the user more context.
+Moreover, when thinking about application screen, it is important to make the screen structure logical and easy to use. With that in mind, semantic views that use accessibility features like VoiceOver may improve user experience. With that in hand goes the definition of the relationship, or connected elements (via container) - to give the user more context.
 
 #### Element information
 
@@ -119,17 +121,17 @@ Every accessibility element should hold information about itself, while its iden
 
 ##### Success techniques
 
-Most of the `UIKit` elements are, by default, accessibility elements. Still, if some of the elements should not be accessible or used as an accessibility element, that can be changed by setting with property `isAccessibilityElement` to `false`.
+Most of `UIKit` elements are accessibility elements by default. Still, if some of the elements should not be accessible or used as an accessibility element, that can be changed by settings the `isAccessibilityElement` to `false`.
 
-Another important thing is to define the `accessibilityLabel` to all accessibility elements on a particular screen. By doing this, the user will be able to go through the elements and get the necessary information. The important thing to mention here is also to add accessibility labels to, e.g., groups or container views that hold multiple elements (e.g., form view).
+Another important thing is to define the `accessibilityLabel` to all accessibility elements on a particular screen. Also make sure to assign an accessibilityLabel on grouped or container views (e.g. form view). The important thing to mention here is also to add accessibility labels to, e.g., groups or container views that hold multiple elements (e.g., form view).
 
-The final thing to identify the element is to define its `accessibilityIdentifier`. The users do not see this property and are not used for accessibility features. Still, if component identification is needed for other purposes (like test automation), it can be set to identify different elements on the screen.
+The final thing to identify the element is to setup its `accessibilityIdentifier`. The users do not see this property and are not used for accessibility features. Still, if component identification is needed for other purposes (like test automation), it can be set to identify different elements on the screen.
 
 ##### Failures
 
 When thinking about accessibility information every application page will provide, it is bad to define all elements as accessibility elements. At the same time, some of them are not being used at all.
 
-Also, as mentioned in "Non-text content identification,” not all elements need to have a label and should not be accessible by the user.
+Also, as mentioned in "Non-text content identification" ﹣ not all elements need to have a label nor be accessible by the user.
 
 #### Element relationship
 
