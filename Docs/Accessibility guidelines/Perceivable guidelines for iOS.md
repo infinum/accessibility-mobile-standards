@@ -12,7 +12,7 @@ When talking about the screen elements, it is important to make information of a
 
 Some users may have issues identifying elements’ functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
 
-#### Success techniques
+#### ✅ Success techniques
 
 ##### Using accessibility labels
 
@@ -34,7 +34,7 @@ Alongside the accessibility label, iOS as a platform supports the definition of 
 addButton.accessibilityHint = "Adds a new task"
 ```
 
-#### Failures
+#### 🚫 Failures
 
 Sometimes it is not a good idea to give accessibility labels to all screen elements. Some elements may only be defined as decorative elements that do not affect the screen functionality (e.g., small elements like images used for screen decoration). In that case, labeling elements like that may confuse the user.
 
@@ -50,7 +50,7 @@ Provide alternatives for time-based media.
 
 Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be prerecorded audio or video track. In some cases it is necessary to add support for some accessibility features to make this content accessible to all users.
 
-#### Success techniques
+#### ✅ Success techniques
 
 ##### Using AVPlayer with captions
 
@@ -119,7 +119,7 @@ Moreover, when thinking about application screen, it is important to make the sc
 
 Every accessibility element should hold information about itself, while its identification may be optional.
 
-##### Success techniques
+##### ✅ Success techniques
 
 Most of `UIKit` elements are accessibility elements by default. Still, if some of the elements should not be accessible or used as an accessibility element, that can be changed by settings the `isAccessibilityElement` to `false`.
 
@@ -127,7 +127,7 @@ Another important thing is to define the `accessibilityLabel` to all accessibili
 
 The final thing to identify the element is to setup its `accessibilityIdentifier`. The users do not see this property and are not used for accessibility features. Still, if component identification is needed for other purposes (like test automation), it can be set to identify different elements on the screen.
 
-##### Failures
+##### 🚫 Failures
 
 When thinking about accessibility information every application page will provide, it is bad to define all elements as accessibility elements. At the same time, some of them are not being used at all.
 
@@ -137,7 +137,7 @@ Also, as mentioned in "Non-text content identification" ﹣ not all elements nee
 
 Many UI components should work together to create a context for the user. For example, if there is a list of components with two labels inside, one with a title and another for the value, it may be good to read those two labels as one sentence to give more context.
 
-##### Success techniques
+##### ✅ Success techniques
 
 In iOS, we can use semantic views or, in other words, the accessibility container technique to create a relationship or give a better context of some (custom) component that may contain more components inside itself.
 
@@ -176,7 +176,7 @@ In this example, when the user goes through cells, there will be no need to go i
 
 Also, if there is a need to define actions or gestures inside components like this, it is important to change the state of the `isAccessibilityElement`. In this case, the value for the cell should be set to `false`, while the action or a gesture (as a child) element should set that value to `true`. One other thing needed for this to work is to define `accessibilityElements` on the cell level.
 
-#### Failures
+#### 🚫 Failures
 
 By not connecting or adding context to the elements or inner elements of the component, there is a chance to create a bad user experience and confusion in the app usage.
 
@@ -184,7 +184,7 @@ By not connecting or adding context to the elements or inner elements of the com
 
 In iOS, screen elements are consumed from the top left to the bottom right. This is a standard way in which most screens work correctly in most scenarios. Still, we should always provide the best experience to the user, even if elements are not structured in a preferred way.
 
-#### Success techniques
+#### ✅ Success techniques
 
 As mentioned in the "Element relationship", we can define sequences on the same or parent-child level to get the element’s context. We provide a better user experience and more information to the user by doing that.
 
@@ -219,7 +219,7 @@ final class SomeViewController: UIViewController {
 
 In this example, we changed the order of how elements will be read, and we’ve forced to read the button information last instead of the value label, which is the last element on the view.
 
-#### Failures
+#### 🚫 Failures
 
 Even if we as developers control the order of the elements, try not to make sequences that are not logical or to produce "jumps" between UI components.
 
@@ -227,7 +227,7 @@ Even if we as developers control the order of the elements, try not to make sequ
 
 Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
 
-#### Success techniques
+#### ✅ Success techniques
 
 To make our app entirely understandable to the users, we should not rely only on one characteristic to show the user elements on the screen. You can find different ways to satisfy this aspect in the text below.
 
@@ -276,9 +276,9 @@ In the same way as "Differentiate without a color" can be used, "Button shapes" 
 
 You can define button shapes or different appearances of the buttons based on the provided designs.
 
-#### Failures
+#### 🚫 Failures
 
-Some of the failures regarding this aspect are:
+Some of the 🚫 Failures regarding this aspect are:
 
 * Creating elements that are not identifiable by design (e.g., a label and a button without a shape)
 * Not applying design changes when user preferences change in system settings
