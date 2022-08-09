@@ -1,10 +1,18 @@
 # Android accessibility features overview
 
-Accessibility is very important part of any app and it should be considered during whole development process. If properly implemented, accessibility features and services can significantly improve your app's usability especially for users with disabilities, but also in general. In this chapter we are going to introduce available Android accessibility features.
+It is very important that the app you are developing is accessible to all users. Accessibility should be considered during whole development process. If properly implemented, accessibility features and services can significantly improve your app's usability especially for users with disabilities, but also in general. 
+
+In this chapter we are going to introduce some of the most frequently used Android accessibility features. The whole list off all available accessibility features and services alongside with quick guide on how to use them could be found on official [Android Accessibility Help page](https://support.google.com/accessibility/android#topic=6007234).
+
+Also, important thing to stress out is that only limited set of accessibility services could be supported from the implementation perspective. Others will work out of the box. Meaning, you can not add some custom implementation in order to make your app behave in different way when that specific feature is on. 
+
+The services you could supports through app implementation will be marked with :large_green_circle.
 
 ## Vision support features
 
-### TalkBack
+### Screen readers
+
+:large_green_circle **Talkback**
 
 The TalkBack is the Google screen reader available on Android devices that allows you to control your app eyes-free.
 
@@ -24,9 +32,9 @@ Detailed description of all TalkBack configuration could be found on official [A
 
 ### Text and display settings
 
-**Font size**
+:large_green_circle **Font size**
 
-The user has the ability to change the font size of the text that will be displayed on his Android device. The regular scale of font is 1.0. Maximum scale that Android devices support is 2.0 and the minimum is ??.
+The user has the ability to change the font size of the text that will be displayed on his Android device. The regular scale of font is 1.0. Maximum scale that Android devices support is 2.0 and the minimum is 0.8.
 
 It is important that applications support font changes and its design to remain consistent after the changes are applied in order to help users with vision impairments. 
 
@@ -54,17 +62,13 @@ Color blindness is commonly divided into three types:
 
 User can, depending on the type of deficiency, choose appropriate option for color correction in phone settings. After choosing appropriate option color correction feature changes how colors are displayed in order to help users to more easily distinguish differences. 
 
-**Color inversion and dark theme**
+:large_green_circle **Color inversion and dark theme**
 
 Some users find it easier to read light text on a dark background either in the long run or in some special conditions (example: when it is really bright outside). 
 
 On Android version 10 and up there is an option to turn on Dark theme on your device. Enabling dark theme on your device will automatically convert existing system colors to their dark alternatives. This option does not apply to pictures to videos. Also, applications that do not support dark theme will also not be converted.
 
-That is why there is another option with similar effect called color inversion. But in this case inversion of colors will be applied to everything on your device, including media. 
-
-**Remove animations**
-
-// TBD
+That is why there is another option with similar effect called color inversion. But in this case inversion of colors will be applied to everything on your device, including media.
 
 **High contrast text**
 
@@ -74,11 +78,13 @@ High contrast has similar effect to text as dark theme to whole device UI. This 
 
 **How it works**
 
-// TBD
+
 
 ## Mobility support features
 
-### Switch Access
+### Interaction controls
+
+:large_green_circle **Switch access**
 
 The Switch Access application lets you interact with your Android device using one or more switches or a keyboard instead of the touchscreen. Switch Access is primarily designed to help users with limited dexterity.
 
@@ -98,9 +104,6 @@ There are three different types of switches:
 
 Detailed description of all Switch Access configuration could be found on official [Android Accessibility Help - Switch Access page](https://support.google.com/accessibility/android/answer/6122836?hl=en&ref_topic=6151780).
 
-### Voice Access
-
-// TBD
 
 
 
