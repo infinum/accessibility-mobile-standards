@@ -6,13 +6,13 @@ In this chapter we are going to introduce some of the most frequently used Andro
 
 Also, important thing to stress out is that only limited set of accessibility services could be supported from the implementation perspective. Others will work out of the box. Meaning, you can not add some custom implementation in order to make your app behave in different way when that specific feature is on. 
 
-The services you could supports through app implementation will be marked with :large_green_circle.
+The services you could supports through app implementation will be marked with :large_green_circle:.
 
 ## Vision support features
 
 ### Screen readers
 
-:large_green_circle **Talkback**
+:large_green_circle: **Talkback**
 
 The TalkBack is the Google screen reader available on Android devices that allows you to control your app eyes-free.
 
@@ -32,7 +32,7 @@ Detailed description of all TalkBack configuration could be found on official [A
 
 ### Text and display settings
 
-:large_green_circle **Font size**
+:large_green_circle: **Font size**
 
 The user has the ability to change the font size of the text that will be displayed on his Android device. The regular scale of font is 1.0. Maximum scale that Android devices support is 2.0 and the minimum is 0.8.
 
@@ -62,7 +62,7 @@ Color blindness is commonly divided into three types:
 
 User can, depending on the type of deficiency, choose appropriate option for color correction in phone settings. After choosing appropriate option color correction feature changes how colors are displayed in order to help users to more easily distinguish differences. 
 
-:large_green_circle **Color inversion and dark theme**
+:large_green_circle: **Color inversion and dark theme**
 
 Some users find it easier to read light text on a dark background either in the long run or in some special conditions (example: when it is really bright outside). 
 
@@ -84,7 +84,7 @@ High contrast has similar effect to text as dark theme to whole device UI. This 
 
 ### Interaction controls
 
-:large_green_circle **Switch access**
+:large_green_circle: **Switch access**
 
 The Switch Access application lets you interact with your Android device using one or more switches or a keyboard instead of the touchscreen. Switch Access is primarily designed to help users with limited dexterity.
 
