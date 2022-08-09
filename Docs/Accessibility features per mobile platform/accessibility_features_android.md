@@ -16,7 +16,7 @@ The services you could supports through app implementation will be marked with :
 
 The TalkBack is the Google screen reader available on Android devices that allows you to control your app eyes-free.
 
-**How it works**
+**>> How it works <<**
 
 When you [turn on TalkBack on your android device](https://support.google.com/accessibility/android/answer/6007100), you will be able to explore your app using touches and swipes.
 
@@ -40,7 +40,7 @@ It is important that applications support font changes and its design to remain 
 
 **Display size**
 
-The user has ability to change size of his display (screen zoom in/out) in order to improve visibility of items on the screen. 
+The user has ability to make items on the screen smaller or larger in order to improve their visibility. 
 
 **Bold fonts**
 
@@ -76,9 +76,13 @@ High contrast has similar effect to text as dark theme to whole device UI. This 
 
 ### Magnification
 
-**How it works**
+This feature gives you the ability to zoom in content displayed on your screen temporarily or in a more permanent way, based on the option the user has chosen in the Settings of the phone.
 
+**>> How it works <<**
 
+If the user has chosen the option to zoom in temporarily he will be able to touch and hold to zoom in specific part of the screen. Once the user releases the press the content will be zoomed out to initial state.
+
+If the user has chosen the option to zoom in more permanently he will be able to touch anywhere on the screen to zoom it in. Also the user will be able to move around a screen with 2 fingers or pinch with 2 fingers to adjust zoom.
 
 ## Mobility support features
 
@@ -88,7 +92,7 @@ High contrast has similar effect to text as dark theme to whole device UI. This 
 
 The Switch Access application lets you interact with your Android device using one or more switches or a keyboard instead of the touchscreen. Switch Access is primarily designed to help users with limited dexterity.
 
-**How it works**
+**>> How it works <<**
 
 The application works in a way that is scans the items on the screen, highlighting each item in a turn, until you make a selection.
 
