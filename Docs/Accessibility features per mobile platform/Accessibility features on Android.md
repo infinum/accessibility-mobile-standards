@@ -66,7 +66,7 @@ User can, depending on the type of deficiency, choose appropriate option for col
 
 Some users find it easier to read light text on a dark background either in the long run or in some special conditions (example: when it is really bright outside). 
 
-On Android version 10 and up there is an option to turn on Dark theme on your device. Enabling dark theme on your device will automatically convert existing system colors to their dark alternatives. This option does not apply to pictures to videos. Also, applications that do not support dark theme will also not be converted.
+On Android version 10 and up there is an option to turn on Dark theme on your device. Enabling dark theme on your device will automatically convert existing system colors to their dark alternatives. This option does not apply to pictures and videos. **Also, applications that do not support dark theme will also not be converted.**
 
 That is why there is another option with similar effect called color inversion. But in this case inversion of colors will be applied to everything on your device, including media.
 
@@ -80,9 +80,9 @@ This feature gives you the ability to zoom in content displayed on your screen t
 
 **>> How it works <<**
 
-If the user has chosen the option to zoom in temporarily he will be able to touch and hold to zoom in specific part of the screen. Once the user releases the press the content will be zoomed out to initial state.
+If the chosen option is to zoom in temporarily, the user will be able to touch and hold to zoom in specific part of the screen. Once the user releases the press the content will be zoomed out to initial state.
 
-If the user has chosen the option to zoom in more permanently he will be able to touch anywhere on the screen to zoom it in. Also the user will be able to move around a screen with 2 fingers or pinch with 2 fingers to adjust zoom.
+If the chosen option is to zoom in more permanently, the user will be able to touch anywhere on the screen to zoom it in. Also the user will be able to move around a screen with 2 fingers or pinch with 2 fingers to adjust zoom.
 
 ## Mobility support features
 
