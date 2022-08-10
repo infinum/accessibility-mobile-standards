@@ -102,7 +102,7 @@ There are three different types of switches:
 
 1. external switch - This is a device that sends keystroke signal to your Android device. These devices connect to your Android device via Bluetooth or USB.
 
-2. external keyboard - You could convert a standard USB or Bluetooth keyboard and use it as switch device by assigning one or more of its keys to actions
+2. external keyboard - You could convert a standard USB or Bluetooth keyboard and use it as switch device by assigning one or more of its keys to actions.
 
 3. buttons on your device - You could also use built-in buttons on Android device, such as the volume up and down buttons, and set up that they trigger actions. This option is mainly intended for developers.
 
