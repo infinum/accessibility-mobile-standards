@@ -8,7 +8,7 @@ _Provide text alternatives for any non-text content so that it can be changed in
 
 ### Non-text context
 
-Each UI element should include a description that describes it's purpose. It is important that all element presented on the screen have the description provided, especially the ones that are important for the functionality of the screen on which they are presented. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
+Each UI element should include a description that describes it's purpose. It is important that all elements presented on the screen have the description provided, especially the ones that are important for the functionality of the screen on which they are presented. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
 
 If an element exists on the UI only for decorative purposes it is recommended that you set its `contentDescription` to "null" or `android:importantForAccessibility` to "no" for devices running Android 4.1 and higher. 
 
@@ -16,7 +16,7 @@ If an element exists on the UI only for decorative purposes it is recommended th
 
 In most cases you can include required description in the layout resource file as the element's `contentDescription`. It is recommended to use string resources for defining all required descriptions for easier localization.
 
-The example is shown on the following snippet:
+**Code example:**
 
 ```
 <!-- The en-US value for the following string is "Inspect". -->
@@ -32,14 +32,16 @@ _Note:_ You should not provide descriptions for TextView elements because Androi
 
 When thinking about describing editable elements such as EditText objects, it is usually helpful to provide text that give examples of valid input in the element itself. That way, users who navigate through the app using screen readers, could get a bit more info about the required input when they focus the editable element. 
 
-In these situations it is recommended to use `android:hint` attribute: 
+In these situations it is recommended to use `android:hint` attribute.
+
+**Code example:**
 
 ```
 <!-- The hint text for en-US locale would be
-     "Apartment, suite, or building". -->
+     "Username". -->
 <EditText
-   android:id="@+id/addressLine2"
-   android:hint="@string/aptSuiteBuilding" ... />
+   android:id="@+id/usernameInputField"
+   android:hint="@string/username_hint_text" ... />
 ```
 
 
@@ -52,6 +54,8 @@ This will help users to get general idea when they've cycled through the complet
 In particular, you should provide additional text or contextual information in elements within reused layouts, such as RecyclerView or ListView objects, so that each child element is uniquely identified.
 
 The described requests could be achieved by setting content description as part of adapter implementation.
+
+**Code example:**
 
 An example of defining content description in adapter is given in the following snippet:
 
@@ -114,7 +118,7 @@ If multiple UI elements that form a natural group should be displayed on the scr
 
 Grouping elements based on the context helps users that benefit from using accessibility services to discover the information that is on the screen more efficiently.
 
-The example of grouping elements is given in the following snippet:
+**Code example:**
 
 ```
 <!-- In response to a single user interaction, accessibility services announce
@@ -140,7 +144,7 @@ _Note:_ In cases like this it is recommended to define content descriptions as s
 
 It is possible to override the platform's default grouping and ordering of a group's inner element descriptions by providing a content description for the group itself.
 
-The example is given in the snippet down below:
+**Code example:**
 
 ```
 <!-- In response to a single user interaction, accessibility services announce the custom content description for the group. -->
@@ -166,7 +170,7 @@ android:contentDescription="@string/title_artist_best_song">
 
 If the app you are building provides multi-dimensional information, it is recommended to use the `android:screenReaderFocusable` attribute on the inner group containers. That kind of grouping and labeling will provide good balance between number of announcements needed to discover the screen's content and the length of each announcement.
 
-The example is given in the snippet down below:
+**Code example:**
 
 ```
 <!-- In response to a single user interaction, accessibility services announce the events for a single stage only. -->
@@ -211,7 +215,7 @@ It is common case that given EditText has corresponding View that describes the 
 
 That way, services such as TalkBack will read defined relationship to the user to give him a bit more context when EditText is in focus.
 
-An example of labeling such element pair is given in the following snippet:
+**Code example:**
 
 ```
 <!-- Label text for en-US locale would be "Username:" -->
