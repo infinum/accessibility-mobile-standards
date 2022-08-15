@@ -6,6 +6,8 @@ All content that is displayed on the screen at some point must be presented to t
 
 _Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language._
 
+:white_check_mark: **Success criteria**
+
 ### Non-text context
 
 Each UI element should include a description that describes it's purpose. It is important that all elements presented on the screen have the description provided, especially the ones that are important for the functionality of the screen on which they are presented. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
@@ -76,12 +78,6 @@ class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
 }
 ```
 
-:white_check_mark: **Success criteria**
-
-- all the relevant UI views have unique, concise and self-explanatory description defined
-
-- all the descriptions are localized properly 
-
 :no_entry_sign: **Failure criteria**
 
 - there are relevant UI view with no description provided
@@ -96,21 +92,23 @@ class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
 
 **Make media content more accessible**
 
+:white_check_mark: **Success criteria**
+
 If the app you are building includes media content such as video clip or audio recording, it is suggested to provide alternative for users with different types of accessibility needs in order for them to understand the material. The suggested practice would be to:
 
-- include controls that allow users ro pause and stop media, change volume and toggle subtitles (captions)
+- include controls that allow users to pause and stop media, change volume and toggle subtitles (captions)
 
 - if a video presents information that is vital to completing workflow, provide the same content in an alternative format, such as transcript
 
-// TO-DO ADD CODE examples
-
-:white_check_mark: **Success criteria**
-
 :no_entry_sign: **Failure criteria**
 
-## Adaptable 
+- all media is presented to the user without the possibility to change some of the controls (slow down, pause, volume up etc.)
+
+## Adaptable
 
 ### Info and Relationships
+
+:white_check_mark: **Success criteria**
 
 - Groups of related content
 
@@ -199,15 +197,13 @@ It is also possible to use _headings_ to summarize groups of text that appear on
 
 That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
 
-:white_check_mark: **Success criteria**
-
-// TO-DO
-
 :no_entry_sign: **Failure criteria**
 
-// TO-DO
+- it is not clear which parts of the screen are contextually connected to each other
 
 ### Meaningful sequence
+
+:white_check_mark: **Success criteria**
 
 - Pairs od elements where one describes the other
 
@@ -230,27 +226,21 @@ That way, services such as TalkBack will read defined relationship to the user t
 
 In the given example, services such as TalkBack will read - "EditBox for username" when user sets focus to EditText.
 
-:white_check_mark: **Success criteria**
-
-// TO-DO
-
 :no_entry_sign: **Failure criteria**
 
-// TO-DO
+- not providing enough context for the views that expect user interaction
 
 ### Sensory characteristics
 
+:white_check_mark: **Success criteria**
+
 It is important that the content provided in your app is easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different view and different actions that those views provide. That way users with color vision deficiencies could also easily understand the whole UI. 
 
-The example is given in the screenshots down below. On the Screenshot 1. there is example of the bills UI in MojA1 app. The only difference between paid and unpaid bills in the list is the color. Unpaid bills are presented in red color instead of the regular black. For users with color vision deficiencies this could be a problem. A better solution is provided on theScreenshot 2.. There is example of the bills UI in MojTomato app. As you can see, unpaid bills are presented there with different symbol instead of color and that way users could more easily distinguish there is difference between items presented in the list.
+The example is given in the screenshots down below. On the Screenshot 1. there is example of the bills UI in MojA1 app. The only difference between paid and unpaid bills in the list is the color. Unpaid bills are presented in red color instead of the regular black. For users with color vision deficiencies this could be a problem. A better solution is provided on the Screenshot 2. There is example of the bills UI in MojTomato app. As you can see, unpaid bills are presented there with different symbol instead of color and that way users could more easily distinguish there is difference between items presented in the list.
 
 | <img src="https://imgur.com/RcsRuYf.png" width="50%"> | <img src="https://imgur.com/pWejQkl.png" width="50%"> |
 |:--:|:--:|
 | **Screenshot 1.** MojA1 App bills | **Screenshot 2.** MojTomato App bills |
-
-:white_check_mark: **Success criteria**
-
-- difference in actions between similar items is described using both colors and graphics -> Screenshot 2.
 
 :no_entry_sign: **Failure criteria**
 
