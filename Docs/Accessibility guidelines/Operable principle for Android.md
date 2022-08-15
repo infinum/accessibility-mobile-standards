@@ -6,13 +6,15 @@ In this section we will describe guidelines and define examples of implementatio
 
 ## Keyboard accessible
 
+:white_check_mark: **Success criteria**
+
 Except on-screen keyboard, Android also supports physical keyboards that offer convenient way to input text but also to navigate and interact with the app. This is also of huge benefit for the users with motor difficulties that use Switch Access service to interact with the app. 
 
 - Handle tab navigation
 
 When the is navigating through he app **using Tab key** on the keyboard, the system passes focus based on the the order elements are appeared on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. 
 
-Example is given in the snippet down below: // TODO add other example with ConstraintLayout 
+**Code example:** // TODO add other example with ConstraintLayout 
 
 ```
 <RelativeLayout ...>
@@ -42,7 +44,7 @@ Example is given in the snippet down below: // TODO add other example with Const
 
 When the user is navigating through the app **using arrow keys on the keyboard**, the system provides the best-guess as to which view should be given focus in the given direction based on the layout of the views on the screen. This behavior corresponds to navigating using D-pad or trackball. But, there are situation when the system could make wrong guess and in that case it is important to manually specify which view should receive focus. This could be achieved using following attributes: `android:nextFocusUp`, `android:nextFocusDown`, `android:nextFocusLeft` and `android:nextFocusRight`.
 
-Example is given in the snippet down below: // TODO add other example
+**Code example:** 
 
 ```
 <Button
@@ -61,21 +63,21 @@ Example is given in the snippet down below: // TODO add other example
     ...  />
 ```
 
+:no_entry_sign: **Failure criteria**
+
+- not defining custom order if the views it the layout file are not defined in the same order they should be presented to the user
+
 ## Enough time
 
 _Provide users enough time to read and use content._
 
-All the users should have ability to interact with the content displayed on the screen even if there is time limit defined for interaction with that specific view. Therefore, users should have the ability to turn off defined time-limit, adjust it or extend it.
-
-- In case of session inactivity it is recommended to notify the user that he is about to be signed off with ability to extend that time-limit. The notification could be displayed in form of Alert or something similar. TalkBack service tells you about alerts and notifications so users using accessibility services would also be aware of the defined limit. 
-
-// TO-DO add example
-
-- In case of auto-updating content it is recommended to allow user to extend the defined time-limit to at least ten times the length of the default setting for everyone to be able to process the displayed information. 
-
 :white_check_mark: **Success criteria**
 
-// TO-DO
+All the users should have ability to interact with the content displayed on the screen even if there is time limit defined for interaction with that specific view. Therefore, users should have the ability to turn off defined time-limit, adjust it or extend it.
+
+- In case of session inactivity it is recommended to notify the user that will about to be signed off with ability to extend that time-limit. The notification could be displayed in form of Alert or something similar. TalkBack service tells you about alerts and notifications so users using accessibility services would also be aware of the defined limit.
+
+- In case of auto-updating content it is recommended to allow user to extend the defined time-limit to at least ten times the length of the default setting for everyone to be able to process the displayed information.
 
 :no_entry_sign: **Failure criteria**
 
@@ -89,9 +91,11 @@ _Provide ways to help users navigate, find content, and determine where they are
 
 ### Bypass Blocks
 
+:white_check_mark: **Success criteria**
+
 The app should be implemented in a way that it is possible to relatively easy skip the content that is repeated on the screen or the content that is irrelevant to the user.
 
-This is feature is based on well on a good implementation of grouping the views that are displayed in the app. // TO-DO add link to section Adaptable in Perceivable guidelines
+This is feature is based on a good implementation of grouping the views that are displayed in the app as described in [link to perceivable guidelines].
 
 For example, accessibility services users should be able to skip the whole RecyclerView list if the content is irrelevant to them without having to go through each item in the list. 
 
@@ -101,13 +105,7 @@ It is also possible to use _headings_ to summarize groups of text that appear on
 
 That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
 
-// ADD SNIPPETS OF IMPLEMENTATION and example
-
-:white_check_mark: **Success criteria**
-
-- content is properly grouped depending on the context as described in [link to perceivable guidelines]
-
-- user is possible to relatively easily skip specific sections on the screen
+// TODO ADD SNIPPETS OF IMPLEMENTATION and example
 
 :no_entry_sign: **Failure criteria**
 
@@ -139,15 +137,17 @@ The example of using `android:accessibilityTraversalBefore` or `android:accessib
 
 // TO-DO add screenshot of real app and set the attributes 
 
-_Note 1. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes ina a way that does not create any loops or traps that will prevent users to interact with all relevant views displayed on the screen._
+_Note 1. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes in a way that does not create any loops or traps that will prevent users to interact with all relevant views displayed on the screen._
 
-_Note 2. _ 
+**Code example:**
 
-Example: 
+// TODO
 
-
+:no_entry_sign: **Failure criteria**
 
 ### Link Purpose 
+
+:white_check_mark: **Success criteria**
 
 All the links that are displayed in the application's components and screens should explain its unique purpose. This is important because based on the provided descriptions users would get a better idea if they want to follow provided link or not. 
 
@@ -176,12 +176,6 @@ Example given on the **Screenshot 4.** - **Avoid using ClickableSpan** and inste
 | **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** Link implemented as regular TextView or Button |
 | <img src="https://imgur.com/wj8hWQy.png" width="50%"> | <img src="https://imgur.com/b833Hol.png" width="50%"> |
 | **Screenshot 3.** Link text implemented using URLSpan | **Screenshot 4.** Link as part of longer text should be implemented using URLSpan |
-
-:white_check_mark: **Success criteria**
-
-- it is clear which part of the UI is link
-
-- defined description of the link view or link itself is providing enough information about its purpose
 
 :no_entry_sign: **Failure criteria**
 
