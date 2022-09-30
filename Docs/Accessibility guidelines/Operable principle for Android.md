@@ -14,30 +14,32 @@ Except on-screen keyboard, Android also supports physical keyboards that offer c
 
 When the is navigating through he app **using Tab key** on the keyboard, the system passes focus based on the the order elements are appeared on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. 
 
-**Code example:** // TODO add other example with ConstraintLayout 
+**Code example:** 
 
 ```
-<RelativeLayout ...>
+<ConstraintLayout ...>
     <Button
         android:id="@+id/button1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:nextFocusForward="@+id/editText1"
-        ... />
+    ... />
+
     <Button
         android:id="@+id/button2"
-        android:layout_below="@id/button1"
+        app:layout_constraintTop_toBottomOf="@id/button1"
         android:nextFocusForward="@+id/button1"
-        ... />
+    ... />
+
     <EditText
         android:id="@id/editText1"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toLeftOf="@id/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button2"
         android:nextFocusForward="@+id/button2"
-        ...  />
+    ... />
     ...
-</RelativeLayout>
-
+</ConstraintLayout>
 ```
 
 - Handle directional navigation
