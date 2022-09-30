@@ -12,4 +12,4 @@ When talking about accessibility, it is essential to consider the framework or g
 
 Currently, there is no standardization for most used platforms or frameworks when talking about mobile platforms. Still, as a base for accessibility on mobile is used [Web Content Accessibility Guidelines for Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/).
 
-[Next](../Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20per%20mobile%20platform.md)
+[[Next](../Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20per%20mobile%20platform.md)]
