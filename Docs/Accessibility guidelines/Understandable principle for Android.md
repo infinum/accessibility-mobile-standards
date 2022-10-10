@@ -10,11 +10,11 @@ App should be implemented in the way to reach the most users. It should handle t
 
 It is recommended that all text content used in the application, including `contentDescriptions`, is implemented using Android resource framework. 
 
-It is also important to support localization because of accessibility services. even though TalkBack supports [various languages](https://support.google.com/accessibility/android/answer/11101402?hl=en), not all of the are supported on every Android version.
+It is also important to support localization because of accessibility services.Even though TalkBack supports [various languages](https://support.google.com/accessibility/android/answer/11101402?hl=en), not all of them are supported on every Android version.
 
 **Server-driven application**
 
-If the application is server driven and most of the content is depending on the backend output, it is important to create logic where the app will on launch send information about the current locale. In that scenario, backend should based on the received information about current locale, return the content in the corresponding language.
+If the application is server-driven and most of the content is depending on the backend output, it is important to create logic where the app will on launch send information about the current locale. In that scenario, backend should based on the received information about current locale, return the content in the corresponding language.
 
 :white_check_mark: **Success criteria**
 
@@ -48,17 +48,17 @@ _Help users avoid and correct mistakes._
 
 ### Error identification
 
-If an error occurs on the item that the user is interacting with, the one should be clearly defined and described to the user.
+If an error occurs on the item that the user is interacting with, the one should be clearly defined and described so the user could have clear picture why the error occurred and what to do in order to fix it.
 
 It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible because the ones already have the most of accessibility capabilities that your app needs.
 
-// GO INTO DETAILS -> LOOK INTO CUSTOM ACCESSIBILITY EVENTS
+On the other hand, if your app requires implementation of custom components
 
 ### Labels or instruction
 
 When the accessibility services user focuses some sort of input view (for example in the form or login screen or something else) it is important to give him enough information about the type of input that is expected from him to provide.
 
-- Pairs od elements where one describes the other
+- Pairs of elements where one describes the other
 
 It is common case that given EditText has corresponding View that describes the content that the user should enter within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
 
