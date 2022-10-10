@@ -12,7 +12,7 @@ Except on-screen keyboard, Android also supports physical keyboards that offer c
 
 - Handle tab navigation
 
-When the is navigating through he app **using Tab key** on the keyboard, the system passes focus based on the the order elements are appeared on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. 
+When the user is navigating through he app **using Tab key** on the keyboard, the system passes focus based on the the order of elements appearing on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. 
 
 **Code example:** 
 
@@ -75,7 +75,7 @@ _Provide users enough time to read and use content._
 
 :white_check_mark: **Success criteria**
 
-All the users should have ability to interact with the content displayed on the screen even if there is time limit defined for interaction with that specific view. Therefore, users should have the ability to turn off defined time-limit, adjust it or extend it.
+All users should have ability to interact with the content displayed on the screen even if there is time limit defined for interaction with that specific view. Therefore, users should have the ability to turn off defined time-limit, adjust it or extend it.
 
 - In case of session inactivity it is recommended to notify the user that will about to be signed off with ability to extend that time-limit. The notification could be displayed in form of Alert or something similar. TalkBack service tells you about alerts and notifications so users using accessibility services would also be aware of the defined limit.
 
@@ -97,21 +97,55 @@ _Provide ways to help users navigate, find content, and determine where they are
 
 The app should be implemented in a way that it is possible to relatively easy skip the content that is repeated on the screen or the content that is irrelevant to the user.
 
-This is feature is based on a good implementation of grouping the views that are displayed in the app as described in [link to perceivable guidelines].
+This feature is also based on a good implementation of grouping the views that are displayed in the app as described in [link to perceivable guidelines].
 
 For example, accessibility services users should be able to skip the whole RecyclerView list if the content is irrelevant to them without having to go through each item in the list. 
 
 - Headings within text
 
-It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark some view to be treated as heading you can set `android:accessibilityHeading` to true.
+It is also possible to use _headings_ to summarize groups of text that appear on the screen. For apps with minSdk >= 28, to mark some view to be treated as heading you can set `android:accessibilityHeading` to true.
 
-That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
+That way users of accessibility services, after setting the _navigation mode_ to _Headers_, can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
 
-// TODO ADD SNIPPETS OF IMPLEMENTATION and example
+_Note 1. Navigation mode can be chosen by swiping **up** and **down** when using **TalkBack**. Once Headers is chosen as an Navigation option, the user will be able to navigate through **headers** by swiping right and left instead of navigating through single items._
+
+```
+<TextView
+    android:id="@+id/personalData" ...
+    android:text="@string/personal_data_heading"
+    android:accessibilityHeading="true"/>
+
+<EditText
+    android:id="@+id/nameEntry" ... />
+
+<EditText
+    android:id="@+id/surnameEntry" ... />
+
+<TextView
+    android:id="@+id/workplaceData" ...
+    android:text="@string/personal_data_heading"
+    android:accessibilityHeading="true"/>
+
+<EditText
+    android:id="@+id/addressEntry" ... />
+```
+
+For apps with minSdk < 28, headings can be defined programmatically using ViewCompat.
+
+The example is given down below:
+
+```
+ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
+    override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
+        super.onInitializeAccessibilityNodeInfo(host, info)
+        info?.setTraversalAfter(button2)
+    }
+})
+```
 
 :no_entry_sign: **Failure criteria**
 
-- user using accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation proccess
+- user using accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation process
 
 ### Page Titles
 
@@ -131,21 +165,45 @@ If title is defined using toolbar with custom behavior or some other custom view
 
 ### Traversal Order 
 
-Order of the components that are displayed on the screen should have logical traversal order. That is very important for people using accessibility services such as TalkBack to get clearer picture of the content and possible actions on the current screen they are navigating through.
+Order of the components that are displayed on the screen should have logical traversal order. That is very important for people using accessibility services (such as TalkBack) to get clearer picture of the content and possible actions on the current screen they are navigating through.
 
-The best solution would be to redesign the screen to create logical traversal order. But if that is not an option, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create new order of the displayed views that will make a bit more sense to TalkBack users.
+The best solution would be to redesign the screen to create logical traversal order. 
+
+But if that is not an option, on apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create new order of the displayed views that will make a bit more sense to TalkBack users.
 
 The example of using `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes is given down below:
 
-// TO-DO add screenshot of real app and set the attributes 
+```
+<Button
+    android:id="@+id/button1"
+    ... />
+<Button
+    android:id="@id/button2"
+    android:accessibilityTraversalAfter="@id/button3"
+    ... />
+<Button
+    android:id="@id/button3"
+    ...  />
+```
 
-_Note 1. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes in a way that does not create any loops or traps that will prevent users to interact with all relevant views displayed on the screen._
+_Note 2. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes in a way that does not create any loops or traps that will prevent users to interact with all relevant views displayed on the screen._
 
-**Code example:**
+In apps with minSdk < 22, traversal order can be defined programmatically using ViewCompat. 
 
-// TODO
+The example is given down below:
+
+```
+ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
+    override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
+        super.onInitializeAccessibilityNodeInfo(host, info)
+        info?.setTraversalAfter(button2)
+    }
+})
+```
 
 :no_entry_sign: **Failure criteria**
+
+- views displayed on the screen break consistency of navigation 
 
 ### Link Purpose 
 
