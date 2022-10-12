@@ -12,7 +12,7 @@ Except on-screen keyboard, Android also supports physical keyboards that offer c
 
 - Handle tab navigation
 
-When the user is navigating through he app **using Tab key** on the keyboard, the system passes focus based on the the order of elements appearing on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. 
+When the user is navigating through the app **using Tab key** on the keyboard, the system passes focus based on the the order of elements appearing on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. 
 
 **Code example:** 
 
@@ -67,7 +67,7 @@ When the user is navigating through the app **using arrow keys on the keyboard**
 
 :no_entry_sign: **Failure criteria**
 
-- not defining custom order if the views it the layout file are not defined in the same order they should be presented to the user
+- not defining custom order if the views in the layout file are not defined in the same order they should be presented to the user
 
 ## Enough time
 
@@ -135,10 +135,10 @@ For apps with minSdk < 28, headings can be defined programmatically using ViewCo
 The example is given down below:
 
 ```
-ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
+ViewCompat.setAccessibilityDelegate(personalData, object : AccessibilityDelegateCompat() {
     override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
         super.onInitializeAccessibilityNodeInfo(host, info)
-        info?.setTraversalAfter(button2)
+        info?.isHeading = true
     }
 })
 ```
@@ -149,13 +149,11 @@ ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompa
 
 ### Page Titles
 
+:white_check_mark: **Success criteria**
+
 Each screen should have clear, descriptive, if possible unique title that describes purpose of that screen that will be understandable to all users. Also, it is important to make sure that title is the first thing that will be read when user enters the screen. This could be achieved following design guidelines or with help of setting `android:accessibilityTraversalBefore` attribute.
 
 If title is defined using toolbar with custom behavior or some other custom view it is important to insure that title will be read using accessibility services.
-
-:white_check_mark: **Success criteria**
-
-- each screen has descriptive title defined that is read when user enters the screen
 
 :no_entry_sign: **Failure criteria**
 
@@ -233,9 +231,9 @@ Example given on the **Screenshot 4.** - **Avoid using ClickableSpan** and inste
 
 | <img src="https://imgur.com/X3njNIV.png" width="50%"> | <img src="https://imgur.com/6mI8z8W.png" width="50%"> |
 |:--:|:--:|
-| **Screenshot 1.** Text containing link is part of a longer text | **Screenshot 2.** Link implemented as regular TextView or Button |
+| **Screenshot 1.** Link paired with descriptive text element | **Screenshot 2.** Link implemented as regular TextView or Button |
 | <img src="https://imgur.com/wj8hWQy.png" width="50%"> | <img src="https://imgur.com/b833Hol.png" width="50%"> |
-| **Screenshot 3.** Link text implemented using URLSpan | **Screenshot 4.** Link as part of longer text should be implemented using URLSpan |
+| **Screenshot 3.** Link text implemented using URLSpan | **Screenshot 4.** Text containing link is part of a longer text |
 
 :no_entry_sign: **Failure criteria**
 
