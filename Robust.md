@@ -60,10 +60,10 @@ Every user interface element should have a unique accessibility label which can 
 
 ```swift
  addButton.accessibilityLabel = "Add"
- addButton.accessibilityHint = "Adds an entry in the list."
+ addButton.accessibilityHint = "Adds an entry in the list"
  ```
 
- For elements which carry a value, such as a label, the accessibility value should be used to represent this value.
+ For elements which carry a value, such as a label, the accessibility value should be used to represent this value. If the accessibility value is not set then the actual value (in this case, the text value) will be read.
 
  ```swift
  titleLabel.text = "Entries list"
