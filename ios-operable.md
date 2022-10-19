@@ -1,5 +1,3 @@
-
-
 # Operable
 
 User interface components and navigation must be operable.
@@ -18,7 +16,7 @@ For each time limit set by the content, user can turn off, adjust, or extend it.
 
 - Auto-updating content (like news page): allow user to extend the time limit to 10 times longer.
 
-- Real-time exception: time limit cannot be disabled/extended for a real-time event (e.g. an auction, booking movie tickets, watching live stream)
+- Real-time exception: time limit cannot be disabled/extended for a real-time event (e.g. an auction, booking movie tickets, watching live stream).
 
 - In case you're using a custom modal presentation or a custom modal view, make sure that UIAccessibility is notified about the screen change.
 
@@ -35,7 +33,7 @@ This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standa
 
 ### Pause, Stop, Hide
 
-Moving, blinking, or scrolling, or auto-updating content in the app
+Moving, blinking, or scrolling, or auto-updating content in the app.
 
 #### ✅ Success technique(s)
 
@@ -94,14 +92,15 @@ A skip mechanism is available to bypass blocks of content that are repated in th
 - An element containing many labels or buttons should also have a summary accessibility label so it takes less swipes to skip over it.
 
     **Example**: VoiceOver In Instagram main feed - Instagram stories are contained inside an "adjustable" accessibility group named "Stories Tray".
+    
     1. User arrives to the "Stories Tray" by either tapping it or using right swipes.
     2. VoiceOver announces the name and quick summary of this group, with "adjustable" hint at the end.
     3. User can then iterate through items (adjust) by swiping up and down.
     4. Once done reviewing stories, user can then right swipe to skip onto the next element on the screen.
+       
+    
+    If you want to try this out for yourself, we've prepared an [example project](https://github.com/infinum/ios-accessibility-demo) where we've recreated this exact behavior.
 
-```swift
-    // TODO: Find an example of this implementation.
-```
 #### 🚫 Failures
 
 Not providing a way for user to quickly skip over sections with numerous items.
@@ -212,9 +211,9 @@ This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.
 ---
 
 
-### Link Purpose
+### Action Purpose
 
-Purpose of a button or link is clear and easily understandable by all users
+Purpose of a button or link action is clear and easily understandable by all users
 
 #### ✅ Success technique(s)
 
