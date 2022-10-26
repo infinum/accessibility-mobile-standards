@@ -61,7 +61,7 @@ textField.rightView = someHelpButton
 ...
 
 func someHelpButtonAction() {
-	present(someInformativeViewController, animated: true)
+    present(someInformativeViewController, animated: true)
 }
 ```
 
@@ -71,12 +71,12 @@ Showing programmatically pre-planned popups, modals, or any unusual navigation n
 
 ```swift
 override func viewDidAppear(_ animated: Bool) {
-	super.viewDidAppear(animated)
+    super.viewDidAppear(animated)
   
-	viewAppearCount += 1
-	if viewAppearCount > 3 {
-		present(someInformativeViewController, animated: true)
-	}
+    viewAppearCount += 1
+    if viewAppearCount > 3 {
+        present(someInformativeViewController, animated: true)
+    }
 }
 ```
 
@@ -84,9 +84,9 @@ A form is submitted automatically when a certain UI element receives focus.
 
 ```swift
 func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-	if (textField == passwordTextField) {
-		performLogin()
-	}
+    if (textField == passwordTextField) {
+        performLogin()
+    }
 }
 ```
 
@@ -94,7 +94,7 @@ Focus is automatically moved to a different UI element when a given UI element r
 
 ```swift
 func textFieldDidBeginEditing(_ textField: UITextField) {
-	present(someInformativeViewController, animated: true)  
+    present(someInformativeViewController, animated: true)  
 }
 ```
 
