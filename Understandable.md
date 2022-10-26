@@ -10,7 +10,7 @@ Make text content readable and understandable.
 
 The default human language of an App can be programmatically determined.
 
-#### Success technique(s)
+#### ✅ Success technique(s)
 
 Specify the default language of the application in the HTTP headers of the API calls. 
 
@@ -25,15 +25,13 @@ etc.
 
 This would allow for the app language to be changed dynamically by any back-end response, which would for example allow users from a certain location to get the app in their own language even if they want to keep using their device in a different language. We should also provide an option for the user to choose this option in the in-app settings, or maybe even display a popup reminding them that the app uses a default language based on their location/region settings, and that if they want to override this setting they can do so in the in-app setting. Users should also be able to allow the app to follow the device settings for the language preference.
 
-#### Failures
+#### 🚫 Failures
 
 Hard-coding a language code inside an app should be avoided. 
 ```swift
-let lang = "en"
-let defaults = UserDefaults.standard
-defaults.set([lang], forKey: "AppleLanguages")
-defaults.synchronize()
-Bundle.setLanguage(lang)
+let language = "en"
+UserDefaults.standard.set([language], forKey: "AppleLanguages")
+Bundle.setLanguage(language)
 ```
 Also, every app should be developed as a localizable app, even if it seems like it makes no sense at the start, or all of the intended audience speak a single language, it can still happen that some users will not be able to use that language and there is always a possibility that your app will scale to different language regions or that parts of your code will be reused on different projects which _do_ use localization.
 
@@ -50,7 +48,7 @@ Make mobile apps appear and operate in predictable ways.
 
 Receiving focus on or interacting with any component should not initiate a change of context unless previously announced.
 
-#### Success technique(s)
+#### ✅ Success technique(s)
 
 Users need to be able to consume content without any sudden interruptions and/or changes of context. Interacting with any UI component doesn't automatically cause a change of context unless the user has been previously advised of the behavior _before_ using the component.
 
@@ -59,24 +57,26 @@ Changes of focus and thus context should only ever be done intentionally and con
 ```swift
 textField.rightViewMode = .whileEditing
 textField.rightView = someHelpButton
+
 ...
+
 func someHelpButtonAction() {
-  present(someInformativeViewController, animated: true)
+	present(someInformativeViewController, animated: true)
 }
 ```
 
-#### Failures
+#### 🚫 Failures
 
 Showing programmatically pre-planned popups, modals, or any unusual navigation not directly initiated by the user is considered a change of context.
 
 ```swift
 override func viewDidAppear(_ animated: Bool) {
-  super.viewDidAppear(animated)
+	super.viewDidAppear(animated)
   
-  viewAppearCount += 1
-  if viewAppearCount > 3 {
-    present(someInformativeViewController, animated: true)
-  }
+	viewAppearCount += 1
+	if viewAppearCount > 3 {
+		present(someInformativeViewController, animated: true)
+	}
 }
 ```
 
@@ -110,7 +110,7 @@ Help users avoid and correct mistakes when interacting with the app.
 
 If an input error is automatically detected, the item that is in error is identified and the error is clearly described to the user in text.
 
-#### Success technique(s)
+#### ✅ Success technique(s)
 
 If a form contains fields for which information from the user is mandatory the app should provide text descriptions to help identify those fields which are not sufficiently filled-out. The app should be able to validate and present a human-understandable error to the user even without needing to reach a remote endpoint.
 
@@ -119,6 +119,7 @@ let usernameTextField = UITextField()
 usernameTextField.placeholder = "Username"
 usernameTextField.accessibilityIdentifier = "username-text-field"
 usernameTextField.accessibilityLabel = "Username text field"
+
 let usernameErrorLabel = UILabel()
 usernameErrorLabel.text = "Wrong username. Please enter a correct username and try again."
 usernameErrorLabel.accessibilityLabel = "Username error indicator label"
@@ -142,7 +143,7 @@ generator.prepare()
 generator.notificationOccurred(.success)
 ```
 
-#### Failures
+#### 🚫 Failures
 
 Preventing some action or flow from continuing because an error was detected but not communicating to the user how/when the error was made and/or what needs to be done to correct it.
 
@@ -154,7 +155,7 @@ This technique covers point 3.3.1 Error Identification - Level A of the WCAG sta
 
 Labels or instructions are provided when content requires user input.
 
-#### Success technique(s)
+#### ✅ Success technique(s)
 
 Descriptive labels should be applied to user interface elements, especially those that the user is expected to interact with.
 
@@ -173,7 +174,7 @@ usernameHolderView.addArrangedSubviews = [usernameTextField, usernameErrorLabel]
 usernameHolderView.shouldGroupAccessibilityChildren = true
 ```
 
-#### Failures
+#### 🚫 Failures
 
 User enters some data into a user interface element without knowing what the end result is and/or triggering an unannounced change of context in the process.
 

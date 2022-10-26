@@ -10,7 +10,7 @@ Maximize compatibility with current and future devices, taking into account the 
 
 All user-visible content be grouped logically and assigned identifiers appropriately.
 
-#### Success technique(s)
+#### ✅ Success technique(s)
 
 ##### Using accessibility identifiers
 
@@ -36,13 +36,12 @@ func tableView(
 
     cell.accesibilityIdentifier = "login-form-cell-\(indexPath.row)"
     
-    ...
-    
+    ... 
     return cell
 }
 ```
 
-#### Failures
+#### 🚫 Failures
 
 Duplicate identifiers used for elements which are essentially different in their action or role.
 
@@ -56,23 +55,23 @@ This guideline covers point 4.1.1 Parsing - Level A of the WCAG standard.
 
 User interface elements should be clearly defined by their name ([accessibility label](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel) & [accessibility hint](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)), the role that they have (accessibility identifier), and the value they carry([accesibility value](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)). The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's accessibility attributes), so that the user remains aware of what this element does at all times.
 
-#### Success technique(s)
+#### ✅ Success technique(s)
 
 Every user interface element should have a unique accessibility label which can be used by VoiceOver.
 
 ```swift
- addButton.accessibilityLabel = "Add"
- addButton.accessibilityHint = "Adds an entry in the list"
- ```
+addButton.accessibilityLabel = "Add"
+addButton.accessibilityHint = "Adds an entry in the list"
+```
 
- For elements which carry a value, such as a label, the accessibility value should be used to represent this value. If the accessibility value is not set then the actual value (in this case, the text value) will be read.
+For elements which carry a value, such as a label, the accessibility value should be used to represent this value. If the accessibility value is not set then the actual value (in this case, the text value) will be read.
 
- ```swift
- titleLabel.text = "Entries list"
- titleLabel.accessibilityValue = "Entries list"
- ```
+```swift
+titleLabel.text = "Entries"
+titleLabel.accessibilityValue = "Entries list"
+```
 
-#### Failures
+#### 🚫 Failures
 
 Not providing accessibility identifiers for user interface elements.
 
