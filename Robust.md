@@ -23,8 +23,10 @@ submitFormButton.accessibilityIdentifier = "submit-form-button"
 For iterative elements, such as lists and tables there are two approaches: if the elements don't need to be distinguishable from each other for UI testing purposes (or some other explicit need) then using a single accessibility identifier for all elements is acceptable, otherwise the identifier could be suffixed with an index or more concrete information regarding it's meaning.
 
 ```swift
-func tableView(_ tableView: UITableView,
-               cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+func tableView(
+    _ tableView: UITableView,
+    cellForRowAt indexPath: IndexPath
+) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier)
     ...
 
