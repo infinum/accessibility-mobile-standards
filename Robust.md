@@ -14,7 +14,7 @@ All user-visible content be grouped logically and assigned identifiers appropria
 
 ##### Using accessibility identifiers
 
-Every user interface element should have a unique [accessibility identifier](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification/1623132-accessibilityidentifier) which will define it. Identifiers should not be reused, except where this is by design (i.e. the same exact element exists in several different locations).
+Every user interface element should have a unique [accessibility identifier](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification/1623132-accessibilityidentifier) which will define it. Identifiers should not be reused, except where this is by design (i.e. the same exact element exists in several different locations). This property is not actually part of the accessibility context, but is rather used to differentiate between objects programmatically.
 
 ```swift
 submitFormButton.accessibilityIdentifier = "submit-form-button"
