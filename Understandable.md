@@ -84,7 +84,7 @@ A form is submitted automatically when a certain UI element receives focus.
 
 ```swift
 func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    if (textField == passwordTextField) {
+    if textField == passwordTextField {
         performLogin()
     }
 }
