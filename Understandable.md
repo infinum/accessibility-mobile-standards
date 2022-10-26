@@ -61,7 +61,7 @@ textField.rightView = someHelpButton
 ...
 
 func someHelpButtonAction() {
-present(someInformativeViewController, animated: true)
+	present(someInformativeViewController, animated: true)
 }
 ```
 
