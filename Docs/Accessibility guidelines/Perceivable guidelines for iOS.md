@@ -50,7 +50,7 @@ Provide alternatives for time-based media.
 
 Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be a prerecorded audio or video track. In some cases it is necessary to add support for some accessibility features to make this content accessible to all users.
 
-#### ✅ Success techniques
+#### ✅ Success technique(s)
 
 ##### Using AVPlayer with captions
 
@@ -119,7 +119,7 @@ Moreover, when thinking about a given part of an application, it is important to
 
 Every accessibility element should hold information about itself, while its identification may be optional.
 
-##### ✅ Success techniques
+##### ✅ Success technique(s)
 
 Most of `UIKit` elements are accessibility elements by default. Still, if some of the elements should not be accessible or used as an accessibility element, that can be changed by setting the `isAccessibilityElement` to `false`.
 
@@ -137,7 +137,7 @@ Also, as mentioned in "Non-text content identification" ﹣ not all elements nee
 
 Many UI components should work together to create a context for the user. For example, if there is a list of components with two labels inside, one with a title and another for the value, it may be good to read those two labels as one sentence to give more context.
 
-##### ✅ Success techniques
+##### ✅ Success technique(s)
 
 On iOS, we can use semantic views or, in other words, the accessibility container technique to create a relationship or give a better context of some (custom) component that may contain more components inside itself.
 
@@ -184,7 +184,7 @@ By not connecting or adding context to the elements or inner elements of the com
 
 On iOS, screen elements are consumed from the top left to the bottom right. This is a standard way in which most screens work correctly in most scenarios. Still, we should always provide the best experience to the user, even if elements are not structured in a preferred way.
 
-#### ✅ Success techniques
+#### ✅ Success technique(s)
 
 As mentioned in the "Element relationship", we can define sequences on the same or parent-child level to get the element’s context. We provide a better user experience and more information to the user by doing that.
 
@@ -227,7 +227,7 @@ Even if we as developers control the order of the elements, try not to make sequ
 
 Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
 
-#### ✅ Success techniques
+#### ✅ Success technique(s)
 
 To make our app entirely understandable to the users, we should not rely only on one characteristic to show the user elements on the screen. You can find different ways to satisfy this aspect in the text below.
 
