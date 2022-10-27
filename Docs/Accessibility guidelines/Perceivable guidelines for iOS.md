@@ -10,9 +10,9 @@ Provide text alternatives for any non-text content to be changed into other form
 
 When talking about the screen elements, it is important to make information of all elements accessible and available. Some elements may not have text included by design or as a default user interface component. This can be seen when buttons are used with icons only, images, or other decorative elements.
 
-Some users may have issues identifying elements’ functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
+Some users may have issues identifying an element's functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
 
-#### ✅ Success techniques
+#### ✅ Success technique(s)
 
 ##### Using accessibility labels
 
@@ -28,7 +28,7 @@ Another important thing about labeling elements is the context. Some static elem
 
 #### Using accessibility value and hint
 
-Alongside the accessibility label, iOS as a platform supports the definition of the accessibility value and accessibility hint. If some elements can have and should provide specific values, accessibility value can be used alongside the accessibility label. And when talking about element interactivity, accessibility hint can be used as well - but be aware that the user can disable accessibility hint.
+Alongside the accessibility label, iOS as a platform supports the definition of an accessibility value and accessibility hint. If some elements can have and should provide specific values, accessibility value can be used alongside the accessibility label. And when talking about element interactivity, accessibility hint can be used as well - but be aware that the user can disable accessibility hints.
 
 ```swift
 addButton.accessibilityHint = "Adds a new task"
@@ -36,7 +36,7 @@ addButton.accessibilityHint = "Adds a new task"
 
 #### 🚫 Failures
 
-Sometimes it is not a good idea to give accessibility labels to all screen elements. Some elements may only be defined as decorative elements that do not affect the screen functionality (e.g., small elements like images used for screen decoration). In that case, labeling elements like that may confuse the user.
+Sometimes it is not a good idea to give accessibility labels to all screen elements. Some elements may only be defined as decorative elements that do not affect the screen functionality (e.g. small elements like images used for screen decoration). In that case, labeling elements like that may confuse the user.
 
 #### Additional notes
 
@@ -48,7 +48,7 @@ Provide alternatives for time-based media.
 
 ### Captions support for prerecorded media
 
-Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be prerecorded audio or video track. In some cases it is necessary to add support for some accessibility features to make this content accessible to all users.
+Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be a prerecorded audio or video track. In some cases it is necessary to add support for some accessibility features to make this content accessible to all users.
 
 #### ✅ Success techniques
 
@@ -113,7 +113,7 @@ Create content that can be presented differently without losing information or s
 
 Every accessible element on the screen should hold information about itself, and it should be identifiable. From the web perspective, this is defined as a definition of the regions and elements on the page, while on the mobile side, this can be used to identify components or different areas of the page.
 
-Moreover, when thinking about application screen, it is important to make the screen structure logical and easy to use. With that in mind, semantic views that use accessibility features like VoiceOver may improve user experience. With that in hand goes the definition of the relationship, or connected elements (via container) - to give the user more context.
+Moreover, when thinking about a given part of an application, it is important to make the layout structure logical and easy to use. With that in mind, semantic views that use accessibility features like VoiceOver may improve user experience. With that in hand goes the definition of the relationship, or connected elements (via container) - to give the user more context.
 
 #### Element information
 
@@ -121,11 +121,11 @@ Every accessibility element should hold information about itself, while its iden
 
 ##### ✅ Success techniques
 
-Most of `UIKit` elements are accessibility elements by default. Still, if some of the elements should not be accessible or used as an accessibility element, that can be changed by settings the `isAccessibilityElement` to `false`.
+Most of `UIKit` elements are accessibility elements by default. Still, if some of the elements should not be accessible or used as an accessibility element, that can be changed by setting the `isAccessibilityElement` to `false`.
 
-Another important thing is to define the `accessibilityLabel` to all accessibility elements on a particular screen. Also make sure to assign an accessibilityLabel on grouped or container views (e.g. form view). The important thing to mention here is also to add accessibility labels to, e.g., groups or container views that hold multiple elements (e.g., form view).
+Another important thing is to define the `accessibilityLabel` on all accessibility elements on a particular screen. Also make sure to assign an accessibilityLabel on grouped or container views (e.g. form view). The important thing to mention here is to also add accessibility labels to groups or container views that hold multiple elements (e.g. form view).
 
-The final thing to identify the element is to setup its `accessibilityIdentifier`. The users do not see this property and are not used for accessibility features. Still, if component identification is needed for other purposes (like test automation), it can be set to identify different elements on the screen.
+The final thing to define an element is to setup its `accessibilityIdentifier`. The users do not see this property and it's not used for accessibility features. Still, if component identification is needed for other purposes (like test automation), it can be set to identify different elements on the screen.
 
 ##### 🚫 Failures
 
@@ -139,7 +139,7 @@ Many UI components should work together to create a context for the user. For ex
 
 ##### ✅ Success techniques
 
-In iOS, we can use semantic views or, in other words, the accessibility container technique to create a relationship or give a better context of some (custom) component that may contain more components inside itself.
+On iOS, we can use semantic views or, in other words, the accessibility container technique to create a relationship or give a better context of some (custom) component that may contain more components inside itself.
 
 ```swift
 import UIKit
@@ -182,13 +182,13 @@ By not connecting or adding context to the elements or inner elements of the com
 
 ### Meaningful sequence
 
-In iOS, screen elements are consumed from the top left to the bottom right. This is a standard way in which most screens work correctly in most scenarios. Still, we should always provide the best experience to the user, even if elements are not structured in a preferred way.
+On iOS, screen elements are consumed from the top left to the bottom right. This is a standard way in which most screens work correctly in most scenarios. Still, we should always provide the best experience to the user, even if elements are not structured in a preferred way.
 
 #### ✅ Success techniques
 
 As mentioned in the "Element relationship", we can define sequences on the same or parent-child level to get the element’s context. We provide a better user experience and more information to the user by doing that.
 
-Still, sometimes, we need to provide an exact order of the elements on some screen or inside some component. To define that should be used an array of` accessibilityElements`. All elements defined in the array will be accessed in the order of how they are specified in the array.
+Still, sometimes, we need to provide an exact order of the elements on some screen or inside some component. To define that an array of` accessibilityElements` should be used. All elements defined in the array will be accessed in the order in which they are specified in the array.
 
 ```swift
 final class SomeViewController: UIViewController {
