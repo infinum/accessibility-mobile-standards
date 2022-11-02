@@ -15,7 +15,7 @@ The compatible is the only aspect defined by this principle, and it describes ho
 In this chapter you can find principle-related guidelines and examples for mobile platforms;
 
 * Android
-* iOS
+* [iOS](Robust%20guidelines%20for%20iOS.md)
 * Flutter
 
 [[Previous](Understandable%20principle.md)] | [Next]
