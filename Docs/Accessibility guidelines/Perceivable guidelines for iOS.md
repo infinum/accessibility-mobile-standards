@@ -24,7 +24,7 @@ addButton.accessibilityLabel = "Add"
 
 When talking about group components or containers on the screen, it is an excellent approach to give them names and make navigating with assistive technology much easier and understandable.
 
-Another important thing about labeling elements is the context. Some static elements like images provide a context, like an image with the alert or thick element. In that case, instead of setting the label as a "thick icon", it can be defined as "successful submission" to give the user a bit more information.
+Another important thing about labeling elements is the context. Some static elements like images provide a context, like an image with the alert or check element. In that case, instead of setting the label as a "check icon", it can be defined as "successful submission" to give the user a bit more information.
 
 #### Using accessibility value and hint
 
