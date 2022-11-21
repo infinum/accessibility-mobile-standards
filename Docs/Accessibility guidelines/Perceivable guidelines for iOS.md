@@ -285,4 +285,4 @@ Some of the failures regarding this aspect are:
 
 ⎯
 
-[:arrow_left:](Perceivable%20principle.md "Perceivable principle")
+[← Perceivable principle](Perceivable%20principle.md "Perceivable principle")

@@ -13,6 +13,6 @@ In this chapter you can find principle-related guidelines and examples for mobil
 
 ⎯
 
-[:arrow_left:](Accessibility%20principles%20and%20examples.md "Accessibility principles and examples")
+[← Accessibility principles and examples](Accessibility%20principles%20and%20examples.md "Accessibility principles and examples")
 |
-[:arrow_right:](Operable%20principle.md "Operable principle")
+[Operable principle →](Operable%20principle.md "Operable principle")

@@ -19,6 +19,6 @@ In this chapter you can find principle-related guidelines and examples for mobil
 
 ⎯
 
-[:arrow_left:](Understandable%20principle.md "Understandable principle")
+[← Understandable principle](Understandable%20principle.md "Understandable principle")
 |
-[:arrow_right:](Testing%20accessibility%20features.md "Testing accessibility features")
+[Testing accessibility features →](Testing%20accessibility%20features.md "Testing accessibility features")

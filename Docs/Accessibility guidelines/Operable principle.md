@@ -33,6 +33,6 @@ In this chapter you can find principle-related guidelines and examples for mobil
 
 ⎯
 
-[:arrow_left:](Perceivable%20principle.md "Perceivable principle")
+[← Perceivable principle](Perceivable%20principle.md "Perceivable principle")
 |
-[:arrow_right:](Understandable%20principle.md "Understandable principle")
+[Understandable principle →](Understandable%20principle.md "Understandable principle")

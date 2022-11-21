@@ -45,6 +45,6 @@ In the following chapters, every principle with its guidelines will be described
 
 ⎯
 
-[:arrow_left:](../Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20in%20Flutter.md "Accessibility features in Flutter")
+[← Accessibility features per mobile platform](../Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20per%20mobile%20platform.md "Accessibility features per mobile platform")
 |
-[:arrow_right:](Accessibility%20principles%20and%20examples.md "Accessibility principles and examples")
+[Accessibility principles and examples →](Accessibility%20principles%20and%20examples.md "Accessibility principles and examples")

@@ -49,6 +49,6 @@ In this chapter, you can find principle-related guidelines and examples for mobi
 
 ⎯
 
-[:arrow_left:](Operable%20principle.md "Operable principle")
+[← Operable principle](Operable%20principle.md "Operable principle")
 │
-[:arrow_right:](Robust%20principle.md "Robust principle")
+[Robust principle →](Robust%20principle.md "Robust principle")

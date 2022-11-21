@@ -176,4 +176,4 @@ testWidgets('Test semantics', (tester) async {
 
 ⎯
 
-[:arrow_left:](Accessibility%20features%20per%20mobile%20platform.md "Accessibility features per mobile platform")
+[← Accessibility features per mobile platform](Accessibility%20features%20per%20mobile%20platform.md "Accessibility features per mobile platform")
