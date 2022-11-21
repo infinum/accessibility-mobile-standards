@@ -176,6 +176,4 @@ testWidgets('Test semantics', (tester) async {
 
 ⎯
 
-[:arrow_left:](Accessibility%20features%20on%20iOS.md "Accessibility features on iOS")
-|
-[:arrow_right:](../Accessibility%20guidelines/Accessibility%20guidelines.md "Accessibility guidelines")
+[:arrow_left:](Accessibility%20features%20per%20mobile%20platform.md "Accessibility features per mobile platform")

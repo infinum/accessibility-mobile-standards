@@ -184,5 +184,3 @@ State of this feature can be checked via `UIAccessibility.isSwitchControlRunning
 ⎯
 
 [:arrow_left:](Accessibility%20features%20per%20mobile%20platform.md "Accessibility features per mobile platform")
-|
-[:arrow_right:](Accessibility%20features%20in%20Flutter.md "Accessibility features in Flutter")
