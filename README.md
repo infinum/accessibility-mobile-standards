@@ -16,7 +16,7 @@ This repository contains mobile standards created for mobile platforms. It inclu
 
     * [Accessibility principles and examples](docs/guidelines/principles/accessibility_principles_and_examples.md)
 
-       * [Perceivable](docs/guidelines/principles/perceivable_principle.md.md)
+       * [Perceivable](docs/guidelines/principles/perceivable_principle.md)
        * [Operable](docs/guidelines/principles/operable_principle.md)
        * [Understandable](docs/guidelines/principles/understandable_principle.md)
        * [Robust](docs/guidelines/principles/robust_principle.md)
