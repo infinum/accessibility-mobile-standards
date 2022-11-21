@@ -29,7 +29,7 @@ Some users might have trouble moving the device, themselves or performing comple
 In this chapter you can find principle-related guidelines and examples for mobile platforms;
 
 * Android
-* iOS
+* [iOS](Operable%20guidelines%20for%20iOS.md)
 * Flutter
 
 [[Previous](Perceivable%20principle.md)] | [[Next](Understandable%20principle.md)]

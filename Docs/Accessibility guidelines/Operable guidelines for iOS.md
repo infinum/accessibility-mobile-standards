@@ -2,7 +2,7 @@
 
 User interface components and navigation must be operable.
 
-## 2.2 Enough Time
+## Enough Time
 
 _Provide users enough time to read and use content._
 
@@ -52,7 +52,7 @@ This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standar
 ---
 
 
-## 2.3 Seizures and Physical Reactions
+## Seizures and Physical Reactions
 
 _Do not design content in a way that is known to cause seizures or physical reactions._
 
@@ -77,7 +77,7 @@ This guideline covers point 2.3.1 - Level A of the WCAG standard.
 
 ---
 
-## 2.4 Navigable
+## Navigable
 
 _Provide ways to help users navigate, find content, and determine where they are._
 
