@@ -3,9 +3,13 @@
 Mobile standards provide information about accessibility features and implementation for the following platforms:
 
 * Android
-* Flutter
-* iOS
+* [iOS](Accessibility%20features%20on%20iOS.md "Accessibility features on iOS")
+* [Flutter](Accessibility%20features%20in%20Flutter.md "Accessibility features in Flutter")
 
 Even those platforms are a bit different; the main idea is to provide the same experience to our mobile apps on all platforms. The following paragraphs provide detailed information about accessibility features per supported platforms.
 
-[[Previous](../Introduction/Introduction.md)] | [Next]
+⎯
+
+[:arrow_left:](../Introduction/Introduction.md "Introduction")
+|
+[:arrow_right:](Accessibility%20features%20on%20iOS.md "Accessibility features on iOS")

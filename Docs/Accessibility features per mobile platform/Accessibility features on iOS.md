@@ -181,4 +181,8 @@ Some apps are more interactive, some aren't, but there should be custom actions 
 
 State of this feature can be checked via `UIAccessibility.isSwitchControlRunning` or via notification `UIAccessibility.switchControlStatusDidChangeNotificatication`.
 
-[Previous] | [[Next](Accessibility%20features%20in%20Flutter.md)]
+⎯
+
+[:arrow_left:](Accessibility%20features%20per%20mobile%20platform.md "Accessibility features per mobile platform")
+|
+[:arrow_right:](Accessibility%20features%20in%20Flutter.md "Accessibility features in Flutter")

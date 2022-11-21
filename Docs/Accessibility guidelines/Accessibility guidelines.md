@@ -43,4 +43,8 @@ Another important thing about WCAG is definition of levels - A, AA, and AAA. The
 
 In the following chapters, every principle with its guidelines will be described in a more details.
 
-[[Previous](../Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20in%20Flutter.md)] | [[Next](Accessibility%20principles%20and%20examples.md)]
+⎯
+
+[:arrow_left:](../Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20in%20Flutter.md "Accessibility features in Flutter")
+|
+[:arrow_right:](Accessibility%20principles%20and%20examples.md "Accessibility principles and examples")

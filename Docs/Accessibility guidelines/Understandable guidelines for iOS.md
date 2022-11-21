@@ -14,7 +14,7 @@ The default human language of an App can be programmatically determined.
 
 Specify the default language of the application in the HTTP headers of the API calls. 
 
-```
+```text
 Content-Language: de-DE
 or
 Content-Language: en-US
@@ -27,12 +27,14 @@ This would allow for the app language to be changed dynamically by any back-end 
 
 #### 🚫 Failures
 
-Hard-coding a language code inside an app should be avoided. 
+Hard-coding a language code inside an app should be avoided.
+
 ```swift
 let language = "en"
 UserDefaults.standard.set([language], forKey: "AppleLanguages")
 Bundle.setLanguage(language)
 ```
+
 Also, every app should be developed as a localizable app, even if it seems like it makes no sense at the start, or all of the intended audience speak a single language, it can still happen that some users will not be able to use that language and there is always a possibility that your app will scale to different language regions or that parts of your code will be reused on different projects which _do_ use localization.
 
 #### Additional notes
@@ -42,7 +44,6 @@ This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standar
 ## Predictable
 
 Make mobile apps appear and operate in predictable ways.
-
 
 ### On Focus & On Input
 
@@ -181,3 +182,7 @@ User enters some data into a user interface element without knowing what the end
 #### Additional notes
 
 This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.
+
+⎯
+
+[:arrow_left:](Understandable%20principle.md "Understandable principle")

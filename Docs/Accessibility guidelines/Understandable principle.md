@@ -45,7 +45,10 @@ We should provide enough information to the user when input elements are used in
 In this chapter, you can find principle-related guidelines and examples for mobile platforms;
 
 * Android
-* [iOS](Understandable%20guidelines%20for%20iOS.md)
-* Flutter
+* [iOS](Understandable%20guidelines%20for%20iOS.md "Understandable guidelines for iOS")
 
-[[Previous](Operable%20principle.md)] | [[Next](Robust%20principle.md)]
+⎯
+
+[:arrow_left:](Operable%20principle.md "Operable principle")
+│
+[:arrow_right:](Robust%20principle.md "Robust principle")

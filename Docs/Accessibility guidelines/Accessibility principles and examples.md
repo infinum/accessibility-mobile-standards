@@ -6,4 +6,8 @@ Because of that, we defined our guidelines to help mobile developers to satisfy 
 
 In the following chapters, information about satisfying accessibility guidelines will be provided with descriptions and techniques.
 
-[[Previous](Accessibility%20guidelines.md)] | [[Next](Perceivable%20principle.md)]
+⎯
+
+[:arrow_left:](Accessibility%20guidelines.md "Accessibility guidelines")
+|
+[:arrow_right:](Perceivable%20principle.md "Perceivable principle")

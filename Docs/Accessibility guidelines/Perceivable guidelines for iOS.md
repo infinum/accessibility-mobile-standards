@@ -282,3 +282,7 @@ Some of the failures regarding this aspect are:
 
 * Creating elements that are not identifiable by design (e.g., a label and a button without a shape)
 * Not applying design changes when user preferences change in system settings
+
+⎯
+
+[:arrow_left:](Perceivable%20principle.md "Perceivable principle")

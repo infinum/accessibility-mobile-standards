@@ -15,7 +15,10 @@ The compatible is the only aspect defined by this principle, and it describes ho
 In this chapter you can find principle-related guidelines and examples for mobile platforms;
 
 * Android
-* [iOS](Robust%20guidelines%20for%20iOS.md)
-* Flutter
+* [iOS](Robust%20guidelines%20for%20iOS.md "Robust guidelines for iOS")
 
-[[Previous](Understandable%20principle.md)] | [Next]
+⎯
+
+[:arrow_left:](Understandable%20principle.md "Understandable principle")
+|
+[:arrow_right:](Testing%20accessibility%20features.md "Testing accessibility features")

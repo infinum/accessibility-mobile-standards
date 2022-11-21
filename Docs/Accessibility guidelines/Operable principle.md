@@ -30,6 +30,9 @@ In this chapter you can find principle-related guidelines and examples for mobil
 
 * Android
 * iOS
-* Flutter
 
-[[Previous](Perceivable%20principle.md)] | [[Next](Understandable%20principle.md)]
+⎯
+
+[:arrow_left:](Perceivable%20principle.md "Perceivable principle")
+|
+[:arrow_right:](Understandable%20principle.md "Understandable principle")

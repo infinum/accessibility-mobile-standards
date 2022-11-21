@@ -82,3 +82,5 @@ Changing the value or role of a user interface element without adjusting it's id
 #### Additional notes
 
 This guideline covers point 4.1.2 Name, Role, Value - Level A of the WCAG standard.
+
+[:arrow_left:](Robust%20principle.md "Robust principle")

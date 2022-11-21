@@ -16,6 +16,7 @@ accessibilityFeatures.disableAnimations;
 Some accessibility features (`boldText`, `highContrast`...) are only supported on iOS.
 
 There are some discrepancies between platforms:
+
 * `accessibleNavigation`: on iOS checks whether VoiceOver or Switch Control are enabled. On Android it checks if the user enabled an accessibility app that provides [touchExploration](https://developer.android.com/reference/android/view/accessibility/AccessibilityManager#isTouchExplorationEnabled()), meaning that with TalkBack, the property will be `true`, but `false` when using Switch Access.
 * When reduce motion is enabled on iOS, `reduceMotion` in Flutter is `true` and `disableAnimation` is `false`. When animations are disabled on Android, `reduceMotion` is `false`, and `disableAnimations` is `true`.
 
@@ -173,4 +174,8 @@ testWidgets('Test semantics', (tester) async {
 });
 ```
 
-[[Previous](Accessibility%20features%20on%20iOS.md)] | [[Next](../Accessibility%20guidelines/Accessibility%20guidelines.md)]
+⎯
+
+[:arrow_left:](Accessibility%20features%20on%20iOS.md "Accessibility features on iOS")
+|
+[:arrow_right:](../Accessibility%20guidelines/Accessibility%20guidelines.md "Accessibility guidelines")
