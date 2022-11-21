@@ -69,4 +69,4 @@ In this document, usage of component identifiers like `accessibilityIdentifier` 
 
 ⎯
 
-[← Robust principle](../guidelines/principles/robust_principle.md "Robust principle")
+[← Accessibility principles and examples](../guidelines/principles/accessibility_principles_and_examples.md "Accessibility principles and examples")

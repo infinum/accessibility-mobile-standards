@@ -33,6 +33,4 @@ In this chapter you can find principle-related guidelines and examples for mobil
 
 ⎯
 
-[← Perceivable principle](perceivable_principle.md "Perceivable principle")
-|
-[Understandable principle →](understandable_principle.md "Understandable principle")
+[← Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples")
