@@ -10,6 +10,6 @@ Even those platforms are a bit different; the main idea is to provide the same e
 
 ⎯
 
-[:arrow_left:](../Introduction/Introduction.md "Introduction") [Introduction]
-|
-[Accessibility guidelines] [:arrow_right:](../Accessibility%20guidelines/Accessibility%20guidelines.md "Accessibility guidelines")
+[⬅️ Introduction](../Introduction/Introduction.md "Introduction")
+│
+[Accessibility guidelines ➡️](../Accessibility%20guidelines/Accessibility%20guidelines.md "Accessibility guidelines")
