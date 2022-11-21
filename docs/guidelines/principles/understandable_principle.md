@@ -45,10 +45,10 @@ We should provide enough information to the user when input elements are used in
 In this chapter, you can find principle-related guidelines and examples for mobile platforms;
 
 * Android
-* [iOS](Understandable%20guidelines%20for%20iOS.md "Understandable guidelines for iOS")
+* [iOS](../platforms/ios/guideline_understandable_ios.md "Understandable guidelines for iOS")
 
 ⎯
 
-[← Operable principle](Operable%20principle.md "Operable principle")
+[← Operable principle](operable_principle.md "Operable principle")
 │
-[Robust principle →](Robust%20principle.md "Robust principle")
+[Robust principle →](robust_principle.md "Robust principle")

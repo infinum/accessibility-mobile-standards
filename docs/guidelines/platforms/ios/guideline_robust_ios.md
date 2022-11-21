@@ -85,4 +85,4 @@ This guideline covers point 4.1.2 Name, Role, Value - Level A of the WCAG standa
 
 ⎯
 
-[← Robust principle](Robust%20principle.md "Robust principle")
+[← Robust principle](../../principles/robust_principle.md "Robust principle")

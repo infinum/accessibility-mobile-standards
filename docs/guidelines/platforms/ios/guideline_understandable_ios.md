@@ -185,4 +185,4 @@ This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG s
 
 ⎯
 
-[← Understandable principle](Understandable%20principle.md "Understandable principle")
+[← Understandable principle](../../principles/understandable_principle.md "Understandable principle")

@@ -8,6 +8,6 @@ In the following chapters, information about satisfying accessibility guidelines
 
 ⎯
 
-[← Accessibility guidelines](Accessibility%20guidelines.md "Accessibility guidelines")
+[← Accessibility guidelines](../accessibility_guidelines.md "Accessibility guidelines")
 |
-[Perceivable principle →](Perceivable%20principle.md "Perceivable principle")
+[Perceivable principle →](perceivable_principle.md "Perceivable principle")

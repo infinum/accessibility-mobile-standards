@@ -45,6 +45,6 @@ In the following chapters, every principle with its guidelines will be described
 
 ⎯
 
-[← Accessibility features per mobile platform](../Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20per%20mobile%20platform.md "Accessibility features per mobile platform")
+[← Accessibility features per mobile platform](../features/features_mobile_platforms.md "Accessibility features per mobile platform")
 |
-[Accessibility principles and examples →](Accessibility%20principles%20and%20examples.md "Accessibility principles and examples")
+[Accessibility principles and examples →](principles/accessibility_principles_and_examples.md "Accessibility principles and examples")
