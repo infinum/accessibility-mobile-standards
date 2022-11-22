@@ -1,4 +1,4 @@
-# Accessibility tracking Flutter
+# Accessibility tracking in Flutter
 
 The [AccessibilityFeatures](https://api.flutter.dev/flutter/dart-ui/AccessibilityFeatures-class.html) class contains info about the accessibility setting on the underlying platform. Even though [textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html) could be considered an accessibility setting, it is not a part of the `AccessibilityFeatures`.
 

@@ -266,4 +266,6 @@ Purpose of a button or link action is clear and easily understandable by all use
 
 This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.
 
----
+⎯
+
+[← Perceivable principle](../../principles/operable_principle.md "Operable principle")
