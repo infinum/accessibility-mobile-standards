@@ -207,9 +207,9 @@ That way users of accessibility services can choose to navigate between headings
 
 - Pairs od elements where one describes the other
 
-It is common case that a given EditText has corresponding View that describes the content that the user should input within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
+It is a common case that a given EditText has a corresponding View that describes the content that the user should input within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
 
-That way, services such as TalkBack will read defined relationship to the user to give him a bit more context when EditText is in focus.
+That way, services such as TalkBack will read defined relationships to the user giving him more context about expected input when EditText is in focus.
 
 **Code example:**
 
