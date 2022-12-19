@@ -1,8 +1,8 @@
-# Perceivable guidelines for Android 
+# Perceivable guidelines for Android
 
-All content that is displayed on the screen at some point must be presented to the user in a way that he can perceive.
+All content displayed on the screen at some point must be presented to the user in a perceivable manner.
 
-## Text alternatives 
+## Text alternatives
 
 _Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language._
 
@@ -12,7 +12,7 @@ _Provide text alternatives for any non-text content so that it can be changed in
 
 Each UI element should include a description that describes it's purpose. It is important that all elements presented on the screen have the description provided, especially the ones that are important for the functionality of the screen on which they are presented. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
 
-If an element exists on the UI only for decorative purposes it is recommended that you set its `contentDescription` to "null" or `android:importantForAccessibility` to "no" for devices running Android 4.1 and higher. 
+If an element exists on the UI only for decorative purposes it is recommended that you set its `contentDescription` to "null" or `android:importantForAccessibility` to "no" for devices running Android 4.1 and higher.
 
 #### Label elements
 
@@ -32,7 +32,7 @@ _Note:_ You should not provide descriptions for TextView elements because Androi
 
 - Editable elements
 
-When thinking about describing editable elements such as EditText objects, it is usually helpful to provide text that give examples of valid input in the element itself. That way, users who navigate through the app using screen readers, could get a bit more info about the required input when they focus the editable element. 
+When thinking about describing editable elements such as EditText objects, it is usually helpful to provide text that gives examples of valid input in the element itself. That way, users who navigate through the app using screen readers, could get a bit more info about the required input when they focus the editable element.
 
 In these situations it is recommended to use `android:hint` attribute.
 
@@ -49,7 +49,7 @@ In these situations it is recommended to use `android:hint` attribute.
 
 - Elements in the collection
 
-When working with collections, it is very important that provided labels **are unique for each item**. That way, the system accessibility services can refer to exactly one specific item when announcing the label. 
+When working with collections, it is very important that provided labels **are unique for each item**. That way, the system accessibility services can refer to exactly one specific item when announcing the label.
 
 This will help users to get general idea when they've cycled through the complete UI of your app.
 
@@ -80,13 +80,13 @@ class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
 
 :no_entry_sign: **Failure criteria**
 
-- there are relevant UI view with no description provided
+- there are relevant UI views with no description provided
 
 - descriptions provided for the relevant views are not unique and are repeated shortly one after another
 
 - descriptions provided for the relevant views are too long and too complex
 
-- descriptions provided for the relevant views are hardcoded and are not localized properly 
+- descriptions provided for the relevant views are hardcoded and are not localized properly
 
 ## Time-based Media
 
@@ -94,7 +94,7 @@ class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
 
 :white_check_mark: **Success criteria**
 
-If the app you are building includes media content such as video clip or audio recording, it is suggested to provide alternative for users with different types of accessibility needs in order for them to understand the material. The suggested practice would be to:
+If the app you are building includes media content such as video clips or audio recordings, it is suggested to provide an alternative for users with different types of accessibility needs in order for them to understand the material. The suggested practice would be to:
 
 - include controls that allow users to pause and stop media, change volume and toggle subtitles (captions)
 
@@ -112,7 +112,7 @@ If the app you are building includes media content such as video clip or audio r
 
 - Groups of related content
 
-If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually subclass of ViewGroup. Also, you should set the **container object's** `android:screenReaderFocusable` (for devices running Android 8.1. - API level 27) or `android:focusable` to true. Furthermore, you should set `android:focusable` attribute of each inner object to `false` because doing so, accessibility services can present the inner element's content descriptions one after the other, in a single announcement.
+If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually a subclass of ViewGroup. Also, you should set the **container object's** `android:screenReaderFocusable` (for devices running Android 8.1. - API level 27) or `android:focusable` to true. Furthermore, you should set `android:focusable` attribute of each inner object to `false` because doing so will make accessibility services present the inner element's content descriptions one after the other, in a single announcement.
 
 Grouping elements based on the context helps users that benefit from using accessibility services to discover the information that is on the screen more efficiently.
 
@@ -193,9 +193,9 @@ If the app you are building provides multi-dimensional information, it is recomm
 
 - Headings within text
 
-It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark some view to be treated as heading you can set `android:accessibilityHeading` to true.
+It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark a view to be treated as heading you can set `android:accessibilityHeading` to true.
 
-That way users of accessibility services can choose to navigate between headings instead of between paragraphs or between words which can improve text navigation experience.
+That way users of accessibility services can choose to navigate between headings instead of navigating between paragraphs or between words which can improve text navigation experience.
 
 :no_entry_sign: **Failure criteria**
 
@@ -207,7 +207,7 @@ That way users of accessibility services can choose to navigate between headings
 
 - Pairs od elements where one describes the other
 
-It is common case that given EditText has corresponding View that describes the content that the user should enter within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
+It is common case that a given EditText has corresponding View that describes the content that the user should input within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
 
 That way, services such as TalkBack will read defined relationship to the user to give him a bit more context when EditText is in focus.
 
@@ -234,17 +234,11 @@ In the given example, services such as TalkBack will read - "EditBox for usernam
 
 :white_check_mark: **Success criteria**
 
-It is important that the content provided in your app is easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different view and different actions that those views provide. That way users with color vision deficiencies could also easily understand the whole UI. 
-
-The example is given in the screenshots down below. On the Screenshot 1. there is example of the bills UI in MojA1 app. The only difference between paid and unpaid bills in the list is the color. Unpaid bills are presented in red color instead of the regular black. For users with color vision deficiencies this could be a problem. A better solution is provided on the Screenshot 2. There is example of the bills UI in MojTomato app. As you can see, unpaid bills are presented there with different symbol instead of color and that way users could more easily distinguish there is difference between items presented in the list.
-
-| <img src="https://imgur.com/RcsRuYf.png" width="50%"> | <img src="https://imgur.com/pWejQkl.png" width="50%"> |
-|:--:|:--:|
-| **Screenshot 1.** MojA1 App bills | **Screenshot 2.** MojTomato App bills |
+It is important that the content provided in your app is easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different views and different actions that those views provide. That way users with color vision deficiencies could also easily understand the whole UI.
 
 :no_entry_sign: **Failure criteria**
 
-- important difference between elements is stressed only with colors -> Screenshot 1.
+- important difference between elements is stressed only with colors
 
 
 

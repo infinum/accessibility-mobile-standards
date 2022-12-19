@@ -29,7 +29,8 @@ Some users might have trouble moving the device, themselves or performing comple
 In this chapter you can find principle-related guidelines and examples for mobile platforms;
 
 * Android
-* iOS
-* Flutter
+* [iOS](../platforms/ios/guideline_operable_ios.md "Operable guidelines for iOS")
 
-[[Previous](Perceivable%20principle.md)] | [[Next](Understandable%20principle.md)]
+⎯
+
+[← Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples")
