@@ -18,17 +18,17 @@ The TalkBack is a Google screen reader available on Android devices that allows 
 
 **>> How it works <<**
 
-When you [turn on TalkBack on your android device](https://support.google.com/accessibility/android/answer/6007100), you will be able to explore your app using touches and swipes.
+When you [turn on TalkBack on your Android device](https://support.google.com/accessibility/android/answer/6007100), you will be able to explore your app using touches and swipes.
 
 TalkBack is controlled entirely by only one finger. Gestures with two or more fingers will not be handled by TalkBack. They'll be sent directly to underlying view meaning you still can swipe using two fingers or pinch-to-zoom.
 
-You could navigate through the app using TalkBack by swiping right or left. You are navigating forward in a text by swiping from left to right, meaning moving right and down accordingly. Alternatively, you could navigate backwards by swiping from right to left meaning you will be moving to the left and eventually up.
+You could navigate through the app using TalkBack by swiping right or left. You're navigating forward in a text by swiping from left to right, meaning moving right and down accordingly. Alternatively, you could navigate backward by swiping from right to left, meaning you will be moving to the left and eventually up.
 
 TalkBack provides audible information about the currently focused view whenever you click on it or change focus to it. Also, you can explore the screen more rapidly by using touch-and-drag.
 
 You can interact with a focused item mostly with double tap. Double tapping currently focused item will perform a click. On the other hand, to perform a long click, you can double tap and hold the currently focused item.
 
-Detailed description of all TalkBack configuration could be found on official [Android Accessibility Help - TalkBack page](https://support.google.com/accessibility/android/answer/6006598?hl=en&ref_topic=10601571).
+Detailed description of all TalkBack configuration could be found on the official [Android Accessibility Help - TalkBack page](https://support.google.com/accessibility/android/answer/6006598?hl=en&ref_topic=10601571).
 
 ### Text and display settings
 
@@ -90,7 +90,7 @@ If the chosen option is to zoom in more permanently, the user will be able to to
 
 :green_circle: **Switch access**
 
-The Switch Access application lets you interact with your Android device using one or more switches or a keyboard instead of the touchscreen. Switch Access is primarily designed to help users with limited dexterity.
+The Switch Access application lets you interact with your Android device using one or more switches or a keyboard instead of a touchscreen. Switch Access is primarily designed to help users with limited dexterity.
 
 **>> How it works <<**
 
@@ -106,7 +106,7 @@ There are three different types of switches:
 
 3. buttons on your device - You could also use built-in buttons on Android device, such as the volume up and down buttons, and set up that they trigger actions. This option is mainly intended for developers.
 
-Detailed description of all Switch Access configuration could be found on official [Android Accessibility Help - Switch Access page](https://support.google.com/accessibility/android/answer/6122836?hl=en&ref_topic=6151780).
+Detailed description of all Switch Access configuration could be found on the official [Android Accessibility Help - Switch Access page](https://support.google.com/accessibility/android/answer/6122836?hl=en&ref_topic=6151780).
 
 
 
