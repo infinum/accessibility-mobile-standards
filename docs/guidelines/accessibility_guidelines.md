@@ -43,4 +43,8 @@ Another important thing about WCAG is definition of levels - A, AA, and AAA. The
 
 In the following chapters, every principle with its guidelines will be described in a more details.
 
-[[Previous](“TODO”)] | [[Next](“TODO”)]
+⎯
+
+[← Accessibility features per mobile platform](../features/features_mobile_platforms.md "Accessibility features per mobile platform")
+|
+[Accessibility principles and examples →](principles/accessibility_principles_and_examples.md "Accessibility principles and examples")
