@@ -2,17 +2,15 @@
 
 _User interface components and navigation must be operable._
 
-In this section we will describe guidelines and define examples of implementation that will help in making your application more operable.
-
 ## Keyboard accessible
 
 :white_check_mark: **Success criteria**
 
-Except on-screen keyboard, Android also supports physical keyboards that offer convenient way to input text but also to navigate and interact with the app. This is also of huge benefit for the users with motor difficulties that use Switch Access service to interact with the app.
+Except on-screen keyboard, Android also supports physical keyboards that offer convenient way to input text and also to navigate and interact with the app. This feature is a great benefit for the users with motor difficulties who use Switch Access service to interact with the app.
 
 - Handle tab navigation
 
-When the user is navigating through the app **using Tab key** on the keyboard, the system passes focus based on the the order of elements appearing on the screen. This means that in case the order of the elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order.
+When the user is navigating through the app using Tab key on the keyboard, the system passes focus based on the the order of elements appearing on the screen. This is why, if the order of the view elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order. You can achieve this by simply defining `android:nextFocusForward` attribute.
 
 **Code example:**
 
@@ -97,7 +95,7 @@ _Provide ways to help users navigate, find content, and determine where they are
 
 The app should be implemented in a way that it is possible to relatively easy skip the content that is repeated on the screen or the content that is irrelevant to the user.
 
-This feature is also based on a good implementation of grouping the views that are displayed in the app as described in [link to perceivable guidelines].
+This feature is also based on a good implementation of grouping the views that are displayed in the app as described in [Perceivable guidelines](https://github.com/infinum/accessibility-mobile-standards/blob/master/docs/guidelines/platforms/android/guideline_percievable_android.md).
 
 For example, accessibility services users should be able to skip the whole RecyclerView list if the content is irrelevant to them without having to go through each item in the list.
 
@@ -145,29 +143,17 @@ ViewCompat.setAccessibilityDelegate(personalData, object : AccessibilityDelegate
 
 :no_entry_sign: **Failure criteria**
 
-- user using accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation process
-
-### Page Titles
-
-:white_check_mark: **Success criteria**
-
-Each screen should have clear, descriptive, if possible unique title that describes purpose of that screen that will be understandable to all users. Also, it is important to make sure that title is the first thing that will be read when user enters the screen. This could be achieved following design guidelines or with help of setting `android:accessibilityTraversalBefore` attribute.
-
-If title is defined using toolbar with custom behavior or some other custom view it is important to insure that title will be read using accessibility services.
-
-:no_entry_sign: **Failure criteria**
-
-- screens have no titles defined or the defined titles are not descriptive enough
-
-- defined titles are not the first thing that is read when user enters the screen and therefore users using accessibility services have no information which screen they opened
+- user of accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation process
 
 ### Traversal Order
 
-Order of the components that are displayed on the screen should have logical traversal order. That is very important for people using accessibility services (such as TalkBack) to get clearer picture of the content and possible actions on the current screen they are navigating through.
+:white_check_mark: **Success criteria**
 
-The best solution would be to redesign the screen to create logical traversal order.
+Order of the components that are displayed on the screen should have logical traversal order. That is very important for people using accessibility services (such as TalkBack) in order to get clearer picture of the content and possible actions on the current screen they are navigating through.
 
-But if that is not an option, on apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create new order of the displayed views that will make a bit more sense to TalkBack users.
+The best solution would be to redesign the screen to create the logical traversal order.
+
+But if that is not an option, on apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create new order of displayed views that will make a bit more sense to TalkBack users.
 
 The example of using `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes is given down below:
 
@@ -202,6 +188,20 @@ ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompa
 :no_entry_sign: **Failure criteria**
 
 - views displayed on the screen break consistency of navigation
+
+### Page Titles
+
+:white_check_mark: **Success criteria**
+
+Each screen should have clear, descriptive, if possible unique title that describes purpose of that screen that will be understandable to all users. Also, it is important to make sure that title is the first thing that will be read when user enters the screen. This could be achieved following design guidelines or with help of setting `android:accessibilityTraversalBefore` attribute.
+
+If title is defined using toolbar with custom behavior or some other custom view it is important to insure that title will be read using accessibility services.
+
+:no_entry_sign: **Failure criteria**
+
+- screens have no titles defined or the defined titles are not descriptive enough
+
+- defined titles are not the first thing that is read when user enters the screen and therefore users using accessibility services have no information which screen they opened
 
 ### Link Purpose
 
