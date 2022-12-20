@@ -201,35 +201,6 @@ That way users of accessibility services can choose to navigate between headings
 
 - it is not clear which parts of the screen are contextually connected to each other
 
-### Meaningful sequence
-
-:white_check_mark: **Success criteria**
-
-- Pairs od elements where one describes the other
-
-It is a common case that a given EditText has a corresponding View that describes the content that the user should input within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
-
-That way, services such as TalkBack will read defined relationships to the user giving him more context about expected input when EditText is in focus.
-
-**Code example:**
-
-```
-<!-- Label text for en-US locale would be "Username:" -->
-<TextView
-   android:id="@+id/usernameLabel" ...
-   android:text="@string/username"
-   android:labelFor="@+id/usernameEntry" />
-
-<EditText
-   android:id="@+id/usernameEntry" ... />
-```
-
-In the given example, services such as TalkBack will read - "EditBox for username" when user sets focus to EditText.
-
-:no_entry_sign: **Failure criteria**
-
-- not providing enough context for the views that expect user interaction
-
 ### Sensory characteristics
 
 :white_check_mark: **Success criteria**

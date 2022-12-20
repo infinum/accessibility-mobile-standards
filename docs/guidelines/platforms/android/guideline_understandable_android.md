@@ -30,13 +30,11 @@ _Make mobile apps appear and operate in predictable ways._
 
 ### On Focus & On Input
 
-The user should be able to navigate through the app without constant context switching. Also, interacting with the view should not cause a change of context. If view interaction changes the context that should be signalized to the user **before** the interaction.
-
-If the content that is displayed on the screen is designed and implemented following [Perceivable guidelines] these requirements should be met by default.
-
 :white_check_mark: **Success criteria**
 
-- the content is grouped and labeled following [Perceivable guidelines].
+The user should be able to navigate through the app without constant context switching. Also, interacting with the view should not cause a change of context. If view interaction changes the context that should be signalized to the user **before** the interaction.
+
+If the content that is displayed on the screen is designed and implemented following [Perceivable guidelines](https://github.com/infinum/accessibility-mobile-standards/blob/master/docs/guidelines/platforms/android/guideline_percievable_android.md) these requirements should be met by default.
 
 :no_entry_sign: **Failure criteria**
 
@@ -48,24 +46,34 @@ _Help users avoid and correct mistakes._
 
 ### Error identification
 
-If an error occurs on the item that the user is interacting with, the one should be clearly defined and described so the user could have a clear picture of why the error occurred and what to do to fix it.
+:white_check_mark: **Success criteria**
+
+If an error occurs on the item that the user is interacting with, the one should be clearly defined and described so the user can get a clear information of why the error occurred and what to do in order to fix it.
 
 It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible because the ones already have the most accessibility capabilities that your app needs.
 
 On the other hand, if your app requires the implementation of custom components, you will need to implement [custom accessibility events](https://developer.android.com/guide/topics/ui/accessibility/principles#define-custom-events)
 to provide all accessibility updates the same as system-provided widgets do.
 
+:no_entry_sign: **Failure criteria**
+
+- error messages do not exist or are not descriptive enough
+
+- custom components do not support custom error handling 
+
 ### Labels or instruction
 
-When the accessibility services user focuses on some sort of input view (for example in the form or login screen or something else) it is important to give him enough information about the type of input that is expected from him to provide.
+:white_check_mark: **Success criteria**
+
+When the accessibility services user focuses on input view (for example in the form or login screen) it is important to give him enough information about the type of input that is expected from him to provide.
 
 - Pairs of elements where one describes the other
 
-It is a common case that given EditText has a corresponding View that describes the content that the user should enter within the EditText element. This relationship between elements could be achieved by setting the` android:labelFor` attribute on that specific View.
+It is a common case that a given EditText has a corresponding View that describes the content that the user should input within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
 
-That way, services such as TalkBack will read defined relationships to the user to give him a bit more context when EditText is in focus.
+That way, services such as TalkBack will read defined relationships to the user giving him more context about expected input when EditText is in focus.
 
-An example of labeling such an element pair is given in the following snippet:
+**Code example:**
 
 ```
 <!-- Label text for en-US locale would be "Username:" -->
@@ -78,12 +86,8 @@ An example of labeling such an element pair is given in the following snippet:
    android:id="@+id/usernameEntry" ... />
 ```
 
-In the given example, services such as TalkBack will read - "EditBox for username" when the user sets focus to EditText.
-
-:white_check_mark: **Success criteria**
-
-- input views are paired with other descriptions in a way that they provide meaningful information about the required input type
+In the given example, services such as TalkBack will read - "EditBox for username" when user sets focus to EditText.
 
 :no_entry_sign: **Failure criteria**
 
-- input views have no additional descriptions provided about the required input type 
+- not providing enough context for the views that expect user interaction
