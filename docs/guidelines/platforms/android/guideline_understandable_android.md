@@ -6,6 +6,8 @@ _Make text content readable and understandable._
 
 ### Language of the App
 
+:white_check_mark: **Success criteria**
+
 The app should be implemented in a way to reach the most users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It should provide a text alternative for, at least English language if the one is not the default language of the app.
 
 It is recommended that all text content used in the application, including `contentDescriptions`, is implemented using the Android resource framework.
@@ -15,10 +17,6 @@ It is also important to support localization because of accessibility services. 
 **Server-driven application**
 
 If the application is server-driven and most of the content is depending on the backend output, it is important to create logic where the app will on launch send information about the current locale. In that scenario, the backend should based on the received information about the current locale, return the content in the corresponding language.
-
-:white_check_mark: **Success criteria**
-
-- application's content is localized based on the current locale
 
 :no_entry_sign: **Failure criteria**
 
