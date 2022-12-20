@@ -61,14 +61,12 @@ While two previous tools were testing tools where some implementation was needed
 
 Accessibility Inspector is a tool already included in Xcode, and when used, it can inspect the currently active screen and components. We can get much information about accessibility implementation and other accessibility features like contrast, hit area, unsupported dynamic font size, and others.
 
-Xcode inspector is available in the Xcode by _Xcode _> Open Developer Tools... > Accessibility Inspector__.
-
-## Testing on Flutter
-
-// TODO
+Xcode inspector is available in the Xcode by _Xcode > Open Developer Tools... > Accessibility Inspector_.
 
 ## Additional notes
 
 In this document, usage of component identifiers like `accessibilityIdentifier` or `resourceId` is not defined, because they are not used for accessibility features, but rather for automation testing.
 
-[[Previous]()] | [[Next]()]
+⎯
+
+[← Accessibility principles and examples](../guidelines/principles/accessibility_principles_and_examples.md "Accessibility principles and examples")

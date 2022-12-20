@@ -4,25 +4,23 @@ This repository contains mobile standards created for mobile platforms. It inclu
 
 ## Table of contents
 
-1. [Introduction](Docs/Introduction/Introduction.md)
+1. [Introduction](docs/general/introduction.md)
 
-2. [Accessibility features per mobile platform](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20per%20mobile%20platform.md)
+2. [Accessibility features per mobile platform](docs/features/features_mobile_platforms.md)
 
     * Android
-    * [iOS](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20on%20iOS.md)
-    * [Flutter](Docs/Accessibility%20features%20per%20mobile%20platform/Accessibility%20features%20in%20Flutter.md)
+    * [iOS](docs/features/features_ios.md)
+    * [Flutter](docs/features/features_flutter.md)
 
-3. [Accessibility guidelines](Docs/Accessibility%20guidelines/Accessibility%20guidelines.md)
+3. [Accessibility guidelines](docs/guidelines/accessibility_guidelines.md)
 
-    * [Accessibility principles and examples](Docs/Accessibility%20guidelines/Accessibility%20principles%20and%20examples.md)
+    * [Accessibility principles and examples](docs/guidelines/principles/accessibility_principles_and_examples.md)
 
-       * [Perceivable](Docs/Accessibility%20guidelines/Perceivable%20principle.md)
-       * [Operable](Docs/Accessibility%20guidelines/Operable%20principle.md)
-       * [Understandable](Docs/Accessibility%20guidelines/Understandable%20principle.md)
-       * [Robust](Docs/Accessibility%20guidelines/Robust%20principle.md)
+       * [Perceivable](docs/guidelines/principles/perceivable_principle.md)
+       * [Operable](docs/guidelines/principles/operable_principle.md)
+       * [Understandable](docs/guidelines/principles/understandable_principle.md)
+       * [Robust](docs/guidelines/principles/robust_principle.md)
   
-    * Common practices per mobile platform
-
-    * [Testing accessibility features](Docs/Accessibility%20guidelines/Testing%20accessibility%20features.md)
+    * [Testing accessibility features](docs/testing/testing.md)
 
 4. Conclusion
