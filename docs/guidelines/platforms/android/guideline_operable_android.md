@@ -4,6 +4,8 @@ _User interface components and navigation must be operable._
 
 ## Keyboard accessible
 
+_Make all functionality available from a keyboard._
+
 :white_check_mark: **Success criteria**
 
 Except on-screen keyboard, Android also supports physical keyboards that offer convenient way to input text and also to navigate and interact with the app. This feature is a great benefit for the users with motor difficulties who use Switch Access service to interact with the app.
