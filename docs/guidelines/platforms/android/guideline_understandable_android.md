@@ -50,8 +50,7 @@ If an error occurs on the item that the user is interacting with, the error shou
 
 It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible, because they already have most accessibility capabilities that your app needs.
 
-On the other hand, if your app requires the implementation of custom components, you will need to implement [custom accessibility events](https://developer.android.com/guide/topics/ui/accessibility/principles#define-custom-events)
-to provide all accessibility updates the same as system-provided widgets do.
+On the other hand, if your app requires the implementation of custom components, you will need to implement [custom accessibility events](https://developer.android.com/guide/topics/ui/accessibility/principles#define-custom-events) to provide all accessibility updates that the system-provided widgets do.
 
 :no_entry_sign: **Failure criteria**
 
