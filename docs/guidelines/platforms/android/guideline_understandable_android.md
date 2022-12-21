@@ -10,7 +10,7 @@ _Make text content readable and understandable._
 
 The app should be implemented in a way to reach the largest number of users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It should provide a text alternative at least in English if it already isn't the default language of the app.
 
-It is recommended that all text content used in the application, including `contentDescriptions`, is implemented using the Android resource framework.
+It is recommended that all text content used in the application, including `contentDescription`, is implemented using the Android resource framework.
 
 It is also important to support localization because of accessibility services. Even though TalkBack supports [various languages](https://support.google.com/accessibility/android/answer/11101402?hl=en), not all of them are supported on every Android version.
 
