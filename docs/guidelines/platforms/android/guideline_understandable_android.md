@@ -48,7 +48,7 @@ _Help users avoid and correct mistakes._
 
 If an error occurs on the item that the user is interacting with, the error should be clearly defined and described so the user can get a clear information of why the error occurred and what to do in order to fix it.
 
-It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible because the ones already have the most accessibility capabilities that your app needs.
+It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible, because they already have most accessibility capabilities that your app needs.
 
 On the other hand, if your app requires the implementation of custom components, you will need to implement [custom accessibility events](https://developer.android.com/guide/topics/ui/accessibility/principles#define-custom-events)
 to provide all accessibility updates the same as system-provided widgets do.
