@@ -83,7 +83,7 @@ That way, services such as TalkBack will read defined relationships to the user 
    android:id="@+id/usernameEntry" ... />
 ```
 
-In the given example, services such as TalkBack will read - "EditBox for username" when user sets focus to EditText.
+In the given example, services such as TalkBack will read - "EditBox for username" when the user sets focus to EditText.
 
 :no_entry_sign: **Failure criteria**
 
