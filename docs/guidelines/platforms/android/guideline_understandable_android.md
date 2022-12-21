@@ -8,7 +8,7 @@ _Make text content readable and understandable._
 
 :white_check_mark: **Success criteria**
 
-The app should be implemented in a way to reach the most users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It should provide a text alternative for, at least English language if the one is not the default language of the app.
+The app should be implemented in a way to reach the largest number of users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It should provide a text alternative at least in English if it already isn't the default language of the app.
 
 It is recommended that all text content used in the application, including `contentDescriptions`, is implemented using the Android resource framework.
 
