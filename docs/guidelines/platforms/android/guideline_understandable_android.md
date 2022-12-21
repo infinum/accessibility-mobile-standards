@@ -16,7 +16,7 @@ It is also important to support localization because of accessibility services. 
 
 **Server-driven application**
 
-If the application is server-driven and most of the content is depending on the backend output, it is important to create logic where the app will on launch send information about the current locale. In that scenario, the backend should based on the received information about the current locale, return the content in the corresponding language.
+If the application is server-driven and most of the content is depending on the backend output, it is important to create logic where the app will send the information about the current locale at launch. In that scenario, the backend should, based on the received information about the current locale, return the content in the corresponding language.
 
 :no_entry_sign: **Failure criteria**
 
