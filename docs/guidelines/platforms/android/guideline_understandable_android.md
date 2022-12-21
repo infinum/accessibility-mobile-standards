@@ -62,7 +62,7 @@ On the other hand, if your app requires the implementation of custom components,
 
 :white_check_mark: **Success criteria**
 
-When the accessibility services user focuses on input view (for example in the form or login screen) it is important to give him enough information about the type of input that is expected from him to provide.
+When the user focuses on an input view (for example in the form or login screen) through an accessibility service, it is important to give them enough information about the type of input they are expected to provide.
 
 - Pairs of elements where one describes the other
 
