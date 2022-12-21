@@ -46,7 +46,7 @@ _Help users avoid and correct mistakes._
 
 :white_check_mark: **Success criteria**
 
-If an error occurs on the item that the user is interacting with, the one should be clearly defined and described so the user can get a clear information of why the error occurred and what to do in order to fix it.
+If an error occurs on the item that the user is interacting with, the error should be clearly defined and described so the user can get a clear information of why the error occurred and what to do in order to fix it.
 
 It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible because the ones already have the most accessibility capabilities that your app needs.
 
