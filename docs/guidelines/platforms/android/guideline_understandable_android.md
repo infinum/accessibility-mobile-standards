@@ -68,7 +68,7 @@ When the user focuses on an input view (for example in the form or login screen)
 
 It is a common case that a given EditText has a corresponding View that describes the content that the user should input within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
 
-That way, services such as TalkBack will read defined relationships to the user giving him more context about expected input when EditText is in focus.
+That way, services such as TalkBack will read defined relationships to the user, giving them more context about the expected input when EditText is in focus.
 
 **Code example:**
 
