@@ -90,7 +90,7 @@ class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
 
 ## Time-based Media
 
-**Make media content more accessible**
+_Provide alternatives for time-based media._
 
 :white_check_mark: **Success criteria**
 
@@ -105,6 +105,8 @@ If the app you are building includes media content such as video clips or audio 
 - all media is presented to the user without the possibility to change some of the controls (slow down, pause, volume up etc.)
 
 ## Adaptable
+
+_Create content that can be presented in different ways without losing information or structure._
 
 ### Info and Relationships
 
