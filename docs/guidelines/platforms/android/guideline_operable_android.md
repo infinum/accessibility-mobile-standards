@@ -147,43 +147,13 @@ ViewCompat.setAccessibilityDelegate(personalData, object : AccessibilityDelegate
 
 - user of accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation process
 
-### Traversal Order
+### Focus Order
 
 :white_check_mark: **Success criteria**
 
 Order of the components that are displayed on the screen should have a logical traversal order. That is very important for people using accessibility services (such as TalkBack) in order to get a clearer picture of the content and possible actions on the current screen they are navigating through.
 
-The best solution would be to redesign the screen to create such a logical traversal order. If that is not an option, on apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create a new order of displayed views that will make a bit more sense to TalkBack users.
-
-An example of using `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes is given down below:
-
-```
-<Button
-    android:id="@+id/button1"
-    ... />
-<Button
-    android:id="@id/button2"
-    android:accessibilityTraversalAfter="@id/button3"
-    ... />
-<Button
-    android:id="@id/button3"
-    ...  />
-```
-
-_Note 2. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes in a way that does not create any loops or traps that will prevent users to interact with all relevant views displayed on the screen._
-
-In apps with minSdk < 22, traversal order can be defined programmatically using ViewCompat.
-
-The example is given down below:
-
-```
-ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
-    override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
-        super.onInitializeAccessibilityNodeInfo(host, info)
-        info?.setTraversalAfter(button2)
-    }
-})
-```
+Defining the content of the screen in the meaningful sequence described in the [Perceivable guidelines] automatically results in appropriate traversal order when navigating through the screen.
 
 :no_entry_sign: **Failure criteria**
 
