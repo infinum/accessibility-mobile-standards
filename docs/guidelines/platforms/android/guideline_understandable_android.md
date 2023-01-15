@@ -26,7 +26,7 @@ If the application is server-driven and most of the content is depending on the 
 
 This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.
 
-⎯
+---
 
 ## Predictable
 
@@ -48,7 +48,7 @@ If the content that is displayed on the screen is designed and implemented follo
 
 This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.
 
-⎯
+---
 
 ## Input Assistance
 
@@ -74,7 +74,7 @@ On the other hand, if your app requires the implementation of custom components,
 
 This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.
 
-⎯
+---
 
 ### Labels or instruction
 
@@ -111,6 +111,11 @@ In the given example, services such as TalkBack will read - "EditBox for usernam
 
 This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.
 
-⎯
+### Sources
+
+- ![](https://support.google.com/accessibility/android)
+- ![](https://developer.android.com/guide/topics/ui/accessibility)
+
+---
 
 [← Understandable principle](../../principles/understandable_principle.md "Understandable principle")

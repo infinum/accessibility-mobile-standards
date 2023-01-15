@@ -9,10 +9,6 @@ Based on the currently available tools, we can define them as;
 
 Testing tools are tools that can be used in standard testing like; UI testing. On the other hand, verification tools give us information about the current accessibility implementation status.
 
-## Testing on Android
-
-// TODO
-
 ## Testing on iOS
 
 On iOS, we can support both testing and verification tools. When talking about testing tools, we will cover tools that can be used as a part of UI testing; while talking about verification tools, we will cover tool which is a part of the Xcode to verify the current status of the application (or screen of the application).

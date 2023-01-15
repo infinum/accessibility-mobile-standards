@@ -22,7 +22,7 @@ If an element exists on the UI only for decorative purposes it is recommended th
 
 This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.
 
-⎯
+---
 
 ## Time-based Media
 
@@ -44,7 +44,7 @@ If the app you are building includes media content such as video clips or audio 
 
 This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.
 
-⎯
+---
 
 ## Adaptable
 
@@ -149,7 +149,7 @@ That way users of accessibility services can choose to navigate between headings
 
 This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.
 
-⎯
+---
 
 ### Meaningful sequence
 
@@ -197,7 +197,7 @@ ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompa
 
 This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.
 
-⎯
+---
 
 ### Sensory characteristics
 
@@ -213,6 +213,11 @@ It is important that the content provided in your app is easily understandable t
 
 This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.
 
-⎯
+### Sources
+
+- ![](https://support.google.com/accessibility/android)
+- ![](https://developer.android.com/guide/topics/ui/accessibility)
+
+---
 
 [← Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
