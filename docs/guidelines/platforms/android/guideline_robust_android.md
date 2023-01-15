@@ -86,3 +86,11 @@ class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
 - descriptions provided for the relevant views are too long and too complex
 
 - descriptions provided for the relevant views are hardcoded and are not localized properly
+
+#### Additional notes
+
+This guideline covers point 4.1.1 Parsing - Level A of the WCAG standard.
+
+⎯
+
+[← Robust principle](../../principles/robust_principle.md "Robust principle")

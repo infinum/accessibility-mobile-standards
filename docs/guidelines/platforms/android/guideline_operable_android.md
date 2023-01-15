@@ -69,6 +69,12 @@ When the user is navigating through the app **using arrow keys on the keyboard**
 
 - not defining custom order if the views in the layout file are not defined in the same order they should be presented to the user
 
+#### Additional notes
+
+This guideline covers point 2.1.1 Keyboard - Level A of the WCAG standard.
+
+---
+
 ## Enough time
 
 _Provide users enough time to read and use content._
@@ -86,6 +92,62 @@ All users should have the ability to interact with the content displayed on the 
 - logging out the user without prior warning and possibility to extend session
 
 - define time-limited actions in the app with no ability to extend that limit
+
+#### Additional notes
+
+This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.
+
+---
+
+### Pause, Stop, Hide
+
+Moving, blinking, or scrolling, or auto-updating content in the app.
+
+#### ✅ Success technique(s)
+
+- When using auto-scrolling page views, whose animation starts automatically, make sure to provide a way for user to pause, stop, or hide it.
+
+- If there is no parallel content next to the moving, blinking, or scrolling content there's no need to provide a pause, stop or hide button.
+
+- Loading screens doesn't require to meet this success criterion.
+
+#### 🚫 Failures
+
+- Using an auto-updating or auto-scrolling view that can't be paused/stopped.
+
+#### Additional notes
+
+This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.
+
+---
+
+## Seizures and Physical Reactions
+
+_Do not design content in a way that is known to cause seizures or physical reactions._
+
+### Three Flashed or Below Treshold
+
+Apps should not contain elements that flash more than three times in one second period.
+
+#### ✅ Success technique(s)
+
+- Avoiding flashing content in general, if possible.
+
+- If using flashing content - make sure that any flashing element last at least least 333 ms.
+
+- If having an element that flashes more frequently is unavoidable - make sure that the flashing area is covering less than 25% of 10 degrees of visual field
+
+#### 🚫 Failures
+
+- Using rapidly flashing elements to catch user's attention
+
+- Having a larger area of screen flashing more than three times per second
+
+#### Additional notes
+
+This guideline covers point 2.3.1 - Level A of the WCAG standard.
+
+---
 
 ## Navigable
 
@@ -147,17 +209,11 @@ ViewCompat.setAccessibilityDelegate(personalData, object : AccessibilityDelegate
 
 - user of accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation process
 
-### Focus Order
+#### Additional notes
 
-:white_check_mark: **Success criteria**
+This guideline covers points 2.4.1 Bypass Blocks - Level A of the WCAG standard.
 
-Order of the components that are displayed on the screen should have a logical traversal order. That is very important for people using accessibility services (such as TalkBack) in order to get a clearer picture of the content and possible actions on the current screen they are navigating through.
-
-Defining the content of the screen in the meaningful sequence described in the [Perceivable guidelines] automatically results in appropriate traversal order when navigating through the screen.
-
-:no_entry_sign: **Failure criteria**
-
-- views displayed on the screen break consistency of navigation
+---
 
 ### Page Titles
 
@@ -172,6 +228,30 @@ If the title is defined using a toolbar with custom behavior or some other custo
 - screens have no titles defined or the defined titles are not descriptive enough
 
 - defined titles are not the first thing that is read when user enters the screen and therefore users using accessibility services have no information which screen they opened
+
+#### Additional notes
+
+This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.
+
+---
+
+### Focus Order
+
+:white_check_mark: **Success criteria**
+
+Order of the components that are displayed on the screen should have a logical traversal order. That is very important for people using accessibility services (such as TalkBack) in order to get a clearer picture of the content and possible actions on the current screen they are navigating through.
+
+Defining the content of the screen in the meaningful sequence described in the [Perceivable guidelines] automatically results in appropriate traversal order when navigating through the screen.
+
+:no_entry_sign: **Failure criteria**
+
+- views displayed on the screen break consistency of navigation
+
+#### Additional notes
+
+This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.
+
+---
 
 ### Link Purpose
 
@@ -211,6 +291,13 @@ Example given on the **Screenshot 4.** - **Avoid using ClickableSpan** and inste
 
 - link is part of the longer text and implemented using ClickableSpan so TalkBack users are not aware of link existence
 
+#### Additional notes
+
+This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.
+
+⎯
+
+[← Operable principle](../../principles/operable_principle.md "Operable principle")
 
 
 

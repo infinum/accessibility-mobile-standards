@@ -22,6 +22,12 @@ If the application is server-driven and most of the content is depending on the 
 
 - the default language of the app is hardcoded and it is impossible to change it
 
+#### Additional notes
+
+This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.
+
+⎯
+
 ## Predictable
 
 _Make mobile apps appear and operate in predictable ways._
@@ -37,6 +43,12 @@ If the content that is displayed on the screen is designed and implemented follo
 :no_entry_sign: **Failure criteria**
 
 - the content is not grouped based on context relationships and has no meaningful labels defined
+
+#### Additional notes
+
+This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.
+
+⎯
 
 ## Input Assistance
 
@@ -57,6 +69,12 @@ On the other hand, if your app requires the implementation of custom components,
 - error messages do not exist or are not descriptive enough
 
 - custom components do not support custom error handling 
+
+#### Additional notes
+
+This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.
+
+⎯
 
 ### Labels or instruction
 
@@ -88,3 +106,11 @@ In the given example, services such as TalkBack will read - "EditBox for usernam
 :no_entry_sign: **Failure criteria**
 
 - not providing enough context for the views that expect user interaction
+
+#### Additional notes
+
+This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.
+
+⎯
+
+[← Understandable principle](../../principles/understandable_principle.md "Understandable principle")
