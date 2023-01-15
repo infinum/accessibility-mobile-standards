@@ -215,8 +215,8 @@ This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG 
 
 ### Sources
 
-- ![](https://support.google.com/accessibility/android)
-- ![](https://developer.android.com/guide/topics/ui/accessibility)
+- [Google Support Page](https://support.google.com/accessibility/android)
+- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
 
 ---
 

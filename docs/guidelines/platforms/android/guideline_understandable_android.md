@@ -113,8 +113,8 @@ This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG s
 
 ### Sources
 
-- ![](https://support.google.com/accessibility/android)
-- ![](https://developer.android.com/guide/topics/ui/accessibility)
+- [Google Support Page](https://support.google.com/accessibility/android)
+- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
 
 ---
 
