@@ -295,7 +295,9 @@ Example given on the **Screenshot 4.** - **Avoid using ClickableSpan** and inste
 
 This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.
 
-### Sources
+---
+
+#### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
 - [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)

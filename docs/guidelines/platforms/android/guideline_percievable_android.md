@@ -213,7 +213,9 @@ It is important that the content provided in your app is easily understandable t
 
 This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.
 
-### Sources
+---
+
+#### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
 - [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)

@@ -111,7 +111,9 @@ In the given example, services such as TalkBack will read - "EditBox for usernam
 
 This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.
 
-### Sources
+---
+
+#### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
 - [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
