@@ -95,8 +95,8 @@ This guideline covers point 4.1.1 Parsing - Level A of the WCAG standard.
 
 #### Sources
 
-- [Google Support Page](https://support.google.com/accessibility/android)
-- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
+- ![Google Support Page](https://support.google.com/accessibility/android)
+- ![Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
 
 ---
 
