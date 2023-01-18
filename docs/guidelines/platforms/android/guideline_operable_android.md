@@ -133,9 +133,9 @@ Apps should not contain elements that flash more than three times in one second 
 
 - Avoiding flashing content in general, if possible.
 
-- If using flashing content - make sure that any flashing element last at least least 333 ms.
+- If using flashing content - keep the flash of an element running for a minimum of 333ms.
 
-- If having an element that flashes more frequently is unavoidable - make sure that the flashing area is covering less than 25% of 10 degrees of visual field
+- If the usage of an element that flashes more frequently is unavoidable - make sure that the flashing area is covering less than 25% within 10 degrees of a visual field.
 
 #### 🚫 Failures
 
@@ -219,15 +219,15 @@ This guideline covers points 2.4.1 Bypass Blocks - Level A of the WCAG standard.
 
 :white_check_mark: **Success criteria**
 
-Each screen should have a clear, descriptive and, if possible, unique title that describes the purpose of that screen that will be understandable to all users. Also, it is important to make sure that the title is the first thing that will be read when the user enters the screen. This could be achieved by following design guidelines or with the help of setting the `android:accessibilityTraversalBefore` attribute.
+Each screen should have a clear, descriptive and, if possible, unique title that describes the purpose of that screen that will be understandable to all users. Also, it is important to make sure that the title is the first element that will be read when the user enters the screen. This could be achieved by following design guidelines or with the help of setting the `android:accessibilityTraversalBefore` attribute.
 
-If the title is defined using a toolbar with custom behavior or some other custom view, it is important to insure that the title will be read using accessibility services.
+If the title is defined using a toolbar with custom behavior or some other custom view, it is important to ensure that the title will be read using accessibility services.
 
 :no_entry_sign: **Failure criteria**
 
 - screens have no titles defined or the defined titles are not descriptive enough
 
-- defined titles are not the first thing that is read when user enters the screen and therefore users using accessibility services have no information which screen they opened
+- defined titles are not the first elements that are read when user enters the screen and therefore users using accessibility services have no information which screen they opened
 
 #### Additional notes
 
@@ -239,7 +239,7 @@ This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.
 
 :white_check_mark: **Success criteria**
 
-Order of the components that are displayed on the screen should have a logical traversal order. That is very important for people using accessibility services (such as TalkBack) in order to get a clearer picture of the content and possible actions on the current screen they are navigating through.
+Order of the components that are displayed on the screen should have a logical traversal order. This is very important for people using accessibility services (such as TalkBack) in order to get a clearer picture of the content and possible actions on the current screen that is being navigated through.
 
 Defining the content of the screen in the meaningful sequence described in the [Perceivable guidelines] automatically results in appropriate traversal order when navigating through the screen.
 

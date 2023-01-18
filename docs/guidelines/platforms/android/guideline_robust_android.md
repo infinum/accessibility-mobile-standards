@@ -10,13 +10,13 @@ _Maximize compatibility with current and future devices, taking into account the
 
 :white_check_mark: **Success criteria**
 
-All user-visible content be grouped logically and assigned identifiers appropriately.
+All user-visible content should be grouped logically and with appropriately assigned identifiers.
 
 #### Label elements
 
 In most cases you can include required description in the layout resource file as the element's `contentDescription`. It is recommended to use string resources for defining all required descriptions for easier localization.
 
-Also, the app should be able to notify the user if the value of presented view in any way change programmatically without user input.
+Also, the app should be able to notify the user if the value of a presented view changes programmatically without any user input.
 
 **Code example:**
 
@@ -31,7 +31,7 @@ _Note:_ You should not provide descriptions for TextView elements because Androi
 
 - Editable elements
 
-When thinking about describing editable elements such as EditText objects, it is usually helpful to provide text that gives examples of valid input in the element itself. That way, users who navigate through the app using screen readers, could get a bit more info about the required input when they focus the editable element.
+When thinking about describing editable elements such as EditText objects, it is usually helpful to provide a text that gives examples of valid input in the element itself. That way, users who navigate through the app using screen readers, could get a bit more info about the required input when they focus the editable element.
 
 In these situations it is recommended to use `android:hint` attribute.
 
@@ -50,11 +50,11 @@ In these situations it is recommended to use `android:hint` attribute.
 
 When working with collections, it is very important that provided labels **are unique for each item**. That way, the system accessibility services can refer to exactly one specific item when announcing the label.
 
-This will help users to get general idea when they've cycled through the complete UI of your app.
+This will help users to get a general idea when they've cycled through the complete UI of your app.
 
 In particular, you should provide additional text or contextual information in elements within reused layouts, such as RecyclerView or ListView objects, so that each child element is uniquely identified.
 
-The described requests could be achieved by setting content description as part of adapter implementation.
+The described requests could be achieved by setting content description as a part of adapter implementation.
 
 **Code example:**
 
