@@ -14,7 +14,7 @@ The compatible is the only aspect defined by this principle, and it describes ho
 
 In this chapter you can find principle-related guidelines and examples for mobile platforms;
 
-* Android
+* [Android](../platforms/android/guideline_robust_android.md "Robust guidelines for Android")
 * [iOS](../platforms/ios/guideline_robust_ios.md "Robust guidelines for iOS")
 
 ⎯

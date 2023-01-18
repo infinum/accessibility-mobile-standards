@@ -28,7 +28,7 @@ Some users might have trouble moving the device, themselves or performing comple
 
 In this chapter you can find principle-related guidelines and examples for mobile platforms;
 
-* Android
+* [Android](../platforms/android/guideline_operable_android.md "Operable guidelines for Android")
 * [iOS](../platforms/ios/guideline_operable_ios.md "Operable guidelines for iOS")
 
 ⎯

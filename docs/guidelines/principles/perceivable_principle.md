@@ -1,14 +1,10 @@
 # Perceivable principle
 
-## Aspects
-
-// TODO
-
 ## Guidelines for mobile developers
 
 In this chapter you can find principle-related guidelines and examples for mobile platforms;
 
-* Android
+* [Android](../platforms/android/guideline_perceivable_android.md "Perceivable guidelines for Android")
 * [iOS](../platforms/ios/guideline_perceivable_ios.md "Perceivable guidelines for iOS")
 
 ⎯

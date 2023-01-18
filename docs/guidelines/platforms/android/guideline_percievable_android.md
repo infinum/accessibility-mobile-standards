@@ -14,79 +14,15 @@ Each UI element should include a description that describes it's purpose. It is 
 
 If an element exists on the UI only for decorative purposes it is recommended that you set its `contentDescription` to "null" or `android:importantForAccessibility` to "no" for devices running Android 4.1 and higher.
 
-#### Label elements
-
-In most cases you can include required description in the layout resource file as the element's `contentDescription`. It is recommended to use string resources for defining all required descriptions for easier localization.
-
-**Code example:**
-
-```
-<!-- The en-US value for the following string is "Inspect". -->
-<ImageView
-    ...
-    android:contentDescription="@string/inspect" />
-```
-
-_Note:_ You should not provide descriptions for TextView elements because Android accessibility services automatically announce the text itself as required description.
-
-
-- Editable elements
-
-When thinking about describing editable elements such as EditText objects, it is usually helpful to provide text that gives examples of valid input in the element itself. That way, users who navigate through the app using screen readers, could get a bit more info about the required input when they focus the editable element.
-
-In these situations it is recommended to use `android:hint` attribute.
-
-**Code example:**
-
-```
-<!-- The hint text for en-US locale would be
-     "Username". -->
-<EditText
-   android:id="@+id/usernameInputField"
-   android:hint="@string/username_hint_text" ... />
-```
-
-
-- Elements in the collection
-
-When working with collections, it is very important that provided labels **are unique for each item**. That way, the system accessibility services can refer to exactly one specific item when announcing the label.
-
-This will help users to get general idea when they've cycled through the complete UI of your app.
-
-In particular, you should provide additional text or contextual information in elements within reused layouts, such as RecyclerView or ListView objects, so that each child element is uniquely identified.
-
-The described requests could be achieved by setting content description as part of adapter implementation.
-
-**Code example:**
-
-An example of defining content description in adapter is given in the following snippet:
-
-```
-data class MovieRating(val title: String, val starRating: Integer)
-
-class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
-        RecyclerView.Adapter<MyMovieRatingsAdapter.MyRatingViewHolder>() {
-
-    class MyRatingViewHolder(val ratingView: ImageView) :
-            RecyclerView.ViewHolder(ratingView)
-
-    override fun onBindViewHolder(holder: MyRatingViewHolder, position: Int) {
-        val ratingData = myData[position]
-        holder.ratingView.contentDescription = "Movie ${position}: " +
-                "${ratingData.title}, ${ratingData.starRating} stars"
-    }
-}
-```
-
 :no_entry_sign: **Failure criteria**
 
-- there are relevant UI views with no description provided
+- Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes
 
-- descriptions provided for the relevant views are not unique and are repeated shortly one after another
+#### Additional notes
 
-- descriptions provided for the relevant views are too long and too complex
+This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.
 
-- descriptions provided for the relevant views are hardcoded and are not localized properly
+---
 
 ## Time-based Media
 
@@ -103,6 +39,12 @@ If the app you are building includes media content such as video clips or audio 
 :no_entry_sign: **Failure criteria**
 
 - all media is presented to the user without the possibility to change some of the controls (slow down, pause, volume up etc.)
+
+#### Additional notes
+
+This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.
+
+---
 
 ## Adaptable
 
@@ -203,6 +145,60 @@ That way users of accessibility services can choose to navigate between headings
 
 - it is not clear which parts of the screen are contextually connected to each other
 
+#### Additional notes
+
+This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.
+
+---
+
+### Meaningful sequence
+
+:white_check_mark: **Success criteria**
+
+If the order of the content displayed on the screen is crucial for the understanding, it is very important to make sure it will be presented in the same order when using accessibility services. That way users of accessibility services (such as TalkBack) can get clearer picture of the content and possible actions on the current screen that is being navigated through.
+
+The best solution should be a full screen redesign with the correct and logical traversal order. If that is not an option, on apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create a new order of displayed views that will make a bit more sense to TalkBack users.
+
+An example of using `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes is given down below:
+
+```
+<Button
+    android:id="@+id/button1"
+    ... />
+<Button
+    android:id="@id/button2"
+    android:accessibilityTraversalAfter="@id/button3"
+    ... />
+<Button
+    android:id="@id/button3"
+    ...  />
+```
+
+_Note 2. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes in a way that does not create any loops or traps that will prevent users to interact with all relevant views displayed on the screen._
+
+In apps with minSdk < 22, traversal order can be defined programmatically using ViewCompat.
+
+The example is given down below:
+
+```
+ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
+    override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
+        super.onInitializeAccessibilityNodeInfo(host, info)
+        info?.setTraversalAfter(button2)
+    }
+})
+```
+
+:no_entry_sign: **Failure criteria**
+
+- views displayed on the screen break consistency of navigation
+
+#### Additional notes
+
+This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.
+
+---
+
 ### Sensory characteristics
 
 :white_check_mark: **Success criteria**
@@ -212,3 +208,18 @@ It is important that the content provided in your app is easily understandable t
 :no_entry_sign: **Failure criteria**
 
 - important difference between elements is stressed only with colors
+
+#### Additional notes
+
+This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.
+
+---
+
+#### Sources
+
+- [Google Support Page](https://support.google.com/accessibility/android)
+- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
+
+---
+
+[← Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")

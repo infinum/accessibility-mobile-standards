@@ -8,7 +8,7 @@ This repository contains mobile standards created for mobile platforms. It inclu
 
 2. [Accessibility features per mobile platform](docs/features/features_mobile_platforms.md)
 
-    * Android
+    * [Android](docs/features/features_android.md)
     * [iOS](docs/features/features_ios.md)
     * [Flutter](docs/features/features_flutter.md)
 
