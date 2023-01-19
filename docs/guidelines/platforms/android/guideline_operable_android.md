@@ -279,10 +279,10 @@ Example shown on the **Screenshot 3.** - If the link text is well defined and im
 
 Example given on the **Screenshot 4.** - **Avoid using ClickableSpan** and instead **use URLSpan** for adding link to specific part of text. That way accessibility service such as TalkBack will recognized there is link set somewhere in the text and user will know that he is able to perform action if he is interested in following link.
 
-| <img src="https://imgur.com/X3njNIV.png" width="50%"> | <img src="https://imgur.com/6mI8z8W.png" width="50%"> |
+| <img src="https://imgur.com/5HPJfes.png" width="50%"> | <img src="https://imgur.com/MlWcuYI.png" width="50%"> |
 |:--:|:--:|
 | **Screenshot 1.** Link paired with descriptive text element | **Screenshot 2.** Link implemented as regular TextView or Button |
-| <img src="https://imgur.com/wj8hWQy.png" width="50%"> | <img src="https://imgur.com/b833Hol.png" width="50%"> |
+| <img src="https://imgur.com/xHv8oCi.png" width="50%"> | <img src="https://imgur.com/dy92J6y.png" width="50%"> |
 | **Screenshot 3.** Link text implemented using URLSpan | **Screenshot 4.** Text containing link is part of a longer text |
 
 :no_entry_sign: **Failure criteria**
