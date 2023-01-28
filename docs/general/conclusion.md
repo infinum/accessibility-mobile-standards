@@ -12,4 +12,4 @@ This document is and will be in active development, with care in our mind to mak
 
 [← Testing accessibility features](../testing/testing.md "Testing accessibility features")
 │
-[Close document](https://github.com/infinum/accessibility-mobile-standards "Close accessibility mobile standards document")
+[Close accessibility mobile standards](https://github.com/infinum/accessibility-mobile-standards "Close accessibility mobile standards")

@@ -66,3 +66,5 @@ In this document, usage of component identifiers like `accessibilityIdentifier` 
 ⎯
 
 [← Accessibility principles and examples](../guidelines/principles/accessibility_principles_and_examples.md "Accessibility principles and examples")
+│
+[Conclusion →](../general/conclusion.md "Conclusion")
