@@ -23,4 +23,4 @@ This repository contains mobile standards created for mobile platforms. It inclu
   
     * [Testing accessibility features](docs/testing/testing.md)
 
-4. Conclusion
+4. [Conclusion](docs/general/conclusion.md)
