@@ -63,6 +63,21 @@ Xcode inspector is available in the Xcode by _Xcode > Open Developer Tools... > 
 
 In this document, usage of component identifiers like `accessibilityIdentifier` or `resourceId` is not defined, because they are not used for accessibility features, but rather for automation testing.
 
+## Testing for Flutter
+
+- **Android**
+
+For manual testing, the usual way in native Android is testing using Accesibility scanner. Unfortunatelly that doesn't work with Flutter yet ([see open issue](https://github.com/flutter/flutter/issues/39531)).
+You can use TalkBack, but that's mainly inteded for real users that needs accessibility features. It's good so you know how everything works for user, but it's a bit complex and slow to use for testing.
+
+For automated testing, maily it's about widget tests and inspecting that correct semantics is applied.
+
+- **iOS**
+
+
+
+
+
 ⎯
 
 [← Accessibility principles and examples](../guidelines/principles/accessibility_principles_and_examples.md "Accessibility principles and examples")
