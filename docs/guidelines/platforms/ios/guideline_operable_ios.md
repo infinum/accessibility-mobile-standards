@@ -1,14 +1,18 @@
+ [🔼 Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
+
 # Operable
 
 User interface components and navigation must be operable.
 
 ## Enough Time
 
-_Provide users enough time to read and use content._
+Provide users enough time to read and use content.
 
 ### Timing Adjustable
 
 For each time limit set by the content, user can turn off, adjust, or extend it.
+
+*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -25,15 +29,13 @@ For each time limit set by the content, user can turn off, adjust, or extend it.
 - Logging user out of their session with no prior warning.
 - Not providing enough time or time extensions to react on an incoming action in the app.
 
-#### Additional notes
-
-This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.
-
 ---
 
 ### Pause, Stop, Hide
 
 Moving, blinking, or scrolling, or auto-updating content in the app.
+
+*This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -45,20 +47,17 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
-#### Additional notes
-
-This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.
-
 ---
-
 
 ## Seizures and Physical Reactions
 
-_Do not design content in a way that is known to cause seizures or physical reactions._
+Do not design content in a way that is known to cause seizures or physical reactions.
 
 ### Three Flashed or Below Treshold
 
 Apps should not contain any element that flashes more than three times in any one second period.
+
+*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -71,10 +70,6 @@ Apps should not contain any element that flashes more than three times in any on
 - Using rapidly flashing elements to catch user's attention.
 - Having a larger area of screen flashing more than three times per second.
 
-#### Additional notes
-
-This guideline covers point 2.3.1 - Level A of the WCAG standard.
-
 ---
 
 ## Navigable
@@ -84,6 +79,8 @@ _Provide ways to help users navigate, find content, and determine where they are
 ### Bypass Blocks
 
 A skip mechanism is available to bypass blocks of content that are repated in the app.
+
+*This guideline covers point 2.4.1 Bypass Blocks - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -105,16 +102,13 @@ A skip mechanism is available to bypass blocks of content that are repated in th
 
 Not providing a way for user to quickly skip over sections with numerous items.
 
-#### Additional notes
-
-This guideline covers point 2.4.1 Bypass Blocks - Level A of the WCAG standard.
-
 ---
-
 
 ### Page Titled
 
 Screens have a clear, descriptive, and possibly unique title that describes topic or purpose and is easily understood by all users.
+
+*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -151,16 +145,14 @@ Screens have a clear, descriptive, and possibly unique title that describes topi
   - file names like "report.pdf" or "DSC_0123.jpeg"
   - placeholder text like "Enter title..." or "Search..."
 
-#### Additional notes
-
-This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.
-
 ---
 
 
 ### Focus Order
 
 VoiceOver: Ensure that information is read in an order consistent with the meaning and content.
+
+*This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -204,16 +196,14 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
         return true
     }
 ```
-#### Additional notes
-
-This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.
 
 ---
-
 
 ### Action Purpose
 
 Purpose of a button or link action is clear and easily understandable by all users
+
+*This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -261,10 +251,6 @@ Purpose of a button or link action is clear and easily understandable by all use
 *"Are you sure you want to cancel your booking? This action is ireversible" 
 ▸ OK  ▸ Cancel*
 - Button titles with unclear result like "Ready to publish?"
-
-#### Additional notes
-
-This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.
 
 ⎯
 

@@ -2,7 +2,7 @@
 
 Mobile standards provide information about accessibility features and implementation for the following platforms:
 
-* Android
+* [Android](features_android.md "Accessibility features for Android")
 * [iOS](features_ios.md "Accessibility features on iOS")
 * [Flutter](features_flutter.md "Accessibility features in Flutter")
 

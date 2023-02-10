@@ -1,3 +1,5 @@
+ [🔼 Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️ Understandable principle](../../principles/understandable_principle.md "Understandable principle")
+
 # Understandable guidelines for Flutter
 
 ## Readable
@@ -8,8 +10,7 @@ Make text content readable and understandable.
 
 The default human language of an App can be programmatically determined.
 
-*This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.*
-
+*This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.*
 #### ✅ Success technique(s)
 
 If the app supports multiple languages, we should also care that accessibility labels are localized as well.
@@ -29,12 +30,13 @@ Hard-coding a language code and labels inside an app should be avoided.
 
 Also, every app should be developed as a localizable app, even if it seems like it makes no sense at the start, or all of the intended audience speak a single language, it can still happen that some users will not be able to use that language and there is always a possibility that your app will scale to different language regions or that parts of your code will be reused on different projects which _do_ use localization.
 
-*This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.*
-
 ## Predictable
+
+Make mobile apps appear and operate in predictable ways.
 
 ### On Focus & On Input
 
+*This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.*
 #### ✅ Success technique(s)
 
 Users need to be able to consume content without any sudden interruptions and/or changes of context. Receiving focus on or interacting with any component should not initiate a change of context unless previously announced. By change of context we mean major changes in the content of the screen.

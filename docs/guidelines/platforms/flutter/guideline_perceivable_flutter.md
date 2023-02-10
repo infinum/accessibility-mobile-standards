@@ -1,8 +1,15 @@
-# Operable
 
-_User interface components and navigation must be operable._
+ [🔼 Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
 
-## [Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives) 
+# Operable guidelines for Flutter
+
+User interface components and navigation must be operable.
+
+## Text alternatives
+
+Provide text alternatives for any non-text content to be changed into other forms people need, such as large print, braille, speech, symbols, or more straightforward language.
+
+*This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.*
 
 ### Non-text content identification
 
@@ -24,14 +31,13 @@ Image(image: AssetImage('assets/settings.png'), semanticLabel: 'Open settings')
 
 - Do not provide semantics of elements that only exist for a decorative person. This will make navigation with screen readers harder.
 
-
-#### Additional notes
-
-This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.
-
 ---
 
-## [Time-based Media](https://www.w3.org/TR/WCAG21/#time-based-media)
+## Time-based Media
+
+Provide alternatives for time-based media.
+
+*This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -45,15 +51,15 @@ If the app you are building includes media content such as video clips or audio 
 
 - all media is presented to the user without the possibility to change some of the controls (slow down, pause, volume up etc.)
 
-#### Additional notes
-
-This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.
-
 ---
 
-## [Adaptable](https://www.w3.org/TR/WCAG21/#adaptable)
+## Adaptable
 
 ### Info and Relationships
+
+Information, structure, and relationships conveyed through presentation are available in text.
+
+*This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -75,13 +81,11 @@ That way users of accessibility services can choose to navigate between headings
 
 - it is not clear which parts of the screen are contextually connected to each other
 
-#### Additional notes
-
-This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.
-
 ---
 
 ### Meaningful sequence
+
+*This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -111,14 +115,13 @@ Row(
 );
 ```
 
-#### Additional notes
-
-This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.
-
 ---
 
 ### Sensory characteristics
 
+Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
+
+*This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.*
 #### ✅ Success technique(s)
 
 To make our app entirely understandable to the users, we should not rely only on one characteristic to show the user elements on the screen. You can find different ways to satisfy this aspect in the text below.

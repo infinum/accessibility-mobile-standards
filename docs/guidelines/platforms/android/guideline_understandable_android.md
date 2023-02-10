@@ -1,10 +1,14 @@
+ [🔼 Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️ Understandable principle](../../principles/understandable_principle.md "Understandable principle")
+
 # Understandable guidelines for Android
 
 ## Readable
 
-_Make text content readable and understandable._
+Make text content readable and understandable.
 
 ### Language of the App
+
+*This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -22,15 +26,13 @@ If the application is server-driven and most of the content is depending on the 
 
 - the default language of the app is hardcoded and it is impossible to change it
 
-#### Additional notes
-
-This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.
-
 ---
 
 ## Predictable
 
-_Make mobile apps appear and operate in predictable ways._
+Make mobile apps appear and operate in predictable ways.
+
+*This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.*
 
 ### On Focus & On Input
 
@@ -44,17 +46,15 @@ If the content that is displayed on the screen is designed and implemented follo
 
 - the content is not grouped based on context relationships and has no meaningful labels defined
 
-#### Additional notes
-
-This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.
-
 ---
 
 ## Input Assistance
 
-_Help users avoid and correct mistakes._
+Help users avoid and correct mistakes.
 
 ### Error identification
+
+*This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -70,13 +70,11 @@ On the other hand, if your app requires the implementation of custom components,
 
 - custom components do not support custom error handling 
 
-#### Additional notes
-
-This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.
-
 ---
 
 ### Labels or instruction
+
+*This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -106,10 +104,6 @@ In the given example, services such as TalkBack will read - "EditBox for usernam
 :no_entry_sign: **Failure criteria**
 
 - not providing enough context for the views that expect user interaction
-
-#### Additional notes
-
-This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.
 
 ---
 
