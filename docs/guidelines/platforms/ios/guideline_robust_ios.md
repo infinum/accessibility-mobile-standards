@@ -1,6 +1,6 @@
 # Robust guidelines for iOS
 
-Content must be robust enough that it can be interpreted by a wide variety of mobile devices including those which use accessibility features.
+Content must be robust enough that it can be interpreted by a wide variety of mobile devices, including those which use accessibility features.
 
 ## Compatible
 
@@ -14,13 +14,13 @@ All user-visible content be grouped logically and assigned identifiers appropria
 
 ##### Using accessibility identifiers
 
-Every user interface element should have a unique [accessibility identifier](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification/1623132-accessibilityidentifier) which will define it. Identifiers should not be reused, except where this is by design (i.e. the same exact element exists in several different locations). This property is not actually part of the accessibility context, but is rather used to differentiate between objects programmatically.
+Every user interface element should have a unique [accessibility identifier](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification/1623132-accessibilityidentifier), which will define it. Identifiers should not be reused except where this is by design (i.e. the same exact element exists in several different locations). This property is not actually part of the accessibility context but is rather used to differentiate between objects programmatically.
 
 ```swift
 submitFormButton.accessibilityIdentifier = "submit-form-button"
 ```
 
-For iterative elements, such as lists and tables there are two approaches: if the elements don't need to be distinguishable from each other for UI testing purposes (or some other explicit need) then using a single accessibility identifier for all elements is acceptable, otherwise the identifier could be suffixed with an index or more concrete information regarding it's meaning.
+There are two approaches for iterative elements, such as lists and tables; if the elements don't need to be distinguishable from each other for UI testing purposes (or some other explicit need), then using a single accessibility identifier for all elements is acceptable. Otherwise the identifier could be suffixed with an index or more concrete information regarding its meaning.
 
 ```swift
 func tableView(
@@ -43,28 +43,28 @@ func tableView(
 
 #### 🚫 Failures
 
-Duplicate identifiers used for elements which are essentially different in their action or role.
+Duplicate identifiers are used for elements that are essentially different in their action or role.
 
-Elements are not grouped or are badly organized on the screen which prevents accessibility features from quickly and efficiently moving through them.
+Elements are not grouped or are badly organized on the screen, which prevents accessibility features from quickly and efficiently moving through them.
 
 #### Additional notes
 
-This guideline covers point 4.1.1 Parsing - Level A of the WCAG standard.
+This guideline covers point 4.1.1 Parsing – Level A of the WCAG standard.
 
 ### Name, Role, Value
 
-User interface elements should be clearly defined by their name ([accessibility label](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel) & [accessibility hint](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)), the role that they have (accessibility identifier), and the value they carry([accesibility value](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)). The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's accessibility attributes), so that the user remains aware of what this element does at all times.
+User interface elements should be clearly defined by their name ([accessibility label](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel) & [accessibility hint](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)), the role that they have (accessibility identifier), and the value they carry([accesibility value](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)). The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's accessibility attributes) so that the user remains aware of what this element does at all times.
 
 #### ✅ Success technique(s)
 
-Every user interface element should have a unique accessibility label which can be used by VoiceOver.
+Every user interface element should have a unique accessibility label that can be used by VoiceOver.
 
 ```swift
 addButton.accessibilityLabel = "Add"
 addButton.accessibilityHint = "Adds an entry in the list"
 ```
 
-For elements which carry a value, such as a label, the accessibility value should be used to represent this value. If the accessibility value is not set then the actual value (in this case, the text value) will be read.
+For elements that carry a value, such as a label, the accessibility value should be used to represent this value. If the accessibility value is not set, then the actual value (in this case, the text value) will be read.
 
 ```swift
 titleLabel.text = "Entries"
@@ -75,13 +75,13 @@ titleLabel.accessibilityValue = "Entries list"
 
 Not providing accessibility identifiers for user interface elements.
 
-Implementing custom controls which are unfamiliar to the users and don't carry the necessary accessibility identifying information as defined in this guideline.
+Implementing custom controls that are unfamiliar to the users and don't carry the necessary accessibility identifying information as defined in this guideline.
 
-Changing the value or role of a user interface element without adjusting it's identifier programmatically.
+Changing the value or role of a user interface element without adjusting its identifier programmatically.
 
 #### Additional notes
 
-This guideline covers point 4.1.2 Name, Role, Value - Level A of the WCAG standard.
+This guideline covers point 4.1.2 Name, Role, Value – Level A of the WCAG standard.
 
 ⎯
 
