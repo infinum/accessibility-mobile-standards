@@ -8,7 +8,7 @@ _Make text content readable and understandable._
 
 :white_check_mark: **Success criteria**
 
-The app should be implemented in a way to reach the largest number of users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It should provide a text alternative at least in English if it already isn't the default language of the app.
+The app should be implemented to reach the largest number of users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It should provide a text alternative, at least in English, if it already isn't the default language of the app.
 
 It is recommended that all text content used in the application, including `contentDescription`, is implemented using the Android resource framework.
 
@@ -16,15 +16,15 @@ It is also important to support localization because of accessibility services. 
 
 **Server-driven application**
 
-If the application is server-driven and most of the content is depending on the backend output, it is important to create logic where the app will send the information about the current locale at launch. In that scenario, the backend should, based on the received information about the current locale, return the content in the corresponding language.
+If the application is server-driven and most of the content depends on the backend output, it is important to create logic where the app will send the information about the current locale at launch. In that scenario, the backend should return the content in the corresponding language based on the received information about the current locale.
 
 :no_entry_sign: **Failure criteria**
 
-- the default language of the app is hardcoded and it is impossible to change it
+- The default language of the app is hardcoded, and it is impossible to change it.
 
 #### Additional notes
 
-This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.
+This guideline covers point 3.1.1 Language of Page – Level A of the WCAG standard.
 
 ---
 
@@ -38,15 +38,15 @@ _Make mobile apps appear and operate in predictable ways._
 
 The user should be able to navigate through the app without constant context switching. Also, interacting with the view should not cause a change of context. If view interaction changes the context, that should be signalized to the user **before** the interaction.
 
-If the content that is displayed on the screen is designed and implemented following [Perceivable guidelines](https://github.com/infinum/accessibility-mobile-standards/blob/master/docs/guidelines/platforms/android/guideline_percievable_android.md), these requirements should be met by default.
+If the content displayed on the screen is designed and implemented following [Perceivable guidelines](https://github.com/infinum/accessibility-mobile-standards/blob/master/docs/guidelines/platforms/android/guideline_percievable_android.md), these requirements should be met by default.
 
 :no_entry_sign: **Failure criteria**
 
-- the content is not grouped based on context relationships and has no meaningful labels defined
+- The content is not grouped based on context relationships and has no meaningful labels defined.
 
 #### Additional notes
 
-This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.
+This technique covers points 3.2.1 On Focus – Level A & 3.2.2 On Input – Level A of the WCAG standard.
 
 ---
 
@@ -58,21 +58,21 @@ _Help users avoid and correct mistakes._
 
 :white_check_mark: **Success criteria**
 
-If an error occurs on the item that the user is interacting with, the error should be clearly defined and described so the user can get a clear information of why the error occurred and what to do in order to fix it.
+If an error occurs on the item the user is interacting with, the error should be clearly defined and described so the user can get clear information on why the error occurred and what to do in order to fix it.
 
-It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible, because they already have most accessibility capabilities that your app needs.
+It is recommended to always use or extend system-provided widgets that are as far down Android's class hierarchy as possible because they already have the most accessibility capabilities that your app needs.
 
 On the other hand, if your app requires the implementation of custom components, you will need to implement [custom accessibility events](https://developer.android.com/guide/topics/ui/accessibility/principles#define-custom-events) to provide all accessibility updates that the system-provided widgets do.
 
 :no_entry_sign: **Failure criteria**
 
-- error messages do not exist or are not descriptive enough
+- Error messages do not exist or are not descriptive enough.
 
-- custom components do not support custom error handling 
+- Custom components do not support custom error handling.
 
 #### Additional notes
 
-This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.
+This technique covers point 3.3.1 Error Identification – Level A of the WCAG standard.
 
 ---
 
@@ -80,11 +80,11 @@ This technique covers point 3.3.1 Error Identification - Level A of the WCAG sta
 
 :white_check_mark: **Success criteria**
 
-When the user focuses on an input view (for example in the form or login screen) through an accessibility service, it is important to give them enough information about the type of input they are expected to provide.
+When the user focuses on an input view (for example, in the form or login screen) through an accessibility service, it is important to give them enough information about the type of input they are expected to provide.
 
 - Pairs of elements where one describes the other
 
-It is a common case that a given EditText has a corresponding View that describes the content that the user should input within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
+It is common that a given EditText has a corresponding View that describes the content that the user should input within the EditText element. This relationship between elements could be achieved by setting `android:labelFor` attribute on that specific View.
 
 That way, services such as TalkBack will read defined relationships to the user, giving them more context about the expected input when EditText is in focus.
 
@@ -101,15 +101,15 @@ That way, services such as TalkBack will read defined relationships to the user,
    android:id="@+id/usernameEntry" ... />
 ```
 
-In the given example, services such as TalkBack will read - "EditBox for username" when the user sets focus to EditText.
+In the given example, services such as TalkBack will read – "EditBox for username" when the user sets focus to EditText.
 
 :no_entry_sign: **Failure criteria**
 
-- not providing enough context for the views that expect user interaction
+- Not providing enough context for the views that expect user interaction.
 
 #### Additional notes
 
-This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.
+This technique covers point 3.3.2 Labels or Instructions – Level A of the WCAG standard.
 
 ---
 
