@@ -4,7 +4,7 @@ The latest version of the WCAG is WCAG 2.1, which defines some guidelines for co
 
 Because of that, we defined our guidelines to help mobile developers to satisfy most of the guidelines defined by WCAG.
 
-In the following chapters, information about satisfying accessibility guidelines will be provided with descriptions and techniques;
+In the following chapters, information about satisfying accessibility guidelines will be provided with descriptions and techniques:
 
 * [Perceivable principle and guidelines](perceivable_principle.md "Perceivable principle and guidelines")
 * [Operable principle and guidelines](operable_principle.md "Operable principle and guidelines")
