@@ -1,6 +1,6 @@
 # Conclusion
 
-As mentioned in the introduction, making applications that are accessible to everyone defines us as well - our values and priorities.
+As mentioned in the introduction, making applications that are accessible to everyone defines us as well – our values and priorities.
 
 Every person should be able to use our applications, and these mobile standards are here to help us with that. Making even small changes to make applications more open to a broad audience is a step forward.
 

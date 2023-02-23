@@ -10,7 +10,7 @@ _Provide text alternatives for any non-text content so that it can be changed in
 
 ### Non-text context
 
-Each UI element should include a description that describes it's purpose. It is important that all elements presented on the screen have the description provided, especially the ones that are important for the functionality of the screen on which they are presented. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
+Each UI element should include a description that describes its purpose. All elements presented on the screen must have the description provided, especially the ones that are important for the screen’s functionality. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
 
 If an element exists on the UI only for decorative purposes it is recommended that you set its `contentDescription` to "null" or `android:importantForAccessibility` to "no" for devices running Android 4.1 and higher.
 
@@ -20,7 +20,7 @@ If an element exists on the UI only for decorative purposes it is recommended th
 
 #### Additional notes
 
-This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.
+This guideline covers point 1.1.1 Non-text Content – Level A of the WCAG standard.
 
 ---
 
@@ -30,19 +30,19 @@ _Provide alternatives for time-based media._
 
 :white_check_mark: **Success criteria**
 
-If the app you are building includes media content such as video clips or audio recordings, it is suggested to provide an alternative for users with different types of accessibility needs in order for them to understand the material. The suggested practice would be to:
+Suppose the app you are building includes media content such as video clips or audio recordings. In that case, it is suggested to provide an alternative for users with different types of accessibility needs for them to understand the material. The suggested practice would be to:
 
-- include controls that allow users to pause and stop media, change volume and toggle subtitles (captions)
+- Include controls that allow users to pause and stop media, change volume and toggle subtitles (captions)
 
-- if a video presents information that is vital to completing workflow, provide the same content in an alternative format, such as transcript
+- If a video presents information that is vital to completing workflow, provide the same content in an alternative format, such as a transcript
 
 :no_entry_sign: **Failure criteria**
 
-- all media is presented to the user without the possibility to change some of the controls (slow down, pause, volume up etc.)
+- All media is presented to the user without the possibility of changing some of the controls (slow down, pause, volume up, etc.).
 
 #### Additional notes
 
-This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.
+This guideline covers point 1.2 Time-Based Media – Level A of the WCAG standard.
 
 ---
 
@@ -56,7 +56,7 @@ _Create content that can be presented in different ways without losing informati
 
 - Groups of related content
 
-If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually a subclass of ViewGroup. Also, you should set the **container object's** `android:screenReaderFocusable` (for devices running Android 8.1. - API level 27) or `android:focusable` to true. Furthermore, you should set `android:focusable` attribute of each inner object to `false` because doing so will make accessibility services present the inner element's content descriptions one after the other, in a single announcement.
+If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually a subclass of ViewGroup. Also, you should set the container object's `android:screenReaderFocusable` (for devices running Android 8.1. – API level 27) or `android:focusable` to true. Furthermore, you should set `android:focusable` attribute of each inner object to false because doing so will make accessibility services present the inner element's content descriptions, one after the other, in a single announcement.
 
 Grouping elements based on the context helps users that benefit from using accessibility services to discover the information that is on the screen more efficiently.
 
@@ -80,7 +80,7 @@ Grouping elements based on the context helps users that benefit from using acces
 </ConstraintLayout>
 ```
 
-_Note:_ In cases like this it is recommended to define content descriptions as short as possible considering that accessibility services will read them one after the other.
+_Note:_ In cases like this, it is recommended to define content descriptions as concisely as possible, considering that accessibility services will read them one after the other.
 
 - Custom group label
 
@@ -110,7 +110,7 @@ android:contentDescription="@string/title_artist_best_song">
 
 - Nested groups
 
-If the app you are building provides multi-dimensional information, it is recommended to use the `android:screenReaderFocusable` attribute on the inner group containers. That kind of grouping and labeling will provide good balance between number of announcements needed to discover the screen's content and the length of each announcement.
+If the app you are building provides multi-dimensional information, it is recommended to use the `android:screenReaderFocusable` attribute on the inner group containers. That kind of grouping and labeling will provide a good balance between the number of announcements needed to discover the screen's content and the length of each announcement.
 
 **Code example:**
 
@@ -137,13 +137,13 @@ If the app you are building provides multi-dimensional information, it is recomm
 
 - Headings within text
 
-It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark a view to be treated as heading you can set `android:accessibilityHeading` to true.
+It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark a view to be treated as a heading, you can set `android:accessibilityHeading` to true.
 
-That way users of accessibility services can choose to navigate between headings instead of navigating between paragraphs or between words which can improve text navigation experience.
+That way, users of accessibility services can choose to navigate between headings instead of navigating between paragraphs or between words which can improve the text navigation experience.
 
 :no_entry_sign: **Failure criteria**
 
-- it is not clear which parts of the screen are contextually connected to each other
+- It is not clear which parts of the screen are contextually connected.
 
 #### Additional notes
 
@@ -155,9 +155,9 @@ This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG s
 
 :white_check_mark: **Success criteria**
 
-If the order of the content displayed on the screen is crucial for the understanding, it is very important to make sure it will be presented in the same order when using accessibility services. That way users of accessibility services (such as TalkBack) can get clearer picture of the content and possible actions on the current screen that is being navigated through.
+If the order of the content displayed on the screen is crucial for understanding, it is very important to make sure it will be presented in the same order when using accessibility services. That way, users of accessibility services (such as TalkBack) can get a clearer picture of the content and possible actions on the current screen that is being navigated through.
 
-The best solution should be a full screen redesign with the correct and logical traversal order. If that is not an option, on apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create a new order of displayed views that will make a bit more sense to TalkBack users.
+The best solution should be a full-screen redesign with the correct and logical traversal order. If that is not an option, on apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create a new order of displayed views that will make a bit more sense to TalkBack users.
 
 An example of using `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes is given down below:
 
@@ -174,11 +174,11 @@ An example of using `android:accessibilityTraversalBefore` or `android:accessibi
     ...  />
 ```
 
-_Note 2. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes in a way that does not create any loops or traps that will prevent users to interact with all relevant views displayed on the screen._
+_Note 2. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes in a way that does not create any loops or traps that will prevent users from interacting with all relevant views displayed on the screen._
 
 In apps with minSdk < 22, traversal order can be defined programmatically using ViewCompat.
 
-The example is given down below:
+The example is given below:
 
 ```
 ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
@@ -191,11 +191,11 @@ ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompa
 
 :no_entry_sign: **Failure criteria**
 
-- views displayed on the screen break consistency of navigation
+- Views displayed on the screen break consistency of the navigation.
 
 #### Additional notes
 
-This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.
+This guideline covers point 1.3.2 Meaningful sequence – Level A of the WCAG standard.
 
 ---
 
@@ -203,15 +203,15 @@ This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG stan
 
 :white_check_mark: **Success criteria**
 
-It is important that the content provided in your app is easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different views and different actions that those views provide. That way users with color vision deficiencies could also easily understand the whole UI.
+The content provided in your app must be easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different views and different actions that those views provide. That way, users with color vision deficiencies could also easily understand the whole UI.
 
 :no_entry_sign: **Failure criteria**
 
-- important difference between elements is stressed only with colors
+- An important difference between elements is stressed only with colors.
 
 #### Additional notes
 
-This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.
+This guideline covers point 1.3.3 Sensory characteristics – Level A of the WCAG standard.
 
 ---
 
