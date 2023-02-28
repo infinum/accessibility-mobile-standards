@@ -43,7 +43,7 @@ FocusTraversalGroup(
     )
 ```
 
-More about focus traversal at: https://docs.flutter.dev/development/ui/advanced/focus#controlling-what-gets-focus
+More about focus traversal you can at [Controlling what gets focus](https://docs.flutter.dev/development/ui/advanced/focus#controlling-what-gets-focus) from Flutter documentation.
 
 *This guideline covers point 2.1.1 Keyboard and  2.4.3 Focus Order - Level A of the WCAG standard.*
 
