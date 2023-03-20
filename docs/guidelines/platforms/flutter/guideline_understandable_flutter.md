@@ -118,8 +118,6 @@ Column(children: [
     ),
 ])
 ```
-
-
 #### 🚫 Failures
 
 User enters some data into a user interface element without knowing what the end result is and/or triggering an unannounced change of context in the process.
