@@ -167,7 +167,7 @@ For example, accessibility services users should be able to skip the whole Recyc
 
 It is also possible to use _headings_ to summarize groups of text that appear on the screen. For apps with minSdk >= 28, you can set `android:accessibilityHeading` to `true` for a view to being treated as a heading.
 
-That way, users of accessibility services, after setting the _navigation mode_ to _Headers_, can choose to navigate between headings instead of between paragraphs or between words which can improve the ext navigation experience.
+That way, users of accessibility services, after setting the _navigation mode_ to _Headers_, can choose to navigate between headings instead of between paragraphs or between words which can improve the navigation experience.
 
 _Note 1. Navigation mode can be chosen by swiping **up** and **down** when using **TalkBack**. Once Headers is chosen as a Navigation option, the user can navigate through **headers** by swiping right and left instead of navigating through single items.._
 
@@ -241,7 +241,7 @@ This guideline covers point 2.4.2 Page Titled – Level A of the WCAG standard.
 
 Order of the components that are displayed on the screen should have a logical traversal order. This is very important for people using accessibility services (such as TalkBack) to get a clearer picture of the content and possible actions on the current screen that is navigated through.
 
-Defining the content of the screen in the meaningful sequence described in the [Perceivable guidelines] automatically results in appropriate traversal order when navigating through the screen.
+Defining the content of the screen in the meaningful sequence described in the [Perceivable guidelines](https://github.com/infinum/accessibility-mobile-standards/blob/master/docs/guidelines/platforms/android/guideline_percievable_android.md) automatically results in appropriate traversal order when navigating through the screen.
 
 :no_entry_sign: **Failure criteria**
 

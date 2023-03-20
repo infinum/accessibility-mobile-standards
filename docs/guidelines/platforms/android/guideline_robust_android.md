@@ -39,10 +39,10 @@ In these situations, it is recommended to use `android:hint` attribute.
 
 ```
 <!-- The hint text for en-US locale would be
-     "Username". -->
+     "Password". -->
 <EditText
-   android:id="@+id/usernameInputField"
-   android:hint="@string/username_hint_text" ... />
+   android:id="@+id/passwordInputField"
+   android:hint="@string/password_hint_text" ... />
 ```
 
 
@@ -52,7 +52,7 @@ When working with collections, it is very important that provided labels are **u
 
 This will help users to get a general idea when they've cycled through the complete UI of your app.
 
-In particular, you should provide additional text or contextual information in elements within reused layouts, such as RecyclerView or ListView objects, so each child element is uniquely identified.
+In particular, you should provide additional text or contextual information in elements within reused layouts, such as RecyclerView objects, so each child element is uniquely identified.
 
 The described requests could be achieved by setting content descriptions as a part of adapter implementation.
 
@@ -61,18 +61,15 @@ The described requests could be achieved by setting content descriptions as a pa
 An example of defining content description in adapter is given in the following snippet:
 
 ```
-data class MovieRating(val title: String, val starRating: Integer)
+class ShowsAdapter(private val shows: List<Show>):
+        RecyclerView.Adapter<ShowsAdapter.ShowViewHolder>() {
 
-class MyMovieRatingsAdapter(private val myData: Array<MovieRating>):
-        RecyclerView.Adapter<MyMovieRatingsAdapter.MyRatingViewHolder>() {
+    class ShowViewHolder(val showView: ShowView) :
+            RecyclerView.ViewHolder(showView)
 
-    class MyRatingViewHolder(val ratingView: ImageView) :
-            RecyclerView.ViewHolder(ratingView)
-
-    override fun onBindViewHolder(holder: MyRatingViewHolder, position: Int) {
-        val ratingData = myData[position]
-        holder.ratingView.contentDescription = "Movie ${position}: " +
-                "${ratingData.title}, ${ratingData.starRating} stars"
+    override fun onBindViewHolder(holder: ShowViewHolder, position: Int) {
+        val show = shows[position]
+        holder.showView.contentDescription = "Show ${position}: ${show.title}"
     }
 }
 ```
