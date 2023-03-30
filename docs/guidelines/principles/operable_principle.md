@@ -14,7 +14,7 @@ Some users might have trouble grasping and interacting with the content that is 
 
 ### Seizures and Physical Reactions
 
-For some users, excessive flashing might cause seizures. As a general rule, avoid content that flashes more than three times in any one second period.
+For some users, excessive flashing might cause seizures. As a general rule, avoid content that flashes more than three times in any one-second period.
 
 ### Navigable
 
@@ -22,11 +22,11 @@ The app's navigation structure should be concise and easy to understand. Users s
 
 ### Input Modalities
 
-Some users might have trouble moving the device, themselves or performing complex gestures. Strive for the app to be operable using a variety of input methods. If possible, the user should have a way to undo the interaction and disable the input methods he might trigger accidentally.
+Some users might have trouble moving the device themselves or performing complex gestures. Strive for the app to be operable using a variety of input methods. If possible, the user should have a way to undo the interaction and disable the input methods he might trigger accidentally.
 
 ## Guidelines for mobile developers
 
-In this chapter you can find principle-related guidelines and examples for mobile platforms;
+In this chapter, you can find principle-related guidelines and examples for mobile platforms:
 
 * [Android](../platforms/android/guideline_operable_android.md "Operable guidelines for Android")
 * [iOS](../platforms/ios/guideline_operable_ios.md "Operable guidelines for iOS")

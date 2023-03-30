@@ -10,7 +10,7 @@ User interface components and navigation must be operable.
 
 :white_check_mark: **Success criteria**
 
-\- Handle tab navigation
+### Handle tab navigation
 
 When the user is navigating through the app using the `Tab` key on the keyboard, the system passes focus based on the the order of elements appearing on the screen. This is why, if the order of the view elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order.
 
@@ -47,7 +47,7 @@ FocusTraversalGroup(
     )
 ```
 
-More about focus traversal at: https://docs.flutter.dev/development/ui/advanced/focus#controlling-what-gets-focus
+More about focus traversal you can at [Controlling what gets focus](https://docs.flutter.dev/development/ui/advanced/focus#controlling-what-gets-focus) from Flutter documentation.
 
 ---
 
