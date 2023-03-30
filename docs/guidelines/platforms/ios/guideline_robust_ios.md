@@ -1,3 +1,5 @@
+ [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️  Robust principle](../../principles/robust_principle.md "Robust principle")
+
 # Robust guidelines for iOS
 
 Content must be robust enough that it can be interpreted by a wide variety of mobile devices, including those which use accessibility features.
@@ -9,6 +11,8 @@ Maximize compatibility with current and future devices, taking into account the 
 ### Parsing
 
 All user-visible content be grouped logically and assigned identifiers appropriately.
+
+*This guideline covers point 4.1.1 Parsing - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -47,13 +51,11 @@ Duplicate identifiers are used for elements that are essentially different in th
 
 Elements are not grouped or are badly organized on the screen, which prevents accessibility features from quickly and efficiently moving through them.
 
-#### Additional notes
-
-This guideline covers point 4.1.1 Parsing – Level A of the WCAG standard.
-
 ### Name, Role, Value
 
 User interface elements should be clearly defined by their name ([accessibility label](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel) & [accessibility hint](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)), the role that they have (accessibility identifier), and the value they carry([accesibility value](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)). The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's accessibility attributes) so that the user remains aware of what this element does at all times.
+
+*This guideline covers point 4.1.2 Name, Role, Value - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -78,10 +80,6 @@ Not providing accessibility identifiers for user interface elements.
 Implementing custom controls that are unfamiliar to the users and don't carry the necessary accessibility identifying information as defined in this guideline.
 
 Changing the value or role of a user interface element without adjusting its identifier programmatically.
-
-#### Additional notes
-
-This guideline covers point 4.1.2 Name, Role, Value – Level A of the WCAG standard.
 
 ⎯
 

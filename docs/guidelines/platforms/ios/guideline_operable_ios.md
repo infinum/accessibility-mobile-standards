@@ -1,14 +1,18 @@
+ [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
+
 # Operable
 
 User interface components and navigation must be operable.
 
 ## Enough Time
 
-_Provide users enough time to read and use the content._
+Provide users enough time to read and use the content.
 
 ### Timing Adjustable
 
 The user can turn off, adjust, or extend each time limit set by the content.
+
+*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -25,15 +29,13 @@ The user can turn off, adjust, or extend each time limit set by the content.
 - Logging a user out of their session with no prior warning.
 - Not providing enough time or time extensions to react to an incoming action in the app.
 
-#### Additional notes
-
-This guideline covers point 2.2.1 Timing Adjustable – Level A of the WCAG standard.
-
 ---
 
 ### Pause, Stop, Hide
 
 Moving, blinking, or scrolling, or auto-updating content in the app.
+
+*This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -45,20 +47,17 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
-#### Additional notes
-
-This guideline covers point 2.2.2 Pause, Stop Hide – Level A of the WCAG standard.
-
 ---
-
 
 ## Seizures and Physical Reactions
 
-_Do not design content in a way known to cause seizures or physical reactions._
+Do not design content in a way known to cause seizures or physical reactions.
 
 ### Three Flashed or Below Threshold
 
 Apps should not contain any element that flashes more than three times in one second.
+
+*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -71,10 +70,6 @@ Apps should not contain any element that flashes more than three times in one se
 - Using rapidly flashing elements to catch the user's attention.
 - Having a larger area of screen flashing more than three times per second.
 
-#### Additional notes
-
-This guideline covers point 2.3.1 – Level A of the WCAG standard.
-
 ---
 
 ## Navigable
@@ -84,6 +79,8 @@ _Provide ways to help users navigate, find content, and determine where they are
 ### Bypass Blocks
 
 A skip mechanism is available to bypass blocks of content that are repeated in the app.
+
+*This guideline covers point 2.4.1 Bypass Blocks - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -105,16 +102,13 @@ A skip mechanism is available to bypass blocks of content that are repeated in t
 
 Not providing a way for the user to quickly skip over sections with numerous items.
 
-#### Additional notes
-
-This guideline covers point 2.4.1 Bypass Blocks – Level A of the WCAG standard.
-
 ---
-
 
 ### Page Titled
 
 Screens have a clear, descriptive, and possibly unique title that describes the topic or purpose and is easily understood by all users.
+
+*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -151,10 +145,6 @@ Screens have a clear, descriptive, and possibly unique title that describes the 
   - file names like "report.pdf" or "DSC_0123.jpeg"
   - placeholder text like "Enter title..." or "Search..."
 
-#### Additional notes
-
-This guideline covers point 2.4.2, Page Titled – Level A of the WCAG standard.
-
 ---
 
 
@@ -162,9 +152,11 @@ This guideline covers point 2.4.2, Page Titled – Level A of the WCAG standard.
 
 VoiceOver: Ensure that information is read in an order consistent with the meaning and content.
 
+*This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.*
+
 #### ✅ Success technique(s)
 
-- VoiceOver: When designing a new screen, make sure to test it with VoiceOver and see whether the elements are read in the right, logical order. The easiest way to achieve a correct focus order is to layout elements inside a `UIStackView`. VoiceOver will read elements in the same order as in the interface builder document outline. 
+- VoiceOver: When designing a new screen, make sure to test it with VoiceOver and see whether the elements are read in the right, logical order. The easiest way to achieve a correct focus order is to layout elements inside a `UIStackView`. VoiceOver will read elements in the same order as in the interface builder document outline.
 Keep in mind: when placed outside a stack view, elements positioned closer to the top are read first. If elements are near the same vertical position, leading-side elements are read first.
 
 – To change focus order, create an array of subviews and assign it to their parent container's `accessibilityElements`.
@@ -204,16 +196,14 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
         return true
     }
 ```
-#### Additional notes
-
-This guideline covers point 2.4.3 Focus Order – Level A of the WCAG standard.
 
 ---
-
 
 ### Action Purpose
 
 The purpose of a button or link action is clear and easily understandable by all users
+
+*This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -257,14 +247,10 @@ The purpose of a button or link action is clear and easily understandable by all
 #### 🚫 Failures
 
 - Using custom-shaped buttons that do not look like buttons.
-- Using generic and confusing button titles for canceling actions, for example: 
-*"Are you sure you want to cancel your booking? This action is irreversible" 
+- Using generic and confusing button titles for canceling actions, for example:
+*"Are you sure you want to cancel your booking? This action is irreversible"
 ▸ OK  ▸ Cancel*
 - Button titles with an unclear result like "Ready to publish?"
-
-#### Additional notes
-
-This guideline covers point 2.4.4 Link Purpose (In Context) – Level A of the WCAG standard.
 
 ⎯
 

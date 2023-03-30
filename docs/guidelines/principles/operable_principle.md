@@ -30,6 +30,7 @@ In this chapter, you can find principle-related guidelines and examples for mobi
 
 * [Android](../platforms/android/guideline_operable_android.md "Operable guidelines for Android")
 * [iOS](../platforms/ios/guideline_operable_ios.md "Operable guidelines for iOS")
+* [Flutter](../platforms/flutter/guideline_operable_flutter.md "Operable guidelines for Flutter")
 
 ⎯
 

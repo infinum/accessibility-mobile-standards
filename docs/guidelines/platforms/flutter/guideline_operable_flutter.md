@@ -1,8 +1,12 @@
+ [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
+
 # Operable guidelines for Flutter
 
-_User interface components and navigation must be operable._
+User interface components and navigation must be operable.
 
 ## Keyboard accessible
+
+*This guideline covers point 2.1.1 Keyboard and  2.4.3 Focus Order - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -45,11 +49,13 @@ FocusTraversalGroup(
 
 More about focus traversal you can at [Controlling what gets focus](https://docs.flutter.dev/development/ui/advanced/focus#controlling-what-gets-focus) from Flutter documentation.
 
-*This guideline covers point 2.1.1 Keyboard and  2.4.3 Focus Order - Level A of the WCAG standard.*
-
 ---
 
 ## Enough time
+
+Provide users enough time to read and use content.
+
+*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -65,13 +71,13 @@ All users should have the ability to interact with the content displayed on the 
 
 - define time-limited actions in the app with no ability to extend that limit
 
-*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
-
 ---
 
 ### Pause, Stop, Hide
 
 Moving, blinking, or scrolling, or auto-updating content in the app.
+
+*This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -83,22 +89,24 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
-*This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
-
 ---
 
 
 ## Seizures and Physical Reactions
 
+Do not design content in a way that is known to cause seizures or physical reactions.
+
 ### Three Flashed or Below Treshold
 
 Apps should not contain elements that flash more than three times in one second period.
+
+*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
 - Avoiding flashing content in general, if possible.
 
-- If using flashing content - keep the flash of an element running for a minimum of 333ms.
+- If using flashing content - keep the flash of an element running for a minimum of 333ms ([more than three per second](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)).
 
 - If the usage of an element that flashes more frequently is unavoidable - make sure that the flashing area is covering less than 25% within 10 degrees of a visual field.
 
@@ -108,11 +116,13 @@ Apps should not contain elements that flash more than three times in one second 
 
 - Having a larger area of screen flashing more than three times per second
 
-*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
-
 ---
 
 ### Bypass Blocks
+
+A skip mechanism is available to bypass blocks of content that are repated in the app.
+
+*This guideline covers point 2.4.1 Bypass Blocks - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -128,11 +138,13 @@ To accomplish this use `Semantics(container: true, label: 'Stories', child: ...)
 
 Not providing a way for user to quickly skip over sections with numerous items.
 
-*This guideline covers point 2.4.1 Bypass Blocks - Level A of the WCAG standard.*
-
 ---
 
 ### Page Titles
+
+Screens have a clear, descriptive, and possibly unique title that describes topic or purpose and is easily understood by all users.
+
+*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -145,11 +157,11 @@ If you're setting AppBar in `Scaffold(appBar: ...)` then the title will be read 
 - Leaving the title empty
 - Using a custom title view or custom navigation bar without ensuring it's readable by screen reader
 
-*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
-
 ---
 
 ### Link Purpose
+
+*This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -164,8 +176,6 @@ Important piece here is that you should wrap the link with `Semantics(link: true
 - link is defined as unclear label or button and has no additional description provided
 
 - link is part of the longer text and implemented using ClickableSpan so TalkBack users are not aware of link existence
-
-*This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
 
 ---
 

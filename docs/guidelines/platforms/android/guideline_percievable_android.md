@@ -1,10 +1,13 @@
+ [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
 # Perceivable guidelines for Android
 
 All content displayed on the screen at some point must be presented to the user in a perceivable manner.
 
 ## Text alternatives
 
-_Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language._
+Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.
+
+*This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -18,15 +21,13 @@ If an element exists on the UI only for decorative purposes it is recommended th
 
 - Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes
 
-#### Additional notes
-
-This guideline covers point 1.1.1 Non-text Content – Level A of the WCAG standard.
-
 ---
 
 ## Time-based Media
 
-_Provide alternatives for time-based media._
+Provide alternatives for time-based media.
+
+*This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -40,17 +41,17 @@ Suppose the app you are building includes media content such as video clips or a
 
 - All media is presented to the user without the possibility of changing some of the controls (slow down, pause, volume up, etc.).
 
-#### Additional notes
-
-This guideline covers point 1.2 Time-Based Media – Level A of the WCAG standard.
-
 ---
 
 ## Adaptable
 
-_Create content that can be presented in different ways without losing information or structure._
+Create content that can be presented in different ways without losing information or structure.
 
 ### Info and Relationships
+
+Information, structure, and relationships conveyed through presentation are available in text.
+
+*This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -145,13 +146,11 @@ That way, users of accessibility services can choose to navigate between heading
 
 - It is not clear which parts of the screen are contextually connected.
 
-#### Additional notes
-
-This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.
-
 ---
 
 ### Meaningful sequence
+
+*This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -193,13 +192,11 @@ ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompa
 
 - Views displayed on the screen break consistency of the navigation.
 
-#### Additional notes
-
-This guideline covers point 1.3.2 Meaningful sequence – Level A of the WCAG standard.
-
 ---
 
 ### Sensory characteristics
+
+*This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -208,10 +205,6 @@ The content provided in your app must be easily understandable to all users. Tha
 :no_entry_sign: **Failure criteria**
 
 - An important difference between elements is stressed only with colors.
-
-#### Additional notes
-
-This guideline covers point 1.3.3 Sensory characteristics – Level A of the WCAG standard.
 
 ---
 

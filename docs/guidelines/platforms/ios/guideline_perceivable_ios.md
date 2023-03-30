@@ -1,3 +1,4 @@
+ [🔼 Accessibility principles and examples](a../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
 # Perceivable guidelines for iOS
 
 Information and user interface components must be presentable to users in ways they can perceive.
@@ -26,6 +27,7 @@ When talking about group components or containers on the screen, it is an excell
 
 Another important thing about labeling elements is the context. Some static elements, like images, provide a context, like an image with the alert or check element. In that case, instead of setting the label as a "check icon", it can be defined as "successful submission" to give the user more information.
 
+*This guideline with provided techniques covers the 1.1.1 Non-text Content - Level A of the WCAG standard.*
 #### Using accessibility value and hint
 
 Alongside the accessibility label, iOS as a platform supports the definition of an accessibility value and accessibility hint. If some elements can have and should provide specific values, accessibility value can be used alongside the accessibility label. And when talking about element interactivity, accessibility hints can be used as well – but be aware that the user can disable them.
@@ -38,10 +40,6 @@ addButton.accessibilityHint = "Adds a new task"
 
 Sometimes it is not a good idea to give accessibility labels to all screen elements. Some elements may only be defined as decorative elements that do not affect the screen functionality (e.g. small elements like images used for screen decoration). In that case, labeling elements like that may confuse the user.
 
-#### Additional notes
-
-This guideline with provided techniques covers the 1.1.1 Non-text Content - Level A of the WCAG standard.
-
 ## Time-based Media
 
 Provide alternatives for time-based media.
@@ -50,6 +48,7 @@ Provide alternatives for time-based media.
 
 Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be a prerecorded audio or video track. In some cases, it is necessary to add support for some accessibility features to make this content accessible to all users.
 
+*This guideline with provided techniques covers the 1.2.1 Audio-only and Video-only (Prerecorded) - Level A and 1.2.2 Captions (Prerecorded) - Level A of the WCAG standard.*
 #### ✅ Success technique(s)
 
 ##### Using AVPlayer with captions
@@ -100,10 +99,6 @@ final class VideoViewController: UIViewController {
 ##### Using transcripts
 
 Supplying transcripts is another way of providing users with information in prerecorded audio or video. If defined correctly, text on the screen can be read by VoiceOver for people with visibility issues, while people with hearing issues can read the transcript. This way, both scenarios are satisfied without a need to provide captions.
-
-#### Additional notes
-
-This guideline with provided techniques covers the 1.2.1 Audio-only and Video-only (Prerecorded) – Level A and 1.2.2 Captions (Prerecorded) – Level A of the WCAG standard.
 
 ## Adaptable
 

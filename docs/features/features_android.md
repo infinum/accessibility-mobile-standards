@@ -1,4 +1,6 @@
-# Android accessibility features overview
+[← Accessibility features per mobile platform](features_mobile_platforms.md "Accessibility features per mobile platform")
+
+# Accessibility features on Android
 
 It is very important that the app you are developing is accessible to all users. Accessibility should be considered during the whole development process. If properly implemented, accessibility features and services can significantly improve your app's usability, especially for users with disabilities, but also in general.
 
@@ -109,5 +111,4 @@ There are three different types of switches:
 A detailed description of all Switch Access configurations can be found on the official [Android Accessibility Help - Switch Access page](https://support.google.com/accessibility/android/answer/6122836?hl=en&ref_topic=6151780).
 
 
-
-
+[← Accessibility features per mobile platform](features_mobile_platforms.md "Accessibility features per mobile platform")

@@ -1,10 +1,13 @@
+ [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
 # Operable guidelines for Android
 
-_User interface components and navigation must be operable._
+User interface components and navigation must be operable.
 
 ## Keyboard accessible
 
-_Make all functionality available from a keyboard._
+Make all functionality available from a keyboard.
+
+*This guideline covers point 2.1.1 Keyboard - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -69,15 +72,13 @@ When the user is navigating through the app **using the arrow keys on the keyboa
 
 - Not defining custom order if the views in the layout file are not defined in the same order they should be presented to the user.
 
-#### Additional notes
-
-This guideline covers point 2.1.1 Keyboard – Level A of the WCAG standard.
-
 ---
 
 ## Enough time
 
-_Provide users enough time to read and use the content._
+Provide users enough time to read and use the content.
+
+*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -93,15 +94,13 @@ All users should be able to interact with the content displayed on the screen, e
 
 - Define time-limited actions in the app with no ability to extend that limit.
 
-#### Additional notes
-
-This guideline covers point 2.2.1 Timing Adjustable – Level A of the WCAG standard.
-
 ---
 
 ### Pause, Stop, Hide
 
 Moving, blinking, or scrolling, or auto-updating content in the app.
+
+*This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -115,19 +114,17 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
-#### Additional notes
-
-This guideline covers point 2.2.2 Pause, Stop Hide – Level A of the WCAG standard.
-
 ---
 
 ## Seizures and Physical Reactions
 
-_Do not design content in a way that is known to cause seizures or physical reactions._
+Do not design content in a way that is known to cause seizures or physical reactions.
 
 ### Three Flashed or Below Threshold
 
 Apps should not contain elements that flash more than three times in one second.
+
+*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -143,17 +140,15 @@ Apps should not contain elements that flash more than three times in one second.
 
 - Having a larger area of screen flashing more than three times per second.
 
-#### Additional notes
-
-This guideline covers point 2.3.1 – Level A of the WCAG standard.
-
 ---
 
 ## Navigable
 
-_Provide ways to help users navigate, find content, and determine where they are._
+Provide ways to help users navigate, find content, and determine where they are.
 
 ### Bypass Blocks
+
+*This guideline covers points 2.4.1 Bypass Blocks - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -209,13 +204,11 @@ ViewCompat.setAccessibilityDelegate(personalData, object : AccessibilityDelegate
 
 - The user of accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation process.
 
-#### Additional notes
-
-This guideline covers points 2.4.1 Bypass Blocks – Level A of the WCAG standard.
-
 ---
 
 ### Page Titles
+
+*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -229,13 +222,11 @@ If the title is defined using a toolbar with custom behavior or another custom v
 
 - Defined titles are not the first elements that are read when the user enters the screen and therefore users using accessibility services have no information about which screen they opened.
 
-#### Additional notes
-
-This guideline covers point 2.4.2 Page Titled – Level A of the WCAG standard.
-
 ---
 
 ### Focus Order
+
+*This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -247,13 +238,11 @@ Defining the content of the screen in the meaningful sequence described in the [
 
 - Views displayed on the screen break consistency of the navigation.
 
-#### Additional notes
-
-This guideline covers point 2.4.3 Focus Order – Level A of the WCAG standard.
-
 ---
 
 ### Link Purpose
+
+*This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -290,10 +279,6 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 - The link is defined as an unclear label or button and has no additional description provided.
 
 - The link is part of the longer text and implemented using ClickableSpan, so TalkBack users are not aware of the link’s existence.
-
-#### Additional notes
-
-This guideline covers point 2.4.4 Link Purpose (In Context) – Level A of the WCAG standard.
 
 ---
 
