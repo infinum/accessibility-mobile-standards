@@ -65,7 +65,7 @@ In this document, the usage of component identifiers like `accessibilityIdentifi
 
 ## Testing for Flutter
 
-- **Flutter app forAndroid**
+- **Flutter app for Android**
 
 For manual testing, the usual way in native Android is testing using Accessibility Scanner. Unfortunatelly that doesn't work with Flutter yet ([see open issue](https://github.com/flutter/flutter/issues/39531)).
 You can use TalkBack, but that's mainly inteded for real users that needs accessibility features. It's good so you know how everything works for user, but it's a bit complex and slow to use for testing.
