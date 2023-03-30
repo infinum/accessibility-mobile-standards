@@ -16,7 +16,7 @@ In this chapter you can find principle-related guidelines and examples for mobil
 
 * [Android](../platforms/android/guideline_robust_android.md "Robust guidelines for Android")
 * [iOS](../platforms/ios/guideline_robust_ios.md "Robust guidelines for iOS")
-* [Flutter](../platforms/flutter/guideline_robust_ios.md "Robust guidelines for Flutter")
+* [Flutter](../platforms/flutter/guideline_robust_flutter.md "Robust guidelines for Flutter")
 
 ⎯
 

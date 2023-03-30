@@ -1,4 +1,4 @@
- [🔼 Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️  Robust principle](../../principles/robust_principle.md "Robust principle")
+ [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️  Robust principle](../../principles/robust_principle.md "Robust principle")
 
 # Robust guidelines for Flutter
 

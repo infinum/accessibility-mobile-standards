@@ -1,4 +1,4 @@
- [🔼 Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
+ [🔼 Accessibility principles and examples](a../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
 # Perceivable guidelines for iOS
 
 Information and user interface components must be presentable to users in ways they can perceive.

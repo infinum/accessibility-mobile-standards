@@ -1,4 +1,4 @@
- [🔼 Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
+ [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
 
 # Operable guidelines for Flutter
 
@@ -106,7 +106,7 @@ Apps should not contain elements that flash more than three times in one second 
 
 - Avoiding flashing content in general, if possible.
 
-- If using flashing content - keep the flash of an element running for a minimum of 333ms.
+- If using flashing content - keep the flash of an element running for a minimum of 333ms ([more than three per second](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)).
 
 - If the usage of an element that flashes more frequently is unavoidable - make sure that the flashing area is covering less than 25% within 10 degrees of a visual field.
 
