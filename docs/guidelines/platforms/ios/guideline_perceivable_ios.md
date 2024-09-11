@@ -1,17 +1,20 @@
  [🔼 Accessibility principles and examples](a../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
+
 # Perceivable guidelines for iOS
 
 Information and user interface components must be presentable to users in ways they can perceive.
 
-## Text alternatives
+## Text alternatives (WCAG 1.1)
 
 Provide text alternatives for any non-text content to be changed into other forms people need, such as large print, braille, speech, symbols, or more straightforward language.
 
-### Non-text content identification
+### Non-text content identification (WCAG 1.1.1 - Level A)
 
 When talking about the screen elements, it is important to make information about all elements accessible and available. Some elements may not have text included by design or as a default user interface component. This can be seen when buttons are used with icons only, images, or other decorative elements.
 
 Some users may have issues identifying an element's functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
+
+> This guideline with provided techniques covers the **1.1.1 Non-text Content - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
@@ -27,7 +30,6 @@ When talking about group components or containers on the screen, it is an excell
 
 Another important thing about labeling elements is the context. Some static elements, like images, provide a context, like an image with the alert or check element. In that case, instead of setting the label as a "check icon", it can be defined as "successful submission" to give the user more information.
 
-*This guideline with provided techniques covers the 1.1.1 Non-text Content - Level A of the WCAG standard.*
 #### Using accessibility value and hint
 
 Alongside the accessibility label, iOS as a platform supports the definition of an accessibility value and accessibility hint. If some elements can have and should provide specific values, accessibility value can be used alongside the accessibility label. And when talking about element interactivity, accessibility hints can be used as well – but be aware that the user can disable them.
@@ -40,15 +42,16 @@ addButton.accessibilityHint = "Adds a new task"
 
 Sometimes it is not a good idea to give accessibility labels to all screen elements. Some elements may only be defined as decorative elements that do not affect the screen functionality (e.g. small elements like images used for screen decoration). In that case, labeling elements like that may confuse the user.
 
-## Time-based Media
+## Time-based Media (WCAG 1.2)
 
 Provide alternatives for time-based media.
 
-### Captions support for prerecorded media
+### Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)
 
 Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be a prerecorded audio or video track. In some cases, it is necessary to add support for some accessibility features to make this content accessible to all users.
 
-*This guideline with provided techniques covers the 1.2.1 Audio-only and Video-only (Prerecorded) - Level A and 1.2.2 Captions (Prerecorded) - Level A of the WCAG standard.*
+> This guideline with provided techniques covers the **1.2.1 Audio-only and Video-only (Prerecorded) - Level A and 1.2.2 Captions (Prerecorded) - Level A of the WCAG standard.*
+
 #### ✅ Success technique(s)
 
 ##### Using AVPlayer with captions
@@ -100,15 +103,17 @@ final class VideoViewController: UIViewController {
 
 Supplying transcripts is another way of providing users with information in prerecorded audio or video. If defined correctly, text on the screen can be read by VoiceOver for people with visibility issues, while people with hearing issues can read the transcript. This way, both scenarios are satisfied without a need to provide captions.
 
-## Adaptable
+## Adaptable (WCAG 1.3)
 
 Create content that can be presented differently without losing information or structure.
 
-### Element information and relationship
+### Element information and relationship (WCAG 1.3.1 - Level A)
 
 Every accessible element on the screen should hold information about itself, and it should be identifiable. From the web perspective, this is defined as a definition of the regions and elements on the page, while on the mobile side, this can be used to identify components or different areas of the page.
 
 Moreover, when thinking about a given part of an application, it is important to make the layout structure logical and easy to use. With that in mind, semantic views that use accessibility features like VoiceOver may improve user experience. With that in hand goes the definition of the relationship, or connected elements (via container) – to give the user more context.
+
+> This guideline with provided techniques covers the **1.3.1 Info and Relationships - Level A of the WCAG standard.*
 
 #### Element information
 
@@ -175,9 +180,11 @@ Also, if there is a need to define actions or gestures inside components like th
 
 By not connecting or adding context to the elements or inner elements of the component, there is a chance to create a bad user experience and confusion in the app usage.
 
-### Meaningful sequence
+### Meaningful sequence (WCAG 1.3.2 - Level A)
 
 On iOS, screen elements are consumed from the top left to the bottom right. This is a standard way in which nearly all screens work correctly in most scenarios. Still, we should always provide the best experience to the user, even if elements are not structured in a preferred way.
+
+> This guideline with provided techniques covers the **1.3.2 Meaningful Sequence - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -218,9 +225,11 @@ In this example, we changed the order of how elements will be read, and we’ve 
 
 Even if we, as developers, control the order of the elements, try not to make sequences that are not logical or to produce "jumps" between UI components.
 
-### Sensory characteristics
+### Sensory characteristics (WCAG 1.3.3 - Level A)
 
 Instructions for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
+
+> This guideline with provided techniques covers the **1.3.3 Sensory characteristics - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 

@@ -4,19 +4,19 @@
 
 Information and the operation of the user interface must be understandable.
 
-## Readable
+## Readable (WCAG 3.1)
 
 Make text content readable and understandable.
 
-### Language of Page
+### Language of Page (WCAG 3.1.1 -Level A)
 
 The default human language of an App can be programmatically determined.
 
-*This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.*
+> This guideline covers point **3.1.1 Language of Page - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
-Specify the default language of the application in the HTTP headers of the API calls. 
+Specify the default language of the application in the HTTP headers of the API calls.
 
 ```text
 Content-Language: de-DE
@@ -41,15 +41,15 @@ Bundle.setLanguage(language)
 
 Also, every app should be developed as a localizable app. Even if it seems that it makes no sense in the beginning or that all of the intended audience speak a single language, it can still happen that some users will not be able to use that language. here is always a possibility that your app will scale to different language regions or parts of your code will be reused on different projects which _do_ use localization.
 
-## Predictable
+## Predictable (WCAG 3.2)
 
 Make mobile apps appear and operate in predictable ways.
 
-### On Focus & On Input
+### On Focus & On Input (WCAG 3.2.1 and 3.2.2 - Level A)
 
 Receiving focus on or interacting with any component should not initiate a change of context unless previously announced.
 
-*This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.*
+> This technique covers points **3.2.1 On Focus - Level A and 3.2.2 On Input - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
@@ -101,15 +101,15 @@ func textFieldDidBeginEditing(_ textField: UITextField) {
 }
 ```
 
-## Input Assistance
+## Input Assistance (WCAG 3.3)
 
 Help users avoid and correct mistakes when interacting with the app.
 
-### Error Identification
+### Error Identification (WCAG 3.3.1 - Level A)
 
 If an input error is automatically detected, the item in error is identified, and the error is clearly described to the user in text.
 
-*This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.*
+> This technique covers point **3.3.1 Error Identification - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
@@ -148,11 +148,11 @@ generator.notificationOccurred(.success)
 
 Preventing some action or flow from continuing because an error was detected but not communicating to the user how/when the error was made and/or what needed to be done to correct it.
 
-### Labels or Instructions
+### Labels or Instructions (WCAG 3.3.2 - Level A)
 
 Labels or instructions are provided when content requires user input.
 
-*This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.*
+> This technique covers point **3.3.2 Labels or Instructions - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 

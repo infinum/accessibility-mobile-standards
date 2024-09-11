@@ -4,15 +4,15 @@
 
 User interface components and navigation must be operable.
 
-## Enough Time
+## Enough Time (WCAG 2.2)
 
 Provide users enough time to read and use the content.
 
-### Timing Adjustable
+### Timing Adjustable (WCAG 2.2.1 - Level A)
 
 The user can turn off, adjust, or extend each time limit set by the content.
 
-*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
+> This guideline covers point **2.2.1 Timing Adjustable - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
@@ -29,13 +29,12 @@ The user can turn off, adjust, or extend each time limit set by the content.
 - Logging a user out of their session with no prior warning.
 - Not providing enough time or time extensions to react to an incoming action in the app.
 
----
 
-### Pause, Stop, Hide
+### Pause, Stop, Hide (WCAG 2.2.2 - Level A)
 
 Moving, blinking, or scrolling, or auto-updating content in the app.
 
-*This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
+> This guideline covers point **2.2.2 Pause, Stop Hide - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
@@ -47,21 +46,19 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
----
-
-## Seizures and Physical Reactions
+## Seizures and Physical Reactions (WCAG 2.3)
 
 Do not design content in a way known to cause seizures or physical reactions.
 
-### Three Flashed or Below Threshold
+### Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)
 
 Apps should not contain any element that flashes more than three times in one second.
 
-*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
+> This guideline covers point **2.3.1 - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
-- Avoid flashing content altogether if possible. 
+- Avoid flashing content altogether if possible.
 - If using flashing content – make sure that any flashing elements have a period of at least 333 ms.
 - If you do have an element that flashes more frequently – ensure that the flashing area is less than 25% of 10 degrees of the visual field.
 
@@ -70,17 +67,15 @@ Apps should not contain any element that flashes more than three times in one se
 - Using rapidly flashing elements to catch the user's attention.
 - Having a larger area of screen flashing more than three times per second.
 
----
-
-## Navigable
+## Navigable (WCAG 2.4)
 
 _Provide ways to help users navigate, find content, and determine where they are._
 
-### Bypass Blocks
+### Bypass Blocks (WCAG 2.4.1 - Level A)
 
 A skip mechanism is available to bypass blocks of content that are repeated in the app.
 
-*This guideline covers point 2.4.1 Bypass Blocks - Level A of the WCAG standard.*
+> This guideline covers point **2.4.1 Bypass Blocks - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
@@ -89,32 +84,30 @@ A skip mechanism is available to bypass blocks of content that are repeated in t
 - An element containing many labels or buttons should also have a summary accessibility label so it takes fewer swipes to skip over it.
 
     **Example**: VoiceOver In Instagram main feed - Instagram stories are contained inside an "adjustable" accessibility group named "Stories Tray".
-    
+
     1. User arrives to the "Stories Tray" by tapping or using the right swipes.
     2. VoiceOver announces the group’s name and quick summary with an "adjustable" hint at the end.
     3. User can then iterate through items (adjust) by swiping up and down.
     4. Once done reviewing stories, the user can read right-swipe to skip to the next element on the screen.
-       
-    
+
     If you want to try this out for yourself, we've prepared an [example project](https://github.com/infinum/ios-accessibility-demo) where we've recreated this exact behavior.
 
 #### 🚫 Failures
 
 Not providing a way for the user to quickly skip over sections with numerous items.
 
----
-
-### Page Titled
+### Page Titled (WCAG 2.4.2 - Level A)
 
 Screens have a clear, descriptive, and possibly unique title that describes the topic or purpose and is easily understood by all users.
 
-*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
+> This guideline covers point **2.4.2 Page Titled - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
 - VoiceOver: When the user requests the entire screen to be read from the top, make sure that the title is one of the first things the user will hear so they know whether they are on the right page or step.
 
     **Example**: Setting view controller's title in `viewDidLoad`:
+
 ```swift
     func viewDidLoad() {
         super.viewDidLoad()
@@ -126,6 +119,7 @@ Screens have a clear, descriptive, and possibly unique title that describes the 
 - When using custom title view, make sure to configure its accessibility label.
 
     **Example**: using custom titleView:
+
 ```swift
     func setupTitleView() {
         navigationItem.titleView = UIImageView(image: .init(named: "header.png"))
@@ -134,7 +128,6 @@ Screens have a clear, descriptive, and possibly unique title that describes the 
 ```
 
 - If using custom navigation bar, make sure that the title can be read correctly by VoiceOver.
-
 
 #### 🚫 Failures
 
@@ -145,14 +138,11 @@ Screens have a clear, descriptive, and possibly unique title that describes the 
   - file names like "report.pdf" or "DSC_0123.jpeg"
   - placeholder text like "Enter title..." or "Search..."
 
----
-
-
-### Focus Order
+### Focus Order (WCAG 2.4.3 - Level A)
 
 VoiceOver: Ensure that information is read in an order consistent with the meaning and content.
 
-*This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.*
+> This guideline covers point **2.4.3 Focus Order - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
@@ -162,6 +152,7 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
 – To change focus order, create an array of subviews and assign it to their parent container's `accessibilityElements`.
 
    **Example:** Setting accessibility elements on container views:
+
 ```swift
     infoView.accessibilityElements = [titleLabel, priceLabel, buyButton]
 ```
@@ -169,6 +160,7 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
 - In case of multiple text fields displayed, make sure that tapping "next" leads to the expected one.
 
     **Example:** Switching to the next text field via view tag:
+
 ```swift
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let nextResponder = textField.superview?.viewWithTag(textField.tag + 1) else {
@@ -179,6 +171,7 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
         return true
     }
 ```
+
 #### 🚫 Failures
 
 - VoiceOver: Elements are being read out in the wrong order, or some elements are skipped.
@@ -186,6 +179,7 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
 - Focus is trapped within the modal and cycles between the elements. For example: In forms, the focus is switching between input fields but never onto a call-to-action button.
 
     **Example:** Trapped cycling between title and subtitle fields:
+
 ```swift
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === titleField {
@@ -197,13 +191,11 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
     }
 ```
 
----
-
-### Action Purpose
+### Action Purpose (WCAG 2.4.4 - Level A)
 
 The purpose of a button or link action is clear and easily understandable by all users
 
-*This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
+> This guideline covers point **2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
@@ -215,6 +207,7 @@ The purpose of a button or link action is clear and easily understandable by all
 - When using custom elements that have a value that is not represented by its label (e.g., sliders, switches, etc.), make sure to configure its `accessibilityValue` property each time the value changes. Provide `accessibilityHint` where useful.
 
     **Example:** Updating accessibility value on a toggle-like button:
+
 ```swift
     class MuteButton: UIButton {
         override var isSelected: Bool {
@@ -233,23 +226,17 @@ The purpose of a button or link action is clear and easily understandable by all
 ```
 
 - When using toggle buttons, avoid relying solely on color to communicate its state, i.e. whether it's disabled or selected:
-    - Add a background shape
-    - Change the button’s content too – e.g., change label text, opacity or size, or gray out the icon.
-    - Add `accessibilityValue` and `accessibilityHint`. Disabled buttons are read out as "...dimmed button" out of the box.
+  - Add a background shape
+  - Change the button’s content too – e.g., change label text, opacity or size, or gray out the icon.
+  - Add `accessibilityValue` and `accessibilityHint`. Disabled buttons are read out as "...dimmed button" out of the box.
 
-- In dialogs, avoid using generic button titles like "Yes" and "No". Try to repeat verbs used in the question, for example:
-*Are you sure you want to delete this message? 
-▸ Delete  ▸ Cancel*
-- In dialogs that confirm a canceling action, avoid using the verb "Cancel" again:
-*Are you sure you want to cancel your booking? This action is irreversible.
-▸ Cancel Booking  ▸ Keep Booking*
+- In dialogs, avoid using generic button titles like "Yes" and "No". Try to repeat verbs used in the question, for example: _Are you sure you want to delete this message? ▸ Delete  ▸ Cancel_
+- In dialogs that confirm a canceling action, avoid using the verb "Cancel" again: _Are you sure you want to cancel your booking? This action is irreversible. ▸ Cancel Booking  ▸ Keep Booking_
 
 #### 🚫 Failures
 
 - Using custom-shaped buttons that do not look like buttons.
-- Using generic and confusing button titles for canceling actions, for example:
-*"Are you sure you want to cancel your booking? This action is irreversible"
-▸ OK  ▸ Cancel*
+- Using generic and confusing button titles for canceling actions, for example: _"Are you sure you want to cancel your booking? This action is irreversible" ▸ OK  ▸ Cancel_
 - Button titles with an unclear result like "Ready to publish?"
 
 ⎯

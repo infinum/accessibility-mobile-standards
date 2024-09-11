@@ -4,62 +4,19 @@
 
 Content must be robust enough that it can be interpreted by a wide variety of mobile devices, including those which use accessibility features.
 
-## Compatible
+## Compatible (WCAG 4.1)
 
 Maximize compatibility with current and future devices, taking into account the accessibility features that they might be using.
 
-### Parsing
-
-All user-visible content be grouped logically and assigned identifiers appropriately.
-
-*This guideline covers point 4.1.1 Parsing - Level A of the WCAG standard.*
-
-#### ✅ Success technique(s)
-
-##### Using accessibility identifiers
-
-Every user interface element should have a unique [accessibility identifier](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification/1623132-accessibilityidentifier), which will define it. Identifiers should not be reused except where this is by design (i.e. the same exact element exists in several different locations). This property is not actually part of the accessibility context but is rather used to differentiate between objects programmatically.
-
-```swift
-submitFormButton.accessibilityIdentifier = "submit-form-button"
-```
-
-There are two approaches for iterative elements, such as lists and tables; if the elements don't need to be distinguishable from each other for UI testing purposes (or some other explicit need), then using a single accessibility identifier for all elements is acceptable. Otherwise the identifier could be suffixed with an index or more concrete information regarding its meaning.
-
-```swift
-func tableView(
-    _ tableView: UITableView,
-    cellForRowAt indexPath: IndexPath
-) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: identifier)
-    ...
-
-    cell.accesibilityIdentifier = "login-form-cell"
-
-    // or
-
-    cell.accesibilityIdentifier = "login-form-cell-\(indexPath.row)"
-    
-    ... 
-    return cell
-}
-```
-
-#### 🚫 Failures
-
-Duplicate identifiers are used for elements that are essentially different in their action or role.
-
-Elements are not grouped or are badly organized on the screen, which prevents accessibility features from quickly and efficiently moving through them.
-
-### Name, Role, Value
+### Name, Role, Value (WCAG 4.1.2 - Level A)
 
 User interface elements should be clearly defined by their name ([accessibility label](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel) & [accessibility hint](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)), the role that they have (accessibility identifier), and the value they carry([accesibility value](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)). The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's accessibility attributes) so that the user remains aware of what this element does at all times.
 
-*This guideline covers point 4.1.2 Name, Role, Value - Level A of the WCAG standard.*
+> This guideline covers point **4.1.2 Name, Role, Value - Level A of the WCAG standard.**
 
 #### ✅ Success technique(s)
 
-Every user interface element should have a unique accessibility label that can be used by VoiceOver.
+Every user interface element should have an accessibility label that can be used by VoiceOver.
 
 ```swift
 addButton.accessibilityLabel = "Add"
