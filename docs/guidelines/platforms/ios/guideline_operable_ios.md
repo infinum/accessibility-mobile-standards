@@ -239,6 +239,60 @@ The purpose of a button or link action is clear and easily understandable by all
 - Using generic and confusing button titles for canceling actions, for example: _"Are you sure you want to cancel your booking? This action is irreversible" ▸ OK  ▸ Cancel_
 - Button titles with an unclear result like "Ready to publish?"
 
+## Input modalities (WCAG 2.5)
+
+_Make it easier for users to operate functionality through various inputs beyond keyboard._
+
+### Label in Name (WCAG 2.5.3 - Level A)
+
+All user interface components that are defined as labels should contain the name, which is visible (presented visually).
+
+> This guideline covers point **2.5.3 Label in Name - Level A of the WCAG standard.**
+
+#### ✅ Success technique(s)
+
+A user should be able to understand and get the information about the label on which is focused. And to satisfy this criterion, the following should be done:
+
+- an accessibility label should match the visible label name, or
+- include the text of the visible label as a part of the accessibility label
+
+```swift
+let label = UILabel(frame: .zero)
+label.text = "First name"
+label.accessibilityLabel = "First name"
+```
+
+#### 🚫 Failures
+
+As a failure to this criterion, the following should be avoided:
+
+- not including the text of the visible label as a part of the accessibility label
+- words of visible label and accessibility label not matching (e.g. not the same order)
+
+### Motion Actuation (WCAG 2.5.4 - Level A)
+
+We need to ensure that content does not rely on device motion for control, as some users may have difficulty moving or holding a device steadily. This helps make content accessible to everyone, regardless of their physical abilities (e.g. shake to undo).
+
+> This guideline covers point **2.5.4 Motion Actuation - Level A of the WCAG standard.**
+
+#### ✅ Success technique(s)
+
+To satisfy this criterion, the application should provide an alternative way to perform the action that is not based on device motion. In this case, this would be a component on the user interface that will give to the user the same functionality. For example, if the application uses a shake gesture to undo an action, it should also provide an undo button.
+
+#### 🚫 Failures
+
+The application should avoid using only one way of input to perform an action - in case when that is not a standard way of input (e.g. device motion).
+
+## Other guidelines
+
+This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
+
+- [WCAG 2.1.1 Keyboard - Level A](https://www.w3.org/WAI/WCAG22/quickref/#keyboard)
+- [WCAG 2.1.2 No Keyboard Trap - Level A](https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap)
+- [WCAG 2.1.4 Character Key Shortcuts - Level A](https://www.w3.org/WAI/WCAG22/quickref/#character-key-shortcuts)
+- [WCAG 2.5.1 Pointer Gestures - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-gestures)
+- [WCAG 2.5.2 Pointer Cancellation - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-cancellation)
+
 ⎯
 
 [← Perceivable principle](../../principles/operable_principle.md "Operable principle")

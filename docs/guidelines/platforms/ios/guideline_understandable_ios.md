@@ -177,6 +177,31 @@ usernameHolderView.shouldGroupAccessibilityChildren = true
 
 A user enters some data into a user interface element without knowing what the end result is and/or triggering an unannounced change of context in the process.
 
+### Redundant Entry (WCAG 3.3.7 - Level A)
+
+Ensure that multi-step processes are easy for users by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
+
+> This technique covers point **3.3.7 Redundant Entry - Level A of the WCAG standard.**
+
+#### ✅ Success technique(s)
+
+Information previously entered by or provided to the user that is required to be entered again in the same process is either:
+
+- auto-populated, or
+- available for the user to select.
+
+Techniques mentioned above does not apply to the following cases:
+
+- when re-entering the information is essential,
+- when the information is required to ensure the security of the content, or
+- when previously entered information is no longer valid.
+
+## Other guidelines
+
+This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
+
+- [WCAG 3.2.6 Consistent Help - Level A](https://www.w3.org/WAI/WCAG22/quickref/#consistent-help)
+
 ⎯
 
 [← Understandable principle](../../principles/understandable_principle.md "Understandable principle")

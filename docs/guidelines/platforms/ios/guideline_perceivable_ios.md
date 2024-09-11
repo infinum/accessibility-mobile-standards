@@ -99,9 +99,39 @@ final class VideoViewController: UIViewController {
 }
 ```
 
+### Audio Description or Media Alternative (WCAG 1.2.3 - Level A)
+
+People that have vision disability may have issues with understanding the content of a video. To make the video accessible to all users, it is important to provide an audio description of the video content.
+
+> This guideline with provided techniques covers the **1.2.3 Audio Description or Media Alternative (Prerecorded) - Level A of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+To satisfy this guideline, there are two ways of providing an audio description:
+
+* provide an audio description of the video content
+* provide a text alternative for synchronized media
+
+##### Using audio description
+
+When talking about the audio description, it is important to provide a description of the video content. This can be done by:
+
+* adding a separate audio track to the video that describes the video content
+* providing a video version file with audio description
+* providing a video with extended audio description
+
+##### Using text alternative
+
+As a text alternative, a transcript of the video content can be provided with additional description added. This way, users can read the content of the video if they are not able to see it.
+In cases when "talking-head" video is used, a static text alternative can be provided as a description.
+
 ##### Using transcripts
 
 Supplying transcripts is another way of providing users with information in prerecorded audio or video. If defined correctly, text on the screen can be read by VoiceOver for people with visibility issues, while people with hearing issues can read the transcript. This way, both scenarios are satisfied without a need to provide captions.
+
+#### 🚫 Failures
+
+If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
 
 ## Adaptable (WCAG 1.3)
 
@@ -286,6 +316,13 @@ Some of the failures regarding this aspect are:
 
 * Creating elements that are not identifiable by design (e.g., a label and a button without a shape)
 * Not applying design changes when user preferences change in system settings
+
+## Other guidelines
+
+This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
+
+* [WCAG 1.4.1 Use of Color - Level A](https://www.w3.org/WAI/WCAG22/quickref/#use-of-color)
+* [WCAG 1.4.2 Audio Control - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-control)
 
 ⎯
 
