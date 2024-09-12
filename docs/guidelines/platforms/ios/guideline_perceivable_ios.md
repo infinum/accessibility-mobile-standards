@@ -46,7 +46,7 @@ Sometimes it is not a good idea to give accessibility labels to all screen eleme
 
 Provide alternatives for time-based media.
 
-### [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)](wcag-121-and-122)
+### [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)](#wcag-121-and-122)
 
 Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be a prerecorded audio or video track. In some cases, it is necessary to add support for some accessibility features to make this content accessible to all users.
 
@@ -101,7 +101,7 @@ final class VideoViewController: UIViewController {
 
 The details about adding captions to the `AVPlayer` (from `AVFoundation`) can be found in the [documentation](https://developer.apple.com/documentation/avfoundation/media_assets_playback_and_editing/adding_subtitles_and_alternative_audio_tracks).
 
-### [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](wcag-123)
+### [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](#wcag-123)
 
 People that have vision disability may have issues with understanding the content of a video. To make the video accessible to all users, it is important to provide an audio description of the video content.
 
@@ -174,7 +174,7 @@ Every accessible element on the screen should hold information about itself, and
 
 Moreover, when thinking about a given part of an application, it is important to make the layout structure logical and easy to use. With that in mind, semantic views that use accessibility features like VoiceOver may improve user experience. With that in hand goes the definition of the relationship, or connected elements (via container) – to give the user more context.
 
-> This guideline with provided techniques covers the **1.3.1 Info and Relationships - Level A of the WCAG standard.*
+> This guideline with provided techniques covers the *1.3.1 Info and Relationships - Level A of the WCAG standard.*
 
 #### Element information
 
@@ -245,7 +245,7 @@ By not connecting or adding context to the elements or inner elements of the com
 
 On iOS, screen elements are consumed from the top left to the bottom right. This is a standard way in which nearly all screens work correctly in most scenarios. Still, we should always provide the best experience to the user, even if elements are not structured in a preferred way.
 
-> This guideline with provided techniques covers the **1.3.2 Meaningful Sequence - Level A of the WCAG standard.*
+> This guideline with provided techniques covers the *1.3.2 Meaningful Sequence - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -290,7 +290,7 @@ Even if we, as developers, control the order of the elements, try not to make se
 
 Instructions for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
 
-> This guideline with provided techniques covers the **1.3.3 Sensory characteristics - Level A of the WCAG standard.*
+> This guideline with provided techniques covers the *1.3.3 Sensory characteristics - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -352,7 +352,7 @@ Some of the failures regarding this aspect are:
 
 Content should not be restricted to operation in a single display orientation, such as portrait or landscape, unless a specific display orientation is essential.
 
-> This guideline with provided techniques covers the **1.3.4 Orientation - Level AA of the WCAG standard.*
+> This guideline with provided techniques covers the *1.3.4 Orientation - Level AA of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
