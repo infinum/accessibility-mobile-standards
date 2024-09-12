@@ -4,17 +4,17 @@
 
 Information and user interface components must be presentable to users in ways they can perceive.
 
-## Text alternatives (WCAG 1.1)
+## [Text alternatives (WCAG 1.1)](#wcag-11)
 
 Provide text alternatives for any non-text content to be changed into other forms people need, such as large print, braille, speech, symbols, or more straightforward language.
 
-### Non-text content identification (WCAG 1.1.1 - Level A)
+### [Non-text content identification (WCAG 1.1.1 - Level A)](#wcag-1.1.1)
 
 When talking about the screen elements, it is important to make information about all elements accessible and available. Some elements may not have text included by design or as a default user interface component. This can be seen when buttons are used with icons only, images, or other decorative elements.
 
 Some users may have issues identifying an element's functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
 
-> This guideline with provided techniques covers the **1.1.1 Non-text Content - Level A of the WCAG standard.**
+> This guideline with provided techniques covers the *1.1.1 Non-text Content - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -42,15 +42,15 @@ addButton.accessibilityHint = "Adds a new task"
 
 Sometimes it is not a good idea to give accessibility labels to all screen elements. Some elements may only be defined as decorative elements that do not affect the screen functionality (e.g. small elements like images used for screen decoration). In that case, labeling elements like that may confuse the user.
 
-## Time-based Media (WCAG 1.2)
+## [Time-based Media (WCAG 1.2)](#wcag-12)
 
 Provide alternatives for time-based media.
 
-### Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)
+### [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)](wcag-121-and-122)
 
 Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be a prerecorded audio or video track. In some cases, it is necessary to add support for some accessibility features to make this content accessible to all users.
 
-> This guideline with provided techniques covers the **1.2.1 Audio-only and Video-only (Prerecorded) - Level A and 1.2.2 Captions (Prerecorded) - Level A of the WCAG standard.*
+> This guideline with provided techniques covers the *1.2.1 Audio-only and Video-only (Prerecorded) - Level A and 1.2.2 Captions (Prerecorded) - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -99,11 +99,13 @@ final class VideoViewController: UIViewController {
 }
 ```
 
-### Audio Description or Media Alternative (WCAG 1.2.3 - Level A)
+The details about adding captions to the `AVPlayer` (from `AVFoundation`) can be found in the [documentation](https://developer.apple.com/documentation/avfoundation/media_assets_playback_and_editing/adding_subtitles_and_alternative_audio_tracks).
+
+### [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](wcag-123)
 
 People that have vision disability may have issues with understanding the content of a video. To make the video accessible to all users, it is important to provide an audio description of the video content.
 
-> This guideline with provided techniques covers the **1.2.3 Audio Description or Media Alternative (Prerecorded) - Level A of the WCAG standard.*
+> This guideline with provided techniques covers the *1.2.3 Audio Description or Media Alternative (Prerecorded) - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
@@ -133,11 +135,40 @@ Supplying transcripts is another way of providing users with information in prer
 
 If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
 
-## Adaptable (WCAG 1.3)
+### [Captions support for live media (WCAG 1.2.4 - Level AA)](#wcag-124)
+
+In some cases, live media is used in the application. To make this content accessible to all users, it is important to provide captions for the live media.
+
+> This guideline with provided techniques covers the *1.2.4 Captions (Live) - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+For every live media that is used in the application, we should provide captions through the user interface. This can be archived as:
+
+* live captions that are embedded in the real-time media
+* live captions that are available in the real-time media stream (can be programmatically added to the video)
+
+The second approach is much more customizable, and can provide much more than embedded captions. Still, this approach requires work on the client side to make it work. Please check documentation mentioned in the [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)](#wcag-121-and-122) and [here](https://developer.apple.com/streaming/) for more information about HTTP live streaming on Apple platforms.
+
+### [Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)](#wcag-125)
+
+As a part of this guideline, it is important to provide an audio description for prerecorded video content.
+
+> This guideline with provided techniques covers the *1.2.5 Audio Description (Prerecorded) - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+This guideline is closely related to the [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](wcag-123) guideline, which basically says that the video content should be described in an audio track, without any alternative (as described in the previous guideline).
+
+This can be done in the main track (media) or by providing an additional audio track that describes the video content.
+
+*Note: Based on the guideline itself, if all of the information in the video track is already provided in the audio track, no audio description is necessary. This applies to both guidelines (1.2.3 and 1.2.5).*
+
+## [Adaptable (WCAG 1.3)](#wcag-13)
 
 Create content that can be presented differently without losing information or structure.
 
-### Element information and relationship (WCAG 1.3.1 - Level A)
+### [Element information and relationship (WCAG 1.3.1 - Level A)](#wcag-131)
 
 Every accessible element on the screen should hold information about itself, and it should be identifiable. From the web perspective, this is defined as a definition of the regions and elements on the page, while on the mobile side, this can be used to identify components or different areas of the page.
 
@@ -255,7 +286,7 @@ In this example, we changed the order of how elements will be read, and we’ve 
 
 Even if we, as developers, control the order of the elements, try not to make sequences that are not logical or to produce "jumps" between UI components.
 
-### Sensory characteristics (WCAG 1.3.3 - Level A)
+### [Sensory characteristics (WCAG 1.3.3 - Level A)](#wcag-133)
 
 Instructions for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
 
@@ -317,12 +348,115 @@ Some of the failures regarding this aspect are:
 * Creating elements that are not identifiable by design (e.g., a label and a button without a shape)
 * Not applying design changes when user preferences change in system settings
 
-## Other guidelines
+### [Orientation (WCAG 1.3.4 - Level AA)](#wcag-134)
+
+Content should not be restricted to operation in a single display orientation, such as portrait or landscape, unless a specific display orientation is essential.
+
+> This guideline with provided techniques covers the **1.3.4 Orientation - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+When talking about the orientation of the screen, it is important to make the application work in both portrait and landscape mode. This can be done by defining the supported orientations in the application settings (*project-target > General > Deployment Info > Device Orientation*).
+
+Programmatically, this can be achieved on two levels; on the view controller level and on the application level. For the view level, the orientation can be defined by overriding the `supportedInterfaceOrientations` method, and setting the `shouldAutorotate` property to `true`.
+
+From the application level, the orientation can be defined in the `AppDelegate` class by setting the `supportedInterfaceOrientationsFor` method.
+
+#### 🚫 Failures
+
+While thinking about orientation, the following implementations can be considered as failures:
+
+* not supporting both horizontal and vertical orientations
+* forcing user to re-orient the device to use it normally (e.g. usage of alert)
+
+### [Identify input purpose (WCAG 1.3.5 - Level AA)](#wcag-135)
+
+In forms, every input field should indicate a purpose of the input for ease of use. With this guideline, the autocomplete feature should be added to the input fields, but the mobile platforms does not support that.
+
+Still, to support this as much as possible, every input should at least define type of input (e.g., email, password, phone number, etc.).
+
+> This guideline with provided techniques covers the *1.3.5 Identify Input Purpose - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+To support type of the input and different keyboard state, always define the `keyboardType` (`UIKeyboardType`) for every text field to support easier input from users. With that defined, the keyboard will show the correct layout for the user to input the data. In addition to that, try to define a `returnKeyType` (`UIReturnKeyType`) to support the user in the form completion.
+
+#### 🚫 Failures
+
+If the wrong input layout (e.g., keyboard type) is used for the input field, the user may have issues with entering the data. This can lead to a bad user experience and a failure of this guideline.
+
+## [Distinguishable (WCAG 1.4)](#wcag-14)
+
+Make it easier for users to see and hear content including separating foreground from background.
+
+### [Resizeable text (WCAG 1.4.4 - Level AA)](#wcag-144)
+
+The text should be resizeable up to 200% without loss of content or functionality. This applies to every text content on the screen except captions and images of text.
+
+> This guideline with provided techniques covers the **1.4.4 Resizeable Text - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+To support this guideline, the application should support the dynamic type. If a system font is used, this is already supported by default.
+
+In case when a custom font is used, it is important to support the dynamic type by setting the `adjustsFontForContentSizeCategory` property to `true`, which will affect the label to change its font size based on changes in accessibility setting. Also, the custom font should be scaled, and that is done by setting the `UIFontMetrics` object to the font.
+
+```swift
+label.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
+label.adjustFontForContentSizeCategory = true
+```
+
+It is important that we can limit the font size (when custom font is used) to a specific value, but the minimum enlargement of 200% of the font size should be supported. This can be done by setting the `maximumContentSizeCategory` to the specific value. Read more about content size categories [here](https://developer.apple.com/documentation/uikit/uicontentsizecategory).
+
+#### 🚫 Failures
+
+As a part of this guideline, the following failures can be considered:
+
+* Not supporting the dynamic type
+* The content is not resizable up to 200%
+
+### [Images of text (WCAG 1.4.5 - Level AA)](#wcag-145)
+
+Where components with image of text are used, they cannot satisfy the other guidelines due to image constraints. E.g., the text in the image cannot be resized which breaks the guideline 1.4.4. To avoid that, use of images of text should be avoided, or at least a text alternative should be provided.
+
+This does not affect components which are essential for the functionality of the application, like logos or branding images.
+
+> This guideline with provided techniques covers the *1.4.5 Images of Text - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+Try to use text instead of images of text to make the component more flexible and easier to use. If that is not possible, provide a text alternative for the image of text. This can be done by setting the `accessibilityLabel` to the image view.
+
+#### 🚫 Failures
+
+If the image of text is used without a text alternative, that will result in a failure of this guideline.
+
+### [Reflow (WCAG 1.4.10 - Level AA)](#wcag-1410)
+
+The reflow is basically another name to responsible design in this context. The content should be able to reflow from one screen size to another without losing information or functionality.
+
+> This guideline with provided techniques covers the *1.4.10 Reflow - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+Every component on the screen should be able to reflow from one screen size to another. This can be achieved by using the auto layout and size classes in the storyboard. Also, the dynamic type should be supported to make the text reflowable.
+
+This should not be done only on the screen level, but also on the component level. Every component should be able to reflow from one size to another without losing information or functionality (e.g., buttons, labels, images, etc.). The simple example of this would be a broken text (label), wrong size of the button, etc.
+
+#### 🚫 Failures
+
+If the content is not responsible to different sizes, it may be broken and not usable on some screen sizes. This can lead to a bad user experience and a failure of this guideline. This could be highly visible when the user changes the system font size or when the user changes the device orientation.
+
+## [Other perceivable guidelines](#other-perceivable-guidelines)
 
 This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
 
 * [WCAG 1.4.1 Use of Color - Level A](https://www.w3.org/WAI/WCAG22/quickref/#use-of-color)
 * [WCAG 1.4.2 Audio Control - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-control)
+* [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum)
+* [WCAG 1.4.11 Non-text Contrast - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast)
+* [WCAG 1.4.12 Text Spacing - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#text-spacing)
+* [WCAG 1.4.13 Content on Hover or Focus - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#content-on-hover-or-focus)
 
 ⎯
 
