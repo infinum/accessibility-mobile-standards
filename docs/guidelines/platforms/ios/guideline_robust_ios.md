@@ -4,15 +4,15 @@
 
 Content must be robust enough that it can be interpreted by a wide variety of mobile devices, including those which use accessibility features.
 
-## Compatible (WCAG 4.1)
+## [Compatible (WCAG 4.1)](#wcag-41)
 
 Maximize compatibility with current and future devices, taking into account the accessibility features that they might be using.
 
-### Name, Role, Value (WCAG 4.1.2 - Level A)
+### [Name, Role, Value (WCAG 4.1.2 - Level A)](#wcag-412)
 
 User interface elements should be clearly defined by their name ([accessibility label](https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel) & [accessibility hint](https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint)), the role that they have (accessibility identifier), and the value they carry([accesibility value](https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue)). The app should be able to notify the user if any of these parameters change programmatically without user input (or the changes should be reflected in the element's accessibility attributes) so that the user remains aware of what this element does at all times.
 
-> This guideline covers point **4.1.2 Name, Role, Value - Level A of the WCAG standard.**
+> This guideline covers point *4.1.2 Name, Role, Value - Level A of the WCAG standard.*
 
 #### ✅ Success technique(s)
 

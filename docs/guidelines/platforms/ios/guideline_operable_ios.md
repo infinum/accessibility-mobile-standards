@@ -91,6 +91,22 @@ A skip mechanism is available to bypass blocks of content that are repeated in t
 
     If you want to try this out for yourself, we've prepared an [example project](https://github.com/infinum/ios-accessibility-demo) where we've recreated this exact behavior.
 
+- Using rotors: In case when user needs to navigate through different elements of the screen, a custom rotor can be a nice way of changing the type of block the user wants to navigate through. Custom rotors are a great way to deal with filtering and changing the state of the screen (if needed).
+
+    **Example**: VoiceOver rotor for navigating through different elements of the screen:
+
+```swift
+    func setupRotors() {
+        let rotor = UIAccessibilityCustomRotor(name: "My custom rotor") { predicate in
+            // Return the next element (e.g. elements that needs to be focused) based on the predicate
+            return UIAccessibilityCustomRotorItemResult(targetElement: nextElement, targetRange: nil)
+        }
+        self.accessibilityCustomRotors = [rotor]
+    }
+```
+
+Please check more information about custom rotors in [this](https://developer.apple.com/videos/play/wwdc2020/10116/) WWDC video.
+
 #### 🚫 Failures
 
 Not providing a way for the user to quickly skip over sections with numerous items.
