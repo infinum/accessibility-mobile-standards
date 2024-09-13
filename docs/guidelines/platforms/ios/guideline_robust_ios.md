@@ -38,6 +38,36 @@ Implementing custom controls that are unfamiliar to the users and don't carry th
 
 Changing the value or role of a user interface element without adjusting its identifier programmatically.
 
+### [Status messages (WCAG 4.1.3 - Level AA)](#wcag-413)
+
+The guideline states that status messages should be programmatically determinable by the user. 
+This means that the user should be able to know the status of the app at any given time without having to interact with it.
+
+On mobile this means that the user should be able to know if the current state has been changed - which is especially important for users who rely on screen readers.
+
+> This guideline covers point *4.1.3 Status messages - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+To satisfy this guideline, the app should provide a way for the user to know the current status of the app at any given time. This can be in situations like;
+
+- search results are being loaded,
+- cooking time has changes,
+- items has been added to the cart,
+- etc.
+
+Based on changes like that, the `UIAccessibility.Notification` can be used to notify the user of the change.
+
+```swift
+UIAccessibility.post(notification: .announcement, argument: "5 results found.")
+```
+
+For more information about examples and success criteria, please refer to the [Understanding WCAG 4.1.3 - Status messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages) page.
+
+#### 🚫 Failures
+
+Not providing a way for the user to know the current status of the application at any given time.
+
 ⎯
 
 [← Robust principle](../../principles/robust_principle.md "Robust principle")
