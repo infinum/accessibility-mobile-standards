@@ -8,7 +8,7 @@ Information and user interface components must be presentable to users in ways t
 
 Provide text alternatives for any non-text content to be changed into other forms people need, such as large print, braille, speech, symbols, or more straightforward language.
 
-### [Non-text content identification (WCAG 1.1.1 - Level A)](#wcag-1.1.1)
+### [Non-text content identification (WCAG 1.1.1 - Level A)](#wcag-111)
 
 When talking about the screen elements, it is important to make information about all elements accessible and available. Some elements may not have text included by design or as a default user interface component. This can be seen when buttons are used with icons only, images, or other decorative elements.
 
@@ -241,7 +241,7 @@ Also, if there is a need to define actions or gestures inside components like th
 
 By not connecting or adding context to the elements or inner elements of the component, there is a chance to create a bad user experience and confusion in the app usage.
 
-### Meaningful sequence (WCAG 1.3.2 - Level A)
+### [Meaningful sequence (WCAG 1.3.2 - Level A)](#wcag-132)
 
 On iOS, screen elements are consumed from the top left to the bottom right. This is a standard way in which nearly all screens work correctly in most scenarios. Still, we should always provide the best experience to the user, even if elements are not structured in a preferred way.
 
