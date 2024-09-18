@@ -136,3 +136,7 @@ Guidelines mentioned in this section are not applicable to the mobile applicatio
   - Android | [iOS](platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
 - [ ] 3.2.6 Consistent help (AA)
   - Android | [iOS](platforms/ios/guideline_understandable_ios.md#other-understandable-guidelines) | Flutter
+
+⎯
+
+[← Accessibility principles and examples](accessibility_principles_and_examples.md "Accessibility principles and examples")

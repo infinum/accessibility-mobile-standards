@@ -20,6 +20,7 @@ This repository contains mobile standards created for mobile platforms. It inclu
        * [Operable](docs/guidelines/principles/operable_principle.md)
        * [Understandable](docs/guidelines/principles/understandable_principle.md)
        * [Robust](docs/guidelines/principles/robust_principle.md)
+       * [Guideline checklist](docs/guidelines/principles/guideline_checklist.md)
   
     * [Testing accessibility features](docs/testing/testing.md)
 
