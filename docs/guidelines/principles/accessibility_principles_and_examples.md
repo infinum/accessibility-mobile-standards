@@ -11,6 +11,10 @@ In the following chapters, information about satisfying accessibility guidelines
 * [Understandable principle and guidelines](understandable_principle.md "Understandable principle and guidelines")
 * [Robust principle and guidelines](robust_principle.md "Robust principle and guidelines")
 
+Alongside the guidelines and examples, you can check the list of requirements that should be satisfied for each guideline:
+
+* [Guideline checklist](guideline_checklist.md "Guideline checklist")
+
 ⎯
 
 [← Accessibility guidelines](../accessibility_guidelines.md "Accessibility guidelines")
