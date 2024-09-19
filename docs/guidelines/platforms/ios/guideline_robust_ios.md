@@ -4,13 +4,9 @@
 
 Content must be robust enough that it can be interpreted by a wide variety of mobile devices, including those which use accessibility features.
 
-[](#wcag-41)
-
 ## Compatible (WCAG 4.1)
 
 Maximize compatibility with current and future devices, taking into account the accessibility features that they might be using.
-
-[](#wcag-412)
 
 ### Name, Role, Value (WCAG 4.1.2 - Level A)
 
@@ -41,8 +37,6 @@ Not providing accessibility identifiers for user interface elements.
 Implementing custom controls that are unfamiliar to the users and don't carry the necessary accessibility identifying information as defined in this guideline.
 
 Changing the value or role of a user interface element without adjusting its identifier programmatically.
-
-[](#wcag-413)
 
 ### Status messages (WCAG 4.1.3 - Level AA)
 
