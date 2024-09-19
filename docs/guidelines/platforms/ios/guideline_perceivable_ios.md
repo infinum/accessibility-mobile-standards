@@ -447,7 +447,7 @@ This should not be done only on the screen level, but also on the component leve
 
 If the content is not responsible to different sizes, it may be broken and not usable on some screen sizes. This can lead to a bad user experience and a failure of this guideline. This could be highly visible when the user changes the system font size or when the user changes the device orientation.
 
-## Other perceivable guidelines](#other-perceivable-guidelines)
+## Other perceivable guidelines
 
 This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
 
