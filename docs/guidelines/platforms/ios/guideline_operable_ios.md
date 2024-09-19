@@ -4,11 +4,11 @@
 
 User interface components and navigation must be operable.
 
-## [Enough Time (WCAG 2.2)](#wcag-22)
+## Enough Time (WCAG 2.2)
 
 Provide users enough time to read and use the content.
 
-### [Timing Adjustable (WCAG 2.2.1 - Level A)](#wcag-221)
+### Timing Adjustable (WCAG 2.2.1 - Level A)
 
 The user can turn off, adjust, or extend each time limit set by the content.
 
@@ -29,7 +29,7 @@ The user can turn off, adjust, or extend each time limit set by the content.
 - Logging a user out of their session with no prior warning.
 - Not providing enough time or time extensions to react to an incoming action in the app.
 
-### [Pause, Stop, Hide (WCAG 2.2.2 - Level A)](#wcag-222)
+### Pause, Stop, Hide (WCAG 2.2.2 - Level A)
 
 Moving, blinking, or scrolling, or auto-updating content in the app.
 
@@ -45,11 +45,11 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
-## [Seizures and Physical Reactions (WCAG 2.3)](#wcag-23)
+## Seizures and Physical Reactions (WCAG 2.3)
 
 Do not design content in a way known to cause seizures or physical reactions.
 
-### [Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)](#wcag-231)
+### Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)
 
 Apps should not contain any element that flashes more than three times in one second.
 
@@ -66,11 +66,11 @@ Apps should not contain any element that flashes more than three times in one se
 - Using rapidly flashing elements to catch the user's attention.
 - Having a larger area of screen flashing more than three times per second.
 
-## [Navigable (WCAG 2.4)](#wcag-24)
+## Navigable (WCAG 2.4)
 
 *Provide ways to help users navigate, find content, and determine where they are.*
 
-### [Bypass Blocks (WCAG 2.4.1 - Level A)](#wcag-241)
+### Bypass Blocks (WCAG 2.4.1 - Level A)
 
 A skip mechanism is available to bypass blocks of content that are repeated in the app.
 
@@ -111,7 +111,7 @@ Please check more information about custom rotors in [this](https://developer.ap
 
 Not providing a way for the user to quickly skip over sections with numerous items.
 
-### [Page Titled (WCAG 2.4.2 - Level A)](#wcag-242)
+### Page Titled (WCAG 2.4.2 - Level A)
 
 Screens have a clear, descriptive, and possibly unique title that describes the topic or purpose and is easily understood by all users.
 
@@ -153,7 +153,7 @@ Screens have a clear, descriptive, and possibly unique title that describes the 
   - file names like "report.pdf" or "DSC_0123.jpeg"
   - placeholder text like "Enter title..." or "Search..."
 
-### [Focus Order (WCAG 2.4.3 - Level A)](#wcag-243)
+### Focus Order (WCAG 2.4.3 - Level A)
 
 VoiceOver: Ensure that information is read in an order consistent with the meaning and content.
 
@@ -206,7 +206,7 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
     }
 ```
 
-### [Action Purpose (WCAG 2.4.4 - Level A)](#wcag-244)
+### Action Purpose (WCAG 2.4.4 - Level A)
 
 The purpose of a button or link action is clear and easily understandable by all users
 
@@ -254,7 +254,7 @@ The purpose of a button or link action is clear and easily understandable by all
 - Using generic and confusing button titles for canceling actions, for example: _"Are you sure you want to cancel your booking? This action is irreversible" ▸ OK  ▸ Cancel_
 - Button titles with an unclear result like "Ready to publish?"
 
-### [Heading and Labels (WCAG 2.4.6 - Level AA)](#wcag-246)
+### Heading and Labels (WCAG 2.4.6 - Level AA)
 
 Based on this guideline, the user should be able to understand the purpose of the heading or label. The heading or label should be descriptive and provide information about the content that follows.
 
@@ -284,7 +284,7 @@ The following should be avoided:
 - Not providing a title or label for the content that follows
 - Providing a missing or incorrect title or label
 
-### [Focus Visibility (WCAG 2.4.7 - Level AA)](#wcag-247)
+### Focus Visibility (WCAG 2.4.7 - Level AA)
 
 This guideline states that the user should be able to see the focus on the element that is currently selected. With a mobile platform in mind, this guideline is automatically satisfied if VoiceOver is used - handled by the system (iOS).
 
@@ -294,7 +294,7 @@ This guideline states that the user should be able to see the focus on the eleme
 
 Even though, the system automatically handles this, think about selection and focus on custom elements; make sure that the focus is visible in a correct way and that the user can see which element is currently selected, especially if the component contains "inner" elements.
 
-### [Focus Not Obscured (Minimum) (WCAG 2.4.11 - Level AA)](#wcag-2411)
+### Focus Not Obscured (Minimum) (WCAG 2.4.11 - Level AA)
 
 When the user navigates through the app, the focus should not be obscured by other elements and should be visible (at least partially).
 
@@ -317,11 +317,11 @@ The following should be avoided:
 - The focus is obscured by other elements
 - Element is hidden due to inability to scroll or another element of the screen (e.g. sticky footer or floating element)
 
-## [Input modalities (WCAG 2.5)](#wcag-25)
+## Input modalities (WCAG 2.5)]
 
-_Make it easier for users to operate functionality through various inputs beyond keyboard._
+*Make it easier for users to operate functionality through various inputs beyond keyboard.*
 
-### [Label in Name (WCAG 2.5.3 - Level A)](#wcag-253)
+### Label in Name (WCAG 2.5.3 - Level A)
 
 All user interface components that are defined as labels should contain the name, which is visible (presented visually).
 
@@ -347,7 +347,7 @@ As a failure to this criterion, the following should be avoided:
 - not including the text of the visible label as a part of the accessibility label
 - words of visible label and accessibility label not matching (e.g. not the same order)
 
-### [Motion Actuation (WCAG 2.5.4 - Level A)](#wcag-254)
+### Motion Actuation (WCAG 2.5.4 - Level A)
 
 We need to ensure that content does not rely on device motion for control, as some users may have difficulty moving or holding a device steadily. This helps make content accessible to everyone, regardless of their physical abilities (e.g. shake to undo).
 
@@ -361,7 +361,7 @@ To satisfy this criterion, the application should provide an alternative way to 
 
 The application should avoid using only one way of input to perform an action - in case when that is not a standard way of input (e.g. device motion).
 
-### [Dragging Movements (WCAG 2.5.7 - Level AA)](#wcag-257)
+### Dragging Movements (WCAG 2.5.7 - Level AA)
 
 Due to different disabilities, some users may have difficulty performing dragging movements. This guideline states that the application should provide an alternative way to perform the action that is not based on dragging movements.
 
@@ -386,7 +386,7 @@ Examples for custom actions can be found in applications like Mail where the use
 
 If the application does not provide an alternative way to perform the action that is not based on dragging movements, it will fail to satisfy this criterion.
 
-### [Target Size (Minimum) (WCAG 2.5.8 - Level AA)](#wcag-258)
+### Target Size (Minimum) (WCAG 2.5.8 - Level AA)
 
 This guideline tries to ensure that the target size of the elements is large enough to be easily operable by touch. To fully understand the requirements, please check examples and details about it [here](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 
@@ -404,7 +404,7 @@ Still, there are some exceptions to this rule:
 - **User agent control**: The size of the target is determined by the user agent and is not modified by the author;
 - **Essential**: A particular presentation of the target is essential or is legally required for the information being conveyed.
 
-## [Other operable guidelines](#other-operable-guidelines)
+## Other operable guidelines
 
 This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
 
