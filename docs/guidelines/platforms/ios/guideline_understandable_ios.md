@@ -260,7 +260,7 @@ Based on the type of the application, the mechanism should be implemented in a w
 
 ### Redundant Entry (WCAG 3.3.7 - Level A)
 
-Ensure that multi-step processes are easy for users by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
+Ensure that multi-step processes are user-friendly by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
 
 > This technique covers point *3.3.7 Redundant Entry - Level A of the WCAG standard.*
 
