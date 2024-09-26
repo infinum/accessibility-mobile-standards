@@ -236,7 +236,7 @@ To provide the best user experience, the application should suggest solutions fo
 
 #### ✅ Success technique(s)
 
-When an error is detected, the application should provide a suggestion for the user on how to correct it. This can be done by providing a hint or a description of the error, or providing a suggestion on how to correct it.
+When an error is detected, the application should provide a suggestion for the user on how to correct it. This can be done by providing a hint or a description of the error or providing a suggestion on how to correct it.
 
 This is not just an accessibility feature, but also a usability feature, as it helps users to understand what they did wrong and how to correct it. Of course, if the suggestion is presented, this should be done in accessible way (e.g. using accessibility label).
 
