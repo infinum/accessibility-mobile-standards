@@ -300,7 +300,7 @@ Some of the success techniques to satisfy this criterion are:
 
 #### 🚫 Failures
 
-To fail this criterion, users should be required to complete a cognitive function test to authenticate themselves, or enter the values in a different way than they were originally created/provided.
+To fail this criterion, users should be required to complete a cognitive function test to authenticate themselves or enter the values in a different way than they were originally created/provided.
 
 Some examples:
 
