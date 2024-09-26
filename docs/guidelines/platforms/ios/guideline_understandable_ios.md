@@ -309,7 +309,7 @@ Some examples:
 
 ## Other understandable guidelines
 
-This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
+This section contains guidelines that may not be applicable to the mobile (iOS) platform or its criteria is not the responsibility of the mobile team. Still, take into account that those guidelines need to be satisfied.
 
 - [WCAG 3.2.6 Consistent Help - Level A](https://www.w3.org/WAI/WCAG22/quickref/#consistent-help)
 
