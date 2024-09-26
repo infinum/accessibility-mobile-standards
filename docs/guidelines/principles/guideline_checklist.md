@@ -36,7 +36,7 @@ Guidelines mentioned in this section are related to the user interface and exper
 
 ## Screen reader & interaction
 
-Guidelines mentioned in this section are related to the screen reader and interaction with the application. There guidelines contain technical, but also design and content related information which should be implemented in collaboration with other teams (based on required inputs).
+Guidelines mentioned in this section are related to the screen reader and interaction with the application. These guidelines contain technical, but also design and content-related information which should be implemented in collaboration with other teams (based on required inputs).
 
 - [ ] 1.1.1 Non-text content (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#non-text-content-identification-wcag-111---level-a) | Flutter
 - [ ] 1.3.1 Info and relationships (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#element-information-and-relationship-wcag-131---level-a) | Flutter
