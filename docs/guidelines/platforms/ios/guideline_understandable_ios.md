@@ -124,7 +124,7 @@ func textFieldDidBeginEditing(_ textField: UITextField) {
 
 ### Consistent Navigation (WCAG 3.2.3 - Level AA)
 
-For users is important to have a consistent navigation experience throughout the app. With that satisfied, users can easily predict where they are and where they can go next.
+For users, it is important to have a consistent navigation experience throughout the app. With that satisfied, users can easily predict where they are and where they can go next.
 
 > This technique covers point *3.2.3 Consistent Navigation - Level AA of the WCAG standard.*
 
