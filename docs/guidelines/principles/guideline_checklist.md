@@ -72,7 +72,7 @@ Guidelines mentioned in this section are related to the security of the applicat
 
 ## Non-applicable
 
-Guidelines mentioned in this section are not applicable to the mobile application, but should be reviewed to ensure that they are not applicable (e.g. tablet or desktop support may require keyboard support).
+Guidelines mentioned in this section are not applicable to the mobile application but should be reviewed to ensure that they are not applicable (e.g. tablet or desktop support may require keyboard support).
 
 - [ ] 1.4.13 Content on hover or focus (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
 - [ ] 2.1.1 Keyboard (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
