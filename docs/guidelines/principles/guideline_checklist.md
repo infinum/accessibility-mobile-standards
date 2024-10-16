@@ -30,7 +30,7 @@ Guidelines mentioned in this section are related to the user interface and exper
 - [ ] 2.2.1 Timing adjustable (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#timing-adjustable-wcag-221---level-a) | Flutter
 - [ ] 2.2.2 Pause, stop, hide (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#pause-stop-hide-wcag-222---level-a) | Flutter
 - [ ] 2.3.1 Three flashes or below threshold (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#three-flashed-or-below-threshold-wcag-231---level-a) | Flutter
-- [ ] 2.5.4 Motion actuation (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#motion-actuation-wcag-254---level-a) | Flutter
+- [ ] 2.5.4 Motion actuation (A) - [Android](../platforms/android/guideline_operable_android.md#motion-actuation) | [iOS](../platforms/ios/guideline_operable_ios.md#motion-actuation-wcag-254---level-a) | Flutter
 - [ ] 2.5.7 Dragging movements (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#dragging-movements-wcag-257---level-aa) | Flutter
 - [ ] 2.5.8 Target size (minimum) (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#target-size-minimum-wcag-258---level-aa) | Flutter
 
