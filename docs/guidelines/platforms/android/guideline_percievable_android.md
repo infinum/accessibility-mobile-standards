@@ -208,6 +208,48 @@ The content provided in your app must be easily understandable to all users. Tha
 
 ---
 
+
+### Resize text
+
+*This guideline covers point 1.4.4 Resize text - Level AA of the WCAG standard.*
+
+:white_check_mark: **Success criteria**
+
+todo
+
+:no_entry_sign: **Failure criteria**
+
+todo
+
+---
+
+### Images of Text
+
+*This guideline covers point 1.4.5 Images of Text - Level AA of the WCAG standard.*
+
+:white_check_mark: **Success criteria**
+
+todo
+
+:no_entry_sign: **Failure criteria**
+
+todo
+
+---
+### Text Spacing
+
+*This guideline covers point 1.4.12 Text Spacing - Level AA of the WCAG standard.*
+
+:white_check_mark: **Success criteria**
+
+todo
+
+:no_entry_sign: **Failure criteria**
+
+todo
+
+---
+
 #### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)

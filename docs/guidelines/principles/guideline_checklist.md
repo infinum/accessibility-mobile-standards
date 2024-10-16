@@ -23,10 +23,10 @@ Guidelines mentioned in this section are related to the user interface and exper
 - [ ] 1.4.1 Use of color (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
 - [ ] 1.4.2 Audio control (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
 - [ ] 1.4.3 Contrast (minimum) (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
-- [ ] 1.4.4 Resize text (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#resizeable-text-wcag-144---level-aa) | Flutter
-- [ ] 1.4.5 Images of text (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#images-of-text-wcag-145---level-aa) | Flutter
+- [ ] 1.4.4 Resize text (AA) - [Android](../platforms/android/guideline_percievable_android.md#resize-text) | [iOS](../platforms/ios/guideline_perceivable_ios.md#resizeable-text-wcag-144---level-aa) | Flutter
+- [ ] 1.4.5 Images of text (AA) - [Android](../platforms/android/guideline_percievable_android.md#images-of-text) | [iOS](../platforms/ios/guideline_perceivable_ios.md#images-of-text-wcag-145---level-aa) | Flutter
 - [ ] 1.4.11 Non-text contrast (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
-- [ ] 1.4.12 Text spacing (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
+- [ ] 1.4.12 Text spacing (AA) - [Android](../platforms/android/guideline_percievable_android.md#text-spacing) | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
 - [ ] 2.2.1 Timing adjustable (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#timing-adjustable-wcag-221---level-a) | Flutter
 - [ ] 2.2.2 Pause, stop, hide (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#pause-stop-hide-wcag-222---level-a) | Flutter
 - [ ] 2.3.1 Three flashes or below threshold (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#three-flashed-or-below-threshold-wcag-231---level-a) | Flutter
