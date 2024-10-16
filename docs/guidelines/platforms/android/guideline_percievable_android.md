@@ -179,7 +179,7 @@ In apps with minSdk < 22, traversal order can be defined programmatically using 
 
 The example is given below:
 
-```
+```kotlin
 ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
     override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
         super.onInitializeAccessibilityNodeInfo(host, info)
@@ -205,6 +205,181 @@ The content provided in your app must be easily understandable to all users. Tha
 :no_entry_sign: **Failure criteria**
 
 - An important difference between elements is stressed only with colors.
+
+---
+
+
+### Resize text
+
+*This guideline covers point 1.4.4 Resize text - Level AA of the WCAG standard.*
+
+:white_check_mark: **Success criteria**
+
+Mobile apps must ensure that text can be resized up to **200%** without loss of content or functionality. This is essential for users with low vision who need larger text for readability. Specifically:
+
+- Text should be resizable up to **200%** using the device’s text size settings.
+- There should be no horizontal scrolling, content overlap, or loss of functionality when text is resized.
+- All UI components should remain usable and readable, even at larger text sizes.
+
+:no_entry_sign: **Failure criteria**
+
+- An app where text overflows or overlaps when scaled up to 200%, making it unreadable, would fail this criterion.
+- If an app forces horizontal scrolling to read resized text, it would also fail.
+- Defining text sizes in pixels (px) rather than sp would prevent proper scaling and lead to accessibility issues.
+
+**Bad Example:** Fixed Height with Text Encapsulation and limiting the line count
+
+```
+<TextView
+    android:id="@+id/fixed_text"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp" <!-- Fixed height -->
+    android:maxLines="2"  <!-- Limits the text to 2 lines -->
+    android:ellipsize="end" <!-- Adds "..." at the end if text is too long -->
+    android:text="This is a long piece of text that might be cut off when resized."
+    android:textSize="16sp" />
+```
+
+```kotlin
+Box(modifier = Modifier.height(50.dp)) {
+    Text(
+        text = "This is a long piece of text that might be cut off when resized.",
+        fontSize = 16.sp,
+        maxLines = 2,  // Limits the text to 2 lines
+        overflow = TextOverflow.Ellipsis  // Adds "..." at the end if text is too long
+    )
+}
+```
+
+**Solution:** 
+
+```
+<TextView
+    android:id="@+id/fixed_text"
+    android:layout_width="wrap_content"
+    android:minHeight="50dp"  <!-- Minimum height but flexible -->
+    android:text="This is a long piece of text that might be cut off when resized."
+    android:textSize="16sp" />
+```
+
+```kotlin
+Box(modifier = Modifier
+    .minHeight(50.dp)  // Minimum height but flexible
+    .wrapContentHeight()) {
+    Text(
+        text = "This is a long piece of text that will resize appropriately.",
+        fontSize = 16.sp
+    )
+}
+```
+
+**Important Point:** Handling Large Text Without Scrollable Container
+
+When presenting large text or content that may exceed the visible area of the screen, it is crucial to provide a way for users to read all the content without losing access. This is especially important for users who might need larger text for better readability.
+
+```
+<!-- Using ScrollView to contain large text -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/large_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a very long piece of text that might not fit on the screen when enlarged. Users need to be able to scroll to read all of it."
+        android:textSize="24sp" />
+</ScrollView>
+```
+
+```kotlin
+// Compose example with scrollable text
+val largeText = "This is a very long piece of text that might not fit on the screen when enlarged. Users need to be able to scroll to read all of it."
+
+Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+    Text(
+        text = largeText,
+        fontSize = 24.sp  // Large font size
+    )
+}
+```
+
+---
+
+### Images of Text
+
+*This guideline covers point 1.4.5 Images of Text - Level AA of the WCAG standard.*
+
+:white_check_mark: **Success criteria**
+
+Mobile apps should avoid using images of text unless the text is **part of a logo or brand name**. When images of text are used, the following must be ensured:
+
+The text contained in the image must have a sufficient contrast ratio with its background.
+There must be an equivalent textual alternative available to convey the same information as the image of text.
+Users should be able to resize text up to 200% without losing content or functionality.
+This guideline ensures that users with visual impairments, including those who rely on screen readers, can access and understand the content.
+
+:no_entry_sign: **Failure criteria**
+
+- Images of Text: It uses images of text without providing a text alternative, limiting access for users relying on screen readers.
+- Inadequate Contrast: The text in an image does not meet the required contrast ratio of 4.5:1, making it difficult for users with low vision to read.
+- Poor Text Alternatives: The contentDescription for an image of text is vague or does not convey the image’s meaning.
+- Cutoff Content: Text in images cannot be resized and becomes cut off or unreadable when enlarged.
+- Fixed Sizes: Images of text have fixed dimensions that do not adapt to user-defined text sizes, reducing accessibility.
+
+---
+### Text Spacing
+
+*This guideline covers point 1.4.12 Text Spacing - Level AA of the WCAG standard.*
+
+:white_check_mark: **Success criteria**
+
+Mobile apps must ensure that the following text spacing requirements are met to enhance readability:
+
+- Line Height: The line height (line spacing) must be at least 1.5 times the font size.
+- Paragraph Spacing: The spacing between paragraphs must be at least 2 times the font size.
+- Letter Spacing: The letter spacing (tracking) must be at least 0.12 times the font size.
+- Word Spacing: The word spacing must be at least 0.16 times the font size.
+- These spacing guidelines help ensure that users with low vision or reading difficulties can read text comfortably.
+
+These spacing guidelines help ensure that users with low vision or reading difficulties can read text comfortably.
+
+**Common Example:** Setting Text Spacing
+
+- **XML Example:** Use the following attributes in your `TextView` to ensure proper text spacing.
+
+```
+<!-- Example of setting text spacing in XML -->
+<TextView
+    android:id="@+id/spaced_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="This text is spaced according to WCAG guidelines."
+    android:textSize="16sp"
+    android:lineSpacingExtra="4dp"  <!-- Line height (1.5 times the font size) -->
+    android:letterSpacing="0.1"  <!-- Letter spacing (0.12 times font size) -->
+    android:paddingBottom="8dp" />  <!-- Paragraph spacing (2 times font size) -->
+```
+
+- **Jetpack Compose Example:** Use `lineHeight`, `letterSpacing`, and `padding` to achieve the desired spacing.
+
+```kotlin
+// Compose example with text spacing
+Text(
+    text = "This text is spaced according to WCAG guidelines.",
+    fontSize = 16.sp,
+    lineHeight = 24.sp,  // Line height (1.5 times font size)
+    letterSpacing = 0.1.em,  // Letter spacing (0.12 times font size)
+    modifier = Modifier.padding(bottom = 8.dp)  // Paragraph spacing (2 times font size)
+)
+```
+
+:no_entry_sign: **Failure criteria**
+
+- Inadequate Spacing: Text spacing does not meet the minimum requirements (line height, paragraph spacing, letter spacing, and word spacing).
+- Overlapping Text: Text lines overlap or are too close together, which can confuse users.
+- No Spacing Between Paragraphs: There is no extra space between paragraphs, making the content look cluttered.
+- Fixed Text Spacing: The app uses fixed spacing that does not allow for adjustments according to user preferences.
 
 ---
 
