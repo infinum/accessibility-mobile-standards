@@ -334,11 +334,52 @@ This guideline ensures that users with visual impairments, including those who r
 
 :white_check_mark: **Success criteria**
 
-todo
+Mobile apps must ensure that the following text spacing requirements are met to enhance readability:
+
+- Line Height: The line height (line spacing) must be at least 1.5 times the font size.
+- Paragraph Spacing: The spacing between paragraphs must be at least 2 times the font size.
+- Letter Spacing: The letter spacing (tracking) must be at least 0.12 times the font size.
+- Word Spacing: The word spacing must be at least 0.16 times the font size.
+- These spacing guidelines help ensure that users with low vision or reading difficulties can read text comfortably.
+
+These spacing guidelines help ensure that users with low vision or reading difficulties can read text comfortably.
+
+**Common Example:** Setting Text Spacing
+
+- **XML Example:** Use the following attributes in your `TextView` to ensure proper text spacing.
+
+```
+<!-- Example of setting text spacing in XML -->
+<TextView
+    android:id="@+id/spaced_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="This text is spaced according to WCAG guidelines."
+    android:textSize="16sp"
+    android:lineSpacingExtra="4dp"  <!-- Line height (1.5 times the font size) -->
+    android:letterSpacing="0.1"  <!-- Letter spacing (0.12 times font size) -->
+    android:paddingBottom="8dp" />  <!-- Paragraph spacing (2 times font size) -->
+```
+
+- **Jetpack Compose Example:** Use `lineHeight`, `letterSpacing`, and `padding` to achieve the desired spacing.
+
+```kotlin
+// Compose example with text spacing
+Text(
+    text = "This text is spaced according to WCAG guidelines.",
+    fontSize = 16.sp,
+    lineHeight = 24.sp,  // Line height (1.5 times font size)
+    letterSpacing = 0.1.em,  // Letter spacing (0.12 times font size)
+    modifier = Modifier.padding(bottom = 8.dp)  // Paragraph spacing (2 times font size)
+)
+```
 
 :no_entry_sign: **Failure criteria**
 
-todo
+- Inadequate Spacing: Text spacing does not meet the minimum requirements (line height, paragraph spacing, letter spacing, and word spacing).
+- Overlapping Text: Text lines overlap or are too close together, which can confuse users.
+- No Spacing Between Paragraphs: There is no extra space between paragraphs, making the content look cluttered.
+- Fixed Text Spacing: The app uses fixed spacing that does not allow for adjustments according to user preferences.
 
 ---
 
