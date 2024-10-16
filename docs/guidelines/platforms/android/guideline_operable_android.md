@@ -78,6 +78,10 @@ When the user is navigating through the app **using the arrow keys on the keyboa
 
 Provide users enough time to read and use the content.
 
+### Timing Adjustable
+
+Ensure that users can adjust the timing of content that is displayed on the screen.
+
 *This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
