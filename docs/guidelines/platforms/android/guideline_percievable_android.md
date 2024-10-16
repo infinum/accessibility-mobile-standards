@@ -312,11 +312,20 @@ Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
 
 :white_check_mark: **Success criteria**
 
-todo
+Mobile apps should avoid using images of text unless the text is **part of a logo or brand name**. When images of text are used, the following must be ensured:
+
+The text contained in the image must have a sufficient contrast ratio with its background.
+There must be an equivalent textual alternative available to convey the same information as the image of text.
+Users should be able to resize text up to 200% without losing content or functionality.
+This guideline ensures that users with visual impairments, including those who rely on screen readers, can access and understand the content.
 
 :no_entry_sign: **Failure criteria**
 
-todo
+- Images of Text: It uses images of text without providing a text alternative, limiting access for users relying on screen readers.
+- Inadequate Contrast: The text in an image does not meet the required contrast ratio of 4.5:1, making it difficult for users with low vision to read.
+- Poor Text Alternatives: The contentDescription for an image of text is vague or does not convey the image’s meaning.
+- Cutoff Content: Text in images cannot be resized and becomes cut off or unreadable when enlarged.
+- Fixed Sizes: Images of text have fixed dimensions that do not adapt to user-defined text sizes, reducing accessibility.
 
 ---
 ### Text Spacing
