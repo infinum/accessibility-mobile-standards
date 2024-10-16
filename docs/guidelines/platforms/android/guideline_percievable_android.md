@@ -179,7 +179,7 @@ In apps with minSdk < 22, traversal order can be defined programmatically using 
 
 The example is given below:
 
-```
+```kotlin
 ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
     override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
         super.onInitializeAccessibilityNodeInfo(host, info)
@@ -215,11 +215,63 @@ The content provided in your app must be easily understandable to all users. Tha
 
 :white_check_mark: **Success criteria**
 
-todo
+Mobile apps must ensure that text can be resized up to **200%** without loss of content or functionality. This is essential for users with low vision who need larger text for readability. Specifically:
+
+- Text should be resizable up to **200%** using the device’s text size settings.
+- There should be no horizontal scrolling, content overlap, or loss of functionality when text is resized.
+- All UI components should remain usable and readable, even at larger text sizes.
 
 :no_entry_sign: **Failure criteria**
 
-todo
+- An app where text overflows or overlaps when scaled up to 200%, making it unreadable, would fail this criterion.
+- If an app forces horizontal scrolling to read resized text, it would also fail.
+- Defining text sizes in pixels (px) rather than sp would prevent proper scaling and lead to accessibility issues.
+
+**Bad Example:** Fixed Height with Text Encapsulation and limiting the line 
+
+```
+<TextView
+    android:id="@+id/fixed_text"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp" <!-- Fixed height -->
+    android:maxLines="2"  <!-- Limits the text to 2 lines -->
+    android:ellipsize="end" <!-- Adds "..." at the end if text is too long -->
+    android:text="This is a long piece of text that might be cut off when resized."
+    android:textSize="16sp" />
+```
+
+```kotlin
+Box(modifier = Modifier.height(50.dp)) {
+    Text(
+        text = "This is a long piece of text that might be cut off when resized.",
+        fontSize = 16.sp,
+        maxLines = 2,  // Limits the text to 2 lines
+        overflow = TextOverflow.Ellipsis  // Adds "..." at the end if text is too long
+    )
+}
+```
+
+**Solution:** 
+
+```
+<TextView
+    android:id="@+id/fixed_text"
+    android:layout_width="wrap_content"
+    android:minHeight="50dp"  <!-- Minimum height but flexible -->
+    android:text="This is a long piece of text that might be cut off when resized."
+    android:textSize="16sp" />
+```
+
+```kotlin
+Box(modifier = Modifier
+    .minHeight(50.dp)  // Minimum height but flexible
+    .wrapContentHeight()) {
+    Text(
+        text = "This is a long piece of text that will resize appropriately.",
+        fontSize = 16.sp
+    )
+}
+```
 
 ---
 
