@@ -227,7 +227,7 @@ Mobile apps must ensure that text can be resized up to **200%** without loss of 
 - If an app forces horizontal scrolling to read resized text, it would also fail.
 - Defining text sizes in pixels (px) rather than sp would prevent proper scaling and lead to accessibility issues.
 
-**Bad Example:** Fixed Height with Text Encapsulation and limiting the line 
+**Bad Example:** Fixed Height with Text Encapsulation and limiting the line count
 
 ```
 <TextView
@@ -269,6 +269,37 @@ Box(modifier = Modifier
     Text(
         text = "This is a long piece of text that will resize appropriately.",
         fontSize = 16.sp
+    )
+}
+```
+
+**Important Point:** Handling Large Text Without Scrollable Container
+
+When presenting large text or content that may exceed the visible area of the screen, it is crucial to provide a way for users to read all the content without losing access. This is especially important for users who might need larger text for better readability.
+
+```
+<!-- Using ScrollView to contain large text -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/large_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a very long piece of text that might not fit on the screen when enlarged. Users need to be able to scroll to read all of it."
+        android:textSize="24sp" />
+</ScrollView>
+```
+
+```kotlin
+// Compose example with scrollable text
+val largeText = "This is a very long piece of text that might not fit on the screen when enlarged. Users need to be able to scroll to read all of it."
+
+Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+    Text(
+        text = largeText,
+        fontSize = 24.sp  // Large font size
     )
 }
 ```
