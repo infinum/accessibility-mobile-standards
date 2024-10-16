@@ -300,6 +300,24 @@ Example: A mobile app that only allows form submission by shaking the device, wi
 
 ---
 
+### Dragging Movements
+
+*This guideline covers point 2.5.7 Dragging Movements - Level AA of the WCAG standard.*
+
+:white_check_mark: **Success criteria**
+
+Mobile apps that require dragging movements (such as swiping or dragging objects across the screen) should also offer an alternative method for performing the same function. This could include taps, buttons, or keyboard inputs that achieve the same result without relying on dragging gestures.
+
+Example: In a photo-editing app that allows users to adjust sliders by dragging, provide the option to use + and - buttons or direct numerical input for precision.
+
+:no_entry_sign: **Failure criteria**
+
+An app that relies solely on dragging movements to complete important actions (e.g., moving an item into a folder, adjusting sliders) without offering an alternative input method would fail this criterion. If dragging movements are the only means of interaction, users with motor impairments or those using assistive technology would face accessibility barriers.
+
+Example: A to-do list app where the only way to reorder tasks is by dragging items, without an option to move tasks via buttons, would fail this criterion.
+
+---
+
 #### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
