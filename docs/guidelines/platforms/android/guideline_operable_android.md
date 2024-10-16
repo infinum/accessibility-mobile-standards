@@ -282,6 +282,24 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 
 ---
 
+### Motion Actuation
+
+*This guideline covers point 2.5.4 Motion Actuation - Level A of the WCAG standard.*
+
+:white_check_mark: **Success criteria**
+
+Mobile apps that support interaction through motion actuation (e.g., shaking the device, tilting, or other motion-based gestures) must also provide an alternative input method, such as touch or on-screen controls. Users should be able to disable motion actuation and still interact with the app effectively.
+
+Example: If your app allows users to shake their phone to refresh content, you should also provide an on-screen refresh button as an alternative.
+
+:no_entry_sign: **Failure criteria**
+
+An app that requires motion actuation (e.g., shaking or tilting) for core functions without offering a touch-based or alternative method of input would fail this criterion. Additionally, if motion-based controls cannot be disabled or cause unintended actions due to accidental motion, it would also be considered a failure.
+
+Example: A mobile app that only allows form submission by shaking the device, with no button for submission, would fail this criterion.
+
+---
+
 #### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
