@@ -6,10 +6,10 @@ This document contains a checklist of guidelines that should be followed when de
 
 Guidelines mentioned in this section are related to the content of the application, specifically the content that is consumed by the user.
 
-- [ ] 1.2.1 Audio-only and video-only (prerecorded) (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) | Flutter
-- [ ] 1.2.2 Captions (prerecorded) (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) | Flutter
+- [ ] 1.2.1 Audio-only and video-only (prerecorded) (A) - [Android](../platforms/android/guideline_percievable_android.md#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) | [iOS](../platforms/ios/guideline_perceivable_ios.md#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) | Flutter
+- [ ] 1.2.2 Captions (prerecorded) (A) - [Android](../platforms/android/guideline_percievable_android.md#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) | [iOS](../platforms/ios/guideline_perceivable_ios.md#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) | Flutter
 - [ ] 1.2.3 Audio description or media alternative (prerecorded) (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#audio-description-or-media-alternative-wcag-123---level-a) | Flutter
-- [ ] 1.2.4 Captions (live) (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#captions-support-for-live-media-wcag-124---level-aa) | Flutter
+- [ ] 1.2.4 Captions (live) (AA) - [Android](../platforms/android/guideline_percievable_android.md#captions-support-for-live-media-wcag-124---level-aa) | [iOS](../platforms/ios/guideline_perceivable_ios.md#captions-support-for-live-media-wcag-124---level-aa) | Flutter
 - [ ] 1.2.5 Audio description (prerecorded) (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#audio-description-for-prerecorded-media-wcag-125---level-aa) | Flutter
 - [ ] 3.1.1 Language of page (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#language-of-page-wcag-311--level-a) | Flutter
 - [ ] 3.1.2 Language of parts (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#language-of-parts-wcag-312---level-aa) | Flutter
