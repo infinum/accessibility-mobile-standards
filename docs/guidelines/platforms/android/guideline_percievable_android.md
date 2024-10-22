@@ -63,6 +63,39 @@ class CaptionUtils(context: Context) {
 }
 ```
 
+### Audio Description or Media Alternative (WCAG 1.2.3 - Level A)
+
+This guideline covers point [1.2.3 Audio Description or Media Alternative (Prerecorded) - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-description-or-media-alternative-prerecorded) of the WCAG standard.
+
+People with vision impairments may have difficulty understanding key visual details in a video. To make the video accessible to everyone, the guideline requires providing an audio description or an alternative method to convey the visual information.
+
+:white_check_mark: **Success criteria**
+
+To satisfy the guideline, there are two ways to make synchronized media accessible for users with vision impairments:
+* **Provide an audio description**: Add narration to describe key visual elements (e.g., actions, scenery) in the video that someone with vision impairments would otherwise miss.
+* **Provide a text alternative**: If audio description isn't possible, offer a transcript that includes descriptions of both the audio and visual content, allowing users to read what happens in the video.
+
+#### Using audio description
+
+When talking about the audio description, it is important to provide a description of the video content. This can be done by:
+* adding a separate audio track to the video that describes the video content
+* providing a video version file with audio description
+* providing a video with extended audio description
+
+##### Audio description with ExoPlayer 
+
+In `ExoPlayer`, you can query the available audio and video tracks using `player.currentTracks`. This allows you to present users with options, such as regular audio and an audio description track. You can implement functionality for users to select their preferred track from the available options.
+
+#### Using text alternative
+
+A text alternative provides a written description of both the audio and visual content. This is helpful for users who cannot see the video or for those who cannot access the audio.
+* **Static text alternative**: For simple videos (like a "talking-head" video, where only a person speaks to the camera), a brief text description can be provided instead of a full audio description.
+* **Detailed transcript**: For more complex videos, a full transcript can include descriptions of visual elements as well as the dialogue.
+
+:no_entry_sign: **Failure criteria**
+
+If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
+
 ### Captions support for live media (WCAG 1.2.4 - Level AA)
 
 This guideline covers [1.2.4 Captions (Live) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#captions-live) of the WCAG standard.
