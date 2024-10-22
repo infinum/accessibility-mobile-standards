@@ -111,6 +111,18 @@ For all live media in the application, captions should be available through the 
 
 The second approach is more customizable and can offer more flexibility than embedded captions, though it requires additional client-side work. For further details, please refer to the [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A) section](#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) and the [ExoPlayer documentation on live streaming](https://developer.android.com/media/media3/exoplayer/live-streaming), which provides more information about HTTP Live Streaming (HLS) on the Android platform.
 
+### Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)
+
+This guideline covers [1.2.5 Audio Description (Prerecorded) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#audio-description-prerecorded) of the WCAG standard.
+
+As a part of this guideline, it is important to provide an audio description for prerecorded video content.
+
+:white_check_mark: **Success criteria**
+
+This guideline closely aligns with the [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](#audio-description-or-media-alternative-wcag-123---level-a), which states that video content must include an audio description. Unlike the previous guideline, which allows for alternatives, this requirement emphasizes the need for a dedicated audio track that describes the video content. This description can be integrated into the main audio track or provided as a separate audio track.
+
+**Note**: Based on the guideline itself, if all of the information in the video track is already provided in the audio track, no audio description is necessary. This applies to both guidelines (1.2.3 and 1.2.5).
+
 ---
 
 ## Adaptable
