@@ -3,23 +3,62 @@
 
 All content displayed on the screen at some point must be presented to the user in a perceivable manner.
 
-## Text alternatives
+## Text alternatives (WCAG 1.1)
 
 Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.
 
-*This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.*
+### Non-text content identification (WCAG 1.1.1 - Level A)
 
-:white_check_mark: **Success criteria**
+When talking about the screen elements, it is important to make information about all elements accessible and available. Some elements may not have text included by design or as a default user interface component. This can be seen when buttons are used with icons only, images, or other decorative elements.
 
-### Non-text context
+Some users may have issues identifying an element's functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
+
+✅ **Success criteria**
 
 Each UI element should include a description that describes its purpose. All elements presented on the screen must have the description provided, especially the ones that are important for the screen’s functionality. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
 
-If an element exists on the UI only for decorative purposes it is recommended that you set its `contentDescription` to "null" or `android:importantForAccessibility` to "no" for devices running Android 4.1 and higher.
+Set `contentDescription` attribute to non-decorative elements. The labels need to be localized, so make sure to use string resources.
 
-:no_entry_sign: **Failure criteria**
+```xml
+<string name='copy'>Copy</string>
 
-- Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes
+<ImageView
+    ...
+    android:contentDescription="@string/copy"/>
+```
+
+If an element exists only for decorative purposes, it is recommended that you set its `contentDescription` to `null` or `android:importantForAccessibility` to `no` for devices running Android 4.1 and higher.
+
+In Compose, use the `contentDescription` parameter to set the description. Some Composables do not offer it as a parameter, in which case it can also be set through `semantics`.
+
+
+```kotlin
+@Composable
+private fun CopyButton(onClick: () -> Unit) {
+    IconButton(onClick = onClick) {
+        Icon(
+            imageVector = Icons.Filled.Copy,
+            contentDescription = stringResource(R.string.copy)
+        )
+    }
+}
+
+@Composable
+private fun MyCustomButton(onClick: () -> Unit) {
+    val copyDescription = stringResource(R.string.copy)
+    Canvas(modifier = Modifier
+        .clickable { onClick() }
+        .semantics { contentDescription = copyDescription }
+    ) { ... }
+}
+```
+
+If an element is used only for decoration, pass `null` for `contentDescription` in order to mark it as non-semantically important.
+
+🚫 **Failure criteria**
+
+- Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes.
+- Setting content description to non-functional or decorative elements. In those cases, labeling the elements may confuse the user and should be avoided.
 
 ---
 
