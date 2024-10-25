@@ -270,19 +270,19 @@ That way, users of accessibility services can choose to navigate between heading
 
 ---
 
-### Meaningful sequence
-
-*This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+### Meaningful sequence (WCAG 1.3.2 - Level A)
 
 If the order of the content displayed on the screen is crucial for understanding, it is very important to make sure it will be presented in the same order when using accessibility services. That way, users of accessibility services (such as TalkBack) can get a clearer picture of the content and possible actions on the current screen that is being navigated through.
 
-The best solution should be a full-screen redesign with the correct and logical traversal order. If that is not an option, on apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create a new order of displayed views that will make a bit more sense to TalkBack users.
+✅ **Success criteria**
+
+By default, screen elements are read out from the top left to the bottom right. This is a standard way in which nearly all screens work correctly in most scenarios. In the occasions where that is not sufficient, a full-screen redesign with the correct logical and traversal order should be considered. If that is not an option, the traversal order can be modified manually.
+
+On apps with minSdk >= 22, setting `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes could help create a new order of displayed views that will make a bit more sense to TalkBack users.
 
 An example of using `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes is given down below:
 
-```
+```xml
 <Button
     android:id="@+id/button1"
     ... />
@@ -295,13 +295,9 @@ An example of using `android:accessibilityTraversalBefore` or `android:accessibi
     ...  />
 ```
 
-_Note 2. Always make sure to define `android:accessibilityTraversalBefore` or `android:accessibilityTraversalAfter` attributes in a way that does not create any loops or traps that will prevent users from interacting with all relevant views displayed on the screen._
+In apps with minSdk < 22, traversal order can be defined programmatically using ViewCompat:
 
-In apps with minSdk < 22, traversal order can be defined programmatically using ViewCompat.
-
-The example is given below:
-
-```
+```kotlin
 ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
     override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
         super.onInitializeAccessibilityNodeInfo(host, info)
@@ -310,9 +306,77 @@ ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompa
 })
 ```
 
-:no_entry_sign: **Failure criteria**
+In Compose, the same can be achieved using `isTraversalGroup` alone or in conjunction with `traversalIndex` semantics.
 
-- Views displayed on the screen break consistency of the navigation.
+Traversal groups identify semantically important groups, so that all children of the node are visited before moving to other elements. This can be useful when arranging elements inside a layout that is not a traversal group by default, and does not necessarily output the elements in a linear manner, such as a `Box`.
+
+```kotlin
+@Composable
+fun CardBox(
+    topSampleText: String,
+    bottomSampleText: String,
+    modifier: Modifier = Modifier
+) {
+    Box(modifier) {
+        Column {
+            Text(topSampleText)
+            Text(bottomSampleText)
+        }
+    }
+}
+
+@Composable
+fun TraversalGroupDemo() {
+    val topSampleText1 = "This sentence is in "
+    val bottomSampleText1 = "the left column."
+    val topSampleText2 = "This sentence is "
+    val bottomSampleText2 = "on the right."
+    
+    Row {
+        CardBox(
+            topSampleText1,
+            bottomSampleText1,
+            Modifier.semantics { isTraversalGroup = true }
+        )
+        CardBox(
+            topSampleText2,
+            bottomSampleText2,
+            Modifier.semantics { isTraversalGroup = true }
+        )
+    }
+
+}
+```
+
+Had `isTraversalGroup` not been set to `true`, the reading order of the Composables would be "This sentence is in" -> "This sentence is" -> "the left column" -> "on the right".
+
+When that is not enough, the `traversalIndex` float can be used in conjunction with traversal groups to modify the order further. Elements with lower `traversalIndex` are prioritized first when in the same traversal group, the default value is `0f` and the values can be negative.
+
+Be wary that sometimes all elements of a traversal group will need to have a defined `traversalIndex` to be read in the correct order (and/or grouped into smaller traversal groups), since there is no relative traversal before/after property as in XML. This can be error-prone and difficult to maintain, so the `traversalIndex` approach should be used only as a last resort.
+
+```kotlin
+@Composable
+fun ButtonsScreen() {
+    Column {
+        // Traversal index not needed - 0f by default
+        Button {
+            Text("Button 1")
+        }
+        Button(modifier = Modifier.semantics { traversalIndex = 2f }) {
+            Text("Button 2")
+        }
+        Button(modifier = Modifier.semantics { traversalIndex = 1f }) {
+            Text("Button 3")
+        }
+    }
+}
+```
+
+_**Note.** When modifying the traversal order, make sure that it is done in a way that does not create any loops or traps that will prevent users from interacting with all relevant views displayed on the screen._
+
+🚫 **Failure criteria**
+
+- Elements displayed on the screen break consistency of the navigation. For example, having sudden jumps to unrelated components in the middle of a sequence of similar elements.
 
 ---
 
