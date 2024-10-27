@@ -280,6 +280,48 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 
 - The link is part of the longer text and implemented using ClickableSpan, so TalkBack users are not aware of the link’s existence.
 
+### Target size (Minimum) (WCAG 2.5.8 - Level AA)
+
+To make your app's interface more user-friendly, ensure that controls are easy to see and tap. A bigger target size is also essential to make your app accessible to everyone, including users with disabilities.
+More details about this guideline can be found [here](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+
+:white_check_mark: **Success criteria**
+
+This guideline primarily addresses design considerations. However, it is important that from the development side, the application provide enough space for the elements to be easily operable by touch.
+
+As per official Android documentation, recommended minimum touch target size is 48x48 dp for each interactive UI element, though larger sizes can further improve usability. 
+
+**Code example:**
+
+- In xml layout file:
+```
+<ImageButton ...
+    android:paddingLeft="4dp"
+    android:minWidth="40dp"
+    android:paddingRight="4dp"
+
+    android:paddingTop="8dp"
+    android:minHeight="32dp"
+    android:paddingBottom="8dp" />
+```
+
+- In Compose:
+```kotlin
+IconButton(
+    modifier = Modifier
+        .padding(start = 4.dp, end = 4.dp, top = 8.dp, bottom = 8.dp)
+        .defaultMinSize(minWidth = 40.dp, minHeight = 32.dp),
+    // Add your onClick or other parameters here
+) {
+    // Content of the IconButton goes here
+}
+```
+More about the implementation details can be found [here](https://developer.android.com/guide/topics/ui/accessibility/apps#large-controls).
+
+:no_entry_sign: **Failure criteria**
+
+- Interactive UI elements are too small to be easily tapped.
+
 ---
 
 #### Sources
