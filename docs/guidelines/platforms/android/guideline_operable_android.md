@@ -282,6 +282,16 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 
 ---
 
+### Focus Visibility (WCAG 2.4.7 - Level AA)
+
+This guideline states that the user should be able to see the focus on the element that is currently selected. With a mobile platform in mind, this guideline is automatically satisfied when TalkBack or Switch access is used --- the focus is made clearly visible with colored borders.
+
+#### ✅ Success technique(s)
+
+Even though the system automatically handles this, think about selection and focus on custom elements; make sure that the focus is visible in the correct way and that the user can see which element is currently selected, especially if the component contains "inner" elements. If there are too many nested focusable elements and it is difficult to determine which one is in focus, this might call for a reconsideration in design, where the elements could be laid out in a different way.
+
+---
+
 #### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
