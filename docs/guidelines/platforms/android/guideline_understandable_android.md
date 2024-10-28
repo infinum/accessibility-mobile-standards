@@ -111,6 +111,26 @@ If the content displayed on the screen is designed and implemented following [Pe
 :no_entry_sign: **Failure criteria**
 
 - The content is not grouped based on context relationships and has no meaningful labels defined.
+---
+
+### Consistent Navigation (WCAG 3.2.3 - Level AA)
+
+For users, it is important to have a consistent navigation experience throughout the app (on all screens). With that satisfied, users can easily predict where they are and where they can go next.
+
+#### ✅ Success criteria
+
+To satisfy this criterion, try to keep the navigation structure consistent, with elements like the toolbar, bottom navigation, search bar or any other repeated elements always in the same place, read out in the same order and with the same functionality.
+
+Visually, this is mostly the responsibility of the design, but it is important to make sure that consistent ordering is preserved when using assistive technologies (e.g. TalkBack) as well.
+
+If there is a need to manually adjust ordering of elements to make them consistent across multiple screens, the same techniques described in [Meaningful sequence guideline](guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) can be applied.
+
+#### 🚫 Failure examples
+
+Usually, when reusing the same components across multiple screens, the ordering will be preserved automatically. However, there are certain cases where other elements might come "in-between" and there could be some inconsistencies when mixing technologies on the same screen (e.g. the toolbar is a `View`, while all of the other screen contents are in Compose), so pay special attention to those.
+ 
+- TalkBack: Two screens share the same bottom navigation bar. On the first screen, the bottom bar items are read out last, after all the other content. On the second screen, the bottom bar items are read out after the toolbar and before any other screen content.
+- TalkBack: An app has multiple screens that contain a toolbar with a title and a navigation button. On some screens, the navigation button is read out first and, on others, the title is read out before the navigation button.
 
 ---
 
