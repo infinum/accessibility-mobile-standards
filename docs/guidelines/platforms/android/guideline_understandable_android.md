@@ -48,7 +48,7 @@ If the content displayed on the screen is designed and implemented following [Pe
 
 ---
 
-## Input Assistance
+## Input Assistance (WCAG 3.3)
 
 Help users avoid and correct mistakes.
 
@@ -106,6 +106,34 @@ In the given example, services such as TalkBack will read – "EditBox for usern
 - Not providing enough context for the views that expect user interaction.
 
 ---
+
+### Accessible Authentication (Minimum) (WCAG 3.3.8 - Level AA)
+
+This guideline covers point [3.3.8 Accessible Authentication (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#accessible-authentication-minimum) of the WCAG standard.
+
+To make authentication accessible to all users, the application should not require a cognitive function (such as remembering a password or solving a puzzle) test unless that step provides at least one of the following:
+
+- **Alternative**: Another authentication method that does not rely on a cognitive function test.
+- **Mechanism**: A mechanism is available to assist the user in completing the cognitive function test.
+- **Object Recognition**: The cognitive function test is to recognize objects.
+- **Personal Content**: The cognitive function test is to identify non-text content the user provided to the application.
+
+:white_check_mark: **Success criteria**
+
+- Support for text (copy and) paste to reduce the cognitive burden of re-typing
+- Support for password entry by password managers
+- Support for biometric authentication
+- Support for email link authentication
+- Support for OAuth authentication
+
+:no_entry_sign: **Failure criteria**
+
+To fail this criterion, users should be required to complete a cognitive function test to authenticate themselves or enter the values in a different way than they were originally created/provided.
+
+Some examples:
+
+- Write 2nd and 5th character of your password
+- Write every character of the verification code in a separate field
 
 #### Sources
 

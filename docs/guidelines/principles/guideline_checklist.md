@@ -68,7 +68,7 @@ Guidelines mentioned in this section are related to the screen reader and intera
 
 Guidelines mentioned in this section are related to the security of the application. These guidelines are mostly technical and should include a security perspective when developing the application.
 
-- [ ] 3.3.8 Accessible authentication (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#accessible-authentication-minimum-wcag-338---level-aa) | Flutter
+- [ ] 3.3.8 Accessible authentication (AA) - [Android](../platforms/android/guideline_understandable_android.md#accessible-authentication-minimum-wcag-338---level-aa) | [iOS](../platforms/ios/guideline_understandable_ios.md#accessible-authentication-minimum-wcag-338---level-aa) | Flutter
 
 ## Non-applicable
 
