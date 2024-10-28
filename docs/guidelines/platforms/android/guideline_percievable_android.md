@@ -35,15 +35,15 @@ Some users have disabilities that prevent them from hearing media content in an 
 
 :white_check_mark: **Success criteria**
 
-##### Using ExoPlayer with captions
-
 One way to enhance accessibility is by adding captions, either open or closed. Open captions are permanently visible as they are integrated into the video, while closed captions require a media format with a player that supports them. Most modern video players support captions, and `ExoPlayer` provides built-in support for displaying them automatically.
+
+##### Using ExoPlayer with captions
 
 To view captions in media that supports them, users must enable the _Show captions_ option. This accessibility feature can be found under **Settings** > **Accessibility** > **Caption preferences**. On this screen, users can also adjust caption size and style; however, these preferences may not work with media apps that don’t support Caption Preferences.
 
 ##### Custom solution
 
-If a different player is used instead of `ExoPlayer`, the status of closed captions, along with the font scale and caption style, can be checked programmatically using the `CaptioningManager`. When the _Show captions_ option is enabled, captions should be turned on in the selected player.
+If a different player is used instead of `ExoPlayer`, the status of closed captions, along with the font scale and caption style, can be checked programmatically using the [CaptioningManager](https://developer.android.com/reference/android/view/accessibility/CaptioningManager). When the _Show captions_ option is enabled, captions should be turned on in the selected player.
 
 ```kotlin
 import android.content.Context
@@ -71,7 +71,7 @@ In some cases, live media is used in the application. To ensure accessibility fo
 
 :white_check_mark: **Success criteria**
 
-For all live media in the application, captions should be available through the user interface. This can be achieved in two ways:
+All live media in the application should offer captions through the user interface, available as either open or closed captions. For two-way multimedia calls between individuals, accessibility requirements are the responsibility of content providers, not the application.
 
 - **Open captions**: Captions are embedded directly into the live media and always visible to viewers.
 - **Closed captions**: Captions are available in the live media stream and can be programmatically toggled on or off by the user.
