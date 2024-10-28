@@ -6,7 +6,7 @@
 
 Make text content readable and understandable.
 
-### Language of Page (WCAG 3.1.1 -Level A)
+### Language of Page (WCAG 3.1.1 - Level A)
 
 This guideline covers point [3.1.1 Language of Page - Level A](https://www.w3.org/WAI/WCAG22/quickref/#language-of-page) of the WCAG standard.
 
@@ -53,7 +53,7 @@ fun setLocaleEn(context: Context): Context {
 }
 ```
 
-### Language of Parts (WCAG 3.1.2 -Level AA)
+### Language of Parts (WCAG 3.1.2 - Level AA)
 
 This guideline covers point [3.1.2 Language of Parts - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#language-of-parts) of the WCAG standard.
 
