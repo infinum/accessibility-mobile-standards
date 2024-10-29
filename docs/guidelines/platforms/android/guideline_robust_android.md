@@ -138,6 +138,46 @@ in this guideline.
 
 Changing the value or role of a user interface element without adjusting its identifier programmatically.
 
+### Status messages (WCAG 4.1.3 - Level AA)
+
+The guideline states that status messages should be programmatically determinable by the user.
+This means that the user should be able to know the status of the app at any given time without having to interact with it.
+
+On mobile this means that the user should be able to know if the current state has been changed - which is especially important for users who rely on screen readers.
+
+> This guideline covers point *4.1.3 Status messages - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+When an important thing on the screen changes, users should be notified about it.
+This can be achieved in View system by by setting `ViewCompat.setAccessibilityLiveRegion` which makes the accessibility service announce
+changes to the view.
+To interrupt ongoing speech and start the announcement, use `ACCESSIBILITY_LIVE_REGION_ASSERTIVE`. To wait for ongoing speech, use `ACCESSIBILITY_LIVE_REGION_POLITE`.
+
+Example: Add assertive announcement of changes to the EditText
+
+```
+ViewCompat.setAccessibilityLiveRegion(editText, ViewCompat.ACCESSIBILITY_LIVE_REGION_ASSERTIVE)
+```
+
+In Compose, the same can be achieved by setting the `liveRegion` semantics property.
+
+Example: Add assertive announcement of changes to the TextField
+
+```
+TextField(
+    modifier = Modifier.semantics {
+        liveRegion = LiveRegionMode.Assertive
+    }
+)
+```
+
+#### 🚫 Failures
+
+Not providing a way for the user to know the current status of the application at any given time.
+
+Using assertive live region mode for content which is not important and time-sensitive. 
+
 ---
 
 #### Sources
