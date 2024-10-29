@@ -11,8 +11,8 @@ Guidelines mentioned in this section are related to the content of the applicati
 - [ ] 1.2.3 Audio description or media alternative (prerecorded) (A) - [Android](../platforms/android/guideline_percievable_android.md#audio-description-or-media-alternative-wcag-123---level-a) | [iOS](../platforms/ios/guideline_perceivable_ios.md#audio-description-or-media-alternative-wcag-123---level-a) | Flutter
 - [ ] 1.2.4 Captions (live) (AA) - [Android](../platforms/android/guideline_percievable_android.md#captions-support-for-live-media-wcag-124---level-aa) | [iOS](../platforms/ios/guideline_perceivable_ios.md#captions-support-for-live-media-wcag-124---level-aa) | Flutter
 - [ ] 1.2.5 Audio description (prerecorded) (AA) - [Android](../platforms/android/guideline_percievable_android.md#audio-description-for-prerecorded-media-wcag-125---level-aa) | [iOS](../platforms/ios/guideline_perceivable_ios.md#audio-description-for-prerecorded-media-wcag-125---level-aa) | Flutter
-- [ ] 3.1.1 Language of page (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#language-of-page-wcag-311--level-a) | Flutter
-- [ ] 3.1.2 Language of parts (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#language-of-parts-wcag-312---level-aa) | Flutter
+- [ ] 3.1.1 Language of page (A) - [Android](../platforms/android/guideline_understandable_android.md#language-of-page-wcag-311--level-a) | [iOS](../platforms/ios/guideline_understandable_ios.md#language-of-page-wcag-311--level-a) | Flutter
+- [ ] 3.1.2 Language of parts (AA) - [Android](../platforms/android/guideline_understandable_android.md#language-of-parts-wcag-312--level-aa) | [iOS](../platforms/ios/guideline_understandable_ios.md#language-of-parts-wcag-312---level-aa) | Flutter
 
 ## User interface and experience
 

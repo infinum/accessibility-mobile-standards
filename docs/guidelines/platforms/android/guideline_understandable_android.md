@@ -2,13 +2,15 @@
 
 # Understandable guidelines for Android
 
-## Readable
+## Readable (WCAG 3.1)
 
 Make text content readable and understandable.
 
-### Language of the App
+### Language of Page (WCAG 3.1.1 -Level A)
 
-*This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.*
+This guideline covers point [3.1.1 Language of Page - Level A](https://www.w3.org/WAI/WCAG22/quickref/#language-of-page) of the WCAG standard.
+
+The default human language of an App can be programmatically determined.
 
 :white_check_mark: **Success criteria**
 
@@ -16,15 +18,79 @@ The app should be implemented to reach the largest number of users. It should ha
 
 It is recommended that all text content used in the application, including `contentDescription`, is implemented using the Android resource framework.
 
+To simplify this process, you can use a library like [Localian](https://github.com/infinum/android-localian). It manages application locale and language across multiple Android API levels without requiring a restart of the application process.
+
 It is also important to support localization because of accessibility services. Even though TalkBack supports [various languages](https://support.google.com/accessibility/android/answer/11101402?hl=en), not all of them are supported on every Android version.
 
 **Server-driven application**
 
 If the application is server-driven and most of the content depends on the backend output, it is important to create logic where the app will send the information about the current locale at launch. In that scenario, the backend should return the content in the corresponding language based on the received information about the current locale.
 
+This can be achieved by specifying the application's default language in the HTTP headers of API calls:
+
+```text
+Content-Language: de-DE
+or
+Content-Language: en-US
+or
+Content-Language: de-DE, en-CA
+etc.
+```
+
+To enhance user control, include an option in the app’s settings for users to select their preferred language. It’s also beneficial to inform users that the default app language is based on their location or region, with the option to override it if desired. Users should also have the flexibility to allow the app to follow their device’s language settings.
+
 :no_entry_sign: **Failure criteria**
 
 - The default language of the app is hardcoded, and it is impossible to change it.
+
+```kotlin
+fun setLocaleEn(context: Context): Context {
+   val locale = Locale("en", "US")
+   Locale.setDefault(locale)
+   
+   val config = context.resources.configuration
+   config.setLocale(locale)
+
+   return context.createConfigurationContext(config)
+}
+```
+
+### Language of Parts (WCAG 3.1.2 -Level AA)
+
+This guideline covers point [3.1.2 Language of Parts - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#language-of-parts) of the WCAG standard.
+
+To be able to give the best possible experience to users, the language of each part of the app should be programmatically determined. With that in mind, Talkback should be able to read the content in the correct language.
+
+:white_check_mark: **Success criteria**
+
+Due to need for Talkback to read the content in the correct language, the part of the content should get the correct language interpretation.
+
+In a traditional Android view, you can set the locale for accessibility by applying a **LocaleSpan** to a **SpannableString** and assigning it to a **TextView**:
+
+```kotlin
+val text = "Arc de Triomphe"
+val spannableString = SpannableString(text)
+
+val locale = Locale("fr", "FR")
+spannableString.setSpan(LocaleSpan(locale), 0, text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+textView.text = spannableString
+```
+
+In Jetpack Compose, achieve the same with an **AnnotatedString**:
+```kotlin
+val text = "Arc de Triomphe"
+
+val localeList = LocaleList("fr-FR")
+
+val annotatedText = buildAnnotatedString {
+    withStyle(style = SpanStyle(localeList = localeList)) {
+        append(text)
+    }
+}
+
+Text(text = annotatedText)
+```
 
 ---
 
