@@ -18,6 +18,8 @@ The app should be implemented to reach the largest number of users. It should ha
 
 It is recommended that all text content used in the application, including `contentDescription`, is implemented using the Android resource framework.
 
+To simplify this process, you can use a library like [Localian](https://github.com/infinum/android-localian). It manages application locale and language across multiple Android API levels without requiring a restart of the application process.
+
 It is also important to support localization because of accessibility services. Even though TalkBack supports [various languages](https://support.google.com/accessibility/android/answer/11101402?hl=en), not all of them are supported on every Android version.
 
 **Server-driven application**
