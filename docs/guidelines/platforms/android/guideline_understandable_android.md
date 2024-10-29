@@ -181,6 +181,20 @@ TextField(
 
 - Not providing enough context for the views / composables that expect user interaction.
 
+### Error Suggestion (WCAG 3.3.3 - Level AA)
+
+To provide the best user experience, the application should suggest solutions for input errors when they are detected, unless doing so compromises security or the content's purpose.
+
+> This technique covers point *3.3.3 Error Suggestion - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+When an error is detected, the application should provide the user with a suggestion on how to correct it. This can be done by providing a hint or a description of the error, along with suggested correction text to guide the user.
+
+Using an alert dialog is recommended because it ensures that users see the alert content first, making them aware of any errors. Without this notification, users may not realise an error has occurred and might mistakenly believe the form is not functioning correctly.
+
+Regardless of the method used, the error message should indicate the location of the error and provide a clear explanation of the issue.
+
 ### Redundant Entry (WCAG 3.3.7 - Level A)
 
 Ensure that multi-step processes are user-friendly by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
