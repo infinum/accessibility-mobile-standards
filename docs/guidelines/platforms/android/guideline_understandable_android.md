@@ -121,7 +121,7 @@ To make authentication accessible to all users, the application should not requi
 :white_check_mark: **Success criteria**
 
 - Support for text (copy and) paste to reduce the cognitive burden of re-typing
-- Support for password entry by password managers
+- Support for password entry by password managers or passkeys (i.e [Google passkey](https://developers.google.com/identity/passkeys))
 - Support for biometric authentication
 - Support for email link authentication
 - Support for OAuth authentication
