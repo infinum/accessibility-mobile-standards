@@ -48,7 +48,7 @@ Guidelines mentioned in this section are related to the screen reader and intera
 - [ ] 2.4.3 Focus order (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#focus-order-wcag-243---level-a) | Flutter
 - [ ] 2.4.4 Link purpose (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#action-purpose-wcag-244---level-a) | Flutter
 - [ ] 2.4.5 Multiple ways (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
-- [ ] 2.4.6 Headings and labels (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#heading-and-labels-wcag-246---level-aa) | Flutter
+- [ ] 2.4.6 Headings and labels (AA) - [Android](../platforms/android/guideline_operable_android.md#heading-and-labels-wcag-246---level-aa) | [iOS](../platforms/ios/guideline_operable_ios.md#heading-and-labels-wcag-246---level-aa) | Flutter
 - [ ] 2.4.7 Focus visible (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#focus-visibility-wcag-247---level-aa) | Flutter
 - [ ] 2.4.11 Focus not obstructed (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#focus-not-obscured-minimum-wcag-2411---level-aa) | Flutter
 - [ ] 2.5.3 Label in name (A)  - Android | [iOS](../platforms/ios/guideline_operable_ios.md#label-in-name-wcag-253---level-a) | Flutter
