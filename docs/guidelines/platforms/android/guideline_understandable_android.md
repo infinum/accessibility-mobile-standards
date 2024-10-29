@@ -79,12 +79,12 @@ In Jetpack Compose, achieve the same with an **AnnotatedString**:
 ```kotlin
 val text = "Arc de Triomphe"
 
-val locale = Locale("fr", "FR")
+val localeList = LocaleList("fr-FR")
 
-val annotatedText = buildAnnotatedString { 
-    withStyle(style = SpanStyle(locale = locale)) { 
-        append(text) 
-    } 
+val annotatedText = buildAnnotatedString {
+    withStyle(style = SpanStyle(localeList = localeList)) {
+        append(text)
+    }
 }
 
 Text(text = annotatedText)
