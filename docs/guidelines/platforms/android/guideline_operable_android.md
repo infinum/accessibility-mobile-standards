@@ -334,6 +334,45 @@ In general, try to make the headings and labels as descriptive as possible. Also
 
 - Providing a missing or incorrect heading or label
 
+## Input modalities (WCAG 2.5)]
+
+*Make it easier for users to operate functionality through various inputs beyond keyboard.*
+
+### Label in Name (WCAG 2.5.3 - Level A)
+
+All user interface components that are defined as labels (that include text or images of text) contain the name, which is visible (presented visually).
+
+> This guideline covers point *2.5.3 Label in Name - Level A of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+A user should easily understand the information related to the focused label. To achieve this, the following steps should be taken:
+
+- content description should match the visible label name, or
+
+- include the text of the visible label as a part of the content description
+
+For views, it can be set through `android:contentDescription` attribute in XML or by using `View.setContentDescription(contentDescription)` function.
+
+For Compose, it can be set as a semantics property.
+
+Example: setting contentDescription in Compose:
+```
+Text(
+     modifier = Modifier.semantics {
+            contentDescription = text
+        },
+     text = text,
+```
+
+For most components like labels and buttons, accessibility service will handle things automatically. In case of a custom component, `contentDescription` label should be set manually.
+
+#### 🚫 Failures
+
+- Not including the text of the visible label as a part of the content description
+
+- Words of visible label and content description not matching (e.g. not the same order)
+
 ---
 
 #### Sources
