@@ -57,7 +57,7 @@ Guidelines mentioned in this section are related to the screen reader and intera
 - [ ] 3.2.3 Consistent navigation (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#consistent-navigation-wcag-323---level-aa) | Flutter
 - [ ] 3.2.4 Consistent identification (AA) - [Android](../platforms/android/guideline_understandable_android.md#consistent-identification-wcag-324---level-aa) | [iOS](../platforms/ios/guideline_understandable_ios.md#consistent-identification-wcag-324---level-aa) | Flutter
 - [ ] 3.3.1 Error identification (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#error-identification-wcag-331---level-a) | Flutter
-- [ ] 3.3.2 Labels or instructions (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#labels-or-instructions-wcag-332---level-a) | Flutter
+- [ ] 3.3.2 Labels or instructions (A) - [Android](../platforms/android/guideline_understandable_android.md#labels-or-instructions-wcag-332---level-a) | [iOS](../platforms/ios/guideline_understandable_ios.md#labels-or-instructions-wcag-332---level-a) | Flutter
 - [ ] 3.3.3 Error suggestion (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#error-suggestion-wcag-333---level-aa) | Flutter
 - [ ] 3.3.4 Error prevention (legal, financial, data) - (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#error-prevention-legal-financial-data-wcag-334---level-aa) | Flutter
 - [ ] 3.3.7 Redundant entry (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#redundant-entry-wcag-337---level-a) | Flutter

@@ -94,9 +94,9 @@ On the other hand, if your app requires the implementation of custom components,
 
 ---
 
-### Labels or instruction
+### Labels or Instructions (WCAG 3.3.2 - Level A)
 
-*This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.*
+> This technique covers point *3.3.2 Labels or Instructions - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -123,9 +123,22 @@ That way, services such as TalkBack will read defined relationships to the user,
 
 In the given example, services such as TalkBack will read – "EditBox for username" when the user sets focus to EditText.
 
+In Compose, there is no built-in way to link a label between different components. However, the `TextField` composable has a `label` parameter that can be used to provide a label for the input field. Another option is to use the `placeholder` parameter to hint at what should be entered into the field.
+
+Example:
+```
+<!-- Label text for en-US locale would be "Email Address" -->
+TextField(
+    value = email,
+    onValueChange = { email = it },
+    label = { Text(stringResource(R.string.email)) },
+    placeholder = { Text(stringResource(R.string.email_example)) }
+)
+```
+
 :no_entry_sign: **Failure criteria**
 
-- Not providing enough context for the views that expect user interaction.
+- Not providing enough context for the views / composables that expect user interaction.
 
 ---
 
