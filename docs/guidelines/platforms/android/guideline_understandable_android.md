@@ -74,11 +74,13 @@ Note: Certain elements may require context-specific labels to convey their funct
 
 Help users avoid and correct mistakes.
 
-### Error identification
+### Error identification (WCAG 3.3.1 - Level A)
 
-*This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.*
+If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.
 
-:white_check_mark: **Success criteria**
+> This technique covers point *3.3.1 Error Identification - Level A of the WCAG standard.*
+
+#### ✅ Success technique(s)
 
 If an error occurs on the item the user is interacting with, the error should be clearly defined and described so the user can get clear information on why the error occurred and what to do in order to fix it.
 
@@ -86,11 +88,50 @@ It is recommended to always use or extend system-provided widgets that are as fa
 
 On the other hand, if your app requires the implementation of custom components, you will need to implement [custom accessibility events](https://developer.android.com/guide/topics/ui/accessibility/principles#define-custom-events) to provide all accessibility updates that the system-provided widgets do.
 
-:no_entry_sign: **Failure criteria**
+For Views, `TextView` can be used to display error message. `TextInputLayout` can also be used, as it has built-in support for error messages.
 
-- Error messages do not exist or are not descriptive enough.
+Example - showing error on `TextInputLayout`:
+
+```
+<!-- Error message for en-US locale would be "Invalid date, must be in the form DD/MM/YYYY, for example, 01/01/1990" -->
+ textInputLayout.error = getString(R.string.date_error)
+ textInputLayout.setErrorEnabled(true)
+```
+
+For Compose, a `error` semantics property can be used. However, this will only announce the error message, but it won't be shown on the screen.
+`TextField` can be used to display the error message. Its `label` parameter can be used to provide the message, and by combining it with `isError`, the `TextField`
+ will change its appearance to indicate an error.
+
+Example - showing error on `TextField`:
+
+```
+<!-- Error message for en-US locale would be "Invalid date, must be in the form DD/MM/YYYY, for example, 01/01/1990" -->
+TextField(
+    value = "",
+    label = {
+        Text(errorMessage.ifEmpty { "TextField label" })
+    },
+    isError = isError,
+    onValueChange = { /* State update logic */ },
+    modifier = Modifier
+        .semantics {
+            if (errorMessage.isNotEmpty()) {
+                error(errorMessage)
+            }
+        }
+)
+```
+
+##### Important Note:
+Ensure `androidx.compose.ui.semantics.error` is present when using the error function. If not included, Kotlin will use the standard error function, which throws an IllegalStateException with defined message.
+
+#### 🚫 Failures
+
+- Error messages do not exist in text nor text alternative or are not descriptive enough.
 
 - Custom components do not support custom error handling.
+
+- Preventing further actions without communicating the issue and necessary corrections to the user.
 
 ---
 
