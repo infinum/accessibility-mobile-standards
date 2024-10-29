@@ -195,6 +195,23 @@ Using an alert dialog is recommended because it ensures that users see the alert
 
 Regardless of the method used, the error message should indicate the location of the error and provide a clear explanation of the issue.
 
+### Error Prevention (Legal, Financial, Data) (WCAG 3.3.4 - Level AA)
+
+To prevent users from making mistakes, the application should provide a mechanism before finalizing a transaction that involves legal, financial, or data-sensitive actions.
+
+> This technique covers point *3.3.4 Error Prevention (Legal, Financial, Data) - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+To satisfy this criterion, the app should provide at least one of the following mechanisms:
+- **Reversible**: The submission is reversible.
+- **Checked**: Data entered by the user is checked for input errors and the user is provided with an opportunity to correct them.
+- **Confirmed**: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
+
+For legal transactions, the app should provide a stated time within which the transaction may be amended or canceled by the user after the request.
+
+App should enable users to recover deleted information by temporarily marking it for deletion, moving it to a holding area for a set time, or maintaining a record of deletions for easy restoration requests.
+
 ### Redundant Entry (WCAG 3.3.7 - Level A)
 
 Ensure that multi-step processes are user-friendly by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
