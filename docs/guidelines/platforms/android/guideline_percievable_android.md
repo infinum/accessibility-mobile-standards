@@ -63,6 +63,31 @@ class CaptionUtils(context: Context) {
 }
 ```
 
+### Audio Description or Media Alternative (WCAG 1.2.3 - Level A)
+
+This guideline covers point [1.2.3 Audio Description or Media Alternative (Prerecorded) - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-description-or-media-alternative-prerecorded) of the WCAG standard.
+
+People with vision impairments may have difficulty understanding key visual details in a video. To make the video accessible to everyone, the guideline requires providing an audio description or an alternative method to convey the visual information.
+
+:white_check_mark: **Success criteria**
+
+To satisfy the guideline, there are two ways to make synchronized media accessible for users with vision impairments:
+* **Provide an audio description**: Add narration to describe key visual elements (e.g., actions, scenery) in the video that someone with vision impairments would otherwise miss.
+* **Provide a text alternative**: If audio description isn't possible, offer a transcript that includes descriptions of both the audio and visual content, allowing users to read what happens in the video.
+
+#### Using audio description
+Check [Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)](#audio-description-for-prerecorded-media-wcag-125---level-aa) for more information.
+
+#### Using text alternative
+
+A text alternative provides a written description of both the audio and visual content. This is helpful for users who cannot see the video or for those who cannot access the audio.
+* **Static text alternative**: For simple videos (like a "talking-head" video, where only a person speaks to the camera), a brief text description can be provided instead of a full audio description.
+* **Detailed transcript**: For more complex videos, a full transcript can include descriptions of visual elements as well as the dialogue.
+
+:no_entry_sign: **Failure criteria**
+
+If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
+
 ### Captions support for live media (WCAG 1.2.4 - Level AA)
 
 This guideline covers [1.2.4 Captions (Live) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#captions-live) of the WCAG standard.
@@ -77,6 +102,27 @@ All live media in the application should offer captions through the user interfa
 - **Closed captions**: Captions are available in the live media stream and can be programmatically toggled on or off by the user.
 
 The second approach is more customizable and can offer more flexibility than embedded captions, though it requires additional client-side work. For further details, please refer to the [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A) section](#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) and the [ExoPlayer documentation on live streaming](https://developer.android.com/media/media3/exoplayer/live-streaming), which provides more information about HTTP Live Streaming (HLS) on the Android platform.
+
+### Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)
+
+This guideline covers [1.2.5 Audio Description (Prerecorded) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#audio-description-prerecorded) of the WCAG standard.
+
+As a part of this guideline, it is important to provide an audio description for prerecorded video content.
+
+:white_check_mark: **Success criteria**
+
+This can be done by:
+* adding a separate audio track to the video that describes the video content
+* providing a video version file with audio description
+* providing a video with extended audio description
+
+This guideline closely aligns with the [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](#audio-description-or-media-alternative-wcag-123---level-a), which states that video content must include an audio description. Unlike the previous guideline, which allows for alternatives, this requirement emphasizes the need for a dedicated audio track that describes the video content.
+
+**Note**: Based on the guideline itself, if all of the information in the video track is already provided in the audio track, no audio description is necessary. This applies to both guidelines (1.2.3 and 1.2.5).
+
+##### Audio description with ExoPlayer
+
+In `ExoPlayer`, you can query the available audio and video tracks using `player.currentTracks`. This allows you to present users with options, such as regular audio and an audio description track. You can implement functionality for users to select their preferred track from the available options.
 
 ---
 
