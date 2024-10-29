@@ -23,23 +23,60 @@ If an element exists on the UI only for decorative purposes it is recommended th
 
 ---
 
-## Time-based Media
+## Time-based Media (WCAG 1.2)
 
 Provide alternatives for time-based media.
 
-*This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.*
+### Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)
+
+This guideline addresses [1.2.1 Audio-only and Video-only (Prerecorded) - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-only-and-video-only-prerecorded) and [1.2.2 Captions (Prerecorded) - Level A](https://www.w3.org/WAI/WCAG22/quickref/#captions-prerecorded) from the WCAG standard.
+
+Some users have disabilities that prevent them from hearing media content in an application, such as prerecorded audio or video. To ensure this content is accessible to everyone, techniques like adding captions must be incorporated. This ensures all users, regardless of hearing ability, can fully engage with the media.
 
 :white_check_mark: **Success criteria**
 
-Suppose the app you are building includes media content such as video clips or audio recordings. In that case, it is suggested to provide an alternative for users with different types of accessibility needs for them to understand the material. The suggested practice would be to:
+One way to enhance accessibility is by adding captions, either open or closed. Open captions are permanently visible as they are integrated into the video, while closed captions require a media format with a player that supports them. Most modern video players support captions, and `ExoPlayer` provides built-in support for displaying them automatically.
 
-- Include controls that allow users to pause and stop media, change volume and toggle subtitles (captions)
+##### Using ExoPlayer with captions
 
-- If a video presents information that is vital to completing workflow, provide the same content in an alternative format, such as a transcript
+To view captions in media that supports them, users must enable the _Show captions_ option. This accessibility feature can be found under **Settings** > **Accessibility** > **Caption preferences**. On this screen, users can also adjust caption size and style; however, these preferences may not work with media apps that don’t support Caption Preferences.
 
-:no_entry_sign: **Failure criteria**
+##### Custom solution
 
-- All media is presented to the user without the possibility of changing some of the controls (slow down, pause, volume up, etc.).
+If a different player is used instead of `ExoPlayer`, the status of closed captions, along with the font scale and caption style, can be checked programmatically using the [CaptioningManager](https://developer.android.com/reference/android/view/accessibility/CaptioningManager). When the _Show captions_ option is enabled, captions should be turned on in the selected player.
+
+```kotlin
+import android.content.Context
+import android.view.accessibility.CaptioningManager
+import android.view.accessibility.CaptioningManager.CaptionStyle
+
+class CaptionUtils(context: Context) {
+    
+   private val captioningManager: CaptioningManager =
+       context.getSystemService(Context.CAPTIONING_SERVICE) as CaptioningManager
+    
+   fun areCaptionsEnabled(): Boolean = captioningManager.isEnabled
+    
+   fun getCaptionFontScale(): Float = captioningManager.fontScale
+    
+   fun getCustomCaptionStyle(): CaptionStyle = captioningManager.userStyle
+}
+```
+
+### Captions support for live media (WCAG 1.2.4 - Level AA)
+
+This guideline covers [1.2.4 Captions (Live) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#captions-live) of the WCAG standard.
+
+In some cases, live media is used in the application. To ensure accessibility for all users, providing captions for live content is important.
+
+:white_check_mark: **Success criteria**
+
+All live media in the application should offer captions through the user interface, available as either open or closed captions. For two-way multimedia calls between individuals, accessibility requirements are the responsibility of content providers, not the application.
+
+- **Open captions**: Captions are embedded directly into the live media and always visible to viewers.
+- **Closed captions**: Captions are available in the live media stream and can be programmatically toggled on or off by the user.
+
+The second approach is more customizable and can offer more flexibility than embedded captions, though it requires additional client-side work. For further details, please refer to the [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A) section](#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) and the [ExoPlayer documentation on live streaming](https://developer.android.com/media/media3/exoplayer/live-streaming), which provides more information about HTTP Live Streaming (HLS) on the Android platform.
 
 ---
 
