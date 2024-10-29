@@ -61,7 +61,7 @@ Guidelines mentioned in this section are related to the screen reader and intera
 - [ ] 3.3.3 Error suggestion (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#error-suggestion-wcag-333---level-aa) | Flutter
 - [ ] 3.3.4 Error prevention (legal, financial, data) - (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#error-prevention-legal-financial-data-wcag-334---level-aa) | Flutter
 - [ ] 3.3.7 Redundant entry (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#redundant-entry-wcag-337---level-a) | Flutter
-- [ ] 4.1.2 Name, role, value (A) - Android | [iOS](../platforms/ios/guideline_robust_ios.md#name-role-value-wcag-412---level-a) | Flutter
+- [ ] 4.1.2 Name, role, value (A) - [Android](../platforms/android/guideline_robust_android.md#name-role-value-wcag-412---level-a) | [iOS](../platforms/ios/guideline_robust_ios.md#name-role-value-wcag-412---level-a) | Flutter
 - [ ] 4.1.3 Status messages (AA) - Android | [iOS](../platforms/ios/guideline_robust_ios.md#status-messages-wcag-413---level-aa) | Flutter
 
 ## Security
