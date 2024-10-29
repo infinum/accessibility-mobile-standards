@@ -76,15 +76,7 @@ To satisfy the guideline, there are two ways to make synchronized media accessib
 * **Provide a text alternative**: If audio description isn't possible, offer a transcript that includes descriptions of both the audio and visual content, allowing users to read what happens in the video.
 
 #### Using audio description
-
-When talking about the audio description, it is important to provide a description of the video content. This can be done by:
-* adding a separate audio track to the video that describes the video content
-* providing a video version file with audio description
-* providing a video with extended audio description
-
-##### Audio description with ExoPlayer 
-
-In `ExoPlayer`, you can query the available audio and video tracks using `player.currentTracks`. This allows you to present users with options, such as regular audio and an audio description track. You can implement functionality for users to select their preferred track from the available options.
+Check [Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)](#audio-description-for-prerecorded-media-wcag-125---level-aa) for more information.
 
 #### Using text alternative
 
@@ -119,9 +111,18 @@ As a part of this guideline, it is important to provide an audio description for
 
 :white_check_mark: **Success criteria**
 
-This guideline closely aligns with the [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](#audio-description-or-media-alternative-wcag-123---level-a), which states that video content must include an audio description. Unlike the previous guideline, which allows for alternatives, this requirement emphasizes the need for a dedicated audio track that describes the video content. This description can be integrated into the main audio track or provided as a separate audio track.
+This can be done by:
+* adding a separate audio track to the video that describes the video content
+* providing a video version file with audio description
+* providing a video with extended audio description
+
+This guideline closely aligns with the [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](#audio-description-or-media-alternative-wcag-123---level-a), which states that video content must include an audio description. Unlike the previous guideline, which allows for alternatives, this requirement emphasizes the need for a dedicated audio track that describes the video content.
 
 **Note**: Based on the guideline itself, if all of the information in the video track is already provided in the audio track, no audio description is necessary. This applies to both guidelines (1.2.3 and 1.2.5).
+
+##### Audio description with ExoPlayer
+
+In `ExoPlayer`, you can query the available audio and video tracks using `player.currentTracks`. This allows you to present users with options, such as regular audio and an audio description track. You can implement functionality for users to select their preferred track from the available options.
 
 ---
 
