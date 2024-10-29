@@ -291,6 +291,33 @@ The content provided in your app must be easily understandable to all users. Tha
 
 ---
 
+## Distinguishable (WCAG 1.4)
+
+### Reflow (WCAG 1.4.10 - Level AA)
+
+The reflow is basically another name for responsible design in this context. The content should be able to reflow from one screen size to another without losing information or functionality.
+
+#### ✅ Success criteria
+
+Every component on the screen should be able to reflow from one screen size to another, without any content disappearing or becoming obscured. The same applies when the device orientation is changed or the content is enlarged in any way (increased font or display size in the device settings).
+
+The above can be achieved by using:
+- Components with variable size (i.e. by not restricting the maximum height/width).
+- Scrollable containers when content is laid out linearly. In XML, use `ScrollView` (or `NestedScrollView`) for any content that can potentially go off screen on smaller screen sizes. In Compose, the same can be achieved by using a `LazyColumn/Row` or just a regular `Column/Row` with a `vertical/horizontalScroll()` modifier if lazy behavior is not needed.
+- Layouts that allow the content to flow and wrap into multiple lines if it becomes too wide to fit the screen. In XML, this can be achieved by using the [`Flow`](https://developer.android.com/reference/androidx/constraintlayout/helper/widget/Flow) layout. In Compose, there are [`FlowRow/Column`](https://developer.android.com/develop/ui/compose/layouts/flow) for the same purpose.
+
+For additional techniques regarding text scaling, see the [Resize text guideline](guideline_percievable_android.md#resize-text).
+
+This should not be done only on the screen level, but also on the component level. Every component should be able to reflow from one size to another without losing information or functionality (e.g. buttons, labels, images, etc.).
+
+The content should also never become scrollable in both directions --- having scrolling in both directions on one screen is permitted, but not for one single piece of content (e.g. a block of text). Luckily, this is not likely to happen due to the behavior of native layouts and components, but it should still be kept in mind.
+
+#### 🚫 Failure criteria
+
+Content becomes unusable on a device with a smaller screen, when changing the orientation or when increasing font/display size. For example, the elements go off the screen, start overlapping or important parts of some text are cut off (e.g. ellipsized).
+
+---
+
 #### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
