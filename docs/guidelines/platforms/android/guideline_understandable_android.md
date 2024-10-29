@@ -63,18 +63,31 @@ To be able to give the best possible experience to users, the language of each p
 
 Due to need for Talkback to read the content in the correct language, the part of the content should get the correct language interpretation.
 
-This can be achieved by using **SpannableString** and setting the **LocaleSpan** to define the language for a particular portion of the text. Here's an example:
+In a traditional Android view, you can set the locale for accessibility by applying a **LocaleSpan** to a **SpannableString** and assigning it to a **TextView**:
 
 ```kotlin
 val text = "Arc de Triomphe"
 val spannableString = SpannableString(text)
 
-// Set the language for accessibility
 val locale = Locale("fr", "FR")
 spannableString.setSpan(LocaleSpan(locale), 0, text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-// Assign the spannable string to a TextView
 textView.text = spannableString
+```
+
+In Jetpack Compose, achieve the same with an **AnnotatedString**:
+```kotlin
+val text = "Arc de Triomphe"
+
+val locale = Locale("fr", "FR")
+
+val annotatedText = buildAnnotatedString { 
+    withStyle(style = SpanStyle(locale = locale)) { 
+        append(text) 
+    } 
+}
+
+Text(text = annotatedText)
 ```
 
 ---
