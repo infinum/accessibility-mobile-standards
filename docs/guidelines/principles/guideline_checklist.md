@@ -44,7 +44,7 @@ Guidelines mentioned in this section are related to the screen reader and intera
 - [ ] 1.3.5 Identify input purpose (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#identify-input-purpose-wcag-135---level-aa) | Flutter
 - [ ] 1.4.10 Reflow (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#reflow-wcag-1410---level-aa) | Flutter
 - [ ] 2.4.1 Bypass blocks (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#bypass-blocks-wcag-241---level-a) | Flutter
-- [ ] 2.4.2 Page titled (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#page-titled-wcag-242---level-a) | Flutter
+- [ ] 2.4.2 Page titled (A) - [Android](../platforms/android/guideline_operable_android.md#page-titled-wcag-242---level-a) | [iOS](../platforms/ios/guideline_operable_ios.md#page-titled-wcag-242---level-a) | Flutter
 - [ ] 2.4.3 Focus order (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#focus-order-wcag-243---level-a) | Flutter
 - [ ] 2.4.4 Link purpose (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#action-purpose-wcag-244---level-a) | Flutter
 - [ ] 2.4.5 Multiple ways (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter

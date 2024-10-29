@@ -206,15 +206,37 @@ ViewCompat.setAccessibilityDelegate(personalData, object : AccessibilityDelegate
 
 ---
 
-### Page Titles
+### Page Titled (WCAG 2.4.2 - Level A)
 
-*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
+> This guideline covers point *2.4.2 Page Titled - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
 Each screen should have a clear, descriptive, and, if possible, unique title that describes the purpose of that screen that will be understandable to all users. Also, it is important to make sure that the title is the first element read when the user enters the screen. This could be achieved by following design guidelines or with the help of setting the `android:accessibilityTraversalBefore` attribute.
 
 If the title is defined using a toolbar with custom behavior or another custom view, it is important to ensure that it will be read using accessibility services.
+
+If you're using Compose, set the `traversalIndex` to -1f to ensure that the TalkBack prioritises it during traversal. This negative value ensures it is read before any elements with a default index of 0f. For layouts that use `TopAppBar`, they are usually prioritised first, but the TalkBack reads the navigation icon before the title. This can be fixed by setting the traversalIndex of title composable to -1f.
+
+**Code example:**
+
+```
+ TopAppBar(
+        title = {
+            Text(
+                modifier = Modifier.semantics { traversalIndex = -1f },
+                text = title,
+```
+
+The traversalIndex only affects nodes that are focusable by screen readers, such as text and buttons. To ensure that non-focusable elements (Columns, Rows, or Boxes) are read in a specific order, you can group them using the `isTraversalGroup` property.
+
+```
+ Column(
+        modifier = Modifier.semantics { isTraversalGroup = true }
+    ) {
+        ...
+    }
+```
 
 :no_entry_sign: **Failure criteria**
 
