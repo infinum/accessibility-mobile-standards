@@ -55,7 +55,7 @@ Guidelines mentioned in this section are related to the screen reader and intera
 - [ ] 3.2.1 On focus (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#on-focus--on-input-wcag-321-and-322---level-a) | Flutter
 - [ ] 3.2.2 On input (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#on-focus--on-input-wcag-321-and-322---level-a) | Flutter
 - [ ] 3.2.3 Consistent navigation (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#consistent-navigation-wcag-323---level-aa) | Flutter
-- [ ] 3.2.4 Consistent identification (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#consistent-identification-wcag-324---level-aa) | Flutter
+- [ ] 3.2.4 Consistent identification (AA) - [Android](../platforms/android/guideline_understandable_android.md#consistent-identification-wcag-324---level-aa) | [iOS](../platforms/ios/guideline_understandable_ios.md#consistent-identification-wcag-324---level-aa) | Flutter
 - [ ] 3.3.1 Error identification (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#error-identification-wcag-331---level-a) | Flutter
 - [ ] 3.3.2 Labels or instructions (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#labels-or-instructions-wcag-332---level-a) | Flutter
 - [ ] 3.3.3 Error suggestion (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#error-suggestion-wcag-333---level-aa) | Flutter
