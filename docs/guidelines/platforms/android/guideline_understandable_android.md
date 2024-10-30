@@ -32,19 +32,30 @@ If the application is server-driven and most of the content depends on the backe
 
 Make mobile apps appear and operate in predictable ways.
 
-*This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.*
+### On Focus & On Input (WCAG 3.2.1 and 3.2.2 - Level A)
 
-### On Focus & On Input
+Receiving focus on or interacting with any component should not initiate a change of context unless previously announced.
 
-:white_check_mark: **Success criteria**
+✅ **Success criteria**
 
-The user should be able to navigate through the app without constant context switching. Also, interacting with the view should not cause a change of context. If view interaction changes the context, that should be signalized to the user **before** the interaction.
+Users need to be able to consume content without any sudden interruptions or changes in context. Interacting with any UI component doesn't automatically cause a change of context unless the user has been previously advised of the behavior _before_ using the component.
 
-If the content displayed on the screen is designed and implemented following [Perceivable guidelines](https://github.com/infinum/accessibility-mobile-standards/blob/master/docs/guidelines/platforms/android/guideline_percievable_android.md), these requirements should be met by default.
+Changes of focus and, thus, context should only ever be done intentionally and consciously.
 
-:no_entry_sign: **Failure criteria**
+Whenever adding a custom callback to a focus or input change event, think about whether the action that will be executed can be considered a change of context and, if so, could the user have expected it before initiating focus/input change.
 
-- The content is not grouped based on context relationships and has no meaningful labels defined.
+Here are some examples of focus/input callbacks that would be acceptable with respect to this criteria:
+- An app for online shopping includes a form with payment and delivery information. Below payment information, there is a radio button group with options "Delivery address is the same as the payment information" and "I want products delivered to another address". If the user selects the latter option, a new input field for the delivery address appears. This is not considered a change of context, because only some parts of the screen changed, but the overall structure remained the same.
+- A theme settings screen has three radio buttons (light/dark/system) and instructions to the user that the theme will be changed immediately upon selecting an option. There is no "Submit" button and the action is executed upon input, but the user is clearly instructed on what to expect. 
+- In an input field, a trailing action appears when the input field gets focus. For example, in a password input field, a button for toggling password visibility appears when the field gets focus. This is considered acceptable, as the user is just presented with additional actions and the overall context did not change at all.
+- In an input field, a trailing action for clearing the entire input appears when the user enters something into the field.
+
+
+🚫 **Failure examples**
+
+Some examples of actions that _are_ considered a change of context and would violate the criteria are:
+- Automatically submitting a form when a certain field gets focus or input. For example, in a login form, the user is automatically logged in when checking the "Remember me" checkbox, without pressing the "Log in" button.
+- Showing an alert dialogs when an element receives focus. For example, an input field receives focus and a help alert dialog describing a field appears. The user would first have to close the dialog before continuing with input, and the dialog would appear any time the user might want to edit their input.
 
 ---
 
