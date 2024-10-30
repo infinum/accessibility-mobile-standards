@@ -292,6 +292,27 @@ Even though the system automatically handles this, think about selection and foc
 
 ---
 
+### Focus Not Obscured (Minimum) (WCAG 2.4.11 - Level AA)
+
+When the user navigates through the app, the focus should not be obscured by any other author-created elements and should be visible, at least partially.
+
+#### ✅ Success technique(s)
+
+When creating a view or a screen, think about the visibility of the focus and make sure that the user can see which element is currently selected.
+
+To satisfy this guideline, check the following:
+
+- The content is scrollable (when needed)
+- The element is not obscured by other elements
+- The element is (at least) partially visible when focused/used
+
+#### 🚫 Failures
+
+The following should be avoided:
+
+- Element is hidden due to inability to scroll.
+- Another element of the screen (e.g. sticky footer or floating element) hides the focused element.
+
 ### Other operable guidelines
 
 This section contains guidelines that may not applicable for the mobile (Android) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
