@@ -292,6 +292,14 @@ Even though the system automatically handles this, think about selection and foc
 
 ---
 
+### Other operable guidelines
+
+This section contains guidelines that may not applicable for the mobile (Android) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
+
+- [WCAG 2.4.5 Multiple Ways - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways)
+
+---
+
 #### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
