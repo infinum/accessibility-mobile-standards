@@ -169,23 +169,72 @@ In `ExoPlayer`, you can query the available audio and video tracks using `player
 
 Create content that can be presented in different ways without losing information or structure.
 
-### Info and Relationships
+### Info and Relationships (WCAG 1.3.1 - Level A)
 
-Information, structure, and relationships conveyed through presentation are available in text.
+Information, structure, and relationships conveyed through presentation are available in text. Important information and element relationship should be preserved when the presentation format changes (e.g. read out by a screen reader).
 
-*This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.*
+#### Element information
 
-:white_check_mark: **Success criteria**
+Every accessible element on the screen should hold information about itself and should be identifiable by the user. In addition to visual cues (e.g. using bigger font for headings), relevant information needs to be provided in such a way that it is also accessible to assistive technologies, such as TalkBack.
 
-- Groups of related content
+✅ **Success criteria**
 
-If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually a subclass of ViewGroup. Also, you should set the container object's `android:screenReaderFocusable` (for devices running Android 8.1. – API level 27) or `android:focusable` to true. Furthermore, you should set `android:focusable` attribute of each inner object to false because doing so will make accessibility services present the inner element's content descriptions, one after the other, in a single announcement.
+The most important technique for achieving this criteria is properly labeling all of the elements on the screen, i.e. giving them a proper name and a role (heading, button, switch, edit text, etc.). In that way, no important information is lost when the user relies only on the auditory information read out by TalkBack and it is much easier to understand the purpose of an element on the screen.
+
+**Names**
+
+Use `contentDescription` to set a proper name for an element, as described in the [Non-text content identification chapter](guideline_percievable_android.md#non-text-content-identification-wcag-111---level-a). Names can also be set on a group or a container to give more context to the user, as explained below.
+
+
+**Roles**
+
+In View-based system, the best approach is to use (or inherit) native components, such as `Button`, `Checkbox`, `Switch`, `EditText` and so on, as they come with proper roles by default. If that is for some reason not possible, there is a way to make it appear as one of the native controls to accessibility services, by setting the `className` of the accessibility node info:
+
+```kotlin
+ViewCompat.setAccessibilityDelegate(binding.continueButton, object : AccessibilityDelegateCompat() {
+    override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+        super.onInitializeAccessibilityNodeInfo(host, info)
+        info.className = Button::class.java.name
+    }
+})
+```
+
+When that is not enough, it is also possible to set a custom role string through `info.roleDescription` in the same way, but the description should not stray too far away from the already existing native components, as the user might not recognize them.
+
+In Compose, the same applies --- native controls will work automatically, but in case of custom components, a role can be set through the `semantics` block:
+
+```kotlin
+MyCustomButton(
+    onClick = ...,
+    modifier = Modifier.semantics { role = Role.Button }
+)
+```
+
+The complete list of existing roles is available in the [developer documentation](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/Role).
+
+🚫 **Failure criteria**
+- The purpose of an element on the screen is conveyed only through visual cues, and completely lost when using assistive technologies.
+    - For example, using a clickable image as a toggle without setting any accessibility information. TalkBack will only announce that the element is clickable, but all other information regarding its behavior or state (e.g. the element being toggleable) is lost.
+
+---
+
+#### Element relationships
+
+Many UI components should work together to create a context for the user. For example, if there is a list of components with two labels inside, one with a title and another for the value, it may be suitable to read those two labels as one sentence to give more context. Additionally, it is important to know how elements relate to one another.
+
+✅ **Success criteria**
+
+When there are multiple elements that are connected, this connection needs to be clear when using assistive technologies. For example, in the case of an input field which has a label above it and an error text below it, the user needs to be aware that those two text labels are connected to this specific input field.
+
+This can be achieved by following the [Labels or instruction](guideline_understandable_android.md#labels-or-instruction) and [Error identification](guideline_understandable_android.md#error-identification) guidelines.
+
+If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually a subclass of `ViewGroup`. Also, you should set the container object's `android:screenReaderFocusable` (for devices running Android 8.1. – API level 27) or `android:focusable` to `true`. Furthermore, you should set `android:focusable` attribute of each inner object to `false` because doing so will make accessibility services present the inner element's content descriptions, one after the other, in a single announcement.
 
 Grouping elements based on the context helps users that benefit from using accessibility services to discover the information that is on the screen more efficiently.
 
 **Code example:**
 
-```
+```xml
 <!-- In response to a single user interaction, accessibility services announce
      both the title and the artist of the song. -->
 <ConstraintLayout
@@ -203,33 +252,20 @@ Grouping elements based on the context helps users that benefit from using acces
 </ConstraintLayout>
 ```
 
-_Note:_ In cases like this, it is recommended to define content descriptions as concisely as possible, considering that accessibility services will read them one after the other.
-
-- Custom group label
-
-It is possible to override the platform's default grouping and ordering of a group's inner element descriptions by providing a content description for the group itself.
-
-**Code example:**
-
+In Compose, the same can be achieved using the `mergeDescendants` parameter:
+```kotlin
+@Composable
+private fun SongCard(title: String, artist: String) {
+    Column(modifier = Modifier.semantics(mergeDescendants = true) {}) {
+        Text(title)
+        Text(artist)
+    }
+}
 ```
-<!-- In response to a single user interaction, accessibility services announce the custom content description for the group. -->
-<ConstraintLayout
-android:id="@+id/song_data_container" ...
-android:screenReaderFocusable="true"
-android:contentDescription="@string/title_artist_best_song">
 
-    <TextView
-        android:id="@+id/song_title" ...
+_Note 1:_ In cases like these, it is recommended to define content descriptions as concisely as possible, considering that accessibility services will read them one after the other.
 
-        <!-- Content ignored by accessibility services -->
-        android:text="@string/my_song_title" />
-    <TextView
-        android:id="@+id/song_artist"
-
-        <!-- Content ignored by accessibility services -->
-        android:text="@string/my_songwriter" />
-</ConstraintLayout>
-```
+_Note 2:_ It is also possible to define a `contentDescription` for the whole group, in which case the descriptions of the children will be ignored. But setting the description for the whole group by aggregating the descriptions of its descendants is not advised, as it is error-prone. For example, if any of the descendants' text changes, the group description will not be updated automatically.
 
 - Nested groups
 
@@ -237,7 +273,7 @@ If the app you are building provides multi-dimensional information, it is recomm
 
 **Code example:**
 
-```
+```xml
 <!-- In response to a single user interaction, accessibility services announce the events for a single stage only. -->
 <ConstraintLayout
     android:id="@+id/festival_event_table" ... >
@@ -258,13 +294,24 @@ If the app you are building provides multi-dimensional information, it is recomm
 </ConstraintLayout>
 ```
 
-- Headings within text
+In Compose, nested groups can be merged in a similar way
 
-It is also possible to use _headings_ to summarize groups of text that appear on the screen. To mark a view to be treated as a heading, you can set `android:accessibilityHeading` to true.
+```kotlin
+@Composable
+fun FestivalEventTable() {
+    Row {
+        Column(modifier = Modifier.semantics(mergeDescendants = true) { }) {
+            // UI elements that describe the events on Stage A
+        }
 
-That way, users of accessibility services can choose to navigate between headings instead of navigating between paragraphs or between words which can improve the text navigation experience.
+        Column(modifier = Modifier.semantics(mergeDescendants = true) { }) {
+            // UI elements that describe the events on Stage B
+        }
+    }
+}
+```
 
-:no_entry_sign: **Failure criteria**
+🚫 **Failure criteria**
 
 - It is not clear which parts of the screen are contextually connected.
 
