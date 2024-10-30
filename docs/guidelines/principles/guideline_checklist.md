@@ -38,22 +38,22 @@ Guidelines mentioned in this section are related to the user interface and exper
 
 Guidelines mentioned in this section are related to the screen reader and interaction with the application. These guidelines contain technical, but also design and content-related information which should be implemented in collaboration with other teams (based on required inputs).
 
-- [ ] 1.1.1 Non-text content (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#non-text-content-identification-wcag-111---level-a) | Flutter
-- [ ] 1.3.1 Info and relationships (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#element-information-and-relationship-wcag-131---level-a) | Flutter
-- [ ] 1.3.2 Meaningful sequence (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#meaningful-sequence-wcag-132---level-a) | Flutter
+- [ ] 1.1.1 Non-text content (A) - [Android](../platforms/android/guideline_percievable_android.md#non-text-content-identification-wcag-111---level-a) | [iOS](../platforms/ios/guideline_perceivable_ios.md#non-text-content-identification-wcag-111---level-a) | Flutter
+- [ ] 1.3.1 Info and relationships (A) - [Android](../platforms/android/guideline_percievable_android.md#info-and-relationships-wcag-131---level-a) | [iOS](../platforms/ios/guideline_perceivable_ios.md#element-information-and-relationship-wcag-131---level-a) | Flutter
+- [ ] 1.3.2 Meaningful sequence (A) - [Android](../platforms/android/guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) | [iOS](../platforms/ios/guideline_perceivable_ios.md#meaningful-sequence-wcag-132---level-a) | Flutter
 - [ ] 1.3.5 Identify input purpose (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#identify-input-purpose-wcag-135---level-aa) | Flutter
 - [ ] 1.4.10 Reflow (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#reflow-wcag-1410---level-aa) | Flutter
-- [ ] 2.4.1 Bypass blocks (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#bypass-blocks-wcag-241---level-a) | Flutter
+- [ ] 2.4.1 Bypass blocks (A) - [Android](../platforms/android/guideline_operable_android.md#bypass-blocks-wcag-241---level-a) | [iOS](../platforms/ios/guideline_operable_ios.md#bypass-blocks-wcag-241---level-a) | Flutter
 - [ ] 2.4.2 Page titled (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#page-titled-wcag-242---level-a) | Flutter
-- [ ] 2.4.3 Focus order (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#focus-order-wcag-243---level-a) | Flutter
+- [ ] 2.4.3 Focus order (A) - [Android](../platforms/android/guideline_operable_android.md#focus-order-wcag-243---level-a) | [iOS](../platforms/ios/guideline_operable_ios.md#focus-order-wcag-243---level-a) | Flutter
 - [ ] 2.4.4 Link purpose (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#action-purpose-wcag-244---level-a) | Flutter
 - [ ] 2.4.5 Multiple ways (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
 - [ ] 2.4.6 Headings and labels (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#heading-and-labels-wcag-246---level-aa) | Flutter
 - [ ] 2.4.7 Focus visible (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#focus-visibility-wcag-247---level-aa) | Flutter
 - [ ] 2.4.11 Focus not obstructed (AA) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#focus-not-obscured-minimum-wcag-2411---level-aa) | Flutter
 - [ ] 2.5.3 Label in name (A)  - Android | [iOS](../platforms/ios/guideline_operable_ios.md#label-in-name-wcag-253---level-a) | Flutter
-- [ ] 3.2.1 On focus (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#on-focus--on-input-wcag-321-and-322---level-a) | Flutter
-- [ ] 3.2.2 On input (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#on-focus--on-input-wcag-321-and-322---level-a) | Flutter
+- [ ] 3.2.1 On focus (A) - [Android](../platforms/android/guideline_understandable_android.md#on-focus--on-input-wcag-321-and-322---level-a) | [iOS](../platforms/ios/guideline_understandable_ios.md#on-focus--on-input-wcag-321-and-322---level-a) | Flutter
+- [ ] 3.2.2 On input (A) - [Android](../platforms/android/guideline_understandable_android.md#on-focus--on-input-wcag-321-and-322---level-a) | [iOS](../platforms/ios/guideline_understandable_ios.md#on-focus--on-input-wcag-321-and-322---level-a) | Flutter
 - [ ] 3.2.3 Consistent navigation (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#consistent-navigation-wcag-323---level-aa) | Flutter
 - [ ] 3.2.4 Consistent identification (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#consistent-identification-wcag-324---level-aa) | Flutter
 - [ ] 3.3.1 Error identification (A) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#error-identification-wcag-331---level-a) | Flutter
