@@ -283,13 +283,14 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 ### Target size (Minimum) (WCAG 2.5.8 - Level AA)
 
 To make your app's interface more user-friendly, ensure that controls are easy to see and tap. A bigger target size is also essential to make your app accessible to everyone, including users with disabilities.
-More details about this guideline can be found [here](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+
+> This guideline covers point *2.5.8 Target Size (Minimum) - Level AA of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
-This guideline primarily addresses design considerations. However, it is important that from the development side, the application provide enough space for the elements to be easily operable by touch.
+It is important that the application provides enough space for the elements to be easily operable by touch.
 
-As per official Android documentation, recommended minimum touch target size is 48x48 dp for each interactive UI element, though larger sizes can further improve usability. 
+As per official Android documentation, the recommended minimum touch target size is 48x48 dp for each interactive UI element, though larger sizes can further improve usability.
 
 **Code example:**
 
@@ -316,7 +317,10 @@ IconButton(
     // Content of the IconButton goes here
 }
 ```
-More about the implementation details can be found [here](https://developer.android.com/guide/topics/ui/accessibility/apps#large-controls).
+More about success criterion can be found on the [official WCAG page](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+Additionally, implementation details can be found in the [official Android documentation](https://developer.android.com/guide/topics/ui/accessibility/apps#large-controls).
+
+_Important to note is that this guideline primarily depends on accessible design._
 
 :no_entry_sign: **Failure criteria**
 
