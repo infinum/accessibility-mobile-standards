@@ -162,6 +162,10 @@ Techniques mentioned above does not apply to the following cases:
 - when previously entered information is no longer valid
   - Example: After changing their email address, a user must re-enter the new email to confirm it.
 
+#### 🚫 Failures
+  
+Failures are not defined by the WCAG at the time of writing this.
+
 ---
 
 #### Sources
