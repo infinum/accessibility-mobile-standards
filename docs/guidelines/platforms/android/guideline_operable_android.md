@@ -314,7 +314,20 @@ Based on this guideline, users should clearly understand the purpose of the head
 
 When the user chooses to navigate between headings instead of between paragraphs or between word, make sure that sections on screen are defined as headings so that users can "skim" through them to locate the specific content they need.
 
-For Views, you can set the `android:accessibilityHeading` attribute to `true` for a view to be treated as a heading (requires minSdk >= 28). Alternatively, you can set `ViewCompat.setAccessibilityHeading(view, true)` for older versions.
+For Views, you can set the `android:accessibilityHeading` attribute to `true` for a view to be treated as a heading (requires minSdk >= 28). Alternatively, you can set `ViewCompat.setAccessibilityHeading(view, true)` or use `AccessibilityDelegateCompat` for older versions.
+
+Example: setting a TextView as a heading via `AccessibilityDelegateCompat`:
+```
+ ViewCompat.setAccessibilityDelegate(
+        personalData,
+        object : AccessibilityDelegateCompat() {
+            override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+                super.onInitializeAccessibilityNodeInfo(host, info)
+                info.isHeading = true
+            }
+        },
+    )
+```
 
 For Compose, you can use `heading()` semantics property to define a certain node as a heading.
 
