@@ -78,17 +78,60 @@ When the user is navigating through the app **using the arrow keys on the keyboa
 
 Provide users enough time to read and use the content.
 
-*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
+### Timing Adjustable (WCAG 2.2.1 - Level A)
 
-:white_check_mark: **Success criteria**
+Ensure that users can adjust the timing of content that is displayed on the screen.
 
-All users should be able to interact with the content displayed on the screen, even if a time limit is defined for interaction with a specific view. Therefore, users should be able to turn off the defined time limit, adjust it or extend it.
+
+#### ✅ Success technique(s)
+
+All users should be able to interact with the content displayed on the screen, even if a time limit is defined for interaction with a specific view. Therefore, users should be able to turn off the defined time limit, adjust it or extend it up to 10 times the intended time.
 
 - In case of session inactivity, it is recommended to notify the user that they are about to be signed off with the ability to extend that time limit. The notification could be displayed in the form of an AlertDialog or something similar. TalkBack service tells you about alerts and notifications so users using accessibility services would also be aware of the defined limit.
 
 - In the case of auto-updating content, it is recommended to allow the user to extend the defined time limit to at least ten times the length of the default setting so that they're able to process the displayed information.
 
-:no_entry_sign: **Failure criteria**
+- **Exceptions may apply** to to real-time events or content that is updated frequently, such as stock market data or sports scores.
+
+Most dominant time based UI is a snack bar or a toast message. In the case of a snack bar, you can extend the duration of the message by setting the duration to `Snackbar.LENGTH_LONG` and then setting the custom duration using the `setDuration()` method. The value of the duration should be able to be adjusted by the user in the Settings of the app.
+```
+val SNACK_BAR_DURATION = 10_000
+
+// Snackbar with custom duration
+Snackbar.make(
+    view = view, 
+    resId = R.string.action_completed,
+    startIconResId = Snackbar.LENGTH_LONG,
+    duration = SNACK_BAR_DURATION // Set custom duration
+).show()
+```
+
+```kotlin
+@Composable
+fun CustomSnackbarExample() {
+    val snackbarHostState = remember { SnackbarHostState() }
+    val coroutineScope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val SNACKBAR_DURATION = 10_000L // 10 seconds in milliseconds
+
+    // Trigger to show the Snackbar with a custom duration
+    LaunchedEffect(Unit) {
+        coroutineScope.launch {
+            snackbarHostState.showSnackbar(
+                message = context.getString(R.string.action_completed),
+                duration = SnackbarDuration.Indefinite // Keeps it visible until dismissed manually
+            )
+            delay(SNACKBAR_DURATION) // Wait for 10 seconds
+            snackbarHostState.currentSnackbarData?.dismiss() // Dismiss manually after 10 seconds
+        }
+    }
+
+    // Display the SnackbarHost to show the Snackbar
+    SnackbarHost(hostState = snackbarHostState)
+}
+```
+
+#### 🚫 Failures
 
 - Logging out the user without prior warning and the possibility to extend the session.
 
@@ -371,8 +414,6 @@ Text(
 
 We need to ensure that content does not rely on device motion for control, as some users may have difficulty moving or holding a device steadily. This helps make content accessible to everyone, regardless of their physical abilities (e.g. shake to undo).
 
-> This guideline covers point *2.5.4 Motion Actuation - Level A of the WCAG standard.*
-
 #### ✅ Success technique(s)
 
 Mobile apps that support interaction through motion actuation (e.g., shaking the device, tilting, or other motion-based gestures) must also provide an alternative input method, such as touch or on-screen controls. Users should be able to disable motion actuation and still interact with the app effectively.
@@ -390,8 +431,6 @@ Example: A mobile app that only allows form submission by shaking the device, wi
 ### Dragging Movements (WCAG 2.5.7 - Level AA)
 
 Due to different disabilities, some users may have difficulty performing dragging movements. This guideline states that the application should provide an alternative way to perform the action that is not based on dragging movements.
-
-> This guideline covers point *2.5.7 Dragging Movements - Level AA of the WCAG standard.*
 
 #### ✅ Success technique(s)
 
