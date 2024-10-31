@@ -311,6 +311,24 @@ Make sure that color isn't the only visual cue used for conveying information, i
 
 _Important to note is that this guideline primarily depends on accessible design._
 
+### Audio control (WCAG 1.4.2 - Level A)
+
+If any audio plays automatically for more than 3 seconds, there should be [an option to pause or stop the audio](https://developer.android.com/guide/topics/ui/accessibility/principles#media-content), or a way to adjust the audio volume independently from the overall system volume.
+
+> This guideline covers _1.4.2 Audio control - Level A of the WCAG standard._
+
+:white_check_mark: **Success criteria**
+
+- Playing a sound that turns off automatically within three seconds
+- Playing sounds only on user request
+- Providing a way to pause or stop the sound
+
+:no_entry_sign: **Failure criteria**
+
+- Playing sounds that last longer than three seconds without the option to pause or stop them
+
+_Important to note is that this guideline depends on the accessible design._
+
 ## Other perceivable guidelines
 
 This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met."
