@@ -290,9 +290,9 @@ To make your app's interface more user-friendly, ensure that controls are easy t
 
 > This guideline covers point *2.5.8 Target Size (Minimum) - Level AA of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+:white_check_mark: **Success technique(s)**
 
-It is important that the application provides enough space for the elements to be easily operable by touch.
+The application must provide enough space for the elements to be easily operable by touch.
 
 As per official Android documentation, the recommended minimum touch target size is 48x48 dp for each interactive UI element, though larger sizes can further improve usability.
 
