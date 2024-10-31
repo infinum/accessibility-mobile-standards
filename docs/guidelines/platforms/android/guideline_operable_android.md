@@ -217,6 +217,7 @@ Each screen should have a clear, descriptive, and, if possible, unique title tha
 If the title is defined using a toolbar with custom behavior or another custom view, it is important to ensure that it will be read using accessibility services.
 
 If you're using Compose, set the `traversalIndex` to -1f to ensure that the TalkBack prioritises it during traversal. This negative value ensures it is read before any elements with a default index of 0f. For layouts that use `TopAppBar`, they are usually prioritised first, but the TalkBack reads the navigation icon before the title. This can be fixed by setting the traversalIndex of title composable to -1f.
+If multiple elements have the same traversalIndex, the TalkBack will read them by taking into account the language (and layout direction of the application) into account. In Left-to-Right languages, the order would go from top to bottom, from left to right.
 
 **Code example:**
 
