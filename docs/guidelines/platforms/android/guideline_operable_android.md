@@ -282,6 +282,91 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 
 ---
 
+### Heading and Labels (WCAG 2.4.6 - Level AA)
+
+Based on this guideline, users should clearly understand the purpose of the heading or label. It should be descriptive and give information about the content that comes next.
+
+> This guideline covers point *2.4.6 Headings and Labels - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+When the user chooses to navigate between headings instead of between paragraphs or between word, make sure that sections on screen are defined as headings so that users can "skim" through them to locate the specific content they need.
+
+For Views, you can set the `android:accessibilityHeading` attribute to `true` for a view to be treated as a heading (requires minSdk >= 28). Alternatively, you can set `ViewCompat.setAccessibilityHeading(view, true)` or use `AccessibilityDelegateCompat` for older versions.
+
+Example: setting a TextView as a heading via `AccessibilityDelegateCompat`:
+```
+ ViewCompat.setAccessibilityDelegate(
+        personalData,
+        object : AccessibilityDelegateCompat() {
+            override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+                super.onInitializeAccessibilityNodeInfo(host, info)
+                info.isHeading = true
+            }
+        },
+    )
+```
+
+For Compose, you can use `heading()` semantics property to define a certain node as a heading.
+
+Example: setting a Text composable as a heading:
+```
+Text(
+    modifier = Modifier.semantics {
+        heading()
+    }
+)
+```
+
+In general, try to make the headings and labels as descriptive as possible. Also, in addition to that, putting the most important information at the beginning of each heading helps users navigate through the content more easily.
+
+#### 🚫 Failures
+
+- Not providing a heading or label for the content that follows
+
+- Providing a missing or incorrect heading or label
+
+## Input modalities (WCAG 2.5)
+
+*Make it easier for users to operate functionality through various inputs beyond keyboard.*
+
+### Label in Name (WCAG 2.5.3 - Level A)
+
+All user interface components that are defined as labels (that include text or images of text) contain the name, which is visible (presented visually).
+
+> This guideline covers point *2.5.3 Label in Name - Level A of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+A user should easily understand the information related to the focused label. To achieve this, the following steps should be taken:
+
+- content description should match the visible label name, or
+
+- include the text of the visible label as a part of the content description
+
+For views, it can be set through `android:contentDescription` attribute in XML or by using `View.setContentDescription(contentDescription)` function.
+
+For Compose, it can be set as a semantics property.
+
+Example: setting contentDescription in Compose:
+```
+Text(
+     modifier = Modifier.semantics {
+            contentDescription = text
+        },
+     text = text,
+```
+
+**Important!** For most components like labels and buttons, accessibility service will handle things automatically. In case of a custom component, `contentDescription` label should be set manually.
+
+#### 🚫 Failures
+
+- Not including the text of the visible label as a part of the content description
+
+- Words of visible label and content description not matching (e.g. not the same order)
+
+---
+
 ### Motion Actuation (WCAG 2.5.4 - Level A)
 
 We need to ensure that content does not rely on device motion for control, as some users may have difficulty moving or holding a device steadily. This helps make content accessible to everyone, regardless of their physical abilities (e.g. shake to undo).
