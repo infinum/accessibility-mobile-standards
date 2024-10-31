@@ -70,7 +70,7 @@ Note: Certain elements may require context-specific labels to convey their funct
 
 ---
 
-## Input Assistance
+## Input Assistance (WCAG 3.3)
 
 Help users avoid and correct mistakes.
 
