@@ -124,7 +124,7 @@ Do not design content in a way that is known to cause seizures or physical react
 
 Apps should not contain elements that flash more than three times in one second.
 
-*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
+> This guideline covers _2.3.1 - Level A of the WCAG standard._
 
 #### ✅ Success technique(s)
 

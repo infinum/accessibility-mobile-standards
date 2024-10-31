@@ -301,11 +301,11 @@ Make sure that color isn't the only visual cue used for conveying information, i
 
 > This guideline covers _1.4.1 Use of Color - Level A of the WCAG standard._
 
-:white_check_mark: **Success criteria**
+:white_check_mark: **Success technique(s)**
 
 [Use cues or symbols rather than colors to distinguish different views and different actions](https://developer.android.com/guide/topics/ui/accessibility/principles#cues-other-than-color) that those views provide. That way, users with color vision deficiencies could also easily understand the whole UI.
 
-:no_entry_sign: **Failure criteria**
+:no_entry_sign: **Failures**
 
 - An important difference between elements is stressed only with colors.
 
