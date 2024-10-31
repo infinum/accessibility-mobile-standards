@@ -154,18 +154,22 @@ This can be achieved in View system by by setting `ViewCompat.setAccessibilityLi
 changes to the view.
 To interrupt ongoing speech and start the announcement, use `ACCESSIBILITY_LIVE_REGION_ASSERTIVE`. To wait for ongoing speech, use `ACCESSIBILITY_LIVE_REGION_POLITE`.
 
-Example: Add assertive announcement of changes to the EditText
+Example: Implement assertive announcements for shopping cart updates
+
+In a shopping app, we can add assertive announcements of the number of items in the shopping cart after the user has added or removed an item, such as  "1 item added to your cart. Total: 3 items," which can keep users updated on their cart status.
 
 ```
-ViewCompat.setAccessibilityLiveRegion(editText, ViewCompat.ACCESSIBILITY_LIVE_REGION_ASSERTIVE)
+ViewCompat.setAccessibilityLiveRegion(shoppingCartView, ViewCompat.ACCESSIBILITY_LIVE_REGION_ASSERTIVE)
 ```
 
 In Compose, the same can be achieved by setting the `liveRegion` semantics property.
 
-Example: Add assertive announcement of changes to the TextField
+Example: Implement assertive announcements for remaining cooking time
+
+In a cooking app, we can provide real-time updates by announcing, "Your meal will be ready in 5 minutes.", allowing users to stay informed without checking their phones.
 
 ```
-TextField(
+CookingCountdownTimer(
     modifier = Modifier.semantics {
         liveRegion = LiveRegionMode.Assertive
     }
