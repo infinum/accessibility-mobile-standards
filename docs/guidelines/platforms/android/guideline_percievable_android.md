@@ -290,7 +290,7 @@ To ensure our app is fully accessible to all users, we should avoid relying on a
 **Example:**
 
 If the action on the screen depends on the button of a particular shape (e.g., "To submit the form press on the round button"), it is recommended to provide additional cues about the button's purpose.
-For example, adding a plus sign to the button that will be appropriately labeled so users using accessibility services will be able to identify the targeted button more easily ("To submit the form press on the round plus button").
+For example, adding a `check sign` to the button that will be appropriately labeled so users using accessibility services will be able to identify the targeted button more easily ("To submit the form press on the round check button").
 
 That way, users with visual impairments will be able to understand the button's purpose even if they can't see its shape.
 
