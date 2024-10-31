@@ -365,7 +365,7 @@ Text(
      text = text,
 ```
 
-For most components like labels and buttons, accessibility service will handle things automatically. In case of a custom component, `contentDescription` label should be set manually.
+**Important!** For most components like labels and buttons, accessibility service will handle things automatically. In case of a custom component, `contentDescription` label should be set manually.
 
 #### 🚫 Failures
 
