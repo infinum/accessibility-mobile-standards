@@ -280,6 +280,10 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 
 - The link is part of the longer text and implemented using ClickableSpan, so TalkBack users are not aware of the link’s existence.
 
+## Input Modalities
+
+_Make it easier for users to operate functionality through various inputs beyond keyboard._
+
 ### Target size (Minimum) (WCAG 2.5.8 - Level AA)
 
 To make your app's interface more user-friendly, ensure that controls are easy to see and tap. A bigger target size is also essential to make your app accessible to everyone, including users with disabilities.
