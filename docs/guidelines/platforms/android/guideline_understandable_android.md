@@ -98,7 +98,7 @@ Example - showing error on `TextInputLayout`:
  textInputLayout.setErrorEnabled(true)
 ```
 
-For Compose, a `error` semantics property can be used. However, this will only announce the error message, but it won't be shown on the screen.
+For Compose, an `error` semantics property can be used. However, this will only announce the error message, but it won't be shown on the screen.
 `TextField` can be used to display the error message. Its `label` parameter can be used to provide the message, and by combining it with `isError`, the `TextField`
  will change its appearance to indicate an error.
 
