@@ -78,13 +78,12 @@ When the user is navigating through the app **using the arrow keys on the keyboa
 
 Provide users enough time to read and use the content.
 
-### Timing Adjustable
+### Timing Adjustable (WCAG 2.2.1 - Level A)
 
 Ensure that users can adjust the timing of content that is displayed on the screen.
 
-*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 All users should be able to interact with the content displayed on the screen, even if a time limit is defined for interaction with a specific view. Therefore, users should be able to turn off the defined time limit, adjust it or extend it up to 10 times the intended time.
 
@@ -107,7 +106,32 @@ Snackbar.make(
 ).show()
 ```
 
-:no_entry_sign: **Failure criteria**
+```kotlin
+@Composable
+fun CustomSnackbarExample() {
+    val snackbarHostState = remember { SnackbarHostState() }
+    val coroutineScope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val SNACKBAR_DURATION = 10_000L // 10 seconds in milliseconds
+
+    // Trigger to show the Snackbar with a custom duration
+    LaunchedEffect(Unit) {
+        coroutineScope.launch {
+            snackbarHostState.showSnackbar(
+                message = context.getString(R.string.action_completed),
+                duration = SnackbarDuration.Indefinite // Keeps it visible until dismissed manually
+            )
+            delay(SNACKBAR_DURATION) // Wait for 10 seconds
+            snackbarHostState.currentSnackbarData?.dismiss() // Dismiss manually after 10 seconds
+        }
+    }
+
+    // Display the SnackbarHost to show the Snackbar
+    SnackbarHost(hostState = snackbarHostState)
+}
+```
+
+#### 🚫 Failures
 
 - Logging out the user without prior warning and the possibility to extend the session.
 
