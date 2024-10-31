@@ -150,7 +150,7 @@ On mobile this means that the user should be able to know if the current state h
 #### ✅ Success technique(s)
 
 When an important thing on the screen changes, users should be notified about it.
-This can be achieved in View system by by setting `ViewCompat.setAccessibilityLiveRegion` which makes the accessibility service announce
+This can be achieved in View system by setting `ViewCompat.setAccessibilityLiveRegion` which makes the accessibility service announce
 changes to the view.
 To interrupt ongoing speech and start the announcement, use `ACCESSIBILITY_LIVE_REGION_ASSERTIVE`. To wait for ongoing speech, use `ACCESSIBILITY_LIVE_REGION_POLITE`.
 
