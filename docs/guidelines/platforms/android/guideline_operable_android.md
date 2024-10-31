@@ -282,9 +282,11 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 
 ---
 
-### Motion Actuation
+### Motion Actuation (WCAG 2.5.4 - Level A)
 
-*This guideline covers point 2.5.4 Motion Actuation - Level A of the WCAG standard.*
+We need to ensure that content does not rely on device motion for control, as some users may have difficulty moving or holding a device steadily. This helps make content accessible to everyone, regardless of their physical abilities (e.g. shake to undo).
+
+> This guideline covers point *2.5.4 Motion Actuation - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -300,9 +302,11 @@ Example: A mobile app that only allows form submission by shaking the device, wi
 
 ---
 
-### Dragging Movements
+### Dragging Movements (WCAG 2.5.7 - Level AA)
 
-*This guideline covers point 2.5.7 Dragging Movements - Level AA of the WCAG standard.*
+Due to different disabilities, some users may have difficulty performing dragging movements. This guideline states that the application should provide an alternative way to perform the action that is not based on dragging movements.
+
+> This guideline covers point *2.5.7 Dragging Movements - Level AA of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
