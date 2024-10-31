@@ -27,6 +27,33 @@ Every user interface element should have an accessibility label that can be used
 `android:contentDescription` attribute in XML or by using `View.setContentDescription(contentDescription)` function.
 For Compose, contentDescription can be set as a semantics property.
 
+When describing editable elements such as `EditText` or `TextField`, it is usually helpful to provide a text that gives examples of valid input in the element itself. That way, users who navigate through the app using screen readers could get more info about the required input when they focus on the editable element.
+In these situations, it is recommended to use `android:hint` attribute for Views.
+
+Example: setting a hint for `EditText` view
+
+```
+<!-- The hint text for en-US locale would be "Password". -->
+<EditText
+   android:id="@+id/passwordInputField"
+   android:hint="@string/password_hint_text" ... />
+  ```
+
+For editable Compose components such as `TextField`, an example can be given by passing a `Text` composable through the `placeholder` parameter.
+
+Example: setting a placeholder for `TextField` composable
+
+```
+<!-- The hint text for en-US locale would be "Password". -->
+TextField(
+    value = password,
+    onValueChange = { },
+    placeholder = {
+        Text(text = stringResource(R.string.password_hint_text))
+    }
+)
+```
+
 Accessibility action can be defined for Views via `AccessibilityDelegateCompat`'s `addAction` function.
 In the example below, talkback service will notify the user that performing click option on FAB will open payment options.
 
