@@ -212,6 +212,10 @@ For legal transactions, the app should provide a stated time within which the tr
 
 App should enable users to recover deleted information by temporarily marking it for deletion, moving it to a holding area for a set time, or maintaining a record of deletions for easy restoration requests.
 
+#### 🚫 Failures
+
+Failures are not defined by the WCAG at the time of writing this.
+
 ### Redundant Entry (WCAG 3.3.7 - Level A)
 
 Ensure that multi-step processes are user-friendly by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
