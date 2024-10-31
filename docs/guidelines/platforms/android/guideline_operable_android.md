@@ -373,13 +373,13 @@ We need to ensure that content does not rely on device motion for control, as so
 
 > This guideline covers point *2.5.4 Motion Actuation - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Mobile apps that support interaction through motion actuation (e.g., shaking the device, tilting, or other motion-based gestures) must also provide an alternative input method, such as touch or on-screen controls. Users should be able to disable motion actuation and still interact with the app effectively.
 
 Example: If your app allows users to shake their phone to refresh content, you should also provide an on-screen refresh button as an alternative.
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 An app that requires motion actuation (e.g., shaking or tilting) for core functions without offering a touch-based or alternative method of input would fail this criterion. Additionally, if motion-based controls cannot be disabled or cause unintended actions due to accidental motion, it would also be considered a failure.
 
@@ -393,13 +393,13 @@ Due to different disabilities, some users may have difficulty performing draggin
 
 > This guideline covers point *2.5.7 Dragging Movements - Level AA of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Mobile apps that require dragging movements (such as swiping or dragging objects across the screen) should also offer an alternative method for performing the same function. This could include taps, buttons, or keyboard inputs that achieve the same result without relying on dragging gestures.
 
 Example: In a photo-editing app that allows users to adjust sliders by dragging, provide the option to use + and - buttons or direct numerical input for precision.
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 An app that relies solely on dragging movements to complete important actions (e.g., moving an item into a folder, adjusting sliders) without offering an alternative input method would fail this criterion. If dragging movements are the only means of interaction, users with motor impairments or those using assistive technology would face accessibility barriers.
 
