@@ -94,7 +94,7 @@ Text(text = annotatedText)
 
 ---
 
-## Predictable
+## Predictable (WCAG 3.2)
 
 Make mobile apps appear and operate in predictable ways.
 
@@ -111,6 +111,28 @@ If the content displayed on the screen is designed and implemented following [Pe
 :no_entry_sign: **Failure criteria**
 
 - The content is not grouped based on context relationships and has no meaningful labels defined.
+
+### Consistent Identification (WCAG 3.2.4 - Level AA)
+
+While using the application, components that have the same functionality should be identified consistently.
+
+> This technique covers point *3.2.4 Consistent Identification - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+To satisfy this criterion, try to keep the identification of the same components consistent throughout the application. Use properties like `contentDescription` and `AccessibilityAction` with other parts of implementation to make sure they are defined and function in a same way.
+
+Example 1: Consider a search icon that consistently uses the same accessibility label throughout the application. By standardising the label, users can easily recognise and understand its function, reducing confusion and enhancing usability.
+
+Example 2: Identification should be consistent but not identical. For instance, an arrow that links to the next page can have the label "Go to page 4" on one page and "Go to page 5" on the next. While the labels differ, they maintain consistency in function.
+
+Example 3: While a search icon benefits from having a consistent label, a check mark can mean different things like "approved," "completed," or "included," depending on where it is used. This means it needs different labels based on the context.
+
+#### 🚫 Failures
+
+- As a failure, we can consider components and elements that have different identification across the application. This can confuse users and make it harder for them to use the application.
+
+Note: Certain elements may require context-specific labels to convey their functions accurately, balancing consistency with clarity to enhance user understanding
 
 ---
 
@@ -138,9 +160,9 @@ On the other hand, if your app requires the implementation of custom components,
 
 ---
 
-### Labels or instruction
+### Labels or Instructions (WCAG 3.3.2 - Level A)
 
-*This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.*
+> This technique covers point *3.3.2 Labels or Instructions - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
@@ -167,9 +189,22 @@ That way, services such as TalkBack will read defined relationships to the user,
 
 In the given example, services such as TalkBack will read – "EditBox for username" when the user sets focus to EditText.
 
+In Compose, there is no built-in way to link a label between different components. However, the `TextField` composable has a `label` parameter that can be used to provide a label for the input field. Another option is to use the `placeholder` parameter to hint at what should be entered into the field.
+
+Example:
+```
+<!-- Label text for en-US locale would be "Email Address" -->
+TextField(
+    value = email,
+    onValueChange = { email = it },
+    label = { Text(stringResource(R.string.email)) },
+    placeholder = { Text(stringResource(R.string.email_example)) }
+)
+```
+
 :no_entry_sign: **Failure criteria**
 
-- Not providing enough context for the views that expect user interaction.
+- Not providing enough context for the views / composables that expect user interaction.
 
 ---
 
