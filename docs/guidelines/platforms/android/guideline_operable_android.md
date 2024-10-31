@@ -337,6 +337,7 @@ Text(
     modifier = Modifier.semantics {
         heading()
     }
+)
 ```
 
 In general, try to make the headings and labels as descriptive as possible. Also, in addition to that, putting the most important information at the beginning of each heading helps users navigate through the content more easily.
