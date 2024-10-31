@@ -206,38 +206,15 @@ ViewCompat.setAccessibilityDelegate(personalData, object : AccessibilityDelegate
 
 ---
 
-### Page Titled (WCAG 2.4.2 - Level A)
+### Page Titles
 
-> This guideline covers point *2.4.2 Page Titled - Level A of the WCAG standard.*
+*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
 
 :white_check_mark: **Success criteria**
 
 Each screen should have a clear, descriptive, and, if possible, unique title that describes the purpose of that screen that will be understandable to all users. Also, it is important to make sure that the title is the first element read when the user enters the screen. This could be achieved by following design guidelines or with the help of setting the `android:accessibilityTraversalBefore` attribute.
 
 If the title is defined using a toolbar with custom behavior or another custom view, it is important to ensure that it will be read using accessibility services.
-
-If you're using Compose, set the `traversalIndex` to -1f to ensure that the TalkBack prioritises it during traversal. This negative value ensures it is read before any elements with a default index of 0f. For layouts that use `TopAppBar`, they are usually prioritised first, but the TalkBack reads the navigation icon before the title. This can be fixed by setting the traversalIndex of title composable to -1f.
-If multiple elements have the same traversalIndex, the TalkBack will read them by taking into account the language (and layout direction of the application) into account. In Left-to-Right languages, the order would go from top to bottom, from left to right.
-
-**Code example:**
-
-```
- TopAppBar(
-        title = {
-            Text(
-                modifier = Modifier.semantics { traversalIndex = -1f },
-                text = title,
-```
-
-The traversalIndex only affects nodes that are focusable by screen readers, such as text and buttons. To ensure that non-focusable elements (Columns, Rows, or Boxes) are read in a specific order, you can group them using the `isTraversalGroup` property.
-
-```
- Column(
-        modifier = Modifier.semantics { isTraversalGroup = true }
-    ) {
-        ...
-    }
-```
 
 :no_entry_sign: **Failure criteria**
 
@@ -387,6 +364,46 @@ Text(
 - Not including the text of the visible label as a part of the content description
 
 - Words of visible label and content description not matching (e.g. not the same order)
+
+---
+
+### Motion Actuation (WCAG 2.5.4 - Level A)
+
+We need to ensure that content does not rely on device motion for control, as some users may have difficulty moving or holding a device steadily. This helps make content accessible to everyone, regardless of their physical abilities (e.g. shake to undo).
+
+> This guideline covers point *2.5.4 Motion Actuation - Level A of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+Mobile apps that support interaction through motion actuation (e.g., shaking the device, tilting, or other motion-based gestures) must also provide an alternative input method, such as touch or on-screen controls. Users should be able to disable motion actuation and still interact with the app effectively.
+
+Example: If your app allows users to shake their phone to refresh content, you should also provide an on-screen refresh button as an alternative.
+
+#### 🚫 Failures
+
+An app that requires motion actuation (e.g., shaking or tilting) for core functions without offering a touch-based or alternative method of input would fail this criterion. Additionally, if motion-based controls cannot be disabled or cause unintended actions due to accidental motion, it would also be considered a failure.
+
+Example: A mobile app that only allows form submission by shaking the device, with no button for submission, would fail this criterion.
+
+---
+
+### Dragging Movements (WCAG 2.5.7 - Level AA)
+
+Due to different disabilities, some users may have difficulty performing dragging movements. This guideline states that the application should provide an alternative way to perform the action that is not based on dragging movements.
+
+> This guideline covers point *2.5.7 Dragging Movements - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+Mobile apps that require dragging movements (such as swiping or dragging objects across the screen) should also offer an alternative method for performing the same function. This could include taps, buttons, or keyboard inputs that achieve the same result without relying on dragging gestures.
+
+Example: In a photo-editing app that allows users to adjust sliders by dragging, provide the option to use + and - buttons or direct numerical input for precision.
+
+#### 🚫 Failures
+
+An app that relies solely on dragging movements to complete important actions (e.g., moving an item into a folder, adjusting sliders) without offering an alternative input method would fail this criterion. If dragging movements are the only means of interaction, users with motor impairments or those using assistive technology would face accessibility barriers.
+
+Example: A to-do list app where the only way to reorder tasks is by dragging items, without an option to move tasks via buttons, would fail this criterion.
 
 ---
 
