@@ -9,7 +9,7 @@ Provide text alternatives for any non-text content so that it can be changed int
 
 *This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 ### Non-text context
 
@@ -17,7 +17,7 @@ Each UI element should include a description that describes its purpose. All ele
 
 If an element exists on the UI only for decorative purposes it is recommended that you set its `contentDescription` to "null" or `android:importantForAccessibility` to "no" for devices running Android 4.1 and higher.
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes
 
@@ -29,7 +29,7 @@ Provide alternatives for time-based media.
 
 *This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Suppose the app you are building includes media content such as video clips or audio recordings. In that case, it is suggested to provide an alternative for users with different types of accessibility needs for them to understand the material. The suggested practice would be to:
 
@@ -37,7 +37,7 @@ Suppose the app you are building includes media content such as video clips or a
 
 - If a video presents information that is vital to completing workflow, provide the same content in an alternative format, such as a transcript
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - All media is presented to the user without the possibility of changing some of the controls (slow down, pause, volume up, etc.).
 
@@ -53,7 +53,7 @@ Information, structure, and relationships conveyed through presentation are avai
 
 *This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 - Groups of related content
 
@@ -142,7 +142,7 @@ It is also possible to use _headings_ to summarize groups of text that appear on
 
 That way, users of accessibility services can choose to navigate between headings instead of navigating between paragraphs or between words which can improve the text navigation experience.
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - It is not clear which parts of the screen are contextually connected.
 
@@ -152,7 +152,7 @@ That way, users of accessibility services can choose to navigate between heading
 
 *This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 If the order of the content displayed on the screen is crucial for understanding, it is very important to make sure it will be presented in the same order when using accessibility services. That way, users of accessibility services (such as TalkBack) can get a clearer picture of the content and possible actions on the current screen that is being navigated through.
 
@@ -188,7 +188,7 @@ ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompa
 })
 ```
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - Views displayed on the screen break consistency of the navigation.
 
@@ -198,22 +198,23 @@ ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompa
 
 *This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 The content provided in your app must be easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different views and different actions that those views provide. That way, users with color vision deficiencies could also easily understand the whole UI.
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - An important difference between elements is stressed only with colors.
 
 ---
 
 
-### Resize text
+### Resizeable text (WCAG 1.4.4 - Level AA)
 
-*This guideline covers point 1.4.4 Resize text - Level AA of the WCAG standard.*
+The text should be resizeable up to 200% without loss of content or functionality. This applies to every text content on the screen except captions and images of text.
 
-:white_check_mark: **Success criteria**
+
+#### ✅ Success technique(s)
 
 Mobile apps must ensure that text can be resized up to **200%** without loss of content or functionality. This is essential for users with low vision who need larger text for readability. Specifically:
 
@@ -221,61 +222,9 @@ Mobile apps must ensure that text can be resized up to **200%** without loss of 
 - There should be no horizontal scrolling, content overlap, or loss of functionality when text is resized.
 - All UI components should remain usable and readable, even at larger text sizes.
 
-:no_entry_sign: **Failure criteria**
-
-- An app where text overflows or overlaps when scaled up to 200%, making it unreadable, would fail this criterion.
-- If an app forces horizontal scrolling to read resized text, it would also fail.
-- Defining text sizes in pixels (px) rather than sp would prevent proper scaling and lead to accessibility issues.
-
-**Bad Example:** Fixed Height with Text Encapsulation and limiting the line count
-
-```
-<TextView
-    android:id="@+id/fixed_text"
-    android:layout_width="wrap_content"
-    android:layout_height="50dp" <!-- Fixed height -->
-    android:maxLines="2"  <!-- Limits the text to 2 lines -->
-    android:ellipsize="end" <!-- Adds "..." at the end if text is too long -->
-    android:text="This is a long piece of text that might be cut off when resized."
-    android:textSize="16sp" />
-```
-
-```kotlin
-Box(modifier = Modifier.height(50.dp)) {
-    Text(
-        text = "This is a long piece of text that might be cut off when resized.",
-        fontSize = 16.sp,
-        maxLines = 2,  // Limits the text to 2 lines
-        overflow = TextOverflow.Ellipsis  // Adds "..." at the end if text is too long
-    )
-}
-```
-
-**Solution:** 
-
-```
-<TextView
-    android:id="@+id/fixed_text"
-    android:layout_width="wrap_content"
-    android:minHeight="50dp"  <!-- Minimum height but flexible -->
-    android:text="This is a long piece of text that might be cut off when resized."
-    android:textSize="16sp" />
-```
-
-```kotlin
-Box(modifier = Modifier
-    .minHeight(50.dp)  // Minimum height but flexible
-    .wrapContentHeight()) {
-    Text(
-        text = "This is a long piece of text that will resize appropriately.",
-        fontSize = 16.sp
-    )
-}
-```
 
 **Important Point:** Handling Large Text Without Scrollable Container
-
-When presenting large text or content that may exceed the visible area of the screen, it is crucial to provide a way for users to read all the content without losing access. This is especially important for users who might need larger text for better readability.
+- When presenting large text or content that may exceed the visible area of the screen, it is crucial to provide a way for users to read all the content without losing access. This is especially important for users who might need larger text for better readability.
 
 ```
 <!-- Using ScrollView to contain large text -->
@@ -304,22 +253,78 @@ Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
 }
 ```
 
+##### 🚫 Failures
+
+- An app where text overflows or overlaps when scaled up to 200%, making it unreadable, would fail this criterion.
+- If an app forces horizontal scrolling to read resized text, it would also fail.
+- Defining text sizes in pixels (px) rather than sp would prevent proper scaling and lead to accessibility issues.
+
+**Bad practice example:** Fixed Height with Text Encapsulation and limiting the line count
+
+```
+<TextView
+    android:id="@+id/fixed_text"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp" <!-- Fixed height -->
+    android:maxLines="2"  <!-- Limits the text to 2 lines -->
+    android:ellipsize="end" <!-- Adds "..." at the end if text is too long -->
+    android:text="This is a long piece of text that might be cut off when resized."
+    android:textSize="16sp" />
+```
+
+```kotlin
+Box(modifier = Modifier.height(50.dp)) {
+    Text(
+        text = "This is a long piece of text that might be cut off when resized.",
+        fontSize = 16.sp,
+        maxLines = 2,  // Limits the text to 2 lines
+        overflow = TextOverflow.Ellipsis  // Adds "..." at the end if text is too long
+    )
+}
+```
+
+**Good practice:**
+
+```
+<TextView
+    android:id="@+id/fixed_text"
+    android:layout_width="wrap_content"
+    android:minHeight="50dp"  <!-- Minimum height but flexible -->
+    android:text="This is a long piece of text that might be cut off when resized."
+    android:textSize="16sp" />
+```
+
+```kotlin
+Box(modifier = Modifier
+    .minHeight(50.dp)  // Minimum height but flexible
+    .wrapContentHeight()) {
+    Text(
+        text = "This is a long piece of text that will resize appropriately.",
+        fontSize = 16.sp
+    )
+}
+```
+
+
 ---
 
-### Images of Text
+### Images of text (WCAG 1.4.5 - Level AA)
 
-*This guideline covers point 1.4.5 Images of Text - Level AA of the WCAG standard.*
+Where components with image of text are used, they cannot satisfy the other guidelines due to image constraints. E.g., the text in the image cannot be resized which breaks the guideline 1.4.4. To avoid that, use of images of text should be avoided, or at least a text alternative should be provided.
 
-:white_check_mark: **Success criteria**
+This does not affect components which are essential for the functionality of the application, like logos or branding images.
+
+#### ✅ Success technique(s)
 
 Mobile apps should avoid using images of text unless the text is **part of a logo or brand name**. When images of text are used, the following must be ensured:
 
-The text contained in the image must have a sufficient contrast ratio with its background.
-There must be an equivalent textual alternative available to convey the same information as the image of text.
-Users should be able to resize text up to 200% without losing content or functionality.
-This guideline ensures that users with visual impairments, including those who rely on screen readers, can access and understand the content.
+- The text contained in the image must have a sufficient contrast ratio with its background.
+- There must be an equivalent textual alternative available to convey the same information as the image of text.
+- Users should be able to resize text up to 200% without losing content or functionality.
+- This guideline ensures that users with visual impairments, including those who rely on screen readers, can access and understand the content.
+- The content description of the image should be meaningful, providing context that accurately conveys the image’s purpose and information.
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - Images of Text: It uses images of text without providing a text alternative, limiting access for users relying on screen readers.
 - Inadequate Contrast: The text in an image does not meet the required contrast ratio of 4.5:1, making it difficult for users with low vision to read.
@@ -328,11 +333,11 @@ This guideline ensures that users with visual impairments, including those who r
 - Fixed Sizes: Images of text have fixed dimensions that do not adapt to user-defined text sizes, reducing accessibility.
 
 ---
-### Text Spacing
+### Text Spacing (WCAG 1.4.12 - Level AA)
 
-*This guideline covers point 1.4.12 Text Spacing - Level AA of the WCAG standard.*
+To ensure consistent accessibility, these text spacing requirements should be incorporated directly into design specifications. Designers and developers should collaborate to confirm that the line height, paragraph spacing, letter spacing, and word spacing meet the standards across all text elements.
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Mobile apps must ensure that the following text spacing requirements are met to enhance readability:
 
@@ -374,7 +379,7 @@ Text(
 )
 ```
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - Inadequate Spacing: Text spacing does not meet the minimum requirements (line height, paragraph spacing, letter spacing, and word spacing).
 - Overlapping Text: Text lines overlap or are too close together, which can confuse users.
