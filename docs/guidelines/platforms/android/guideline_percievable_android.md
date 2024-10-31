@@ -322,7 +322,7 @@ If any audio plays automatically for more than 3 seconds, there should be [an op
 - Playing sounds only on user request
 - Providing a way to pause or stop the sound
 
-[Media3 `ExoPlayer`](https://developer.android.com/media/media3/exoplayer) provides built-in support for controlling audio playback, including pausing, stopping, and adjusting the volume so it is preferred to use it for media playback. Implementation details can be found in the official documentation for [ExoPlayer](https://developer.android.com/media/media3/exoplayer/hello-world).
+[Media3 ExoPlayer](https://developer.android.com/media/media3/exoplayer) provides built-in support for controlling audio playback, including pausing, stopping, and adjusting the volume so it is preferred to use it for media playback. Implementation details can be found in the official documentation for [ExoPlayer](https://developer.android.com/media/media3/exoplayer/hello-world).
 
 :no_entry_sign: **Failures**
 
