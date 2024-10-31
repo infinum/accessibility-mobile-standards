@@ -334,7 +334,7 @@ In general, try to make the headings and labels as descriptive as possible. Also
 
 - Providing a missing or incorrect heading or label
 
-## Input modalities (WCAG 2.5)]
+## Input modalities (WCAG 2.5)
 
 *Make it easier for users to operate functionality through various inputs beyond keyboard.*
 
