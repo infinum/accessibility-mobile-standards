@@ -302,6 +302,57 @@ _Important to note is that this guideline primarily depends on accessible design
 
 ---
 
+### Orientation (WCAG 1.3.4 - Level AA)
+
+The application is designed to work in portrait and landscape orientations, without being limited to just one, unless a particular orientation is necessary.
+
+> This guideline covers _1.3.4 Orientation - Level AA of the WCAG standard._
+
+:white_check_mark: **Success technique(s)**
+
+To ensure the app is accessible to all users, it is important to support both portrait and landscape orientations. This is especially important for users with motor impairments who may have difficulty holding the device in a specific orientation. 
+
+Avoid setting a fixed orientation in the app's manifest file (e.g. setting android:screenOrientation="portrait"), as this can prevent users from accessing the app in their preferred orientation. Instead, allow the app to rotate freely based on the device's orientation. 
+
+The exception to this rule is if a particular orientation is necessary for the app to function correctly. An example of this would be a camera app that requires a specific orientation to take photos or a feature that requires scanning a QR code in a particular orientation.
+
+Since orientation changes, like any other configuration change, cause the activity to be destroyed and recreated, it is important to handle this event properly to avoid losing the user's progress. Guidelines on handling configuration changes properly can be found in the [official Android documentation](https://developer.android.com/guide/topics/resources/runtime-changes#configuration-changes).
+In case you need to handle the orientation change manually, you can achieve this by defining proper configuration options in the `AndroidManifest.xml` file and by overriding the `onConfigurationChanged` method in the activity. 
+
+**Example:**
+
+Add the following to the `AndroidManifest.xml` file:
+
+```xml
+  <activity
+      android:name=".MainActivity"
+      android:configChanges="orientation|screenSize|screenLayout"/>
+```
+
+Override the `onConfigurationChanged` method in the Main activity:
+```
+  override fun onConfigurationChanged(newConfig: Configuration) {
+      super.onConfigurationChanged(newConfig)
+      // Handle orientation change
+  }
+```
+
+More information on how to manually handle orientation changes in the traditional View system can be found in the [_React to configuration changes in the View system_ section](https://developer.android.com/guide/topics/resources/runtime-changes#restrict-activity) of the official documentation. For Compose, the same can be found in the [_React to configuration changes in Jetpack Compose_ section](https://developer.android.com/guide/topics/resources/runtime-changes#react-changes-compose).
+
+:no_entry_sign: **Failures**
+
+- Designing the app to work only in portrait orientation mode by hardcoding screenOrientation to `portrait`. 
+
+**Example:**
+
+```xml
+ <activity
+      android:name=".MainActivity"
+      android:screenOrientation="portrait"/>
+```
+
+- Forcing user to re-orient the device to use it normally upon detecting undesired orientation (e.g. usage of alert)
+
 #### Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
