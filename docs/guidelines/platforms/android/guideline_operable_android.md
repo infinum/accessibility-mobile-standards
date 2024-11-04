@@ -150,11 +150,11 @@ Provide ways to help users navigate, find content, and determine where they are.
 
 The app should be implemented so that it is possible to relatively easily skip the content that is repeated on the screen or the content that is irrelevant to the user.
 
+In addition to the basic left/right swipe navigation through elements, TalkBack offers navigation by element types (headings, controls and links) and fine-grained navigation through text (by paragraphs, lines, words and characters) which is controlled with up/down swipes, as explained in the [Reading controls chapter](https://support.google.com/accessibility/android/answer/6007066?hl=en) of Google's TalkBack support page. These alternate modes of navigation are the main tool used for bypassing blocks, so it is important to make sure they all work as intended. Fortunately, most of them work well with native components, but some require additional effort.
+
 ✅ **Success criteria**
 
 The first step in satisfying the criteria is having a design that breaks content into smaller pieces and provides us with "anchor points" that can be used to skip chunks of content (for example, splitting long text into paragraphs, or grouping form fields into sections with headings). After that, these anchor points need to be properly categorized (as headings, controls, etc.) in order to become visible to assistive services and used for navigation.
-
-In addition to the basic left/right swipe navigation through elements, TalkBack offers navigation by element types (headings, controls and links) and fine-grained navigation through text (by paragraphs, lines, words and characters) which is controlled with up/down swipes, as explained in the [Reading controls chapter](https://support.google.com/accessibility/android/answer/6007066?hl=en) of Google's TalkBack support page. These alternate modes of navigation are the main tool used for bypassing blocks, so it is important to make sure they all work as intended. Fortunately, most of them work well with native components, but some require additional effort.
 
 #### Headings within text
 
