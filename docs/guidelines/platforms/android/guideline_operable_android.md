@@ -206,7 +206,7 @@ Ensure that information is read in an order consistent with the meaning and cont
 
 Order of the components that are displayed on the screen should have a logical traversal order. This is very important for people using accessibility services (such as TalkBack) to get a clearer picture of the content and possible actions on the current screen that is navigated through.
 
-Defining the content of the screen as the described in the [Meaningful sequence guideline](guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) automatically results in appropriate traversal order when navigating through the screen.
+Defining the content of the screen as described in the [Meaningful sequence guideline](guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) automatically results in appropriate traversal order when navigating through the screen.
 
 🚫 **Failure criteria**
 
