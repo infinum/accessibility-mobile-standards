@@ -311,15 +311,18 @@ An example of using `android:accessibilityTraversalBefore` or `android:accessibi
     ...  />
 ```
 
-In apps with minSdk < 22, traversal order can be defined programmatically using ViewCompat:
+In some cases, it might happen that a `View` ignores the statically set property (for example, this problem was observed with `ComposeView`). If that happens, the traversal order can be defined programmatically using `ViewCompat`. It is also the only way to define it in apps with minSdk < 22:
 
 ```kotlin
-ViewCompat.setAccessibilityDelegate(button1, object : AccessibilityDelegateCompat() {
-    override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
-        super.onInitializeAccessibilityNodeInfo(host, info)
-        info?.setTraversalAfter(button2)
+ViewCompat.setAccessibilityDelegate(
+    button2,
+    object : AccessibilityDelegateCompat() {
+        override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat) {
+            super.onInitializeAccessibilityNodeInfo(host, info)
+            info.setTraversalAfter(button3)
+        }
     }
-})
+)
 ```
 
 In Compose, the same can be achieved using `isTraversalGroup` alone or in conjunction with `traversalIndex` semantics.
