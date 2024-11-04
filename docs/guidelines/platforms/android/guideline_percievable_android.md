@@ -53,8 +53,6 @@ private fun MyCustomButton(onClick: () -> Unit) {
 }
 ```
 
-If an element is used only for decoration, pass `null` for `contentDescription` in order to mark it as non-semantically important.
-
 🚫 **Failure criteria**
 
 - Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes.
