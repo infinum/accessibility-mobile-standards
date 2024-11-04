@@ -179,36 +179,7 @@ Every accessible element on the screen should hold information about itself and 
 
 The most important technique for achieving this criteria is properly labeling all of the elements on the screen, i.e. giving them a proper name and a role (heading, button, switch, edit text, etc.). In that way, no important information is lost when the user relies only on the auditory information read out by TalkBack and it is much easier to understand the purpose of an element on the screen.
 
-**Names**
-
-Use `contentDescription` to set a proper name for an element, as described in the [Non-text content identification chapter](guideline_percievable_android.md#non-text-content-identification-wcag-111---level-a). Names can also be set on a group or a container to give more context to the user, as explained below.
-
-
-**Roles**
-
-In View-based system, the best approach is to use (or inherit) native components, such as `Button`, `Checkbox`, `Switch`, `EditText` and so on, as they come with proper roles by default. If that is for some reason not possible, there is a way to make it appear as one of the native controls to accessibility services, by setting the `className` of the accessibility node info:
-
-```kotlin
-ViewCompat.setAccessibilityDelegate(binding.continueButton, object : AccessibilityDelegateCompat() {
-    override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-        super.onInitializeAccessibilityNodeInfo(host, info)
-        info.className = Button::class.java.name
-    }
-})
-```
-
-When that is not enough, it is also possible to set a custom role string through `info.roleDescription` in the same way, but the description should not stray too far away from the already existing native components, as the user might not recognize them.
-
-In Compose, the same applies --- native controls will work automatically, but in case of custom components, a role can be set through the `semantics` block:
-
-```kotlin
-MyCustomButton(
-    onClick = ...,
-    modifier = Modifier.semantics { role = Role.Button }
-)
-```
-
-The complete list of existing roles is available in the [developer documentation](https://developer.android.com/reference/kotlin/androidx/compose/ui/semantics/Role).
+The techniques for adding names and roles to elements can be found in the [Name, Role, Value chapter](guideline_robust_android.md#name-role-value-wcag-412---level-a).
 
 🚫 **Failure criteria**
 - The purpose of an element on the screen is conveyed only through visual cues, and completely lost when using assistive technologies.
