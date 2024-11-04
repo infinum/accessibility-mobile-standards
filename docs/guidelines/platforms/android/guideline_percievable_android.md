@@ -312,7 +312,7 @@ The application is designed to work in portrait and landscape orientations, with
 
 To ensure the app is accessible to all users, it is important to support both portrait and landscape orientations. This is especially important for users with motor impairments who may have difficulty holding the device in a specific orientation. 
 
-Avoid setting a fixed orientation in the app's manifest file (e.g. setting android:screenOrientation="portrait"), as this can prevent users from accessing the app in their preferred orientation. Instead, allow the app to rotate freely based on the device's orientation. 
+Avoid setting a fixed orientation in the app's manifest file (e.g. setting `android:screenOrientation="portrait"`), as this can prevent users from accessing the app in their preferred orientation. Instead, allow the app to rotate freely based on the device's orientation. 
 
 The exception to this rule is if a particular orientation is necessary for the app to function correctly. An example of this would be a camera app that requires a specific orientation to take photos or a feature that requires scanning a QR code in a particular orientation.
 
@@ -337,7 +337,7 @@ Override the `onConfigurationChanged` method in the Main activity:
   }
 ```
 
-More information on how to manually handle orientation changes in the traditional View system can be found in the [_React to configuration changes in the View system_ section](https://developer.android.com/guide/topics/resources/runtime-changes#restrict-activity) of the official documentation. For Compose, the same can be found in the [_React to configuration changes in Jetpack Compose_ section](https://developer.android.com/guide/topics/resources/runtime-changes#react-changes-compose).
+More information on how to manually handle orientation changes in the traditional View system can be found in the [_React to configuration changes in the View system_](https://developer.android.com/guide/topics/resources/runtime-changes#restrict-activity) section of the official documentation. For Compose, the same can be found in the [_React to configuration changes in Jetpack Compose_](https://developer.android.com/guide/topics/resources/runtime-changes#react-changes-compose) section.
 
 :no_entry_sign: **Failures**
 
