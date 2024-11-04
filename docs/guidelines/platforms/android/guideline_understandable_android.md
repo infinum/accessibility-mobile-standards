@@ -206,6 +206,32 @@ TextField(
 
 - Not providing enough context for the views / composables that expect user interaction.
 
+### Redundant Entry (WCAG 3.3.7 - Level A)
+
+Ensure that multi-step processes are user-friendly by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
+
+> This technique covers point *3.3.7 Redundant Entry - Level A of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+Information previously entered by or provided to the user that is required to be entered again in the same process is either:
+
+- auto-populated, or
+- available for the user to select.
+
+Techniques mentioned above does not apply to the following cases:
+
+- when re-entering the information is essential
+  - Example: A banking app asks users to re-enter their password before confirming a money transfer.
+- when the information is required to ensure the security of the content
+  - Example: A login screen requires users to re-enter their password after a period of inactivity.
+- when previously entered information is no longer valid
+  - Example: After changing their email address, a user must re-enter the new email to confirm it.
+
+#### 🚫 Failures
+  
+Failures are not defined by the WCAG at the time of writing this.
+
 ---
 
 ### Accessible Authentication (Minimum) (WCAG 3.3.8 - Level AA)
