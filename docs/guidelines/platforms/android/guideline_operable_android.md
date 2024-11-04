@@ -163,7 +163,7 @@ The first step in satisfying the criteria is having a design that breaks content
 Once that is done, it will get picked up by TalkBack and the user will be able to skip parts of content by navigating through headings. This should be automatically satisfied by following the [Heading and Labels guideline](guideline_operable_android.md#heading-and-labels-wcag-246---level-aa).
 
 #### Controls
-TalkBack can recognize that something is a control based on the element's role (button, toggle, edit text etc.). Native controls will always be recognized automatically. For custom components, make sure to set a proper role as described in the [Info and relationships guideline](guideline_percievable_android.md#info-and-relationships-wcag-131---level-a).
+TalkBack can recognize that something is a control based on the element's role (button, toggle, edit text etc.). Native controls will always be recognized automatically. For custom components, make sure to set a proper role as described in the [Name, Role, Value chapter](guideline_robust_android.md#name-role-value-wcag-412---level-a).
 
 #### Links
 This criteria should be satisfied by following the recommendations from [Link purpose guideline](guideline_operable_android.md#link-purpose).
