@@ -205,8 +205,11 @@ To prevent users from making mistakes, the application should provide a mechanis
 
 To satisfy this criterion, the app should provide at least one of the following mechanisms:
 - **Reversible**: The submission is reversible.
+  - Example: A shopping app allows users to cancel or modify their order within 30 minutes, displaying a notification with cancellation options immediately after the order is placed. 
 - **Checked**: Data entered by the user is checked for input errors and the user is provided with an opportunity to correct them.
+  - Example: A registration form highlights fields with errors, such as an invalid email format, and prompts users to correct them before proceeding. 
 - **Confirmed**: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
+  - Example: A banking app presents a summary of payment order details, allowing users to review and edit information such as recipient account number before finalizing the transaction. 
 
 For legal transactions, the app should provide a stated time within which the transaction may be amended or canceled by the user after the request.
 
