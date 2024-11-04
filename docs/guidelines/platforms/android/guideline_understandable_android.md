@@ -140,11 +140,13 @@ Note: Certain elements may require context-specific labels to convey their funct
 
 Help users avoid and correct mistakes.
 
-### Error identification
+### Error identification (WCAG 3.3.1 - Level A)
 
-*This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.*
+If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.
 
-:white_check_mark: **Success criteria**
+> This technique covers point *3.3.1 Error Identification - Level A of the WCAG standard.*
+
+#### ✅ Success technique(s)
 
 If an error occurs on the item the user is interacting with, the error should be clearly defined and described so the user can get clear information on why the error occurred and what to do in order to fix it.
 
@@ -152,11 +154,50 @@ It is recommended to always use or extend system-provided widgets that are as fa
 
 On the other hand, if your app requires the implementation of custom components, you will need to implement [custom accessibility events](https://developer.android.com/guide/topics/ui/accessibility/principles#define-custom-events) to provide all accessibility updates that the system-provided widgets do.
 
-:no_entry_sign: **Failure criteria**
+For Views, `TextView` can be used to display error message. `TextInputLayout` can also be used, as it has built-in support for error messages.
 
-- Error messages do not exist or are not descriptive enough.
+Example - showing error on `TextInputLayout`:
+
+```
+// Error message for en-US locale would be "Invalid date, must be in the form DD/MM/YYYY, for example, 01/01/1990"
+ textInputLayout.error = getString(R.string.date_error)
+ textInputLayout.setErrorEnabled(true)
+```
+
+For Compose, an `error` semantics property can be used. However, this will only announce the error message, but it won't be shown on the screen.
+`TextField` can be used to display the error message. Its `label` parameter can be used to provide the message, and by combining it with `isError`, the `TextField`
+ will change its appearance to indicate an error.
+
+Example - showing error on `TextField`:
+
+```
+// Error message for en-US locale would be "Invalid date, must be in the form DD/MM/YYYY, for example, 01/01/1990"
+TextField(
+    value = "",
+    label = {
+        Text(errorMessage.ifEmpty { "TextField label" })
+    },
+    isError = isError,
+    onValueChange = { /* State update logic */ },
+    modifier = Modifier
+        .semantics {
+            if (errorMessage.isNotEmpty()) {
+                error(errorMessage)
+            }
+        }
+)
+```
+
+##### Important Note:
+Ensure `androidx.compose.ui.semantics.error` is present when using the error function. If not included, Kotlin will use the standard error function, which throws an IllegalStateException with defined message.
+
+#### 🚫 Failures
+
+- Error messages do not exist in text nor text alternative or are not descriptive enough.
 
 - Custom components do not support custom error handling.
+
+- Preventing further actions without communicating the issue and necessary corrections to the user.
 
 ---
 
@@ -193,7 +234,7 @@ In Compose, there is no built-in way to link a label between different component
 
 Example:
 ```
-<!-- Label text for en-US locale would be "Email Address" -->
+// Label text for en-US locale would be "Email Address"
 TextField(
     value = email,
     onValueChange = { email = it },
@@ -205,6 +246,44 @@ TextField(
 :no_entry_sign: **Failure criteria**
 
 - Not providing enough context for the views / composables that expect user interaction.
+
+### Error Suggestion (WCAG 3.3.3 - Level AA)
+
+To provide the best user experience, the application should suggest solutions for input errors when they are detected, unless doing so compromises security or the content's purpose.
+
+> This technique covers point *3.3.3 Error Suggestion - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+When an error is detected, the application should provide the user with a suggestion on how to correct it. This can be done by providing a hint or a description of the error, along with suggested correction text to guide the user.
+
+One of the possibilities is using an alert dialog since it ensures that users see the alert content first, making them aware of any errors. Without this notification, users may not realise an error has occurred and might mistakenly believe the form is not functioning correctly.
+
+Regardless of the method used, the error message should indicate the location of the error and provide a clear explanation of the issue.
+
+### Error Prevention (Legal, Financial, Data) (WCAG 3.3.4 - Level AA)
+
+To prevent users from making mistakes, the application should provide a mechanism before finalizing a transaction that involves legal, financial, or data-sensitive actions.
+
+> This technique covers point *3.3.4 Error Prevention (Legal, Financial, Data) - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+To satisfy this criterion, the app should provide at least one of the following mechanisms:
+- **Reversible**: The submission is reversible.
+  - Example: A shopping app allows users to cancel or modify their order within 30 minutes, displaying a notification with cancellation options immediately after the order is placed. 
+- **Checked**: Data entered by the user is checked for input errors and the user is provided with an opportunity to correct them.
+  - Example: A registration form highlights fields with errors, such as an invalid email format, and prompts users to correct them before proceeding. 
+- **Confirmed**: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
+  - Example: A banking app presents a summary of payment order details, allowing users to review and edit information such as recipient account number before finalizing the transaction. 
+
+For legal transactions, the app should provide a stated time within which the transaction may be amended or canceled by the user after the request.
+
+App should enable users to recover deleted information by temporarily marking it for deletion, moving it to a holding area for a set time, or maintaining a record of deletions for easy restoration requests.
+
+#### 🚫 Failures
+
+Failures are not defined by the WCAG at the time of writing this.
 
 ### Redundant Entry (WCAG 3.3.7 - Level A)
 
