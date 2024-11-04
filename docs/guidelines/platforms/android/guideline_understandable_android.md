@@ -191,7 +191,7 @@ To provide the best user experience, the application should suggest solutions fo
 
 When an error is detected, the application should provide the user with a suggestion on how to correct it. This can be done by providing a hint or a description of the error, along with suggested correction text to guide the user.
 
-Using an alert dialog is recommended because it ensures that users see the alert content first, making them aware of any errors. Without this notification, users may not realise an error has occurred and might mistakenly believe the form is not functioning correctly.
+One of the possibilities is using an alert dialog since it ensures that users see the alert content first, making them aware of any errors. Without this notification, users may not realise an error has occurred and might mistakenly believe the form is not functioning correctly.
 
 Regardless of the method used, the error message should indicate the location of the error and provide a clear explanation of the issue.
 
