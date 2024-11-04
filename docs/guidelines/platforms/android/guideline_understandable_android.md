@@ -93,7 +93,7 @@ For Views, `TextView` can be used to display error message. `TextInputLayout` ca
 Example - showing error on `TextInputLayout`:
 
 ```
-<!-- Error message for en-US locale would be "Invalid date, must be in the form DD/MM/YYYY, for example, 01/01/1990" -->
+// Error message for en-US locale would be "Invalid date, must be in the form DD/MM/YYYY, for example, 01/01/1990"
  textInputLayout.error = getString(R.string.date_error)
  textInputLayout.setErrorEnabled(true)
 ```
@@ -105,7 +105,7 @@ For Compose, an `error` semantics property can be used. However, this will only 
 Example - showing error on `TextField`:
 
 ```
-<!-- Error message for en-US locale would be "Invalid date, must be in the form DD/MM/YYYY, for example, 01/01/1990" -->
+// Error message for en-US locale would be "Invalid date, must be in the form DD/MM/YYYY, for example, 01/01/1990"
 TextField(
     value = "",
     label = {
@@ -168,7 +168,7 @@ In Compose, there is no built-in way to link a label between different component
 
 Example:
 ```
-<!-- Label text for en-US locale would be "Email Address" -->
+// Label text for en-US locale would be "Email Address"
 TextField(
     value = email,
     onValueChange = { email = it },
