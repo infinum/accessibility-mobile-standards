@@ -234,7 +234,7 @@ private fun SongCard(title: String, artist: String) {
 
 _Note 1:_ In cases like these, it is recommended to define content descriptions as concisely as possible, considering that accessibility services will read them one after the other.
 
-_Note 2:_ It is also possible to define a `contentDescription` for the whole group, in which case the descriptions of the children will be ignored. But setting the description for the whole group by aggregating the descriptions of its descendants is not advised, as it is error-prone. For example, if any of the descendants' text changes, the group description will not be updated automatically.
+_Note 2:_ It is also possible to define a `contentDescription` for the whole group, in which case the descriptions of the children will be ignored. But setting the description for the whole group by aggregating the descriptions of its descendants is not advised, as it is error-prone. For example, if any of the descendants' text changes, the group description will not be updated automatically, as explained in the [Developer documentation](https://developer.android.com/guide/topics/ui/accessibility/principles#content-groups).
 
 - Nested groups
 
