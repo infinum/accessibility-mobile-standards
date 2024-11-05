@@ -304,7 +304,7 @@ Every component on the screen should be able to reflow from one screen size to a
 The above can be achieved by using:
 - Components with variable size (i.e. by not restricting the maximum height/width).
 - Scrollable containers when content is laid out linearly. In XML, use `ScrollView`, `NestedScrollView` or a `RecyclerView` for any content that can potentially go off screen on smaller screen sizes. In Compose, the same can be achieved by using a `LazyColumn/Row` or just a regular `Column/Row` with a `vertical/horizontalScroll()` modifier if lazy behavior is not needed.
-- Layouts that allow the content to flow and wrap into multiple lines if it becomes too wide to fit the screen. In XML, this can be achieved by using the [`Flow`](https://developer.android.com/reference/androidx/constraintlayout/helper/widget/Flow) layout. In Compose, there are [`FlowRow/Column`](https://developer.android.com/develop/ui/compose/layouts/flow) for the same purpose.
+- Layouts that allow the content to flow and wrap into multiple lines if it becomes too wide to fit the screen. In XML, this can be achieved by using the [`Flow`](https://developer.android.com/reference/androidx/constraintlayout/helper/widget/Flow) layout. In Compose, there are [`FlowRow/Column`](https://developer.android.com/develop/ui/compose/layouts/flow) for the same purpose. Do note that the flow layouts were added only in version 1.4 and are still experimental in Compose, so expect possible API changes.
 
 For additional techniques regarding text scaling, see the [Resize text guideline](guideline_percievable_android.md#resize-text).
 
