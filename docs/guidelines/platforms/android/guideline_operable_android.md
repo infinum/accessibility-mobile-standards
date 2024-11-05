@@ -343,6 +343,42 @@ In general, try to make the headings and labels as descriptive as possible. Also
 
 - Providing a missing or incorrect heading or label
 
+---
+
+### Focus Visibility (WCAG 2.4.7 - Level AA)
+
+This guideline states that the user should be able to see the focus on the element that is currently selected. With a mobile platform in mind, this guideline is automatically satisfied when TalkBack or Switch access is used --- the focus is made clearly visible with colored borders.
+
+#### ✅ Success technique(s)
+
+Even though the system automatically handles this, think about selection and focus on custom elements; make sure that the focus is visible in the correct way and that the user can see which element is currently selected, especially if the component contains "inner" elements.
+
+#### 🚫 Failure examples
+- There are too many nested focusable elements and it is difficult to determine which one is in focus. This primarily might call for a reconsideration in design, where the elements could be laid out in a different way.
+
+---
+
+### Focus Not Obscured (Minimum) (WCAG 2.4.11 - Level AA)
+
+When the user navigates through the app, the focus should not be obscured by any other author-created elements and should be visible, at least partially.
+
+#### ✅ Success technique(s)
+
+When creating a view or a screen, think about the visibility of the focus and make sure that the user can see which element is currently selected.
+
+To satisfy this guideline, check the following:
+
+- The content is scrollable (when needed)
+- The element is not obscured by other elements
+- The element is (at least) partially visible when focused/used
+
+#### 🚫 Failures
+
+The following should be avoided:
+
+- Element is hidden due to inability to scroll.
+- Another element of the screen (e.g. sticky footer or floating element) hides the focused element.
+
 ## Input modalities (WCAG 2.5)
 
 *Make it easier for users to operate functionality through various inputs beyond keyboard.*
@@ -417,6 +453,14 @@ Example: In a photo-editing app that allows users to adjust sliders by dragging,
 An app that relies solely on dragging movements to complete important actions (e.g., moving an item into a folder, adjusting sliders) without offering an alternative input method would fail this criterion. If dragging movements are the only means of interaction, users with motor impairments or those using assistive technology would face accessibility barriers.
 
 Example: A to-do list app where the only way to reorder tasks is by dragging items, without an option to move tasks via buttons, would fail this criterion.
+
+---
+
+### Other operable guidelines
+
+This section contains guidelines that may not applicable for the mobile (Android) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
+
+- [WCAG 2.4.5 Multiple Ways - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways)
 
 ---
 
