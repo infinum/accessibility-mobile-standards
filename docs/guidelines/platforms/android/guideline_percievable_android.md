@@ -195,7 +195,7 @@ Many UI components should work together to create a context for the user. For ex
 
 When there are multiple elements that are connected, this connection needs to be clear when using assistive technologies. For example, in the case of an input field which has a label above it and an error text below it, the user needs to be aware that those two text labels are connected to this specific input field.
 
-This can be achieved by following the [Labels or instruction](guideline_understandable_android.md#labels-or-instruction) and [Error identification](guideline_understandable_android.md#error-identification) guidelines.
+This can be achieved by following the [Labels or instruction](guideline_understandable_android.md#labels-or-instructions-wcag-332---level-a) and [Error identification](guideline_understandable_android.md#error-identification-wcag-331---level-a) guidelines.
 
 If multiple UI elements that form a natural group should be displayed on the screen, it is recommended to arrange these elements within a container which is usually a subclass of `ViewGroup`. Also, you should set the container object's `android:screenReaderFocusable` (for devices running Android 8.1. – API level 27) or `android:focusable` to `true`. Furthermore, you should set `android:focusable` attribute of each inner object to `false` because doing so will make accessibility services present the inner element's content descriptions, one after the other, in a single announcement.
 
