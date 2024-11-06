@@ -695,7 +695,7 @@ More information on how to manually handle orientation changes in the traditiona
 
 :no_entry_sign: **Failures**
 
-- Designing the app to work only in portrait orientation mode by hardcoding screenOrientation to `portrait`. 
+- Designing the app to work only in portrait orientation mode by hardcoding screenOrientation to `portrait`. Same goes for applications that work only in horizontal orientation mode.
 
 **Example:**
 
