@@ -70,7 +70,7 @@ This guideline addresses [1.2.1 Audio-only and Video-only (Prerecorded) - Level 
 
 Some users have disabilities that prevent them from hearing media content in an application, such as prerecorded audio or video. To ensure this content is accessible to everyone, techniques like adding captions must be incorporated. This ensures all users, regardless of hearing ability, can fully engage with the media.
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 One way to enhance accessibility is by adding captions, either open or closed. Open captions are permanently visible as they are integrated into the video, while closed captions require a media format with a player that supports them. Most modern video players support captions, and `ExoPlayer` provides built-in support for displaying them automatically.
 
@@ -121,7 +121,7 @@ A text alternative provides a written description of both the audio and visual c
 * **Static text alternative**: For simple videos (like a "talking-head" video, where only a person speaks to the camera), a brief text description can be provided instead of a full audio description.
 * **Detailed transcript**: For more complex videos, a full transcript can include descriptions of visual elements as well as the dialogue.
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
 
@@ -403,17 +403,196 @@ _**Note.** When modifying the traversal order, make sure that it is done in a wa
 
 *This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 The content provided in your app must be easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different views and different actions that those views provide. That way, users with color vision deficiencies could also easily understand the whole UI.
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - An important difference between elements is stressed only with colors.
 
 ---
 
 ## Distinguishable (WCAG 1.4)
+
+### Resizeable text (WCAG 1.4.4 - Level AA)
+
+The text should be resizeable up to 200% without loss of content or functionality. This applies to every text content on the screen except captions and images of text.
+
+
+#### ✅ Success technique(s)
+
+Mobile apps must ensure that text can be resized up to **200%** without loss of content or functionality. This is essential for users with low vision who need larger text for readability. Specifically:
+
+- Text should be resizable up to **200%** using the device’s text size settings.
+- There should be no horizontal scrolling, content overlap, or loss of functionality when text is resized.
+- All UI components should remain usable and readable, even at larger text sizes.
+
+
+**Important Point:** Handling Large Text Without Scrollable Container
+- When presenting large text or content that may exceed the visible area of the screen, it is crucial to provide a way for users to read all the content without losing access. This is especially important for users who might need larger text for better readability.
+
+```
+<!-- Using ScrollView to contain large text -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/large_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a very long piece of text that might not fit on the screen when enlarged. Users need to be able to scroll to read all of it."
+        android:textSize="24sp" />
+</ScrollView>
+```
+
+```kotlin
+// Compose example with scrollable text
+val largeText = "This is a very long piece of text that might not fit on the screen when enlarged. Users need to be able to scroll to read all of it."
+
+Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+    Text(
+        text = largeText,
+        fontSize = 24.sp  // Large font size
+    )
+}
+```
+
+##### 🚫 Failures
+
+- An app where text overflows or overlaps when scaled up to 200%, making it unreadable, would fail this criterion.
+- If an app forces horizontal scrolling to read resized text, it would also fail.
+- Defining text sizes in pixels (px) rather than sp would prevent proper scaling and lead to accessibility issues.
+
+**Bad practice example:** Fixed Height with Text Encapsulation and limiting the line count
+
+```
+<TextView
+    android:id="@+id/fixed_text"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp" <!-- Fixed height -->
+    android:maxLines="2"  <!-- Limits the text to 2 lines -->
+    android:ellipsize="end" <!-- Adds "..." at the end if text is too long -->
+    android:text="This is a long piece of text that might be cut off when resized."
+    android:textSize="16sp" />
+```
+
+```kotlin
+Box(modifier = Modifier.height(50.dp)) {
+    Text(
+        text = "This is a long piece of text that might be cut off when resized.",
+        fontSize = 16.sp,
+        maxLines = 2,  // Limits the text to 2 lines
+        overflow = TextOverflow.Ellipsis  // Adds "..." at the end if text is too long
+    )
+}
+```
+
+**Good practice:**
+
+```
+<TextView
+    android:id="@+id/fixed_text"
+    android:layout_width="wrap_content"
+    android:minHeight="50dp"  <!-- Minimum height but flexible -->
+    android:text="This is a long piece of text that might be cut off when resized."
+    android:textSize="16sp" />
+```
+
+```kotlin
+Box(modifier = Modifier
+    .minHeight(50.dp)  // Minimum height but flexible
+    .wrapContentHeight()) {
+    Text(
+        text = "This is a long piece of text that will resize appropriately.",
+        fontSize = 16.sp
+    )
+}
+```
+
+
+---
+
+### Images of text (WCAG 1.4.5 - Level AA)
+
+Where components with image of text are used, they cannot satisfy the other guidelines due to image constraints. E.g., the text in the image cannot be resized which breaks the guideline 1.4.4. To avoid that, use of images of text should be avoided, or at least a text alternative should be provided.
+
+This does not affect components which are essential for the functionality of the application, like logos or branding images.
+
+#### ✅ Success technique(s)
+
+Mobile apps should avoid using images of text unless the text is **part of a logo or brand name**. When images of text are used, the following must be ensured:
+
+- The text contained in the image must have a sufficient contrast ratio with its background.
+- There must be an equivalent textual alternative available to convey the same information as the image of text.
+- Users should be able to resize text up to 200% without losing content or functionality.
+- This guideline ensures that users with visual impairments, including those who rely on screen readers, can access and understand the content.
+- The content description of the image should be meaningful, providing context that accurately conveys the image’s purpose and information.
+
+##### 🚫 Failures
+
+- Images of Text: It uses images of text without providing a text alternative, limiting access for users relying on screen readers.
+- Inadequate Contrast: The text in an image does not meet the required contrast ratio of 4.5:1, making it difficult for users with low vision to read.
+- Poor Text Alternatives: The contentDescription for an image of text is vague or does not convey the image’s meaning.
+- Cutoff Content: Text in images cannot be resized and becomes cut off or unreadable when enlarged.
+- Fixed Sizes: Images of text have fixed dimensions that do not adapt to user-defined text sizes, reducing accessibility.
+
+---
+### Text Spacing (WCAG 1.4.12 - Level AA)
+
+To ensure consistent accessibility, these text spacing requirements should be incorporated directly into design specifications. Designers and developers should collaborate to confirm that the line height, paragraph spacing, letter spacing, and word spacing meet the standards across all text elements.
+
+#### ✅ Success technique(s)
+
+Mobile apps must ensure that the following text spacing requirements are met to enhance readability:
+
+- Line Height: The line height (line spacing) must be at least 1.5 times the font size.
+- Paragraph Spacing: The spacing between paragraphs must be at least 2 times the font size.
+- Letter Spacing: The letter spacing (tracking) must be at least 0.12 times the font size.
+- Word Spacing: The word spacing must be at least 0.16 times the font size.
+- These spacing guidelines help ensure that users with low vision or reading difficulties can read text comfortably.
+
+These spacing guidelines help ensure that users with low vision or reading difficulties can read text comfortably.
+
+**Common Example:** Setting Text Spacing
+
+- **XML Example:** Use the following attributes in your `TextView` to ensure proper text spacing.
+
+```
+<!-- Example of setting text spacing in XML -->
+<TextView
+    android:id="@+id/spaced_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="This text is spaced according to WCAG guidelines."
+    android:textSize="16sp"
+    android:lineSpacingExtra="4dp"  <!-- Line height (1.5 times the font size) -->
+    android:letterSpacing="0.1"  <!-- Letter spacing (0.12 times font size) -->
+    android:paddingBottom="8dp" />  <!-- Paragraph spacing (2 times font size) -->
+```
+
+- **Jetpack Compose Example:** Use `lineHeight`, `letterSpacing`, and `padding` to achieve the desired spacing.
+
+```kotlin
+// Compose example with text spacing
+Text(
+    text = "This text is spaced according to WCAG guidelines.",
+    fontSize = 16.sp,
+    lineHeight = 24.sp,  // Line height (1.5 times font size)
+    letterSpacing = 0.1.em,  // Letter spacing (0.12 times font size)
+    modifier = Modifier.padding(bottom = 8.dp)  // Paragraph spacing (2 times font size)
+)
+```
+
+##### 🚫 Failures
+
+- Inadequate Spacing: Text spacing does not meet the minimum requirements (line height, paragraph spacing, letter spacing, and word spacing).
+- Overlapping Text: Text lines overlap or are too close together, which can confuse users.
+- No Spacing Between Paragraphs: There is no extra space between paragraphs, making the content look cluttered.
+- Fixed Text Spacing: The app uses fixed spacing that does not allow for adjustments according to user preferences.
+
+---
 
 ### Reflow (WCAG 1.4.10 - Level AA)
 
