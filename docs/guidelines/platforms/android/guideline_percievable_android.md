@@ -415,6 +415,30 @@ The content provided in your app must be easily understandable to all users. Tha
 
 ## Distinguishable (WCAG 1.4)
 
+_Make it easier for users to see and hear content including separating foreground from background._
+
+### Use of Color (WCAG 1.4.1 - Level A)
+
+Make sure that color isn't the only visual cue used for conveying information, indicating actions, prompting responses, or distinguishing elements. This is important to ensure that users with disabilities also have a clear and accessible understanding of the app's content.
+
+> This guideline covers _1.4.1 Use of Color - Level A of the WCAG standard._
+
+:white_check_mark: **Success technique(s)**
+
+[Use cues or symbols rather than colors to distinguish different views and different actions](https://developer.android.com/guide/topics/ui/accessibility/principles#cues-other-than-color) that those views provide. That way, users with color vision deficiencies could also easily understand the whole UI.
+
+:no_entry_sign: **Failures**
+
+- An important difference between elements is stressed only with colors.
+
+_Important to note is that this guideline primarily depends on accessible design._
+
+## Other perceivable guidelines
+
+This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met.
+
+- [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum) - This guideline completely depends on the accessible design
+
 ### Resizeable text (WCAG 1.4.4 - Level AA)
 
 The text should be resizeable up to 200% without loss of content or functionality. This applies to every text content on the screen except captions and images of text.

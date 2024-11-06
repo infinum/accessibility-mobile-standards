@@ -159,15 +159,15 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 ---
 
-## Seizures and Physical Reactions
+## Seizures and Physical Reactions (WCAG 2.3)
 
 Do not design content in a way that is known to cause seizures or physical reactions.
 
-### Three Flashed or Below Threshold
+### Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)
 
 Apps should not contain elements that flash more than three times in one second.
 
-*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
+> This guideline covers _2.3.1 - Level A of the WCAG standard._
 
 #### ✅ Success technique(s)
 
@@ -175,7 +175,7 @@ Apps should not contain elements that flash more than three times in one second.
 
 - If using flashing content, keep the flash of an element running for a minimum of 333ms.
 
-- If using of an element that flashes more frequently is unavoidable, make sure that the flashing area covers less than 25% within 10 degrees of a visual field.
+- If using an element that flashes more frequently is unavoidable, make sure that the flashing area covers less than 25% within 10 degrees of a visual field.
 
 #### 🚫 Failures
 
