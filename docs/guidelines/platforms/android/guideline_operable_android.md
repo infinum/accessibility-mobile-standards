@@ -159,11 +159,11 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 ---
 
-## Seizures and Physical Reactions (WCAG 2.3.1 - Level A)
+## Seizures and Physical Reactions (WCAG 2.3)
 
 Do not design content in a way that is known to cause seizures or physical reactions.
 
-### Three Flashed or Below Threshold
+### Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)
 
 Apps should not contain elements that flash more than three times in one second.
 

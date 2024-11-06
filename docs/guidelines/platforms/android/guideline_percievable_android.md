@@ -435,7 +435,7 @@ _Important to note is that this guideline primarily depends on accessible design
 
 ## Other perceivable guidelines
 
-This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met."
+This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met.
 
 - [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum) - This guideline completely depends on the accessible design
 
