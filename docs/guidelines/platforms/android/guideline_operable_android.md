@@ -189,63 +189,37 @@ Apps should not contain elements that flash more than three times in one second.
 
 Provide ways to help users navigate, find content, and determine where they are.
 
-### Bypass Blocks
-
-*This guideline covers points 2.4.1 Bypass Blocks - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+### Bypass Blocks (WCAG 2.4.1 - Level A)
 
 The app should be implemented so that it is possible to relatively easily skip the content that is repeated on the screen or the content that is irrelevant to the user.
 
-This feature is also based on a good implementation of grouping the views displayed in the app as described in [Perceivable guidelines](https://github.com/infinum/accessibility-mobile-standards/blob/master/docs/guidelines/platforms/android/guideline_percievable_android.md).
+In addition to the basic left/right swipe navigation through elements, TalkBack offers navigation by element types (headings, controls and links) and fine-grained navigation through text (by paragraphs, lines, words and characters) which is controlled with up/down swipes, as explained in the [Reading controls chapter](https://support.google.com/accessibility/android/answer/6007066?hl=en) of Google's TalkBack support page. These alternate modes of navigation are the main tool used for bypassing blocks, so it is important to make sure they all work as intended. Fortunately, most of them work well with native components, but some require additional effort.
 
-For example, accessibility services users should be able to skip the whole RecyclerView list if the content is irrelevant to them without going through each item in the list.
+✅ **Success criteria**
 
-- Headings within text
+The first step in satisfying the criteria is having a design that breaks content into smaller pieces and provides us with "anchor points" that can be used to skip chunks of content (for example, splitting long text into paragraphs, or grouping form fields into sections with headings). After that, these anchor points need to be properly categorized (as headings, controls, etc.) in order to become visible to assistive services and used for navigation.
 
-It is also possible to use _headings_ to summarize groups of text that appear on the screen. For apps with minSdk >= 28, you can set `android:accessibilityHeading` to `true` for a view to being treated as a heading.
+#### Headings within text
 
-That way, users of accessibility services, after setting the _navigation mode_ to _Headers_, can choose to navigate between headings instead of between paragraphs or between words which can improve the navigation experience.
+⚠️ There is no way for an element to be recognized as a heading automatically, so it must always be marked as a heading manually.
 
-_Note 1. Navigation mode can be chosen by swiping **up** and **down** when using **TalkBack**. Once Headers is chosen as a Navigation option, the user can navigate through **headers** by swiping right and left instead of navigating through single items.._
+Once that is done, it will get picked up by TalkBack and the user will be able to skip parts of content by navigating through headings. This should be automatically satisfied by following the [Heading and Labels guideline](guideline_operable_android.md#heading-and-labels-wcag-246---level-aa).
 
-```
-<TextView
-    android:id="@+id/personalData" ...
-    android:text="@string/personal_data_heading"
-    android:accessibilityHeading="true"/>
+#### Controls
+TalkBack can recognize that something is a control based on the element's role (button, toggle, edit text etc.). Native controls will always be recognized automatically. For custom components, make sure to set a proper role as described in the [Name, Role, Value chapter](guideline_robust_android.md#name-role-value-wcag-412---level-a).
 
-<EditText
-    android:id="@+id/nameEntry" ... />
+#### Links
+This criteria should be satisfied by following the recommendations from [Link purpose guideline](guideline_operable_android.md#link-purpose).
 
-<EditText
-    android:id="@+id/surnameEntry" ... />
+#### Skippable groups
 
-<TextView
-    android:id="@+id/workplaceData" ...
-    android:text="@string/personal_data_heading"
-    android:accessibilityHeading="true"/>
+In addition to the above, a section of a screen containing numerous items should have related items grouped, so that they are easily skippable and do not require multiple swipes to go over. This feature is based on a good implementation of grouping as described in [Info and relationships - Element relationships guideline](guideline_percievable_android.md#element-relationships).
 
-<EditText
-    android:id="@+id/addressEntry" ... />
-```
-
-For apps with minSdk < 28, headings can be defined programmatically using ViewCompat.
-
-An example is given down below:
-
-```
-ViewCompat.setAccessibilityDelegate(personalData, object : AccessibilityDelegateCompat() {
-    override fun onInitializeAccessibilityNodeInfo(host: View?, info: AccessibilityNodeInfoCompat?) {
-        super.onInitializeAccessibilityNodeInfo(host, info)
-        info?.isHeading = true
-    }
-})
-```
-
-:no_entry_sign: **Failure criteria**
+🚫 **Failure criteria**
 
 - The user of accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation process.
+    - No elements set as headings to separate bigger parts of text or groups in general.
+    - Controls not being recognized as such. This can happen when, for example, using `TextView` instead of a `Button` or `ImageView` instead of a `Checkbox` or a `Switch` without any accessibility info modifications.
 
 ---
 
@@ -267,17 +241,17 @@ If the title is defined using a toolbar with custom behavior or another custom v
 
 ---
 
-### Focus Order
+### Focus Order (WCAG 2.4.3 - Level A)
 
-*This guideline covers point 2.4.3 Focus Order - Level A of the WCAG standard.*
+Ensure that information is read in an order consistent with the meaning and content.
 
-:white_check_mark: **Success criteria**
+✅ **Success criteria**
 
 Order of the components that are displayed on the screen should have a logical traversal order. This is very important for people using accessibility services (such as TalkBack) to get a clearer picture of the content and possible actions on the current screen that is navigated through.
 
-Defining the content of the screen in the meaningful sequence described in the [Perceivable guidelines](https://github.com/infinum/accessibility-mobile-standards/blob/master/docs/guidelines/platforms/android/guideline_percievable_android.md) automatically results in appropriate traversal order when navigating through the screen.
+Defining the content of the screen as described in the [Meaningful sequence guideline](guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) automatically results in appropriate traversal order when navigating through the screen.
 
-:no_entry_sign: **Failure criteria**
+🚫 **Failure criteria**
 
 - Views displayed on the screen break consistency of the navigation.
 
@@ -369,6 +343,42 @@ In general, try to make the headings and labels as descriptive as possible. Also
 
 - Providing a missing or incorrect heading or label
 
+---
+
+### Focus Visibility (WCAG 2.4.7 - Level AA)
+
+This guideline states that the user should be able to see the focus on the element that is currently selected. With a mobile platform in mind, this guideline is automatically satisfied when TalkBack or Switch access is used --- the focus is made clearly visible with colored borders.
+
+#### ✅ Success technique(s)
+
+Even though the system automatically handles this, think about selection and focus on custom elements; make sure that the focus is visible in the correct way and that the user can see which element is currently selected, especially if the component contains "inner" elements.
+
+#### 🚫 Failure examples
+- There are too many nested focusable elements and it is difficult to determine which one is in focus. This primarily might call for a reconsideration in design, where the elements could be laid out in a different way.
+
+---
+
+### Focus Not Obscured (Minimum) (WCAG 2.4.11 - Level AA)
+
+When the user navigates through the app, the focus should not be obscured by any other author-created elements and should be visible, at least partially.
+
+#### ✅ Success technique(s)
+
+When creating a view or a screen, think about the visibility of the focus and make sure that the user can see which element is currently selected.
+
+To satisfy this guideline, check the following:
+
+- The content is scrollable (when needed)
+- The element is not obscured by other elements
+- The element is (at least) partially visible when focused/used
+
+#### 🚫 Failures
+
+The following should be avoided:
+
+- Element is hidden due to inability to scroll.
+- Another element of the screen (e.g. sticky footer or floating element) hides the focused element.
+
 ## Input modalities (WCAG 2.5)
 
 *Make it easier for users to operate functionality through various inputs beyond keyboard.*
@@ -443,6 +453,14 @@ Example: In a photo-editing app that allows users to adjust sliders by dragging,
 An app that relies solely on dragging movements to complete important actions (e.g., moving an item into a folder, adjusting sliders) without offering an alternative input method would fail this criterion. If dragging movements are the only means of interaction, users with motor impairments or those using assistive technology would face accessibility barriers.
 
 Example: A to-do list app where the only way to reorder tasks is by dragging items, without an option to move tasks via buttons, would fail this criterion.
+
+---
+
+### Other operable guidelines
+
+This section contains guidelines that may not applicable for the mobile (Android) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
+
+- [WCAG 2.4.5 Multiple Ways - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways)
 
 ---
 
