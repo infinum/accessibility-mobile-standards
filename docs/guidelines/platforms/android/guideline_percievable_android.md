@@ -495,6 +495,7 @@ Box(modifier = Modifier.height(50.dp)) {
 <TextView
     android:id="@+id/fixed_text"
     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:minHeight="50dp"  <!-- Minimum height but flexible -->
     android:text="This is a long piece of text that might be cut off when resized."
     android:textSize="16sp" />
