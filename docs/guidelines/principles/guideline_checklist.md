@@ -18,7 +18,7 @@ Guidelines mentioned in this section are related to the content of the applicati
 
 Guidelines mentioned in this section are related to the user interface and experience of the application, which should be intuitive and easy to use. Its implementation is mostly done in collaboration with a design team which should provide the necessary information about the user interface and user experience per component or screen.
 
-- [ ] 1.3.3 Sensory characteristics (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#sensory-characteristics-wcag-133---level-a) | Flutter
+- [ ] 1.3.3 Sensory characteristics (A) - [Android](../platforms/android/guideline_percievable_android.md#sensory-characteristics-wcag-133---level-a) | [iOS](../platforms/ios/guideline_perceivable_ios.md#sensory-characteristics-wcag-133---level-a) | Flutter
 - [ ] 1.3.4 Orientation (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#orientation-wcag-134---level-aa) | Flutter
 - [ ] 1.4.1 Use of color (A) - [Android](../platforms/android/guideline_percievable_android.md#use-of-color-wcag-141---level-a) | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
 - [ ] 1.4.2 Audio control (A) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter

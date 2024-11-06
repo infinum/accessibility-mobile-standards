@@ -399,19 +399,28 @@ _**Note.** When modifying the traversal order, make sure that it is done in a wa
 
 ---
 
-### Sensory characteristics
+### Sensory characteristics (WCAG 1.3.3 - Level A)
 
-*This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.*
+Instructions for using content should avoid relying exclusively on sensory characteristics such as shape, color, size, visual position, orientation, or sound cues. Instead, ensure they include descriptive text or additional indicators that make the content understandable to users of all abilities.
+
+> This guideline covers _1.3.3 Sensory characteristics - Level A of the WCAG standard._
 
 #### ✅ Success technique(s)
 
-The content provided in your app must be easily understandable to all users. That is why it is recommended to use cues or symbols rather than colors to distinguish different views and different actions that those views provide. That way, users with color vision deficiencies could also easily understand the whole UI.
+To ensure our app is fully accessible to all users, we should avoid relying on a single characteristic to display elements on the screen.
 
-##### 🚫 Failures
+**Example:**
 
-- An important difference between elements is stressed only with colors.
+If the action on the screen depends on the button of a particular shape (e.g., "To submit the form press on the round button"), it is recommended to provide additional cues about the button's purpose.
+For example, adding a `check sign` to the button that will be appropriately labeled so users using accessibility services are able to identify the targeted button more easily ("To submit the form press on the round check button").
 
----
+That way, users with visual impairments will be able to understand the button's purpose even if they can't see its shape.
+
+:no_entry_sign: **Failures**
+
+- Designing elements that are hard to distinguish and rely on only one characteristic to be visible on the screen.
+
+_Important to note is that this guideline primarily depends on accessible design._
 
 ## Distinguishable (WCAG 1.4)
 
@@ -433,11 +442,6 @@ Make sure that color isn't the only visual cue used for conveying information, i
 
 _Important to note is that this guideline primarily depends on accessible design._
 
-## Other perceivable guidelines
-
-This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met.
-
-- [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum) - This guideline completely depends on the accessible design
 
 ### Resizeable text (WCAG 1.4.4 - Level AA)
 
@@ -641,6 +645,14 @@ The content should also never become scrollable in both directions --- having sc
 #### 🚫 Failure criteria
 
 Content becomes unusable on a device with a smaller screen, when changing the orientation or when increasing font/display size. For example, the elements go off the screen, start overlapping or important parts of some text are cut off (e.g. ellipsized).
+
+---
+
+## Other perceivable guidelines
+
+This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met.
+
+- [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum) - This guideline completely depends on the accessible design
 
 ---
 
