@@ -338,7 +338,7 @@ IconButton(
     // Content of the IconButton goes here
 }
 ```
-More about success criterion can be found on the [official WCAG page](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+More about success criterion, and also some **exceptions** regarding this rule, can be found on the [official WCAG page](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
 Additionally, implementation details can be found in the [official Android documentation](https://developer.android.com/guide/topics/ui/accessibility/apps#large-controls).
 
 _Important to note is that this guideline primarily depends on accessible design._
