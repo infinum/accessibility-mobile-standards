@@ -442,6 +442,27 @@ Make sure that color isn't the only visual cue used for conveying information, i
 
 _Important to note is that this guideline primarily depends on accessible design._
 
+### Audio control (WCAG 1.4.2 - Level A)
+
+If any audio plays automatically for more than 3 seconds, there should be [an option to pause or stop the audio](https://developer.android.com/guide/topics/ui/accessibility/principles#media-content), or a way to adjust the audio volume independently from the overall system volume.
+
+> This guideline covers _1.4.2 Audio control - Level A of the WCAG standard._
+
+:white_check_mark: **Success technique(s)**
+
+- Playing sounds only on user request
+- Providing a way to pause or stop the sound
+
+[Media3 ExoPlayer](https://developer.android.com/media/media3/exoplayer) provides built-in support for controlling audio playback, including pausing, stopping, and adjusting the volume so it is preferred to use it for media playback. Implementation details can be found in the official documentation for [ExoPlayer](https://developer.android.com/media/media3/exoplayer/hello-world).
+
+Also, Android media controls can additionally enhance your app experience by integrating with the system's media framework to support audio playback, making playback controls accessible from the lock screen and notification bar. More details can be found in the official documentation for [Media controls](https://developer.android.com/media/implement/surfaces/mobile).
+
+:no_entry_sign: **Failures**
+
+- Playing sounds that last longer than three seconds without the option to pause or stop them
+
+_Important to note is that this guideline also depends on the accessible design._
+
 
 ### Resizeable text (WCAG 1.4.4 - Level AA)
 
