@@ -297,7 +297,7 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 
 - The link is part of the longer text and implemented using ClickableSpan, so TalkBack users are not aware of the link’s existence.
 
-## Input Modalities
+## Input Modalities (WCAG 2.5)
 
 _Make it easier for users to operate functionality through various inputs beyond keyboard._
 
