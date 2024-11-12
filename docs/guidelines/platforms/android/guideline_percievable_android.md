@@ -669,14 +669,6 @@ Content becomes unusable on a device with a smaller screen, when changing the or
 
 ---
 
-## Other perceivable guidelines
-
-This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met.
-
-- [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum) - This guideline completely depends on the accessible design
-
----
-
 ### Orientation (WCAG 1.3.4 - Level AA)
 
 The application is designed to work in portrait and landscape orientations, without being limited to just one, unless a particular orientation is necessary.
@@ -732,6 +724,62 @@ More information on how to manually handle orientation changes in the traditiona
 
 - [Google Support Page](https://support.google.com/accessibility/android)
 - [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
+
+--- 
+
+### Identify input purpose (WCAG 1.3.5 - Level AA)
+
+In forms, every input field should indicate a purpose of the input for ease of use. With this guideline, the autocomplete feature should be added to the input fields, but the mobile platforms does not support that out-of-the box. However there are some mechanichsm. 
+
+> This guideline with provided techniques covers the *1.3.5 Identify Input Purpose - Level AA of the WCAG standard.*
+
+#### ✅ Success technique(s)
+
+##### Autocompletion | Autosuggestions
+
+To support autocompletion you implement it manually for specific input fields that are sensitive for users. In the traditional view system you can achieve this by using the [AutoCompleteTextView](https://developer.android.com/reference/android/widget/AutoCompleteTextView) and it's attribute `android:completionThreshold`. 
+In compose you can also achieve this by utilising the [DropDownMenu](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#DropdownMenu(kotlin.Boolean,kotlin.Function0,androidx.compose.ui.Modifier,androidx.compose.ui.unit.DpOffset,androidx.compose.foundation.ScrollState,androidx.compose.ui.window.PopupProperties,kotlin.Function1)) in combinaiton with a `TextField`. 
+
+Do not forget that Andorid OS has a built in autosuggestion featuer for all input fields. Try to have it enabled in cases where it makes sense from the accessibility perspective and disable it when not needed. It should be enabled by default, in case you want to disable it you can do it by using the attribute `android:inputType="textNoSuggestions"` for views or `keyboardOptions = KeyboardOptions(autoCorrect = false)` in Compose
+
+
+##### Input types
+
+Every input should at least define type of input (e.g., email, password, phone number, etc.) to make it easier for users to enter their data.
+
+In the traditional view system you can do it with `android:inputType` (`InputType`):
+
+```xml
+<EditText
+    android:id="@+id/editTextNumber"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number" /> 
+    <!-- check other inputType for more info -->
+```
+ In compose you can use the `keyboardOptions` (`KeyboardOptions` and KeyboardType) to achieve the same. 
+
+ ```kotlin
+TextField(
+    // ..
+    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+)
+ ```
+
+ With the above implementation the keyboard will show the correct layout for the user to input the data.
+
+
+#### 🚫 Failures
+
+If the wrong input layout (e.g., keyboard type) is used for the input field, the user may have issues with entering the data. This can lead to a bad user experience and a failure of this guideline.
+
+
+## Other perceivable guidelines
+
+This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met.
+
+- [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum) - This guideline completely depends on the accessible design
+* [WCAG 1.4.11 Non-text Contrast - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast)
 
 ---
 
