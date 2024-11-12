@@ -13,7 +13,7 @@ When talking about the screen elements, it is important to make information abou
 
 Some users may have issues identifying an element's functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
 
-✅ **Success criteria**
+#### ✅ Success technique(s)
 
 Each UI element should include a description that describes its purpose. All elements presented on the screen must have the description provided, especially the ones that are important for the screen’s functionality. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
 
@@ -53,7 +53,7 @@ private fun MyCustomButton(onClick: () -> Unit) {
 }
 ```
 
-🚫 **Failure criteria**
+#### 🚫 Failures
 
 - Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes.
 - Setting content description to non-functional or decorative elements. In those cases, labeling the elements may confuse the user and should be avoided.
@@ -106,22 +106,22 @@ This guideline covers point [1.2.3 Audio Description or Media Alternative (Prere
 
 People with vision impairments may have difficulty understanding key visual details in a video. To make the video accessible to everyone, the guideline requires providing an audio description or an alternative method to convey the visual information.
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 To satisfy the guideline, there are two ways to make synchronized media accessible for users with vision impairments:
 * **Provide an audio description**: Add narration to describe key visual elements (e.g., actions, scenery) in the video that someone with vision impairments would otherwise miss.
 * **Provide a text alternative**: If audio description isn't possible, offer a transcript that includes descriptions of both the audio and visual content, allowing users to read what happens in the video.
 
-#### Using audio description
+##### Using audio description
 Check [Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)](#audio-description-for-prerecorded-media-wcag-125---level-aa) for more information.
 
-#### Using text alternative
+##### Using text alternative
 
 A text alternative provides a written description of both the audio and visual content. This is helpful for users who cannot see the video or for those who cannot access the audio.
 * **Static text alternative**: For simple videos (like a "talking-head" video, where only a person speaks to the camera), a brief text description can be provided instead of a full audio description.
 * **Detailed transcript**: For more complex videos, a full transcript can include descriptions of visual elements as well as the dialogue.
 
-##### 🚫 Failures
+#### 🚫 Failures
 
 If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
 
@@ -131,7 +131,7 @@ This guideline covers [1.2.4 Captions (Live) - Level AA](https://www.w3.org/WAI/
 
 In some cases, live media is used in the application. To ensure accessibility for all users, providing captions for live content is important.
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 All live media in the application should offer captions through the user interface, available as either open or closed captions. For two-way multimedia calls between individuals, accessibility requirements are the responsibility of content providers, not the application.
 
@@ -146,7 +146,7 @@ This guideline covers [1.2.5 Audio Description (Prerecorded) - Level AA](https:/
 
 As a part of this guideline, it is important to provide an audio description for prerecorded video content.
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 This can be done by:
 * adding a separate audio track to the video that describes the video content
@@ -163,7 +163,7 @@ In `ExoPlayer`, you can query the available audio and video tracks using `player
 
 ---
 
-## Adaptable
+## Adaptable (WCAG 1.3)
 
 Create content that can be presented in different ways without losing information or structure.
 
@@ -175,23 +175,22 @@ Information, structure, and relationships conveyed through presentation are avai
 
 Every accessible element on the screen should hold information about itself and should be identifiable by the user. In addition to visual cues (e.g. using bigger font for headings), relevant information needs to be provided in such a way that it is also accessible to assistive technologies, such as TalkBack.
 
-✅ **Success criteria**
+#### ✅ Success technique(s)
 
 The most important technique for achieving this criteria is properly labeling all of the elements on the screen, i.e. giving them a proper name and a role (heading, button, switch, edit text, etc.). In that way, no important information is lost when the user relies only on the auditory information read out by TalkBack and it is much easier to understand the purpose of an element on the screen.
 
 The techniques for adding names and roles to elements can be found in the [Name, Role, Value chapter](guideline_robust_android.md#name-role-value-wcag-412---level-a).
 
-🚫 **Failure criteria**
+#### 🚫 Failures
+
 - The purpose of an element on the screen is conveyed only through visual cues, and completely lost when using assistive technologies.
     - For example, using a clickable image as a toggle without setting any accessibility information. TalkBack will only announce that the element is clickable, but all other information regarding its behavior or state (e.g. the element being toggleable) is lost.
 
----
-
-#### Element relationships
+#### Element relationships 
 
 Many UI components should work together to create a context for the user. For example, if there is a list of components with two labels inside, one with a title and another for the value, it may be suitable to read those two labels as one sentence to give more context. Additionally, it is important to know how elements relate to one another.
 
-✅ **Success criteria**
+#### ✅ Success technique(s)
 
 When there are multiple elements that are connected, this connection needs to be clear when using assistive technologies. For example, in the case of an input field which has a label above it and an error text below it, the user needs to be aware that those two text labels are connected to this specific input field.
 
@@ -280,7 +279,7 @@ fun FestivalEventTable() {
 }
 ```
 
-🚫 **Failure criteria**
+#### 🚫 Failures
 
 - It is not clear which parts of the screen are contextually connected.
 
@@ -290,7 +289,7 @@ fun FestivalEventTable() {
 
 If the order of the content displayed on the screen is crucial for understanding, it is very important to make sure it will be presented in the same order when using accessibility services. That way, users of accessibility services (such as TalkBack) can get a clearer picture of the content and possible actions on the current screen that is being navigated through.
 
-✅ **Success criteria**
+#### ✅ Success technique(s)
 
 By default, screen elements are read out from the top left to the bottom right. This is a standard way in which nearly all screens work correctly in most scenarios. In the occasions where that is not sufficient, a full-screen redesign with the correct logical and traversal order should be considered. If that is not an option, the traversal order can be modified manually.
 
@@ -393,7 +392,7 @@ fun ButtonsScreen() {
 
 _**Note.** When modifying the traversal order, make sure that it is done in a way that does not create any loops or traps that will prevent users from interacting with all relevant views displayed on the screen._
 
-🚫 **Failure criteria**
+#### 🚫 Failures
 
 - Elements displayed on the screen break consistency of the navigation. For example, having sudden jumps to unrelated components in the middle of a sequence of similar elements.
 
@@ -416,7 +415,7 @@ For example, adding a `check sign` to the button that will be appropriately labe
 
 That way, users with visual impairments will be able to understand the button's purpose even if they can't see its shape.
 
-:no_entry_sign: **Failures**
+#### 🚫 Failures
 
 - Designing elements that are hard to distinguish and rely on only one characteristic to be visible on the screen.
 
@@ -432,11 +431,11 @@ Make sure that color isn't the only visual cue used for conveying information, i
 
 > This guideline covers _1.4.1 Use of Color - Level A of the WCAG standard._
 
-:white_check_mark: **Success technique(s)**
+#### ✅ Success technique(s)
 
 [Use cues or symbols rather than colors to distinguish different views and different actions](https://developer.android.com/guide/topics/ui/accessibility/principles#cues-other-than-color) that those views provide. That way, users with color vision deficiencies could also easily understand the whole UI.
 
-:no_entry_sign: **Failures**
+#### 🚫 Failures
 
 - An important difference between elements is stressed only with colors.
 
@@ -448,7 +447,7 @@ If any audio plays automatically for more than 3 seconds, there should be [an op
 
 > This guideline covers _1.4.2 Audio control - Level A of the WCAG standard._
 
-:white_check_mark: **Success technique(s)**
+#### ✅ Success technique(s)
 
 - Playing sounds only on user request
 - Providing a way to pause or stop the sound
@@ -457,7 +456,7 @@ If any audio plays automatically for more than 3 seconds, there should be [an op
 
 Also, Android media controls can additionally enhance your app experience by integrating with the system's media framework to support audio playback, making playback controls accessible from the lock screen and notification bar. More details can be found in the official documentation for [Media controls](https://developer.android.com/media/implement/surfaces/mobile).
 
-:no_entry_sign: **Failures**
+#### 🚫 Failures
 
 - Playing sounds that last longer than three seconds without the option to pause or stop them
 
@@ -467,7 +466,6 @@ _Important to note is that this guideline also depends on the accessible design.
 ### Resizeable text (WCAG 1.4.4 - Level AA)
 
 The text should be resizeable up to 200% without loss of content or functionality. This applies to every text content on the screen except captions and images of text.
-
 
 #### ✅ Success technique(s)
 
@@ -508,7 +506,7 @@ Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
 }
 ```
 
-##### 🚫 Failures
+#### 🚫 Failures
 
 - An app where text overflows or overlaps when scaled up to 200%, making it unreadable, would fail this criterion.
 - If an app forces horizontal scrolling to read resized text, it would also fail.
@@ -580,7 +578,7 @@ Mobile apps should avoid using images of text unless the text is **part of a log
 - This guideline ensures that users with visual impairments, including those who rely on screen readers, can access and understand the content.
 - The content description of the image should be meaningful, providing context that accurately conveys the image’s purpose and information.
 
-##### 🚫 Failures
+#### 🚫 Failures
 
 - Images of Text: It uses images of text without providing a text alternative, limiting access for users relying on screen readers.
 - Inadequate Contrast: The text in an image does not meet the required contrast ratio of 4.5:1, making it difficult for users with low vision to read.
@@ -635,7 +633,7 @@ Text(
 )
 ```
 
-##### 🚫 Failures
+#### 🚫 Failures
 
 - Inadequate Spacing: Text spacing does not meet the minimum requirements (line height, paragraph spacing, letter spacing, and word spacing).
 - Overlapping Text: Text lines overlap or are too close together, which can confuse users.
@@ -648,7 +646,7 @@ Text(
 
 The reflow is basically another name for responsible design in this context. The content should be able to reflow from one screen size to another without losing information or functionality.
 
-#### ✅ Success criteria
+#### ✅ Success technique(s)
 
 Every component on the screen should be able to reflow from one screen size to another, without any content disappearing or becoming obscured. The same applies when the device orientation is changed or the content is enlarged in any way (increased font or display size in the device settings).
 
@@ -663,7 +661,7 @@ This should not be done only on the screen level, but also on the component leve
 
 The content should also never become scrollable in both directions --- having scrolling in both directions on one screen is permitted, but not for one single piece of content (e.g. a block of text). Luckily, this is not likely to happen due to the behavior of native layouts and components, but it should still be kept in mind.
 
-#### 🚫 Failure criteria
+#### 🚫 Failures
 
 Content becomes unusable on a device with a smaller screen, when changing the orientation or when increasing font/display size. For example, the elements go off the screen, start overlapping or important parts of some text are cut off (e.g. ellipsized).
 
@@ -675,7 +673,7 @@ The application is designed to work in portrait and landscape orientations, with
 
 > This guideline covers _1.3.4 Orientation - Level AA of the WCAG standard._
 
-:white_check_mark: **Success technique(s)**
+#### ✅ Success technique(s)
 
 To ensure the app is accessible to all users, it is important to support both portrait and landscape orientations. This is especially important for users with motor impairments who may have difficulty holding the device in a specific orientation. 
 
@@ -706,7 +704,7 @@ Override the `onConfigurationChanged` method in the Main activity:
 
 More information on how to manually handle orientation changes in the traditional View system can be found in the [_React to configuration changes in the View system_](https://developer.android.com/guide/topics/resources/runtime-changes#restrict-activity) section of the official documentation. For Compose, the same can be found in the [_React to configuration changes in Jetpack Compose_](https://developer.android.com/guide/topics/resources/runtime-changes#react-changes-compose) section.
 
-:no_entry_sign: **Failures**
+#### 🚫 Failures
 
 - Designing the app to work only in portrait orientation mode by hardcoding screenOrientation to `portrait`. Same goes for applications that work only in horizontal orientation mode.
 
@@ -778,8 +776,11 @@ If the wrong input layout (e.g., keyboard type) is used for the input field, the
 
 This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met.
 
-- [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum) - This guideline completely depends on the accessible design
+* [WCAG 1.4.1 Use of Color - Level A](https://www.w3.org/WAI/WCAG22/quickref/#use-of-color)
+* [WCAG 1.4.2 Audio Control - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-control)
+* [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum)
 * [WCAG 1.4.11 Non-text Contrast - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast)
+* [WCAG 1.4.12 Text Spacing - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#text-spacing)
 
 ---
 

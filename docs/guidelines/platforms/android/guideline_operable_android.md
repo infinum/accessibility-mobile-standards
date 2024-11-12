@@ -3,7 +3,7 @@
 
 User interface components and navigation must be operable.
 
-## Keyboard accessible
+## Keyboard (WCAG 2.1.1 - Level A)
 
 Make all functionality available from a keyboard.
 
@@ -74,7 +74,7 @@ When the user is navigating through the app **using the arrow keys on the keyboa
 
 ---
 
-## Enough time
+## Enough time (WCAG 2.2)
 
 Provide users enough time to read and use the content.
 
@@ -139,7 +139,7 @@ fun CustomSnackbarExample() {
 
 ---
 
-### Pause, Stop, Hide
+### Pause, Stop, Hide (WCAG - 2.2.2 Level A)
 
 Moving, blinking, or scrolling, or auto-updating content in the app.
 
@@ -185,7 +185,7 @@ Apps should not contain elements that flash more than three times in one second.
 
 ---
 
-## Navigable
+## Navigable (WCAG 2.4)
 
 Provide ways to help users navigate, find content, and determine where they are.
 
@@ -195,7 +195,7 @@ The app should be implemented so that it is possible to relatively easily skip t
 
 In addition to the basic left/right swipe navigation through elements, TalkBack offers navigation by element types (headings, controls and links) and fine-grained navigation through text (by paragraphs, lines, words and characters) which is controlled with up/down swipes, as explained in the [Reading controls chapter](https://support.google.com/accessibility/android/answer/6007066?hl=en) of Google's TalkBack support page. These alternate modes of navigation are the main tool used for bypassing blocks, so it is important to make sure they all work as intended. Fortunately, most of them work well with native components, but some require additional effort.
 
-✅ **Success criteria**
+#### ✅ Success technique(s)
 
 The first step in satisfying the criteria is having a design that breaks content into smaller pieces and provides us with "anchor points" that can be used to skip chunks of content (for example, splitting long text into paragraphs, or grouping form fields into sections with headings). After that, these anchor points need to be properly categorized (as headings, controls, etc.) in order to become visible to assistive services and used for navigation.
 
@@ -215,7 +215,7 @@ This criteria should be satisfied by following the recommendations from [Link pu
 
 In addition to the above, a section of a screen containing numerous items should have related items grouped, so that they are easily skippable and do not require multiple swipes to go over. This feature is based on a good implementation of grouping as described in [Info and relationships - Element relationships guideline](guideline_percievable_android.md#element-relationships).
 
-🚫 **Failure criteria**
+#### 🚫 Failures
 
 - The user of accessibility services has to navigate through all the items displayed on the screen with no possibility to fasten the navigation process.
     - No elements set as headings to separate bigger parts of text or groups in general.
@@ -223,17 +223,17 @@ In addition to the above, a section of a screen containing numerous items should
 
 ---
 
-### Page Titles
+### Page Titled (WCAG 2.4.2 Level A)
 
 *This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Each screen should have a clear, descriptive, and, if possible, unique title that describes the purpose of that screen that will be understandable to all users. Also, it is important to make sure that the title is the first element read when the user enters the screen. This could be achieved by following design guidelines or with the help of setting the `android:accessibilityTraversalBefore` attribute.
 
 If the title is defined using a toolbar with custom behavior or another custom view, it is important to ensure that it will be read using accessibility services.
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - Screens have no titles defined, or the defined titles are not descriptive enough.
 
@@ -245,23 +245,23 @@ If the title is defined using a toolbar with custom behavior or another custom v
 
 Ensure that information is read in an order consistent with the meaning and content.
 
-✅ **Success criteria**
+#### ✅ Success technique(s)
 
 Order of the components that are displayed on the screen should have a logical traversal order. This is very important for people using accessibility services (such as TalkBack) to get a clearer picture of the content and possible actions on the current screen that is navigated through.
 
 Defining the content of the screen as described in the [Meaningful sequence guideline](guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) automatically results in appropriate traversal order when navigating through the screen.
 
-🚫 **Failure criteria**
+#### 🚫 Failures
 
 - Views displayed on the screen break consistency of the navigation.
 
 ---
 
-### Link Purpose
+### Link Purpose (In Context) (WCAG 2.4.3 - Level A)
 
 *This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 All the links displayed in the application's components and screens should explain its unique purpose. This is important because, based on the provided descriptions, users would get a better idea of whether they want to follow the provided link.
 
@@ -291,7 +291,7 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 | <img src="https://imgur.com/xHv8oCi.png" width="50%"> | <img src="https://imgur.com/dy92J6y.png" width="50%"> |
 | **Screenshot 3.** Link text implemented using URLSpan | **Screenshot 4.** Text containing the link is part of a longer text |
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - The link is defined as an unclear label or button and has no additional description provided.
 
@@ -307,7 +307,7 @@ To make your app's interface more user-friendly, ensure that controls are easy t
 
 > This guideline covers point *2.5.8 Target Size (Minimum) - Level AA of the WCAG standard.*
 
-:white_check_mark: **Success technique(s)**
+#### ✅ Success technique(s)
 
 The application must provide enough space for the elements to be easily operable by touch.
 
@@ -345,7 +345,7 @@ More about success criterion, and also some **exceptions** regarding this rule, 
 
 _Important to note is that this guideline primarily depends on accessible design._
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - Interactive UI elements are too small to be easily tapped.
 
@@ -512,7 +512,11 @@ Example: A to-do list app where the only way to reorder tasks is by dragging ite
 
 This section contains guidelines that may not applicable for the mobile (Android) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
 
+- [WCAG 2.1.2 No Keyboard Trap - Level A](https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap)
+- [WCAG 2.1.4 Character Key Shortcuts - Level A](https://www.w3.org/WAI/WCAG22/quickref/#character-key-shortcuts)
 - [WCAG 2.4.5 Multiple Ways - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways)
+- [WCAG 2.5.1 Pointer Gestures - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-gestures)
+- [WCAG 2.5.2 Pointer Cancellation - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-cancellation)]
 
 ---
 

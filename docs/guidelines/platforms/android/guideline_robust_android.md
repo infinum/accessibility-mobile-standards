@@ -211,7 +211,7 @@ Using assertive live region mode for content which is not important and time-sen
 
 ---
 
-#### Sources
+## Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
 - [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
