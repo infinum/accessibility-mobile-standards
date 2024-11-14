@@ -736,10 +736,11 @@ In forms, every input field should indicate a purpose of the input for ease of u
 ##### Autocompletion | Autosuggestions
 
 To support autocompletion you implement it manually for specific input fields that are sensitive for users. In the traditional view system you can achieve this by using the [AutoCompleteTextView](https://developer.android.com/reference/android/widget/AutoCompleteTextView) and it's attribute `android:completionThreshold`. 
-In compose you can also achieve this by utilising the [DropDownMenu](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#DropdownMenu(kotlin.Boolean,kotlin.Function0,androidx.compose.ui.Modifier,androidx.compose.ui.unit.DpOffset,androidx.compose.foundation.ScrollState,androidx.compose.ui.window.PopupProperties,kotlin.Function1)) in combinaiton with a `TextField`. 
+In compose you can also achieve this by utilising the [DropDownMenu](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#DropdownMenu(kotlin.Boolean,kotlin.Function0,androidx.compose.ui.Modifier,androidx.compose.ui.unit.DpOffset,androidx.compose.foundation.ScrollState,androidx.compose.ui.window.PopupProperties,kotlin.Function1)) in combination with a `TextField`. 
 
-Do not forget that **Android** OS has a built in autosuggestion **feature** ...
-
+Do not forget that Android OS has a built in autosuggestion feature for all input fields. Try to have it enabled in cases where it makes 
+sense from the accessibility perspective and disable it when not needed. It should be enabled by default, in case you want to disable it 
+you can do it by using the attribute `android:inputType="textNoSuggestions"` for views or `keyboardOptions = KeyboardOptions(autoCorrect = false)` in Compose.
 
 ##### Input types
 
