@@ -75,6 +75,7 @@ Guidelines mentioned in this section are related to the security of the applicat
 
 Guidelines mentioned in this section are not applicable to the mobile application but should be reviewed to ensure that they are not applicable (e.g. tablet or desktop support may require keyboard support).
 
+
 - [ ] 1.4.13 Content on hover or focus (AA) - [Android](../platforms/android/guideline_percievable_android.md#other-percievable-guidelines) | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
 - [ ] 2.1.2 No keyboard trap (A) - [Android](../platforms/android/guideline_operable_android.md#other-operable-guidelines) | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
 - [ ] 2.1.4 Character key shortcuts (A) - [Android](../platforms/android/guideline_operable_android.md#other-operable-guidelines) | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
