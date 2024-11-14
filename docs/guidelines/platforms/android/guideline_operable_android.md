@@ -520,7 +520,7 @@ This section contains guidelines that may not applicable for the mobile (Android
 
 ---
 
-#### Sources
+## Sources
 
 - [Google Support Page](https://support.google.com/accessibility/android)
 - [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
