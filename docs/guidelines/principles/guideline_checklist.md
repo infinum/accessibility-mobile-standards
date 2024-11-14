@@ -27,6 +27,7 @@ Guidelines mentioned in this section are related to the user interface and exper
 - [ ] 1.4.5 Images of text (AA) - [Android](../platforms/android/guideline_percievable_android.md#images-of-text) | [iOS](../platforms/ios/guideline_perceivable_ios.md#images-of-text-wcag-145---level-aa) | Flutter
 - [ ] 1.4.11 Non-text contrast (AA) - [Android](../platforms/android/guideline_percievable_android.md#other-perceivable-guidelines) | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
 - [ ] 1.4.12 Text spacing (AA) - [Android](../platforms/android/guideline_percievable_android.md#text-spacing) | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
+- [ ] 2.1.1 Keyboard (A) - [Android](../platforms/android/guideline_operable_android.md#keyboard-wcag-211---Level-a) | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
 - [ ] 2.2.1 Timing adjustable (A) - [Android](../platforms/android/guideline_operable_android.md#timing-adjustable) | [iOS](../platforms/ios/guideline_operable_ios.md#timing-adjustable-wcag-221---level-a) | Flutter
 - [ ] 2.2.2 Pause, stop, hide (A) - [Android](../platforms/android/guideline_operable_android.md#pause-stop-hide) | [iOS](../platforms/ios/guideline_operable_ios.md#pause-stop-hide-wcag-222---level-a) | Flutter
 - [ ] 2.3.1 Three flashes or below threshold (A) - [Android](../platforms/android/guideline_operable_android.md#seizures-and-physical-reactions-wcag-231---level-a) | [iOS](../platforms/ios/guideline_operable_ios.md#three-flashed-or-below-threshold-wcag-231---level-a) | Flutter
@@ -74,13 +75,13 @@ Guidelines mentioned in this section are related to the security of the applicat
 
 Guidelines mentioned in this section are not applicable to the mobile application but should be reviewed to ensure that they are not applicable (e.g. tablet or desktop support may require keyboard support).
 
-- [ ] 1.4.13 Content on hover or focus (AA) - Android | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
-- [ ] 2.1.1 Keyboard (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
-- [ ] 2.1.2 No keyboard trap (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
-- [ ] 2.1.4 Character key shortcuts (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
-- [ ] 2.5.1 Pointer gestures (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
-- [ ] 2.5.2 Pointer cancellation (A) - Android | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
-- [ ] 3.2.6 Consistent help (AA) - Android | [iOS](../platforms/ios/guideline_understandable_ios.md#other-understandable-guidelines) | Flutter
+
+- [ ] 1.4.13 Content on hover or focus (AA) - [Android](../platforms/android/guideline_percievable_android.md#other-percievable-guidelines) | [iOS](../platforms/ios/guideline_perceivable_ios.md#other-perceivable-guidelines) | Flutter
+- [ ] 2.1.2 No keyboard trap (A) - [Android](../platforms/android/guideline_operable_android.md#other-operable-guidelines) | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
+- [ ] 2.1.4 Character key shortcuts (A) - [Android](../platforms/android/guideline_operable_android.md#other-operable-guidelines) | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
+- [ ] 2.5.1 Pointer gestures (A) - [Android](../platforms/android/guideline_operable_android.md#other-operable-guidelines) | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
+- [ ] 2.5.2 Pointer cancellation (A) - [Android](../platforms/android/guideline_operable_android.md#other-operable-guidelines) | [iOS](../platforms/ios/guideline_operable_ios.md#other-operable-guidelines) | Flutter
+- [ ] 3.2.6 Consistent help (AA) - [Android](../platforms/android/guideline_understandable_android.md#other-operable-guidelines) | [iOS](../platforms/ios/guideline_understandable_ios.md#other-understandable-guidelines) | Flutter
 
 ⎯
 

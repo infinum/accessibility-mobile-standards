@@ -12,7 +12,7 @@ This guideline covers point [3.1.1 Language of Page - Level A](https://www.w3.or
 
 The default human language of an App can be programmatically determined.
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 The app should be implemented to reach the largest number of users. It should handle text, audio files, numbers, currency, and graphics in ways appropriate to the locales where it is used. It should provide a text alternative, at least in English, if it already isn't the default language of the app.
 
@@ -39,7 +39,7 @@ etc.
 
 To enhance user control, include an option in the app’s settings for users to select their preferred language. It’s also beneficial to inform users that the default app language is based on their location or region, with the option to override it if desired. Users should also have the flexibility to allow the app to follow their device’s language settings.
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - The default language of the app is hardcoded, and it is impossible to change it.
 
@@ -61,7 +61,7 @@ This guideline covers point [3.1.2 Language of Parts - Level AA](https://www.w3.
 
 To be able to give the best possible experience to users, the language of each part of the app should be programmatically determined. With that in mind, Talkback should be able to read the content in the correct language.
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Due to need for Talkback to read the content in the correct language, the part of the content should get the correct language interpretation.
 
@@ -102,7 +102,7 @@ Make mobile apps appear and operate in predictable ways.
 
 Receiving focus on or interacting with any component should not initiate a change of context unless previously announced.
 
-✅ **Success criteria**
+#### ✅ Success technique(s)
 
 Users need to be able to consume content without any sudden interruptions or changes in context. Interacting with any UI component doesn't automatically cause a change of context unless the user has been previously advised of the behavior _before_ using the component.
 
@@ -117,7 +117,7 @@ Here are some examples of focus/input callbacks that would be acceptable with re
 - In an input field, a trailing action for clearing the entire input appears when the user enters something into the field.
 
 
-🚫 **Failure examples**
+#### 🚫 Failures
 
 Some examples of actions that _are_ considered a change of context and would violate the criteria are:
 - Automatically submitting a form when a certain field gets focus or input. For example, in a login form, the user is automatically logged in when checking the "Remember me" checkbox, without pressing the "Log in" button.
@@ -151,7 +151,7 @@ Note: Certain elements may require context-specific labels to convey their funct
 
 For users, it is important to have a consistent navigation experience throughout the app (on all screens). With that satisfied, users can easily predict where they are and where they can go next.
 
-#### ✅ Success criteria
+#### ✅ Success technique(s)
 
 To satisfy this criterion, try to keep the navigation structure consistent, with elements like the toolbar, bottom navigation, search bar or any other repeated elements always in the same place, read out in the same order and with the same functionality.
 
@@ -159,7 +159,7 @@ Visually, this is mostly the responsibility of the design, but it is important t
 
 If there is a need to manually adjust ordering of elements to make them consistent across multiple screens, the same techniques described in [Meaningful sequence guideline](guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) can be applied.
 
-#### 🚫 Failure examples
+#### 🚫 Failures
 
 Usually, when reusing the same components across multiple screens, the ordering will be preserved automatically. However, there are certain cases where other elements might come "in-between" and there could be some inconsistencies when mixing technologies on the same screen (e.g. the toolbar is a `View`, while all of the other screen contents are in Compose), so pay special attention to those.
 
@@ -237,7 +237,7 @@ Ensure `androidx.compose.ui.semantics.error` is present when using the error fun
 
 > This technique covers point *3.3.2 Labels or Instructions - Level A of the WCAG standard.*
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 When the user focuses on an input view (for example, in the form or login screen) through an accessibility service, it is important to give them enough information about the type of input they are expected to provide.
 
@@ -356,7 +356,7 @@ To make authentication accessible to all users, the application should not requi
 - **Object Recognition**: The cognitive function test is to recognize objects.
 - **Personal Content**: The cognitive function test is to identify non-text content the user provided to the application.
 
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 - Support for text (copy and) paste to reduce the cognitive burden of re-typing
 - Support for password entry by password managers or passkeys (i.e [Google passkey](https://developers.google.com/identity/passkeys))
@@ -364,7 +364,7 @@ To make authentication accessible to all users, the application should not requi
 - Support for email link authentication
 - Support for OAuth authentication
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failuresg
 
 To fail this criterion, users should be required to complete a cognitive function test to authenticate themselves or enter the values in a different way than they were originally created/provided.
 
@@ -373,11 +373,6 @@ Some examples:
 - Write 2nd and 5th character of your password
 - Write every character of the verification code in a separate field
 
-#### Sources
-
-- [Google Support Page](https://support.google.com/accessibility/android)
-- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
-
 ---
 
 ## Other understandable guidelines
@@ -385,6 +380,12 @@ Some examples:
 This section contains guidelines that may not applicable for the mobile (Android) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
 
 - [WCAG 3.2.6 Consistent Help - Level A](https://www.w3.org/WAI/WCAG22/quickref/#consistent-help)
+
+## Sources
+
+- [Google Support Page](https://support.google.com/accessibility/android)
+- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
+
 
 ---
 
