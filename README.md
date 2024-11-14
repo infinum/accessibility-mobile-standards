@@ -4,24 +4,18 @@ This repository contains mobile standards created for mobile platforms. It inclu
 
 ## Table of contents
 
-1. [Introduction](docs/general/introduction.md)
+* [Introduction](docs/introduction.md)
+* [Guidelines](docs/accessibility_guidelines.md)
+* [Checklist](docs/accessibility_checklist.md)
+* [Principles and examples](docs/accessibility_principles_and_examples.md)
+    * [Perceivable](docs/principles/perceivable_principle.md)
+    * [Operable](docs/principles/operable_principle.md)
+    * [Understandable](docs/principles/understandable_principle.md)
+    * [Robust](docs/principles/robust_principle.md)
+* [Testing accessibility](docs/accessibility_testing.md)
+* [Conclusion](docs/conclusion.md)
 
-2. [Accessibility features per mobile platform](docs/features/features_mobile_platforms.md)
-
-    * [Android](docs/features/features_android.md)
-    * [iOS](docs/features/features_ios.md)
-    * [Flutter](docs/features/features_flutter.md)
-
-3. [Accessibility guidelines](docs/guidelines/accessibility_guidelines.md)
-
-    * [Accessibility principles and examples](docs/guidelines/principles/accessibility_principles_and_examples.md)
-
-       * [Perceivable](docs/guidelines/principles/perceivable_principle.md)
-       * [Operable](docs/guidelines/principles/operable_principle.md)
-       * [Understandable](docs/guidelines/principles/understandable_principle.md)
-       * [Robust](docs/guidelines/principles/robust_principle.md)
-       * [Guideline checklist](docs/guidelines/principles/guideline_checklist.md)
-  
-    * [Testing accessibility features](docs/testing/testing.md)
-
-4. [Conclusion](docs/general/conclusion.md)
+* **[Platforms specifics](docs/platforms/features_mobile_platforms.md)**
+    * [Android](docs/platforms/android/features_android.md)
+    * [iOS](docs/platforms/ios/features_ios.md)
+    * [Flutter](docs/platforms/flutter/features_flutter.md)

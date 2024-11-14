@@ -1,4 +1,4 @@
-# Guideline checklist
+# Accessibility checklist
 
 This document contains a checklist of guidelines that should be followed when developing a mobile application.
 
