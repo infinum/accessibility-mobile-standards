@@ -85,13 +85,7 @@ class CaptionUtils(context: Context) {
 }
 ```
 
--- OLD
-
-### Audio Description or Media Alternative (WCAG 1.2.3 - Level A)
-
-This guideline covers point [1.2.3 Audio Description or Media Alternative (Prerecorded) - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-description-or-media-alternative-prerecorded) of the WCAG standard.
-
-People with vision impairments may have difficulty understanding key visual details in a video. To make the video accessible to everyone, the guideline requires providing an audio description or an alternative method to convey the visual information.
+### [1.2.3 Audio Description or Media Alternative (Level A)](../../principles/perceivable_principle.md#123-audio-description-or-media-alternative-level-a)
 
 #### ✅ Success technique(s)
 
@@ -112,11 +106,7 @@ A text alternative provides a written description of both the audio and visual c
 
 If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
 
-### Captions support for live media (WCAG 1.2.4 - Level AA)
-
-This guideline covers [1.2.4 Captions (Live) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#captions-live) of the WCAG standard.
-
-In some cases, live media is used in the application. To ensure accessibility for all users, providing captions for live content is important.
+### [1.2.4 Captions support for live media (Level AA)](../../principles/perceivable_principle.md#124-captions-support-for-live-media-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -127,11 +117,7 @@ All live media in the application should offer captions through the user interfa
 
 The second approach is more customizable and can offer more flexibility than embedded captions, though it requires additional client-side work. For further details, please refer to the [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A) section](#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) and the [ExoPlayer documentation on live streaming](https://developer.android.com/media/media3/exoplayer/live-streaming), which provides more information about HTTP Live Streaming (HLS) on the Android platform.
 
-### Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)
-
-This guideline covers [1.2.5 Audio Description (Prerecorded) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#audio-description-prerecorded) of the WCAG standard.
-
-As a part of this guideline, it is important to provide an audio description for prerecorded video content.
+### [1.2.5 Audio Description for Prerecorded Media (Level AA)](../../principles/perceivable_principle.md#125-audio-description-for-prerecorded-media-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -148,15 +134,9 @@ This guideline closely aligns with the [Audio Description or Media Alternative (
 
 In `ExoPlayer`, you can query the available audio and video tracks using `player.currentTracks`. This allows you to present users with options, such as regular audio and an audio description track. You can implement functionality for users to select their preferred track from the available options.
 
----
+## [1.3 Adaptable](../../principles/perceivable_principle.md#13-adaptable)
 
-## Adaptable (WCAG 1.3)
-
-Create content that can be presented in different ways without losing information or structure.
-
-### Info and Relationships (WCAG 1.3.1 - Level A)
-
-Information, structure, and relationships conveyed through presentation are available in text. Important information and element relationship should be preserved when the presentation format changes (e.g. read out by a screen reader).
+### [1.3.1 Element information and relationship (Level A)](../../principles/perceivable_principle.md#131-element-information-and-relationship-level-a)
 
 #### Element information
 
@@ -270,11 +250,7 @@ fun FestivalEventTable() {
 
 - It is not clear which parts of the screen are contextually connected.
 
----
-
-### Meaningful sequence (WCAG 1.3.2 - Level A)
-
-If the order of the content displayed on the screen is crucial for understanding, it is very important to make sure it will be presented in the same order when using accessibility services. That way, users of accessibility services (such as TalkBack) can get a clearer picture of the content and possible actions on the current screen that is being navigated through.
+### [1.3.2 Meaningful sequence (Level A)](../../principles/perceivable_principle.md#132-meaningful-sequence-level-a)
 
 #### ✅ Success technique(s)
 
@@ -383,13 +359,7 @@ _**Note.** When modifying the traversal order, make sure that it is done in a wa
 
 - Elements displayed on the screen break consistency of the navigation. For example, having sudden jumps to unrelated components in the middle of a sequence of similar elements.
 
----
-
-### Sensory characteristics (WCAG 1.3.3 - Level A)
-
-Instructions for using content should avoid relying exclusively on sensory characteristics such as shape, color, size, visual position, orientation, or sound cues. Instead, ensure they include descriptive text or additional indicators that make the content understandable to users of all abilities.
-
-> This guideline covers _1.3.3 Sensory characteristics - Level A of the WCAG standard._
+### [1.3.3 Sensory characteristics (Level A)](../../principles/perceivable_principle.md#133-sensory-characteristics-level-a)
 
 #### ✅ Success technique(s)
 
@@ -408,15 +378,104 @@ That way, users with visual impairments will be able to understand the button's 
 
 _Important to note is that this guideline primarily depends on accessible design._
 
-## Distinguishable (WCAG 1.4)
+### [1.3.4 Orientation (Level AA)](../../principles/perceivable_principle.md#134-orientation-level-aa)
 
-_Make it easier for users to see and hear content including separating foreground from background._
+#### ✅ Success technique(s)
 
-### Use of Color (WCAG 1.4.1 - Level A)
+To ensure the app is accessible to all users, it is important to support both portrait and landscape orientations. This is especially important for users with motor impairments who may have difficulty holding the device in a specific orientation. 
 
-Make sure that color isn't the only visual cue used for conveying information, indicating actions, prompting responses, or distinguishing elements. This is important to ensure that users with disabilities also have a clear and accessible understanding of the app's content.
+Avoid setting a fixed orientation in the app's manifest file (e.g. setting `android:screenOrientation="portrait"`), as this can prevent users from accessing the app in their preferred orientation. Instead, allow the app to rotate freely based on the device's orientation. 
 
-> This guideline covers _1.4.1 Use of Color - Level A of the WCAG standard._
+The exception to this rule is if a particular orientation is necessary for the app to function correctly. An example of this would be a camera app that requires a specific orientation to take photos or a feature that requires scanning a QR code in a particular orientation.
+
+Since orientation changes, like any other configuration change, cause the activity to be destroyed and recreated, it is important to handle this event properly to avoid losing the user's progress. Guidelines on handling configuration changes properly can be found in the [official Android documentation](https://developer.android.com/guide/topics/resources/runtime-changes#configuration-changes).
+In case you need to handle the orientation change manually, you can achieve this by defining proper configuration options in the `AndroidManifest.xml` file and by overriding the `onConfigurationChanged` method in the activity. 
+
+**Example:**
+
+Add the following to the `AndroidManifest.xml` file:
+
+```xml
+  <activity
+      android:name=".MainActivity"
+      android:configChanges="orientation|screenSize|screenLayout"/>
+```
+
+Override the `onConfigurationChanged` method in the Main activity:
+```
+  override fun onConfigurationChanged(newConfig: Configuration) {
+      super.onConfigurationChanged(newConfig)
+      // Handle orientation change
+  }
+```
+
+More information on how to manually handle orientation changes in the traditional View system can be found in the [_React to configuration changes in the View system_](https://developer.android.com/guide/topics/resources/runtime-changes#restrict-activity) section of the official documentation. For Compose, the same can be found in the [_React to configuration changes in Jetpack Compose_](https://developer.android.com/guide/topics/resources/runtime-changes#react-changes-compose) section.
+
+#### 🚫 Failures
+
+- Designing the app to work only in portrait orientation mode by hardcoding screenOrientation to `portrait`. Same goes for applications that work only in horizontal orientation mode.
+
+**Example:**
+
+```xml
+ <activity
+      android:name=".MainActivity"
+      android:screenOrientation="portrait"/>
+```
+
+- Forcing user to re-orient the device to use it normally upon detecting undesired orientation (e.g. usage of alert)
+
+#### Sources
+
+- [Google Support Page](https://support.google.com/accessibility/android)
+- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
+
+### [1.3.5 Identify input purpose (Level AA)](../../principles/perceivable_principle.md#135-identify-input-purpose-level-aa)
+
+#### ✅ Success technique(s)
+
+##### Autocompletion | Autosuggestions
+
+To support autocompletion you implement it manually for specific input fields that are sensitive for users. In the traditional view system you can achieve this by using the [AutoCompleteTextView](https://developer.android.com/reference/android/widget/AutoCompleteTextView) and it's attribute `android:completionThreshold`. 
+In compose you can also achieve this by utilising the [DropDownMenu](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#DropdownMenu(kotlin.Boolean,kotlin.Function0,androidx.compose.ui.Modifier,androidx.compose.ui.unit.DpOffset,androidx.compose.foundation.ScrollState,androidx.compose.ui.window.PopupProperties,kotlin.Function1)) in combination with a `TextField`. 
+
+Do not forget that Android OS has a built in autosuggestion feature for all input fields. Try to have it enabled in cases where it makes 
+sense from the accessibility perspective and disable it when not needed. It should be enabled by default, in case you want to disable it 
+you can do it by using the attribute `android:inputType="textNoSuggestions"` for views or `keyboardOptions = KeyboardOptions(autoCorrect = false)` in Compose.
+
+##### Input types
+
+Every input should at least define type of input (e.g., email, password, phone number, etc.) to make it easier for users to enter their data.
+
+In the traditional view system you can do it with `android:inputType` (`InputType`):
+
+```xml
+<EditText
+    android:id="@+id/editTextNumber"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number" /> 
+    <!-- check other inputType for more info -->
+```
+ In compose you can use the `keyboardOptions` (`KeyboardOptions` and KeyboardType) to achieve the same. 
+
+ ```kotlin
+TextField(
+    // ..
+    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+)
+ ```
+
+ With the above implementation the keyboard will show the correct layout for the user to input the data.
+
+
+#### 🚫 Failures
+
+If the wrong input layout (e.g., keyboard type) is used for the input field, the user may have issues with entering the data. This can lead to a bad user experience and a failure of this guideline.
+
+## [1.4 Distinguishable](../../principles/perceivable_principle.md#14-distinguishable)
+
+### [1.4.1 Use of Color (Level A)](../../principles/perceivable_principle.md#141-use-of-color-level-a)
 
 #### ✅ Success technique(s)
 
@@ -428,11 +487,7 @@ Make sure that color isn't the only visual cue used for conveying information, i
 
 _Important to note is that this guideline primarily depends on accessible design._
 
-### Audio control (WCAG 1.4.2 - Level A)
-
-If any audio plays automatically for more than 3 seconds, there should be [an option to pause or stop the audio](https://developer.android.com/guide/topics/ui/accessibility/principles#media-content), or a way to adjust the audio volume independently from the overall system volume.
-
-> This guideline covers _1.4.2 Audio control - Level A of the WCAG standard._
+### [1.4.2 Audio control (Level A)](../../principles/perceivable_principle.md#142-audio-control-level-a)
 
 #### ✅ Success technique(s)
 
@@ -449,10 +504,7 @@ Also, Android media controls can additionally enhance your app experience by int
 
 _Important to note is that this guideline also depends on the accessible design._
 
-
-### Resizeable text (WCAG 1.4.4 - Level AA)
-
-The text should be resizeable up to 200% without loss of content or functionality. This applies to every text content on the screen except captions and images of text.
+### [1.4.4 Resizeable text (Level AA)](../../principles/perceivable_principle.md#144-resizeable-text-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -546,14 +598,7 @@ Box(modifier = Modifier
 }
 ```
 
-
----
-
-### Images of text (WCAG 1.4.5 - Level AA)
-
-Where components with image of text are used, they cannot satisfy the other guidelines due to image constraints. E.g., the text in the image cannot be resized which breaks the guideline 1.4.4. To avoid that, use of images of text should be avoided, or at least a text alternative should be provided.
-
-This does not affect components which are essential for the functionality of the application, like logos or branding images.
+### [1.4.5 Images of text (Level AA)](../../principles/perceivable_principle.md#145-images-of-text-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -573,10 +618,28 @@ Mobile apps should avoid using images of text unless the text is **part of a log
 - Cutoff Content: Text in images cannot be resized and becomes cut off or unreadable when enlarged.
 - Fixed Sizes: Images of text have fixed dimensions that do not adapt to user-defined text sizes, reducing accessibility.
 
----
-### Text Spacing (WCAG 1.4.12 - Level AA)
+### [1.4.10 Reflow (Level AA)](../../principles/perceivable_principle.md#1410-reflow-level-aa)
 
-To ensure consistent accessibility, these text spacing requirements should be incorporated directly into design specifications. Designers and developers should collaborate to confirm that the line height, paragraph spacing, letter spacing, and word spacing meet the standards across all text elements.
+#### ✅ Success technique(s)
+
+Every component on the screen should be able to reflow from one screen size to another, without any content disappearing or becoming obscured. The same applies when the device orientation is changed or the content is enlarged in any way (increased font or display size in the device settings).
+
+The above can be achieved by using:
+- Components with variable size (i.e. by not restricting the maximum height/width).
+- Scrollable containers when content is laid out linearly. In XML, use `ScrollView`, `NestedScrollView` or a `RecyclerView` for any content that can potentially go off screen on smaller screen sizes. In Compose, the same can be achieved by using a `LazyColumn/Row` or just a regular `Column/Row` with a `vertical/horizontalScroll()` modifier if lazy behavior is not needed.
+- Layouts that allow the content to flow and wrap into multiple lines if it becomes too wide to fit the screen. In XML, this can be achieved by using the [`Flow`](https://developer.android.com/reference/androidx/constraintlayout/helper/widget/Flow) layout. In Compose, there are [`FlowRow/Column`](https://developer.android.com/develop/ui/compose/layouts/flow) for the same purpose. Do note that the flow layouts were added only in version 1.4 and are still experimental in Compose, so expect possible API changes.
+
+For additional techniques regarding text scaling, see the [Resize text guideline](guideline_percievable_android.md#resizeable-text-wcag-144---level-aa).
+
+This should not be done only on the screen level, but also on the component level. Every component should be able to reflow from one size to another without losing information or functionality (e.g. buttons, labels, images, etc.).
+
+The content should also never become scrollable in both directions --- having scrolling in both directions on one screen is permitted, but not for one single piece of content (e.g. a block of text). Luckily, this is not likely to happen due to the behavior of native layouts and components, but it should still be kept in mind.
+
+#### 🚫 Failures
+
+Content becomes unusable on a device with a smaller screen, when changing the orientation or when increasing font/display size. For example, the elements go off the screen, start overlapping or important parts of some text are cut off (e.g. ellipsized).
+
+### [1.4.12 Text Spacing (Level AA)](../../principles/perceivable_principle.md#1412-text-spacing-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -626,150 +689,3 @@ Text(
 - Overlapping Text: Text lines overlap or are too close together, which can confuse users.
 - No Spacing Between Paragraphs: There is no extra space between paragraphs, making the content look cluttered.
 - Fixed Text Spacing: The app uses fixed spacing that does not allow for adjustments according to user preferences.
-
----
-
-### Reflow (WCAG 1.4.10 - Level AA)
-
-The reflow is basically another name for responsible design in this context. The content should be able to reflow from one screen size to another without losing information or functionality.
-
-#### ✅ Success technique(s)
-
-Every component on the screen should be able to reflow from one screen size to another, without any content disappearing or becoming obscured. The same applies when the device orientation is changed or the content is enlarged in any way (increased font or display size in the device settings).
-
-The above can be achieved by using:
-- Components with variable size (i.e. by not restricting the maximum height/width).
-- Scrollable containers when content is laid out linearly. In XML, use `ScrollView`, `NestedScrollView` or a `RecyclerView` for any content that can potentially go off screen on smaller screen sizes. In Compose, the same can be achieved by using a `LazyColumn/Row` or just a regular `Column/Row` with a `vertical/horizontalScroll()` modifier if lazy behavior is not needed.
-- Layouts that allow the content to flow and wrap into multiple lines if it becomes too wide to fit the screen. In XML, this can be achieved by using the [`Flow`](https://developer.android.com/reference/androidx/constraintlayout/helper/widget/Flow) layout. In Compose, there are [`FlowRow/Column`](https://developer.android.com/develop/ui/compose/layouts/flow) for the same purpose. Do note that the flow layouts were added only in version 1.4 and are still experimental in Compose, so expect possible API changes.
-
-For additional techniques regarding text scaling, see the [Resize text guideline](guideline_percievable_android.md#resizeable-text-wcag-144---level-aa).
-
-This should not be done only on the screen level, but also on the component level. Every component should be able to reflow from one size to another without losing information or functionality (e.g. buttons, labels, images, etc.).
-
-The content should also never become scrollable in both directions --- having scrolling in both directions on one screen is permitted, but not for one single piece of content (e.g. a block of text). Luckily, this is not likely to happen due to the behavior of native layouts and components, but it should still be kept in mind.
-
-#### 🚫 Failures
-
-Content becomes unusable on a device with a smaller screen, when changing the orientation or when increasing font/display size. For example, the elements go off the screen, start overlapping or important parts of some text are cut off (e.g. ellipsized).
-
----
-
-### Orientation (WCAG 1.3.4 - Level AA)
-
-The application is designed to work in portrait and landscape orientations, without being limited to just one, unless a particular orientation is necessary.
-
-> This guideline covers _1.3.4 Orientation - Level AA of the WCAG standard._
-
-#### ✅ Success technique(s)
-
-To ensure the app is accessible to all users, it is important to support both portrait and landscape orientations. This is especially important for users with motor impairments who may have difficulty holding the device in a specific orientation. 
-
-Avoid setting a fixed orientation in the app's manifest file (e.g. setting `android:screenOrientation="portrait"`), as this can prevent users from accessing the app in their preferred orientation. Instead, allow the app to rotate freely based on the device's orientation. 
-
-The exception to this rule is if a particular orientation is necessary for the app to function correctly. An example of this would be a camera app that requires a specific orientation to take photos or a feature that requires scanning a QR code in a particular orientation.
-
-Since orientation changes, like any other configuration change, cause the activity to be destroyed and recreated, it is important to handle this event properly to avoid losing the user's progress. Guidelines on handling configuration changes properly can be found in the [official Android documentation](https://developer.android.com/guide/topics/resources/runtime-changes#configuration-changes).
-In case you need to handle the orientation change manually, you can achieve this by defining proper configuration options in the `AndroidManifest.xml` file and by overriding the `onConfigurationChanged` method in the activity. 
-
-**Example:**
-
-Add the following to the `AndroidManifest.xml` file:
-
-```xml
-  <activity
-      android:name=".MainActivity"
-      android:configChanges="orientation|screenSize|screenLayout"/>
-```
-
-Override the `onConfigurationChanged` method in the Main activity:
-```
-  override fun onConfigurationChanged(newConfig: Configuration) {
-      super.onConfigurationChanged(newConfig)
-      // Handle orientation change
-  }
-```
-
-More information on how to manually handle orientation changes in the traditional View system can be found in the [_React to configuration changes in the View system_](https://developer.android.com/guide/topics/resources/runtime-changes#restrict-activity) section of the official documentation. For Compose, the same can be found in the [_React to configuration changes in Jetpack Compose_](https://developer.android.com/guide/topics/resources/runtime-changes#react-changes-compose) section.
-
-#### 🚫 Failures
-
-- Designing the app to work only in portrait orientation mode by hardcoding screenOrientation to `portrait`. Same goes for applications that work only in horizontal orientation mode.
-
-**Example:**
-
-```xml
- <activity
-      android:name=".MainActivity"
-      android:screenOrientation="portrait"/>
-```
-
-- Forcing user to re-orient the device to use it normally upon detecting undesired orientation (e.g. usage of alert)
-
-#### Sources
-
-- [Google Support Page](https://support.google.com/accessibility/android)
-- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
-
---- 
-
-### Identify input purpose (WCAG 1.3.5 - Level AA)
-
-In forms, every input field should indicate a purpose of the input for ease of use. With this guideline, the autocomplete feature should be added to the input fields, but the mobile platforms does not support that out-of-the box. However there are some mechanichsm. 
-
-> This guideline with provided techniques covers the *1.3.5 Identify Input Purpose - Level AA of the WCAG standard.*
-
-#### ✅ Success technique(s)
-
-##### Autocompletion | Autosuggestions
-
-To support autocompletion you implement it manually for specific input fields that are sensitive for users. In the traditional view system you can achieve this by using the [AutoCompleteTextView](https://developer.android.com/reference/android/widget/AutoCompleteTextView) and it's attribute `android:completionThreshold`. 
-In compose you can also achieve this by utilising the [DropDownMenu](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#DropdownMenu(kotlin.Boolean,kotlin.Function0,androidx.compose.ui.Modifier,androidx.compose.ui.unit.DpOffset,androidx.compose.foundation.ScrollState,androidx.compose.ui.window.PopupProperties,kotlin.Function1)) in combination with a `TextField`. 
-
-Do not forget that Android OS has a built in autosuggestion feature for all input fields. Try to have it enabled in cases where it makes 
-sense from the accessibility perspective and disable it when not needed. It should be enabled by default, in case you want to disable it 
-you can do it by using the attribute `android:inputType="textNoSuggestions"` for views or `keyboardOptions = KeyboardOptions(autoCorrect = false)` in Compose.
-
-##### Input types
-
-Every input should at least define type of input (e.g., email, password, phone number, etc.) to make it easier for users to enter their data.
-
-In the traditional view system you can do it with `android:inputType` (`InputType`):
-
-```xml
-<EditText
-    android:id="@+id/editTextNumber"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="number" /> 
-    <!-- check other inputType for more info -->
-```
- In compose you can use the `keyboardOptions` (`KeyboardOptions` and KeyboardType) to achieve the same. 
-
- ```kotlin
-TextField(
-    // ..
-    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
-)
- ```
-
- With the above implementation the keyboard will show the correct layout for the user to input the data.
-
-
-#### 🚫 Failures
-
-If the wrong input layout (e.g., keyboard type) is used for the input field, the user may have issues with entering the data. This can lead to a bad user experience and a failure of this guideline.
-
-
-## Other perceivable guidelines
-
-This section includes guidelines that may not apply to the Android platform or fall under the mobile team’s responsibilities. However, please keep in mind that these guidelines still need to be met.
-
-* [WCAG 1.4.1 Use of Color - Level A](https://www.w3.org/WAI/WCAG22/quickref/#use-of-color)
-* [WCAG 1.4.2 Audio Control - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-control)
-* [WCAG 1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum)
-* [WCAG 1.4.11 Non-text Contrast - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast)
-* [WCAG 1.4.12 Text Spacing - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#text-spacing)
-
----
-
-[← Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")

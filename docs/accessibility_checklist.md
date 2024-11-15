@@ -6,6 +6,20 @@ This document contains a checklist of guidelines that should be followed when de
 
 - [ ] [1.1.1 Non-text content (Level A)](principles/perceivable_principle.md#111-non-text-content-level-a)
 - [ ] [1.2.1-1.2.2 Captions support for prerecorded media (Level A)](principles/perceivable_principle.md#121-122-captions-support-for-prerecorded-media-level-a)
+- [ ] [1.2.3 Audio Description or Media Alternative (Level A)](principles/perceivable_principle.md#123-audio-description-or-media-alternative-level-a)
+- [ ] [1.2.4 Captions support for live media (Level AA)](principles/perceivable_principle.md#124-captions-support-for-live-media-level-aa)
+- [ ] [1.2.5 Audio Description for Prerecorded Media (Level AA)](principles/perceivable_principle.md#125-audio-description-for-prerecorded-media-level-aa)
+- [ ] [1.3.1 Element information and relationship (Level A)](principles/perceivable_principle.md#131-element-information-and-relationship-level-a)
+- [ ] [1.3.2 Meaningful sequence (Level A)](principles/perceivable_principle.md#132-meaningful-sequence-level-a)
+- [ ] [1.3.3 Sensory characteristics (Level A)](principles/perceivable_principle.md#133-sensory-characteristics-level-a)
+- [ ] [1.3.4 Orientation (Level AA)](principles/perceivable_principle.md#134-orientation-level-aa)
+- [ ] [1.3.5 Identify input purpose (Level AA)](principles/perceivable_principle.md#135-identify-input-purpose-level-aa)
+- [ ] [1.4.1 Use of Color (Level A)](principles/perceivable_principle.md#141-use-of-color-level-a)
+- [ ] [1.4.2 Audio control (Level A)](principles/perceivable_principle.md#142-audio-control-level-a)
+- [ ] [1.4.4 Resizeable text (Level AA)](principles/perceivable_principle.md#144-resizeable-text-level-aa)
+- [ ] [1.4.5 Images of text (Level AA)](principles/perceivable_principle.md#145-images-of-text-level-aa)
+- [ ] [1.4.10 Reflow (Level AA)](principles/perceivable_principle.md#1410-reflow-level-aa)
+- [ ] [1.4.12 Text Spacing (Level AA)](principles/perceivable_principle.md#1412-text-spacing-level-aa)
 
 -- OLD
 

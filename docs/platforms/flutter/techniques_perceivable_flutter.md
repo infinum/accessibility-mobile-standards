@@ -40,17 +40,11 @@ If the app you are building includes media content such as video clips or audio 
 
 - all media is presented to the user without the possibility to change some of the controls (slow down, pause, volume up etc.)
 
---- OLD
+## [1.3 Adaptable](../../principles/perceivable_principle.md#13-adaptable)
 
-## Adaptable
+### [1.3.1 Element information and relationship (Level A)](../../principles/perceivable_principle.md#131-element-information-and-relationship-level-a)
 
-### Info and Relationships
-
-Information, structure, and relationships conveyed through presentation are available in text.
-
-*This guideline covers point 1.3.1 Info and Relationships - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 - **Groups of related content**
 
@@ -66,17 +60,13 @@ It is also possible to use _headings_ to summarize groups of text that appear on
 
 That way users of accessibility services can choose to navigate between headings instead of navigating between paragraphs or between words which can improve text navigation experience.
 
-:no_entry_sign: **Failure criteria**
+##### 🚫 Failures
 
 - it is not clear which parts of the screen are contextually connected to each other
 
----
+### [1.3.2 Meaningful sequence (Level A)](../../principles/perceivable_principle.md#132-meaningful-sequence-level-a)
 
-### Meaningful sequence
-
-*This guideline covers point 1.3.2 Meaningful sequence - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 If the order of the content displayed on the screen is crucial for the understanding, it is very important to make sure it will be presented in the same order when using accessibility services. That way users of accessibility services (such as TalkBack) can get clearer picture of the content and possible actions on the current screen that is being navigated through.
 
@@ -104,13 +94,8 @@ Row(
 );
 ```
 
----
+### [1.3.3 Sensory characteristics (Level A)](../../principles/perceivable_principle.md#133-sensory-characteristics-level-a)
 
-### Sensory characteristics
-
-Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
-
-*This guideline covers point 1.3.3 Sensory characteristics - Level A of the WCAG standard.*
 #### ✅ Success technique(s)
 
 To make our app entirely understandable to the users, we should not rely only on one characteristic to show the user elements on the screen. You can find different ways to satisfy this aspect in the text below.
@@ -124,8 +109,4 @@ For example, the color. Use additional differentiation beside the color.
 ![](/resources/images/bill.png)
 
 Here the person might not realize that discount is being reduced from the total price.
-
-⎯
-
-[← Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
 
