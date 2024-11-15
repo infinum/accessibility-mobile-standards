@@ -8,10 +8,10 @@ As the name says, this standard was created for the web (initially developed in 
 
 There are four main principles:
 
-* Perceivable
-* Operable
-* Understandable
-* Robust
+* [Perceivable](principles/perceivable_principle.md)
+* [Operable](principles/operable_principle.md)
+* [Understandable](principles/understandable_principle.md)
+* [Robust](principles/robust_principle.md)
 
 When talking about the **perceivable** principle, this is how it is defined:
 
@@ -45,6 +45,6 @@ In the following chapters, every principle with its guidelines will be described
 
 ⎯
 
-[← Accessibility features per mobile platform](../features/features_mobile_platforms.md "Accessibility features per mobile platform")
+[← Intriduction](introduction.md)
 |
-[Accessibility principles and examples →](principles/accessibility_principles_and_examples.md "Accessibility principles and examples")
+[Checklist →](accessibility_checklist.md)

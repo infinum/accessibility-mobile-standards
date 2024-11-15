@@ -1,19 +1,12 @@
+[⬅️ Principles](../../accessibility_principles.md)
 
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
+ # [1. Perceivable principle](../../principles/perceivable_principle.md#1-perceivable-principle)
 
-# Operable guidelines for Flutter
+ ## [1.1 Text alternatives](../../principles/perceivable_principle.md#11-text-alternatives)
 
-User interface components and navigation must be operable.
+### [1.1.1 Non-text content (Level A)](../../principles/perceivable_principle.md#111-non-text-content-level-a)
 
-## Text alternatives
-
-Provide text alternatives for any non-text content to be changed into other forms people need, such as large print, braille, speech, symbols, or more straightforward language.
-
-*This guideline covers point 1.1.1 Non-text Content - Level A of the WCAG standard.*
-
-### Non-text content identification
-
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Each UI element should include a description that describes it's purpose. It is important that all elements presented on the screen have the description provided, especially the ones that are important for the functionality of the screen on which they are presented. That way, screen readers such as TalkBack can announce these labels to users who rely on these services.
 
@@ -23,7 +16,7 @@ For this use wrap your widget with `Semantics` widget. Some widgets already wrap
 Image(image: AssetImage('assets/settings.png'), semanticLabel: 'Open settings')
 ```
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 ![](/resources/images/settings_icon.png)
 
@@ -31,15 +24,11 @@ Image(image: AssetImage('assets/settings.png'), semanticLabel: 'Open settings')
 
 - Do not provide semantics of elements that only exist for a decorative person. This will make navigation with screen readers harder.
 
----
+## [1.2 Time-based Media](../../principles/perceivable_principle.md#12-time-based-media)
 
-## Time-based Media
+### [1.2.1-1.2.2 Captions support for prerecorded media (Level A)](../../principles/perceivable_principle.md#121-122-captions-support-for-prerecorded-media-level-a)
 
-Provide alternatives for time-based media.
-
-*This guideline covers point 1.2 Time-Based Media - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 If the app you are building includes media content such as video clips or audio recordings, it is suggested to provide an alternative for users with different types of accessibility needs in order for them to understand the material. The suggested practice would be to:
 
@@ -47,11 +36,11 @@ If the app you are building includes media content such as video clips or audio 
 
 - if a video presents information that is vital to completing workflow, provide the same content in an alternative format, such as transcript
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - all media is presented to the user without the possibility to change some of the controls (slow down, pause, volume up etc.)
 
----
+--- OLD
 
 ## Adaptable
 

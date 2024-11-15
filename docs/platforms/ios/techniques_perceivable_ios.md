@@ -1,20 +1,10 @@
- [🔼 Accessibility principles and examples](a../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
+[⬅️ Principles](../../accessibility_principles.md)
 
-# Perceivable guidelines for iOS
+ # [1. Perceivable principle](../../principles/perceivable_principle.md#1-perceivable-principle)
 
-Information and user interface components must be presentable to users in ways they can perceive.
+ ## [1.1 Text alternatives](../../principles/perceivable_principle.md#11-text-alternatives)
 
-## Text alternatives (WCAG 1.1)
-
-Provide text alternatives for any non-text content to be changed into other forms people need, such as large print, braille, speech, symbols, or more straightforward language.
-
-### Non-text content identification (WCAG 1.1.1 - Level A)
-
-When talking about the screen elements, it is important to make information about all elements accessible and available. Some elements may not have text included by design or as a default user interface component. This can be seen when buttons are used with icons only, images, or other decorative elements.
-
-Some users may have issues identifying an element's functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
-
-> This guideline with provided techniques covers the *1.1.1 Non-text Content - Level A of the WCAG standard.*
+### [1.1.1 Non-text content (Level A)](../../principles/perceivable_principle.md#111-non-text-content-level-a)
 
 #### ✅ Success technique(s)
 
@@ -30,7 +20,7 @@ When talking about group components or containers on the screen, it is an excell
 
 Another important thing about labeling elements is the context. Some static elements, like images, provide a context, like an image with the alert or check element. In that case, instead of setting the label as a "check icon", it can be defined as "successful submission" to give the user more information.
 
-#### Using accessibility value and hint
+##### Using accessibility value and hint
 
 Alongside the accessibility label, iOS as a platform supports the definition of an accessibility value and accessibility hint. If some elements can have and should provide specific values, accessibility value can be used alongside the accessibility label. And when talking about element interactivity, accessibility hints can be used as well – but be aware that the user can disable them.
 
@@ -42,15 +32,9 @@ addButton.accessibilityHint = "Adds a new task"
 
 Sometimes it is not a good idea to give accessibility labels to all screen elements. Some elements may only be defined as decorative elements that do not affect the screen functionality (e.g. small elements like images used for screen decoration). In that case, labeling elements like that may confuse the user.
 
-## Time-based Media (WCAG 1.2)
+## [1.2 Time-based Media](../../principles/perceivable_principle.md#12-time-based-media)
 
-Provide alternatives for time-based media.
-
-### Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)
-
-Due to some disabilities, some users may not be able to hear the content of the media provided by the application. An example of that can be a prerecorded audio or video track. In some cases, it is necessary to add support for some accessibility features to make this content accessible to all users.
-
-> This guideline with provided techniques covers the *1.2.1 Audio-only and Video-only (Prerecorded) - Level A and 1.2.2 Captions (Prerecorded) - Level A of the WCAG standard.*
+### [1.2.1-1.2.2 Captions support for prerecorded media (Level A)](../../principles/perceivable_principle.md#121-122-captions-support-for-prerecorded-media-level-a)
 
 #### ✅ Success technique(s)
 
@@ -100,6 +84,8 @@ final class VideoViewController: UIViewController {
 ```
 
 The details about adding captions to the `AVPlayer` (from `AVFoundation`) can be found in the [documentation](https://developer.apple.com/documentation/avfoundation/media_assets_playback_and_editing/adding_subtitles_and_alternative_audio_tracks).
+
+-- OLD
 
 ### Audio Description or Media Alternative (WCAG 1.2.3 - Level A)
 

@@ -2,6 +2,13 @@
 
 This document contains a checklist of guidelines that should be followed when developing a mobile application.
 
+## Perceivable
+
+- [ ] [1.1.1 Non-text content (Level A)](principles/perceivable_principle.md#111-non-text-content-level-a)
+- [ ] [1.2.1-1.2.2 Captions support for prerecorded media (Level A)](principles/perceivable_principle.md#121-122-captions-support-for-prerecorded-media-level-a)
+
+-- OLD
+
 ## Content
 
 Guidelines mentioned in this section are related to the content of the application, specifically the content that is consumed by the user.

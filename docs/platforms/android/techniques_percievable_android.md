@@ -1,17 +1,10 @@
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Perceivable principle](../../principles/perceivable_principle.md "Perceivable principle")
-# Perceivable guidelines for Android
+[⬅️ Principles](../../accessibility_principles.md)
 
-All content displayed on the screen at some point must be presented to the user in a perceivable manner.
+ # [1. Perceivable principle](../../principles/perceivable_principle.md#1-perceivable-principle)
 
-## Text alternatives (WCAG 1.1)
+ ## [1.1 Text alternatives](../../principles/perceivable_principle.md#11-text-alternatives)
 
-Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.
-
-### Non-text content identification (WCAG 1.1.1 - Level A)
-
-When talking about the screen elements, it is important to make information about all elements accessible and available. Some elements may not have text included by design or as a default user interface component. This can be seen when buttons are used with icons only, images, or other decorative elements.
-
-Some users may have issues identifying an element's functionality or description in general, and because of that, it is important to define non-text elements by accessibility features.
+### [1.1.1 Non-text content (Level A)](../../principles/perceivable_principle.md#111-non-text-content-level-a)
 
 #### ✅ Success technique(s)
 
@@ -58,17 +51,9 @@ private fun MyCustomButton(onClick: () -> Unit) {
 - Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes.
 - Setting content description to non-functional or decorative elements. In those cases, labeling the elements may confuse the user and should be avoided.
 
----
+## [1.2 Time-based Media](../../principles/perceivable_principle.md#12-time-based-media)
 
-## Time-based Media (WCAG 1.2)
-
-Provide alternatives for time-based media.
-
-### Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)
-
-This guideline addresses [1.2.1 Audio-only and Video-only (Prerecorded) - Level A](https://www.w3.org/WAI/WCAG22/quickref/#audio-only-and-video-only-prerecorded) and [1.2.2 Captions (Prerecorded) - Level A](https://www.w3.org/WAI/WCAG22/quickref/#captions-prerecorded) from the WCAG standard.
-
-Some users have disabilities that prevent them from hearing media content in an application, such as prerecorded audio or video. To ensure this content is accessible to everyone, techniques like adding captions must be incorporated. This ensures all users, regardless of hearing ability, can fully engage with the media.
+### [1.2.1-1.2.2 Captions support for prerecorded media (Level A)](../../principles/perceivable_principle.md#121-122-captions-support-for-prerecorded-media-level-a)
 
 #### ✅ Success technique(s)
 
@@ -99,6 +84,8 @@ class CaptionUtils(context: Context) {
    fun getCustomCaptionStyle(): CaptionStyle = captioningManager.userStyle
 }
 ```
+
+-- OLD
 
 ### Audio Description or Media Alternative (WCAG 1.2.3 - Level A)
 
