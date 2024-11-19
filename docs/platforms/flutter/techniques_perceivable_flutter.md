@@ -1,8 +1,6 @@
-[⬅️ Principles](../../accessibility_principles.md)
+# [1. Perceivable principle](../../principles/perceivable_principle.md#1-perceivable-principle)
 
- # [1. Perceivable principle](../../principles/perceivable_principle.md#1-perceivable-principle)
-
- ## [1.1 Text alternatives](../../principles/perceivable_principle.md#11-text-alternatives)
+## [1.1 Text alternatives](../../principles/perceivable_principle.md#11-text-alternatives)
 
 ### [1.1.1 Non-text content (Level A)](../../principles/perceivable_principle.md#111-non-text-content-level-a)
 

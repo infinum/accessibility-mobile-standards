@@ -1,15 +1,10 @@
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
-# Operable guidelines for Android
+# [2. Operable principle](../../principles/operable_principle.md#2-operable-principle)
 
-User interface components and navigation must be operable.
+## [2.1. Keyboard Accessible](../../principles/operable_principle.md#21-keyboard-accessible)
 
-## Keyboard (WCAG 2.1.1 - Level A)
+## [2.1.1 Keyboard (Level A)](../../principles/operable_principle.md#211-keyboard-level-a)
 
-Make all functionality available from a keyboard.
-
-*This guideline covers point 2.1.1 Keyboard - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Besides the on-screen keyboard, Android also supports physical keyboards that offer a convenient way to input text and navigate and interact with the app. This feature greatly benefits users with motor difficulties who use the Switch Access service to interact with the app.
 
@@ -68,20 +63,13 @@ When the user is navigating through the app **using the arrow keys on the keyboa
     ...  />
 ```
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - Not defining custom order if the views in the layout file are not defined in the same order they should be presented to the user.
 
----
+## [2.2 Enough Time](../../principles/operable_principle.md#22-enough-time)
 
-## Enough time (WCAG 2.2)
-
-Provide users enough time to read and use the content.
-
-### Timing Adjustable (WCAG 2.2.1 - Level A)
-
-Ensure that users can adjust the timing of content that is displayed on the screen.
-
+### [2.2.1 Timing Adjustable (Level A)](../../principles/operable_principle.md#221-timing-adjustable-level-a)
 
 #### ✅ Success technique(s)
 
@@ -137,13 +125,7 @@ fun CustomSnackbarExample() {
 
 - Define time-limited actions in the app with no ability to extend that limit.
 
----
-
-### Pause, Stop, Hide (WCAG - 2.2.2 Level A)
-
-Moving, blinking, or scrolling, or auto-updating content in the app.
-
-*This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
+### [2.2.2 Pause, Stop, Hide (Level A)](../../principles/operable_principle.md#222-pause-stop-hide-level-a)
 
 #### ✅ Success technique(s)
 
@@ -157,17 +139,9 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
----
+## [2.3 Seizures and Physical Reactions](../../principles/operable_principle.md#23-seizures-and-physical-reactions)
 
-## Seizures and Physical Reactions (WCAG 2.3)
-
-Do not design content in a way that is known to cause seizures or physical reactions.
-
-### Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)
-
-Apps should not contain elements that flash more than three times in one second.
-
-> This guideline covers _2.3.1 - Level A of the WCAG standard._
+### [2.3.1 Three Flashed or Below Threshold (Level A)](../../principles/operable_principle.md#231-three-flashed-or-below-threshold-level-a)
 
 #### ✅ Success technique(s)
 
@@ -183,17 +157,9 @@ Apps should not contain elements that flash more than three times in one second.
 
 - Having a larger area of screen flashing more than three times per second.
 
----
+## [2.4 Navigable](../../principles/operable_principle.md#24-navigable)
 
-## Navigable (WCAG 2.4)
-
-Provide ways to help users navigate, find content, and determine where they are.
-
-### Bypass Blocks (WCAG 2.4.1 - Level A)
-
-The app should be implemented so that it is possible to relatively easily skip the content that is repeated on the screen or the content that is irrelevant to the user.
-
-In addition to the basic left/right swipe navigation through elements, TalkBack offers navigation by element types (headings, controls and links) and fine-grained navigation through text (by paragraphs, lines, words and characters) which is controlled with up/down swipes, as explained in the [Reading controls chapter](https://support.google.com/accessibility/android/answer/6007066?hl=en) of Google's TalkBack support page. These alternate modes of navigation are the main tool used for bypassing blocks, so it is important to make sure they all work as intended. Fortunately, most of them work well with native components, but some require additional effort.
+### [2.4.1 Bypass Blocks (Level A)](../../principles/operable_principle.md#241-bypass-blocks-level-a)
 
 #### ✅ Success technique(s)
 
@@ -221,11 +187,7 @@ In addition to the above, a section of a screen containing numerous items should
     - No elements set as headings to separate bigger parts of text or groups in general.
     - Controls not being recognized as such. This can happen when, for example, using `TextView` instead of a `Button` or `ImageView` instead of a `Checkbox` or a `Switch` without any accessibility info modifications.
 
----
-
-### Page Titled (WCAG 2.4.2 Level A)
-
-*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
+### [2.4.2 Page Titled (Level A)](../../principles/operable_principle.md#242-page-titled-level-a)
 
 #### ✅ Success technique(s)
 
@@ -239,11 +201,7 @@ If the title is defined using a toolbar with custom behavior or another custom v
 
 - Defined titles are not the first elements that are read when the user enters the screen and therefore users using accessibility services have no information about which screen they opened.
 
----
-
-### Focus Order (WCAG 2.4.3 - Level A)
-
-Ensure that information is read in an order consistent with the meaning and content.
+### [2.4.3 Focus Order (Level A)](../../principles/operable_principle.md#243-focus-order-level-a)
 
 #### ✅ Success technique(s)
 
@@ -255,11 +213,7 @@ Defining the content of the screen as described in the [Meaningful sequence guid
 
 - Views displayed on the screen break consistency of the navigation.
 
----
-
-### Link Purpose (In Context) (WCAG 2.4.3 - Level A)
-
-*This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
+### [2.4.4 Link Purpose (Level A)](../../principles/operable_principle.md#244-link-purpose-level-a)
 
 #### ✅ Success technique(s)
 
@@ -297,15 +251,136 @@ The example given in the **Screenshot 4.** - **Avoid using ClickableSpan** and i
 
 - The link is part of the longer text and implemented using ClickableSpan, so TalkBack users are not aware of the link’s existence.
 
-## Input Modalities (WCAG 2.5)
+### [2.4.6 Heading and Labels (Level AA)](../../principles/operable_principle.md#246-heading-and-labels-level-aa)
 
-_Make it easier for users to operate functionality through various inputs beyond keyboard._
+#### ✅ Success technique(s)
 
-### Target size (Minimum) (WCAG 2.5.8 - Level AA)
+When the user chooses to navigate between headings instead of between paragraphs or between word, make sure that sections on screen are defined as headings so that users can "skim" through them to locate the specific content they need.
 
-To make your app's interface more user-friendly, ensure that controls are easy to see and tap. A bigger target size is also essential to make your app accessible to everyone, including users with disabilities.
+For Views, you can set the `android:accessibilityHeading` attribute to `true` for a view to be treated as a heading (requires minSdk >= 28). Alternatively, you can set `ViewCompat.setAccessibilityHeading(view, true)` or use `AccessibilityDelegateCompat` for older versions.
 
-> This guideline covers point *2.5.8 Target Size (Minimum) - Level AA of the WCAG standard.*
+Example: setting a TextView as a heading via `AccessibilityDelegateCompat`:
+```
+ ViewCompat.setAccessibilityDelegate(
+        personalData,
+        object : AccessibilityDelegateCompat() {
+            override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+                super.onInitializeAccessibilityNodeInfo(host, info)
+                info.isHeading = true
+            }
+        },
+    )
+```
+
+For Compose, you can use `heading()` semantics property to define a certain node as a heading.
+
+Example: setting a Text composable as a heading:
+```
+Text(
+    modifier = Modifier.semantics {
+        heading()
+    }
+)
+```
+
+In general, try to make the headings and labels as descriptive as possible. Also, in addition to that, putting the most important information at the beginning of each heading helps users navigate through the content more easily.
+
+#### 🚫 Failures
+
+- Not providing a heading or label for the content that follows
+
+- Providing a missing or incorrect heading or label
+
+### [2.4.7 Focus Visibility (Level AA)](../../principles/operable_principle.md#247-focus-visibility-level-aa)
+
+#### ✅ Success technique(s)
+
+Even though the system automatically handles this, think about selection and focus on custom elements; make sure that the focus is visible in the correct way and that the user can see which element is currently selected, especially if the component contains "inner" elements.
+
+#### 🚫 Failure examples
+- There are too many nested focusable elements and it is difficult to determine which one is in focus. This primarily might call for a reconsideration in design, where the elements could be laid out in a different way.
+
+### [2.4.11 Focus Not Obscured (Minimum) (Level AA)](../../principles/operable_principle.md#2411-focus-not-obscured-minimum-level-aa)
+
+#### ✅ Success technique(s)
+
+When creating a view or a screen, think about the visibility of the focus and make sure that the user can see which element is currently selected.
+
+To satisfy this guideline, check the following:
+
+- The content is scrollable (when needed)
+- The element is not obscured by other elements
+- The element is (at least) partially visible when focused/used
+
+#### 🚫 Failures
+
+The following should be avoided:
+
+- Element is hidden due to inability to scroll.
+- Another element of the screen (e.g. sticky footer or floating element) hides the focused element.
+
+## [2.5 Input modalities](../../principles/operable_principle.md#25-input-modalities)
+
+### [2.5.3 Label in Name (Level A)](../../principles/operable_principle.md#253-label-in-name-level-a)
+
+#### ✅ Success technique(s)
+
+A user should easily understand the information related to the focused label. To achieve this, the following steps should be taken:
+
+- content description should match the visible label name, or
+
+- include the text of the visible label as a part of the content description
+
+For views, it can be set through `android:contentDescription` attribute in XML or by using `View.setContentDescription(contentDescription)` function.
+
+For Compose, it can be set as a semantics property.
+
+Example: setting contentDescription in Compose:
+```
+Text(
+     modifier = Modifier.semantics {
+            contentDescription = text
+        },
+     text = text,
+```
+
+**Important!** For most components like labels and buttons, accessibility service will handle things automatically. In case of a custom component, `contentDescription` label should be set manually.
+
+#### 🚫 Failures
+
+- Not including the text of the visible label as a part of the content description
+
+- Words of visible label and content description not matching (e.g. not the same order)
+
+### [2.5.4 Motion Actuation (Level A)](../../principles/operable_principle.md#254-motion-actuation-level-a)
+
+#### ✅ Success technique(s)
+
+Mobile apps that support interaction through motion actuation (e.g., shaking the device, tilting, or other motion-based gestures) must also provide an alternative input method, such as touch or on-screen controls. Users should be able to disable motion actuation and still interact with the app effectively.
+
+Example: If your app allows users to shake their phone to refresh content, you should also provide an on-screen refresh button as an alternative.
+
+#### 🚫 Failures
+
+An app that requires motion actuation (e.g., shaking or tilting) for core functions without offering a touch-based or alternative method of input would fail this criterion. Additionally, if motion-based controls cannot be disabled or cause unintended actions due to accidental motion, it would also be considered a failure.
+
+Example: A mobile app that only allows form submission by shaking the device, with no button for submission, would fail this criterion.
+
+### [2.5.7 Dragging Movements (Level AA)](../../principles/operable_principle.md#257-dragging-movements-level-aa)
+
+#### ✅ Success technique(s)
+
+Mobile apps that require dragging movements (such as swiping or dragging objects across the screen) should also offer an alternative method for performing the same function. This could include taps, buttons, or keyboard inputs that achieve the same result without relying on dragging gestures.
+
+Example: In a photo-editing app that allows users to adjust sliders by dragging, provide the option to use + and - buttons or direct numerical input for precision.
+
+#### 🚫 Failures
+
+An app that relies solely on dragging movements to complete important actions (e.g., moving an item into a folder, adjusting sliders) without offering an alternative input method would fail this criterion. If dragging movements are the only means of interaction, users with motor impairments or those using assistive technology would face accessibility barriers.
+
+Example: A to-do list app where the only way to reorder tasks is by dragging items, without an option to move tasks via buttons, would fail this criterion.
+
+### [2.5.8 Target Size (Minimum) (Level AA)](../../principles/operable_principle.md#258-target-size-minimum-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -348,193 +423,3 @@ _Important to note is that this guideline primarily depends on accessible design
 #### 🚫 Failures
 
 - Interactive UI elements are too small to be easily tapped.
-
----
-
-### Heading and Labels (WCAG 2.4.6 - Level AA)
-
-Based on this guideline, users should clearly understand the purpose of the heading or label. It should be descriptive and give information about the content that comes next.
-
-> This guideline covers point *2.4.6 Headings and Labels - Level AA of the WCAG standard.*
-
-#### ✅ Success technique(s)
-
-When the user chooses to navigate between headings instead of between paragraphs or between word, make sure that sections on screen are defined as headings so that users can "skim" through them to locate the specific content they need.
-
-For Views, you can set the `android:accessibilityHeading` attribute to `true` for a view to be treated as a heading (requires minSdk >= 28). Alternatively, you can set `ViewCompat.setAccessibilityHeading(view, true)` or use `AccessibilityDelegateCompat` for older versions.
-
-Example: setting a TextView as a heading via `AccessibilityDelegateCompat`:
-```
- ViewCompat.setAccessibilityDelegate(
-        personalData,
-        object : AccessibilityDelegateCompat() {
-            override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-                super.onInitializeAccessibilityNodeInfo(host, info)
-                info.isHeading = true
-            }
-        },
-    )
-```
-
-For Compose, you can use `heading()` semantics property to define a certain node as a heading.
-
-Example: setting a Text composable as a heading:
-```
-Text(
-    modifier = Modifier.semantics {
-        heading()
-    }
-)
-```
-
-In general, try to make the headings and labels as descriptive as possible. Also, in addition to that, putting the most important information at the beginning of each heading helps users navigate through the content more easily.
-
-#### 🚫 Failures
-
-- Not providing a heading or label for the content that follows
-
-- Providing a missing or incorrect heading or label
-
----
-
-### Focus Visibility (WCAG 2.4.7 - Level AA)
-
-This guideline states that the user should be able to see the focus on the element that is currently selected. With a mobile platform in mind, this guideline is automatically satisfied when TalkBack or Switch access is used --- the focus is made clearly visible with colored borders.
-
-#### ✅ Success technique(s)
-
-Even though the system automatically handles this, think about selection and focus on custom elements; make sure that the focus is visible in the correct way and that the user can see which element is currently selected, especially if the component contains "inner" elements.
-
-#### 🚫 Failure examples
-- There are too many nested focusable elements and it is difficult to determine which one is in focus. This primarily might call for a reconsideration in design, where the elements could be laid out in a different way.
-
----
-
-### Focus Not Obscured (Minimum) (WCAG 2.4.11 - Level AA)
-
-When the user navigates through the app, the focus should not be obscured by any other author-created elements and should be visible, at least partially.
-
-#### ✅ Success technique(s)
-
-When creating a view or a screen, think about the visibility of the focus and make sure that the user can see which element is currently selected.
-
-To satisfy this guideline, check the following:
-
-- The content is scrollable (when needed)
-- The element is not obscured by other elements
-- The element is (at least) partially visible when focused/used
-
-#### 🚫 Failures
-
-The following should be avoided:
-
-- Element is hidden due to inability to scroll.
-- Another element of the screen (e.g. sticky footer or floating element) hides the focused element.
-
-## Input modalities (WCAG 2.5)
-
-*Make it easier for users to operate functionality through various inputs beyond keyboard.*
-
-### Label in Name (WCAG 2.5.3 - Level A)
-
-All user interface components that are defined as labels (that include text or images of text) contain the name, which is visible (presented visually).
-
-> This guideline covers point *2.5.3 Label in Name - Level A of the WCAG standard.*
-
-#### ✅ Success technique(s)
-
-A user should easily understand the information related to the focused label. To achieve this, the following steps should be taken:
-
-- content description should match the visible label name, or
-
-- include the text of the visible label as a part of the content description
-
-For views, it can be set through `android:contentDescription` attribute in XML or by using `View.setContentDescription(contentDescription)` function.
-
-For Compose, it can be set as a semantics property.
-
-Example: setting contentDescription in Compose:
-```
-Text(
-     modifier = Modifier.semantics {
-            contentDescription = text
-        },
-     text = text,
-```
-
-**Important!** For most components like labels and buttons, accessibility service will handle things automatically. In case of a custom component, `contentDescription` label should be set manually.
-
-#### 🚫 Failures
-
-- Not including the text of the visible label as a part of the content description
-
-- Words of visible label and content description not matching (e.g. not the same order)
-
----
-
-### Motion Actuation (WCAG 2.5.4 - Level A)
-
-We need to ensure that content does not rely on device motion for control, as some users may have difficulty moving or holding a device steadily. This helps make content accessible to everyone, regardless of their physical abilities (e.g. shake to undo).
-
-#### ✅ Success technique(s)
-
-Mobile apps that support interaction through motion actuation (e.g., shaking the device, tilting, or other motion-based gestures) must also provide an alternative input method, such as touch or on-screen controls. Users should be able to disable motion actuation and still interact with the app effectively.
-
-Example: If your app allows users to shake their phone to refresh content, you should also provide an on-screen refresh button as an alternative.
-
-#### 🚫 Failures
-
-An app that requires motion actuation (e.g., shaking or tilting) for core functions without offering a touch-based or alternative method of input would fail this criterion. Additionally, if motion-based controls cannot be disabled or cause unintended actions due to accidental motion, it would also be considered a failure.
-
-Example: A mobile app that only allows form submission by shaking the device, with no button for submission, would fail this criterion.
-
----
-
-### Dragging Movements (WCAG 2.5.7 - Level AA)
-
-Due to different disabilities, some users may have difficulty performing dragging movements. This guideline states that the application should provide an alternative way to perform the action that is not based on dragging movements.
-
-#### ✅ Success technique(s)
-
-Mobile apps that require dragging movements (such as swiping or dragging objects across the screen) should also offer an alternative method for performing the same function. This could include taps, buttons, or keyboard inputs that achieve the same result without relying on dragging gestures.
-
-Example: In a photo-editing app that allows users to adjust sliders by dragging, provide the option to use + and - buttons or direct numerical input for precision.
-
-#### 🚫 Failures
-
-An app that relies solely on dragging movements to complete important actions (e.g., moving an item into a folder, adjusting sliders) without offering an alternative input method would fail this criterion. If dragging movements are the only means of interaction, users with motor impairments or those using assistive technology would face accessibility barriers.
-
-Example: A to-do list app where the only way to reorder tasks is by dragging items, without an option to move tasks via buttons, would fail this criterion.
-
----
-
-### Other operable guidelines
-
-This section contains guidelines that may not applicable for the mobile (Android) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
-
-- [WCAG 2.1.2 No Keyboard Trap - Level A](https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap)
-- [WCAG 2.1.4 Character Key Shortcuts - Level A](https://www.w3.org/WAI/WCAG22/quickref/#character-key-shortcuts)
-- [WCAG 2.4.5 Multiple Ways - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways)
-- [WCAG 2.5.1 Pointer Gestures - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-gestures)
-- [WCAG 2.5.2 Pointer Cancellation - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-cancellation)]
-
----
-
-## Sources
-
-- [Google Support Page](https://support.google.com/accessibility/android)
-- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
-
----
-
-[← Operable principle](../../principles/operable_principle.md "Operable principle")
-
-
-
-
-
-
-
-
-
-

@@ -21,6 +21,23 @@ This document contains a checklist of guidelines that should be followed when de
 - [ ] [1.4.10 Reflow (Level AA)](principles/perceivable_principle.md#1410-reflow-level-aa)
 - [ ] [1.4.12 Text Spacing (Level AA)](principles/perceivable_principle.md#1412-text-spacing-level-aa)
 
+## Operable
+
+- [ ] [2.1.1 Keyboard (Level A)](principles/operable_principle.md#211-keyboard-level-a)
+- [ ] [2.2.1 Timing Adjustable (Level A)](principles/operable_principle.md#221-timing-adjustable-level-a)
+- [ ] [2.2.2 Pause, Stop, Hide (Level A)](principles/operable_principle.md#222-pause-stop-hide-level-a)
+- [ ] [2.3.1 Three Flashed or Below Threshold (Level A)](principles/operable_principle.md#231-three-flashed-or-below-threshold-level-a)
+- [ ] [2.4.1 Bypass Blocks (Level A)](principles/operable_principle.md#241-bypass-blocks-level-a)
+- [ ] [2.4.2 Page Titled (Level A)](principles/operable_principle.md#242-page-titled-level-a)
+- [ ] [2.4.4 Link Purpose (Level A)](principles/operable_principle.md#244-link-purpose-level-a)
+- [ ] [2.4.6 Heading and Labels (Level AA)](principles/operable_principle.md#246-heading-and-labels-level-aa)
+- [ ] [2.4.7 Focus Visibility (Level AA)](principles/operable_principle.md#247-focus-visibility-level-aa)
+- [ ] [2.4.11 Focus Not Obscured (Minimum) (Level AA)](principles/operable_principle.md#2411-focus-not-obscured-minimum-level-aa)
+- [ ] [2.5.3 Label in Name (Level A)](principles/operable_principle.md#253-label-in-name-level-a)
+- [ ] [2.5.4 Motion Actuation (Level A)](principles/operable_principle.md#254-motion-actuation-level-a)
+- [ ] [2.5.7 Dragging Movements (Level AA)](principles/operable_principle.md#257-dragging-movements-level-aa)
+- [ ] [2.5.8 Target Size (Minimum) (Level AA)](principles/operable_principle.md#258-target-size-minimum-level-aa)
+
 -- OLD
 
 ## Content

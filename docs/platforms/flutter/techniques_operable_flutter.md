@@ -1,16 +1,12 @@
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
+# [2. Operable principle](../../principles/operable_principle.md#2-operable-principle)
 
-# Operable guidelines for Flutter
+## [2.1. Keyboard Accessible](../../principles/operable_principle.md#21-keyboard-accessible)
 
-User interface components and navigation must be operable.
+## [2.1.1 Keyboard (Level A)](../../principles/operable_principle.md#211-keyboard-level-a)
 
-## Keyboard accessible
+#### ✅ Success technique(s)
 
-*This guideline covers point 2.1.1 Keyboard and  2.4.3 Focus Order - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
-
-### Handle tab navigation
+##### Handle tab navigation
 
 When the user is navigating through the app using the `Tab` key on the keyboard, the system passes focus based on the the order of elements appearing on the screen. This is why, if the order of the view elements on the screen is not entirely the same as the order defined in the file, you might need to manually specify the focus order.
 
@@ -49,15 +45,11 @@ FocusTraversalGroup(
 
 More about focus traversal you can at [Controlling what gets focus](https://docs.flutter.dev/development/ui/advanced/focus#controlling-what-gets-focus) from Flutter documentation.
 
----
+## [2.2 Enough Time](../../principles/operable_principle.md#22-enough-time)
 
-## Enough time
+### [2.2.1 Timing Adjustable (Level A)](../../principles/operable_principle.md#221-timing-adjustable-level-a)
 
-Provide users enough time to read and use content.
-
-*This guideline covers point 2.2.1 Timing Adjustable - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 All users should have the ability to interact with the content displayed on the screen even if there is a time limit defined for interaction with a specific view. Therefore, users should have the ability to turn off the defined time-limit, adjust it or extend it.
 
@@ -65,19 +57,13 @@ All users should have the ability to interact with the content displayed on the 
 
 - In case of auto-updating content, it is recommended to allow the user to extend the defined time limit to at least ten times the length of the default setting so that they're able to process the displayed information.
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - logging out the user without prior warning and possibility to extend session
 
 - define time-limited actions in the app with no ability to extend that limit
 
----
-
-### Pause, Stop, Hide
-
-Moving, blinking, or scrolling, or auto-updating content in the app.
-
-*This guideline covers point 2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
+### [2.2.2 Pause, Stop, Hide (Level A)](../../principles/operable_principle.md#222-pause-stop-hide-level-a)
 
 #### ✅ Success technique(s)
 
@@ -89,18 +75,9 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
----
+## [2.3 Seizures and Physical Reactions](../../principles/operable_principle.md#23-seizures-and-physical-reactions)
 
-
-## Seizures and Physical Reactions
-
-Do not design content in a way that is known to cause seizures or physical reactions.
-
-### Three Flashed or Below Treshold
-
-Apps should not contain elements that flash more than three times in one second period.
-
-*This guideline covers point 2.3.1 - Level A of the WCAG standard.*
+### [2.3.1 Three Flashed or Below Threshold (Level A)](../../principles/operable_principle.md#231-three-flashed-or-below-threshold-level-a)
 
 #### ✅ Success technique(s)
 
@@ -116,13 +93,9 @@ Apps should not contain elements that flash more than three times in one second 
 
 - Having a larger area of screen flashing more than three times per second
 
----
+## [2.4 Navigable](../../principles/operable_principle.md#24-navigable)
 
-### Bypass Blocks
-
-A skip mechanism is available to bypass blocks of content that are repated in the app.
-
-*This guideline covers point 2.4.1 Bypass Blocks - Level A of the WCAG standard.*
+### [2.4.1 Bypass Blocks (Level A)](../../principles/operable_principle.md#241-bypass-blocks-level-a)
 
 #### ✅ Success technique(s)
 
@@ -138,32 +111,22 @@ To accomplish this use `Semantics(container: true, label: 'Stories', child: ...)
 
 Not providing a way for user to quickly skip over sections with numerous items.
 
----
+### [2.4.2 Page Titled (Level A)](../../principles/operable_principle.md#242-page-titled-level-a)
 
-### Page Titles
-
-Screens have a clear, descriptive, and possibly unique title that describes topic or purpose and is easily understood by all users.
-
-*This guideline covers point 2.4.2 Page Titled - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Each screen should have a clear, descriptive and, if possible, unique title that describes the purpose of that screen that will be understandable to all users. Also, it is important to make sure that the title is the first element that will be read by screen reader when the user enters the screen. 
 
 If you're setting AppBar in `Scaffold(appBar: ...)` then the title will be read before body. But if you have some custom design you can use `Semantics(sortKey: OrdinalSortKey(0), child: ...)` to make sure title is read first.
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - Leaving the title empty
 - Using a custom title view or custom navigation bar without ensuring it's readable by screen reader
 
----
+### [2.4.4 Link Purpose (Level A)](../../principles/operable_principle.md#244-link-purpose-level-a)
 
-### Link Purpose
-
-*This guideline covers point 2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
-
-:white_check_mark: **Success criteria**
+#### ✅ Success technique(s)
 
 Links are also special elements for screen readers and user expects they will be read in an appropriate way. Note that we are not talking here about buttons, but about text links that are mostly found on the web.
 
@@ -171,12 +134,8 @@ Flutter doesn't have out-of-box support for hyperlinks, but it can be achieved w
 
 Important piece here is that you should wrap the link with `Semantics(link: true, child...)`.
 
-:no_entry_sign: **Failure criteria**
+#### 🚫 Failures
 
 - link is defined as unclear label or button and has no additional description provided
 
 - link is part of the longer text and implemented using ClickableSpan so TalkBack users are not aware of link existence
-
----
-
-[← Operable principle](../../principles/operable_principle.md "Operable principle")

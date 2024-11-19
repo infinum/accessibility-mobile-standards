@@ -1,18 +1,8 @@
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Operable principle](../../principles/operable_principle.md "Operable principle")
+# [2. Operable principle](../../principles/operable_principle.md#2-operable-principle)
 
-# Operable
+## [2.2 Enough Time](../../principles/operable_principle.md#22-enough-time)
 
-User interface components and navigation must be operable.
-
-## Enough Time (WCAG 2.2)
-
-Provide users enough time to read and use the content.
-
-### Timing Adjustable (WCAG 2.2.1 - Level A)
-
-The user can turn off, adjust, or extend each time limit set by the content.
-
-> This guideline covers point *2.2.1 Timing Adjustable - Level A of the WCAG standard.*
+### [2.2.1 Timing Adjustable (Level A)](../../principles/operable_principle.md#221-timing-adjustable-level-a)
 
 #### ✅ Success technique(s)
 
@@ -29,11 +19,7 @@ The user can turn off, adjust, or extend each time limit set by the content.
 - Logging a user out of their session with no prior warning.
 - Not providing enough time or time extensions to react to an incoming action in the app.
 
-### Pause, Stop, Hide (WCAG 2.2.2 - Level A)
-
-Moving, blinking, or scrolling, or auto-updating content in the app.
-
-> This guideline covers point *2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
+### [2.2.2 Pause, Stop, Hide (Level A)](../../principles/operable_principle.md#222-pause-stop-hide-level-a)
 
 #### ✅ Success technique(s)
 
@@ -45,15 +31,9 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
-## Seizures and Physical Reactions (WCAG 2.3)
+## [2.3 Seizures and Physical Reactions](../../principles/operable_principle.md#23-seizures-and-physical-reactions)
 
-Do not design content in a way known to cause seizures or physical reactions.
-
-### Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)
-
-Apps should not contain any element that flashes more than three times in one second.
-
-> This guideline covers point *2.3.1 - Level A of the WCAG standard.*
+### [2.3.1 Three Flashed or Below Threshold (Level A)](../../principles/operable_principle.md#231-three-flashed-or-below-threshold-level-a)
 
 #### ✅ Success technique(s)
 
@@ -66,15 +46,9 @@ Apps should not contain any element that flashes more than three times in one se
 - Using rapidly flashing elements to catch the user's attention.
 - Having a larger area of screen flashing more than three times per second.
 
-## Navigable (WCAG 2.4)
+## [2.4 Navigable](../../principles/operable_principle.md#24-navigable)
 
-*Provide ways to help users navigate, find content, and determine where they are.*
-
-### Bypass Blocks (WCAG 2.4.1 - Level A)
-
-A skip mechanism is available to bypass blocks of content that are repeated in the app.
-
-> This guideline covers point *2.4.1 Bypass Blocks - Level A of the WCAG standard.*
+### [2.4.1 Bypass Blocks (Level A)](../../principles/operable_principle.md#241-bypass-blocks-level-a)
 
 #### ✅ Success technique(s)
 
@@ -111,11 +85,7 @@ Please check more information about custom rotors in [this](https://developer.ap
 
 Not providing a way for the user to quickly skip over sections with numerous items.
 
-### Page Titled (WCAG 2.4.2 - Level A)
-
-Screens have a clear, descriptive, and possibly unique title that describes the topic or purpose and is easily understood by all users.
-
-> This guideline covers point *2.4.2 Page Titled - Level A of the WCAG standard.*
+### [2.4.2 Page Titled (Level A)](../../principles/operable_principle.md#242-page-titled-level-a)
 
 #### ✅ Success technique(s)
 
@@ -153,18 +123,14 @@ Screens have a clear, descriptive, and possibly unique title that describes the 
   - file names like "report.pdf" or "DSC_0123.jpeg"
   - placeholder text like "Enter title..." or "Search..."
 
-### Focus Order (WCAG 2.4.3 - Level A)
-
-VoiceOver: Ensure that information is read in an order consistent with the meaning and content.
-
-> This guideline covers point *2.4.3 Focus Order - Level A of the WCAG standard.*
+### [2.4.3 Focus Order (Level A)](../../principles/operable_principle.md#243-focus-order-level-a)
 
 #### ✅ Success technique(s)
 
 - VoiceOver: When designing a new screen, make sure to test it with VoiceOver and see whether the elements are read in the right, logical order. The easiest way to achieve a correct focus order is to layout elements inside a `UIStackView`. VoiceOver will read elements in the same order as in the interface builder document outline.
 Keep in mind: when placed outside a stack view, elements positioned closer to the top are read first. If elements are near the same vertical position, leading-side elements are read first.
 
-– To change focus order, create an array of subviews and assign it to their parent container's `accessibilityElements`.
+- To change focus order, create an array of subviews and assign it to their parent container's `accessibilityElements`.
 
    **Example:** Setting accessibility elements on container views:
 
@@ -206,11 +172,7 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
     }
 ```
 
-### Action Purpose (WCAG 2.4.4 - Level A)
-
-The purpose of a button or link action is clear and easily understandable by all users
-
-> This guideline covers point *2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
+### [2.4.4 Link Purpose (Level A)](../../principles/operable_principle.md#244-link-purpose-level-a)
 
 #### ✅ Success technique(s)
 
@@ -254,11 +216,7 @@ The purpose of a button or link action is clear and easily understandable by all
 - Using generic and confusing button titles for canceling actions, for example: _"Are you sure you want to cancel your booking? This action is irreversible" ▸ OK  ▸ Cancel_
 - Button titles with an unclear result like "Ready to publish?"
 
-### Heading and Labels (WCAG 2.4.6 - Level AA)
-
-Based on this guideline, the user should be able to understand the purpose of the heading or label. The heading or label should be descriptive and provide information about the content that follows.
-
-> This guideline covers point *2.4.6 Headings and Labels - Level AA of the WCAG standard.*
+### [2.4.6 Heading and Labels (Level AA)](../../principles/operable_principle.md#246-heading-and-labels-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -284,21 +242,13 @@ The following should be avoided:
 - Not providing a title or label for the content that follows
 - Providing a missing or incorrect title or label
 
-### Focus Visibility (WCAG 2.4.7 - Level AA)
-
-This guideline states that the user should be able to see the focus on the element that is currently selected. With a mobile platform in mind, this guideline is automatically satisfied if VoiceOver is used - handled by the system (iOS).
-
-> This guideline covers point *2.4.7 Focus Visible - Level AA of the WCAG standard.*
+### [2.4.7 Focus Visibility (Level AA)](../../principles/operable_principle.md#247-focus-visibility-level-aa)
 
 #### ✅ Success technique(s)
 
 Even though, the system automatically handles this, think about selection and focus on custom elements; make sure that the focus is visible in a correct way and that the user can see which element is currently selected, especially if the component contains "inner" elements.
 
-### Focus Not Obscured (Minimum) (WCAG 2.4.11 - Level AA)
-
-When the user navigates through the app, the focus should not be obscured by other elements and should be visible (at least partially).
-
-> This guideline covers point *2.4.11 Focus Not Obscured (Minimum) - Level AA of the WCAG standard.*
+### [2.4.11 Focus Not Obscured (Minimum) (Level AA)](../../principles/operable_principle.md#2411-focus-not-obscured-minimum-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -317,15 +267,9 @@ The following should be avoided:
 - The focus is obscured by other elements
 - Element is hidden due to inability to scroll or another element of the screen (e.g. sticky footer or floating element)
 
-## Input modalities (WCAG 2.5)]
+## [2.5 Input modalities](../../principles/operable_principle.md#25-input-modalities)
 
-*Make it easier for users to operate functionality through various inputs beyond keyboard.*
-
-### Label in Name (WCAG 2.5.3 - Level A)
-
-All user interface components that are defined as labels should contain the name, which is visible (presented visually).
-
-> This guideline covers point *2.5.3 Label in Name - Level A of the WCAG standard.*
+### [2.5.3 Label in Name (Level A)](../../principles/operable_principle.md#253-label-in-name-level-a)
 
 #### ✅ Success technique(s)
 
@@ -347,11 +291,7 @@ As a failure to this criterion, the following should be avoided:
 - not including the text of the visible label as a part of the accessibility label
 - words of visible label and accessibility label not matching (e.g. not the same order)
 
-### Motion Actuation (WCAG 2.5.4 - Level A)
-
-We need to ensure that content does not rely on device motion for control, as some users may have difficulty moving or holding a device steadily. This helps make content accessible to everyone, regardless of their physical abilities (e.g. shake to undo).
-
-> This guideline covers point *2.5.4 Motion Actuation - Level A of the WCAG standard.*
+### [2.5.4 Motion Actuation (Level A)](../../principles/operable_principle.md#254-motion-actuation-level-a)
 
 #### ✅ Success technique(s)
 
@@ -361,11 +301,7 @@ To satisfy this criterion, the application should provide an alternative way to 
 
 The application should avoid using only one way of input to perform an action - in case when that is not a standard way of input (e.g. device motion).
 
-### Dragging Movements (WCAG 2.5.7 - Level AA)
-
-Due to different disabilities, some users may have difficulty performing dragging movements. This guideline states that the application should provide an alternative way to perform the action that is not based on dragging movements.
-
-> This guideline covers point *2.5.7 Dragging Movements - Level AA of the WCAG standard.*
+### [2.5.7 Dragging Movements (Level AA)](../../principles/operable_principle.md#257-dragging-movements-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -386,11 +322,7 @@ Examples for custom actions can be found in applications like Mail where the use
 
 If the application does not provide an alternative way to perform the action that is not based on dragging movements, it will fail to satisfy this criterion.
 
-### Target Size (Minimum) (WCAG 2.5.8 - Level AA)
-
-This guideline tries to ensure that the target size of the elements is large enough to be easily operable by touch. To fully understand the requirements, please check examples and details about it [here](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
-
-> This guideline covers point *2.5.8 Target Size (Minimum) - Level AA of the WCAG standard.*
+### [2.5.8 Target Size (Minimum) (Level AA)](../../principles/operable_principle.md#258-target-size-minimum-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -403,18 +335,3 @@ Still, there are some exceptions to this rule:
 - **Inline**: The target is in a sentence or its size is otherwise constrained by the line-height of non-target text;
 - **User agent control**: The size of the target is determined by the user agent and is not modified by the author;
 - **Essential**: A particular presentation of the target is essential or is legally required for the information being conveyed.
-
-## Other operable guidelines
-
-This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
-
-- [WCAG 2.1.1 Keyboard - Level A](https://www.w3.org/WAI/WCAG22/quickref/#keyboard)
-- [WCAG 2.1.2 No Keyboard Trap - Level A](https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap)
-- [WCAG 2.1.4 Character Key Shortcuts - Level A](https://www.w3.org/WAI/WCAG22/quickref/#character-key-shortcuts)
-- [WCAG 2.4.5 Multiple Ways - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways)
-- [WCAG 2.5.1 Pointer Gestures - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-gestures)
-- [WCAG 2.5.2 Pointer Cancellation - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-cancellation)]
-
-⎯
-
-[← Perceivable principle](../../principles/operable_principle.md "Operable principle")
