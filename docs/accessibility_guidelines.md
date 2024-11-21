@@ -13,52 +13,33 @@ There are four main principles:
 * [Understandable](principles/understandable_principle.md)
 * [Robust](principles/robust_principle.md)
 
-## 1. Perceivable
+### Perceivable
+
+> Information and user interface components must be presentable to users in ways they can perceive.
 
 This principle covers the application content and how users can access every part of the application.
 
-## 2. Operable
+### Operable
 
-The [operable chapter in the WCAG standard](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_overview&levels=aa%2Caaa&technologies=smil%2Cpdf%2Cflash%2Csl#principle2) describes how disabilities might make it hard for some users to interact with the app. It contains information about how they alter the way users perform in-app actions and how to ensure users with nonstandard input devices can operate all parts of the app.
+> User interface components and navigation must be operable.
 
-#### Keyboard Accessible
+This principle covers and defines guidelines about how the application works - e.g., input mechanisms, assistive technologies, etc.
 
-The app should be fully functional for users whose only input device is the keyboard. Operating via the keyboard should be concise and possible without requiring specific timing for individual keystrokes. Navigating into and out of different parts of the app should be possible without getting stuck. Document unconventional keyboard navigation methods. For keyboard shortcuts that only require pressing a single letter or number, the user should be able to turn the shortcut off or remap it.
-
-#### Enough Time
-
-Some users might have trouble grasping and interacting with the content that is available only for a limited time or is auto-updating. If possible, there should be a way to extend, pause or disable the timing.
-
-#### Seizures and Physical Reactions
-
-For some users, excessive flashing might cause seizures. As a general rule, avoid content that flashes more than three times in any one-second period.
-
-#### Navigable
-
-The app's navigation structure should be concise and easy to understand. Users should have an indication of where they are located and how their actions will affect their location. There should be a way to bypass content that is repeated on multiple screens. The focus order should be clear and predictable.
-
-#### Input Modalities
-
-Some users might have trouble moving the device themselves or performing complex gestures. Strive for the app to be operable using a variety of input methods. If possible, the user should have a way to undo the interaction and disable the input methods he might trigger accidentally.
-
-## 3. Understandable
-
-## 4. Robust
-
-
--- OLD
-
-Another fundamental principle is **understandable**:
+### Understandable
 
 > Information and the operation of the user interface must be understandable.
 
 This principle covers the aspect of distinctiveness, readability, and ease of use.
 
-The last principle is **robust**, which is defined as:
+### Robust
 
 > Content must be robust enough that it can be interpreted by a wide variety of user agents, including assistive technologies.
 
 The main idea of this principle is to make your application compatible with assistive technologies.
+
+
+---
+
 
 Beyond just defining principles, WCAG defines **guidelines**, **success criteria**, and **techniques** on how to satisfy or implement guidelines for every principle.
 

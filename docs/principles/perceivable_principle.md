@@ -1,4 +1,4 @@
-[⬅️ Principles](../accessibility_principles.md)
+[⬅️ Principles and guidelines](../accessibility_principles_and_guidelines.md)
 
 # 1. Perceivable principle
 
@@ -190,4 +190,4 @@ This section contains guidelines that may not applicable for the mobile platform
 
 ⎯
 
-[← Principles](../accessibility_principles.md) | [Operable →](operable_principle.md)
+[← Principles and guidelines](../accessibility_principles_and_guidelines.md.md) | [Operable →](operable_principle.md)

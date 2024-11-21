@@ -1,12 +1,12 @@
-[⬅️ Principles](../accessibility_principles.md)
+[⬅️ Principles and guidelines](../accessibility_principles_and_guidelines.md)
 
 # 2. Operable principle
 
-User interface components and navigation must be operable.
+The [operable chapter in the WCAG standard](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_overview&levels=aa%2Caaa&technologies=smil%2Cpdf%2Cflash%2Csl#principle2) describes how disabilities might make it hard for some users to interact with the app. It contains information about how they alter the way users perform in-app actions and how to ensure users with nonstandard input devices can operate all parts of the app.
 
 ## 2.1. Keyboard Accessible
 
-Make all functionality available from a keyboard.
+The app should be fully functional for users whose only input device is the keyboard. Operating via the keyboard should be concise and possible without requiring specific timing for individual keystrokes. Navigating into and out of different parts of the app should be possible without getting stuck. Document unconventional keyboard navigation methods. For keyboard shortcuts that only require pressing a single letter or number, the user should be able to turn the shortcut off or remap it.
 
 ## 2.1.1 Keyboard (Level A)
 
@@ -19,7 +19,7 @@ Make all functionality available from a keyboard.
 
 ## 2.2 Enough Time
 
-Provide users enough time to read and use the content.
+Some users might have trouble grasping and interacting with the content that is available only for a limited time or is auto-updating. If possible, there should be a way to extend, pause or disable the timing.
 
 ### 2.2.1 Timing Adjustable (Level A)
 
@@ -42,7 +42,7 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 ## 2.3 Seizures and Physical Reactions
 
-Do not design content in a way known to cause seizures or physical reactions.
+For some users, excessive flashing might cause seizures. As a general rule, avoid content that flashes more than three times in any one-second period.
 
 ### 2.3.1 Three Flashed or Below Threshold (Level A)
 
@@ -55,7 +55,7 @@ Apps should not contain any element that flashes more than three times in one se
 
 ## 2.4 Navigable
 
-Provide ways to help users navigate, find content, and determine where they are.
+The app's navigation structure should be concise and easy to understand. Users should have an indication of where they are located and how their actions will affect their location. There should be a way to bypass content that is repeated on multiple screens. The focus order should be clear and predictable.
 
 ### 2.4.1 Bypass Blocks (Level A)
 
@@ -123,7 +123,7 @@ When the user navigates through the app, the focus should not be obscured by oth
 
 ## 2.5 Input modalities
 
-Make it easier for users to operate functionality through various inputs beyond keyboard.
+Some users might have trouble moving the device themselves or performing complex gestures. Strive for the app to be operable using a variety of input methods. If possible, the user should have a way to undo the interaction and disable the input methods he might trigger accidentally.
 
 ### 2.5.3 Label in Name (Level A)
 
