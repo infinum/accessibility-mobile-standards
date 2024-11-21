@@ -1,16 +1,9 @@
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Understandable principle](../../principles/understandable_principle.md "Understandable principle")
+# [3. Understandable principle](../../principles/understandable_principle.md#3-understandable-principle)
 
-# Understandable guidelines for Flutter
+## [3.1 Readable](../../principles/understandable_principle.md#31-readable)
 
-## Readable
+### [3.1.1 Language of Page (Level A)](../../principles/understandable_principle.md#311-language-of-page-level-a)
 
-Make text content readable and understandable.
-
-### Language of Page
-
-The default human language of an App can be programmatically determined.
-
-*This guideline covers point 3.1.1 Language of Page - Level A of the WCAG standard.*
 #### ✅ Success technique(s)
 
 If the app supports multiple languages, we should also care that accessibility labels are localized as well.
@@ -30,13 +23,10 @@ Hard-coding a language code and labels inside an app should be avoided.
 
 Also, every app should be developed as a localizable app, even if it seems like it makes no sense at the start, or all of the intended audience speak a single language, it can still happen that some users will not be able to use that language and there is always a possibility that your app will scale to different language regions or that parts of your code will be reused on different projects which _do_ use localization.
 
-## Predictable
+## [3.2 Predictable](../../principles/understandable_principle.md#32-predictable)
 
-Make mobile apps appear and operate in predictable ways.
+### [3.2.1-3.2.2 On Focus & On Input (Level A)](../../principles/understandable_principle.md#321-322-on-focus--on-input-level-a)
 
-### On Focus & On Input
-
-*This technique covers points 3.2.1 On Focus - Level A & 3.2.2 On Input - Level A of the WCAG standard.*
 #### ✅ Success technique(s)
 
 Users need to be able to consume content without any sudden interruptions and/or changes of context. Receiving focus on or interacting with any component should not initiate a change of context unless previously announced. By change of context we mean major changes in the content of the screen.
@@ -60,16 +50,9 @@ Showing programmatically pre-planned popups, modals, or any unusual navigation n
 - A form is submitted automatically when a certain UI element receives focus.
 - Focus is automatically moved to a different UI element when a give UI receives focus.
 
-## Input Assistance
+## [3.3 Input Assistance](../../principles/understandable_principle.md#33-input-assistance)
 
-Help users avoid and correct mistakes when interacting with the app.
-
-### Error Identification
-
-If an input error is automatically detected, the item that is in error is identified and the error is clearly described to the user in text.
-
-
-*This technique covers point 3.3.1 Error Identification - Level A of the WCAG standard.*
+### [3.3.1 Error Identification (Level A)](../../principles/understandable_principle.md#331-error-identification-level-a)
 
 #### ✅ Success technique(s)
 
@@ -94,11 +77,7 @@ TextFormField(
 
 Preventing some action or flow from continuing because an error was detected but not communicating to the user how/when the error was made and/or what needs to be done to correct it.
 
-### Labels or Instructions
-
-Labels or instructions are provided when content requires user input.
-
-*This technique covers point 3.3.2 Labels or Instructions - Level A of the WCAG standard.*
+### [3.3.2 Labels or Instructions (Level A)](../../principles/understandable_principle.md#332-labels-or-instructions-level-a)
 
 #### ✅ Success technique(s)
 
@@ -123,7 +102,3 @@ Column(children: [
 #### 🚫 Failures
 
 User enters some data into a user interface element without knowing what the end result is and/or triggering an unannounced change of context in the process.
-
-⎯
-
-[← Understandable principle](../../principles/understandable_principle.md "Understandable principle")

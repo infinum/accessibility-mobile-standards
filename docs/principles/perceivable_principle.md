@@ -190,4 +190,4 @@ This section contains guidelines that may not applicable for the mobile platform
 
 ⎯
 
-[← Principles and guidelines](../accessibility_principles_and_guidelines.md.md) | [Operable →](operable_principle.md)
+[← Principles and guidelines](../accessibility_principles_and_guidelines.md) | [Operable →](operable_principle.md)

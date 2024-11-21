@@ -1,18 +1,8 @@
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Understandable principle](../../principles/understandable_principle.md "Understandable principle")
+# [3. Understandable principle](../../principles/understandable_principle.md#3-understandable-principle)
 
-# Understandable guidelines for iOS
+## [3.1 Readable](../../principles/understandable_principle.md#31-readable)
 
-Information and the operation of the user interface must be understandable.
-
-## Readable (WCAG 3.1)
-
-Make text content readable and understandable.
-
-### Language of Page (WCAG 3.1.1 -Level A)
-
-The default human language of an App can be programmatically determined.
-
-> This guideline covers point *3.1.1 Language of Page - Level A of the WCAG standard.*
+### [3.1.1 Language of Page (Level A)](../../principles/understandable_principle.md#311-language-of-page-level-a)
 
 #### ✅ Success technique(s)
 
@@ -41,11 +31,7 @@ Bundle.setLanguage(language)
 
 Also, every app should be developed as a localizable app. Even if it seems that it makes no sense in the beginning or that all of the intended audience speak a single language, it can still happen that some users will not be able to use that language. here is always a possibility that your app will scale to different language regions or parts of your code will be reused on different projects which _do_ use localization.
 
-### Language of Parts (WCAG 3.1.2 - Level AA)
-
-To be able to give the best possible experience to users, the language of each part of the app should be programmatically determined. With that in mind, VoiceOver should be able to read the content in the correct language.
-
-> This guideline covers point *3.1.2 Language of Parts - Level AA of the WCAG standard.*
+### [3.1.2 Language of Parts (Level AA)](../../principles/understandable_principle.md#312-language-of-parts-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -62,15 +48,9 @@ let attributedString = NSAttributedString(
 
 If the whole text (label) is using the same language, the `accessibilityLanguage` property can be set in that case instead.
 
-## Predictable (WCAG 3.2)
+## [3.2 Predictable](../../principles/understandable_principle.md#32-predictable)
 
-Make mobile apps appear and operate in predictable ways.
-
-### On Focus & On Input (WCAG 3.2.1 and 3.2.2 - Level A)
-
-Receiving focus on or interacting with any component should not initiate a change of context unless previously announced.
-
-> This technique covers points *3.2.1 On Focus - Level A and 3.2.2 On Input - Level A of the WCAG standard.*
+### [3.2.1-3.2.2 On Focus & On Input (Level A)](../../principles/understandable_principle.md#321-322-on-focus--on-input-level-a)
 
 #### ✅ Success technique(s)
 
@@ -122,11 +102,7 @@ func textFieldDidBeginEditing(_ textField: UITextField) {
 }
 ```
 
-### Consistent Navigation (WCAG 3.2.3 - Level AA)
-
-For users, it is important to have a consistent navigation experience throughout the app. With that satisfied, users can easily predict where they are and where they can go next.
-
-> This technique covers point *3.2.3 Consistent Navigation - Level AA of the WCAG standard.*
+### [3.2.3 Consistent Navigation (Level AA)](../../principles/understandable_principle.md#323-consistent-navigation-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -136,11 +112,7 @@ To satisfy this criterion, try to keep the navigation structure consistent, with
 
 Changing the position of elements or making the app behaviour unconsistent can confuse users and make it harder for them to navigate through the app, which results in failure to satisfy this criterion.
 
-### Consistent Identification (WCAG 3.2.4 - Level AA)
-
-While using the application, components that have the same functionality should be identified consistently.
-
-> This technique covers point *3.2.4 Consistent Identification - Level AA of the WCAG standard.*
+### [3.2.4 Consistent Identification (Level AA)](../../principles/understandable_principle.md#324-consistent-identification-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -152,15 +124,9 @@ To simplify this, try to think about a simple download icon, which should have t
 
 As a failure, we can consider components and elements that have different identification across the application. This can confuse users and make it harder for them to use the application.
 
-## Input Assistance (WCAG 3.3)
+## [3.3 Input Assistance](../../principles/understandable_principle.md#33-input-assistance)
 
-Help users avoid and correct mistakes when interacting with the app.
-
-### Error Identification (WCAG 3.3.1 - Level A)
-
-If an input error is automatically detected, the item in error is identified, and the error is clearly described to the user in text.
-
-> This technique covers point *3.3.1 Error Identification - Level A of the WCAG standard.*
+### [3.3.1 Error Identification (Level A)](../../principles/understandable_principle.md#331-error-identification-level-a)
 
 #### ✅ Success technique(s)
 
@@ -199,11 +165,7 @@ generator.notificationOccurred(.success)
 
 Preventing some action or flow from continuing because an error was detected but not communicating to the user how/when the error was made and/or what needed to be done to correct it.
 
-### Labels or Instructions (WCAG 3.3.2 - Level A)
-
-Labels or instructions are provided when content requires user input.
-
-> This technique covers point *3.3.2 Labels or Instructions - Level A of the WCAG standard.*
+### [3.3.2 Labels or Instructions (Level A)](../../principles/understandable_principle.md#332-labels-or-instructions-level-a)
 
 #### ✅ Success technique(s)
 
@@ -228,11 +190,7 @@ usernameHolderView.shouldGroupAccessibilityChildren = true
 
 A user enters some data into a user interface element without knowing what the end result is and/or triggering an unannounced change of context in the process.
 
-### Error Suggestion (WCAG 3.3.3 - Level AA)
-
-To provide the best user experience, the application should suggest solutions for input errors when they are detected.
-
-> This technique covers point *3.3.3 Error Suggestion - Level AA of the WCAG standard.*
+### [3.3.3 Error Suggestion (Level AA)](../../principles/understandable_principle.md#333-error-suggestion-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -242,11 +200,7 @@ This is not just an accessibility feature, but also a usability feature, as it h
 
 *Note: This should be avoided if the error suggestion would jeopardize the security or purpose of the content.*
 
-### Error Prevention (Legal, Financial, Data) (WCAG 3.3.4 - Level AA)
-
-To prevent users from making mistakes, the application should provide a mechanism before finalizing a transaction that involves legal, financial, or data-sensitive actions.
-
-> This technique covers point *3.3.4 Error Prevention (Legal, Financial, Data) - Level AA of the WCAG standard.*
+### [3.3.4 Error Prevention (Legal, Financial, Data) (Level AA)](../../principles/understandable_principle.md#334-error-prevention-legal-financial-data-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -258,11 +212,7 @@ To satisfy this criterion, the app should provide at least one of the following 
 
 Based on the type of the application, the mechanism should be implemented in a way that is most suitable for the user and the application's purpose.
 
-### Redundant Entry (WCAG 3.3.7 - Level A)
-
-Ensure that multi-step processes are user-friendly by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
-
-> This technique covers point *3.3.7 Redundant Entry - Level A of the WCAG standard.*
+### [3.3.7 Redundant Entry (Level A)](../../principles/understandable_principle.md#337-redundant-entry-level-a)
 
 #### ✅ Success technique(s)
 
@@ -277,16 +227,7 @@ Techniques mentioned above does not apply to the following cases:
 - when the information is required to ensure the security of the content, or
 - when previously entered information is no longer valid.
 
-### Accessible Authentication (Minimum) (WCAG 3.3.8 - Level AA)
-
-To make authentication accessible to all users, the application should not require a cognitive function test unless that step provides at least one of the following:
-
-- **Alternative**: Another authentication method that does not rely on a cognitive function test.
-- **Mechanism**: A mechanism is available to assist the user in completing the cognitive function test.
-- **Object Recognition**: The cognitive function test is to recognize objects.
-- **Personal Content**: The cognitive function test is to identify non-text content the user provided to the application.
-
-> This technique covers point *3.3.8 Accessible Authentication (Minimum) - Level AA of the WCAG standard.*
+### [3.3.8 Accessible Authentication (Minimum) (Level AA)](../../principles/understandable_principle.md#338-accessible-authentication-minimum-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -306,13 +247,3 @@ Some examples:
 
 - Write 2nd and 5th character of your password
 - Write every character of the verification code in a separate field
-
-## Other understandable guidelines
-
-This section contains guidelines that may not be applicable to the mobile (iOS) platform or its criteria is not the responsibility of the mobile team. Still, take into account that those guidelines need to be satisfied.
-
-- [WCAG 3.2.6 Consistent Help - Level A](https://www.w3.org/WAI/WCAG22/quickref/#consistent-help)
-
-⎯
-
-[← Understandable principle](../../principles/understandable_principle.md "Understandable principle")

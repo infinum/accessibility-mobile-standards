@@ -8,7 +8,7 @@ The [operable chapter in the WCAG standard](https://www.w3.org/WAI/WCAG21/quickr
 
 The app should be fully functional for users whose only input device is the keyboard. Operating via the keyboard should be concise and possible without requiring specific timing for individual keystrokes. Navigating into and out of different parts of the app should be possible without getting stuck. Document unconventional keyboard navigation methods. For keyboard shortcuts that only require pressing a single letter or number, the user should be able to turn the shortcut off or remap it.
 
-## 2.1.1 Keyboard (Level A)
+### 2.1.1 Keyboard (Level A)
 
 Make all functionality available from a keyboard.
 
@@ -173,4 +173,4 @@ This section contains guidelines that may not applicable for the mobile (iOS) pl
 
 ⎯
 
-[← Perceivable](perceivable_principle.md.md) | [Understandable →](understandable_principle.md)
+[← Perceivable](perceivable_principle.md) | [Understandable →](understandable_principle.md)

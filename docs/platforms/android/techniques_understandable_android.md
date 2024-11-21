@@ -1,16 +1,8 @@
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Understandable principle](../../principles/understandable_principle.md "Understandable principle")
+# [3. Understandable principle](../../principles/understandable_principle.md#3-understandable-principle)
 
-# Understandable guidelines for Android
+## [3.1 Readable](../../principles/understandable_principle.md#31-readable)
 
-## Readable (WCAG 3.1)
-
-Make text content readable and understandable.
-
-### Language of Page (WCAG 3.1.1 -Level A)
-
-This guideline covers point [3.1.1 Language of Page - Level A](https://www.w3.org/WAI/WCAG22/quickref/#language-of-page) of the WCAG standard.
-
-The default human language of an App can be programmatically determined.
+### [3.1.1 Language of Page (Level A)](../../principles/understandable_principle.md#311-language-of-page-level-a)
 
 #### ✅ Success technique(s)
 
@@ -55,11 +47,7 @@ fun setLocaleEn(context: Context): Context {
 }
 ```
 
-### Language of Parts (WCAG 3.1.2 -Level AA)
-
-This guideline covers point [3.1.2 Language of Parts - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#language-of-parts) of the WCAG standard.
-
-To be able to give the best possible experience to users, the language of each part of the app should be programmatically determined. With that in mind, Talkback should be able to read the content in the correct language.
+### [3.1.2 Language of Parts (Level AA)](../../principles/understandable_principle.md#312-language-of-parts-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -92,15 +80,9 @@ val annotatedText = buildAnnotatedString {
 Text(text = annotatedText)
 ```
 
----
+## [3.2 Predictable](../../principles/understandable_principle.md#32-predictable)
 
-## Predictable (WCAG 3.2)
-
-Make mobile apps appear and operate in predictable ways.
-
-### On Focus & On Input (WCAG 3.2.1 and 3.2.2 - Level A)
-
-Receiving focus on or interacting with any component should not initiate a change of context unless previously announced.
+### [3.2.1-3.2.2 On Focus & On Input (Level A)](../../principles/understandable_principle.md#321-322-on-focus--on-input-level-a)
 
 #### ✅ Success technique(s)
 
@@ -123,11 +105,24 @@ Some examples of actions that _are_ considered a change of context and would vio
 - Automatically submitting a form when a certain field gets focus or input. For example, in a login form, the user is automatically logged in when checking the "Remember me" checkbox, without pressing the "Log in" button.
 - Showing an alert dialogs when an element receives focus. For example, an input field receives focus and a help alert dialog describing a field appears. The user would first have to close the dialog before continuing with input, and the dialog would appear any time the user might want to edit their input.
 
-### Consistent Identification (WCAG 3.2.4 - Level AA)
+### [3.2.3 Consistent Navigation (Level AA)](../../principles/understandable_principle.md#323-consistent-navigation-level-aa)
 
-While using the application, components that have the same functionality should be identified consistently.
+#### ✅ Success technique(s)
 
-> This technique covers point *3.2.4 Consistent Identification - Level AA of the WCAG standard.*
+To satisfy this criterion, try to keep the navigation structure consistent, with elements like the toolbar, bottom navigation, search bar or any other repeated elements always in the same place, read out in the same order and with the same functionality.
+
+Visually, this is mostly the responsibility of the design, but it is important to make sure that consistent ordering is preserved when using assistive technologies (e.g. TalkBack) as well.
+
+If there is a need to manually adjust ordering of elements to make them consistent across multiple screens, the same techniques described in [Meaningful sequence guideline](guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) can be applied.
+
+#### 🚫 Failures
+
+Usually, when reusing the same components across multiple screens, the ordering will be preserved automatically. However, there are certain cases where other elements might come "in-between" and there could be some inconsistencies when mixing technologies on the same screen (e.g. the toolbar is a `View`, while all of the other screen contents are in Compose), so pay special attention to those.
+
+- TalkBack: Two screens share the same bottom navigation bar. On the first screen, the bottom bar items are read out last, after all the other content. On the second screen, the bottom bar items are read out after the toolbar and before any other screen content.
+- TalkBack: An app has multiple screens that contain a toolbar with a title and a navigation button. On some screens, the navigation button is read out first and, on others, the title is read out before the navigation button.
+
+### [3.2.4 Consistent Identification (Level AA)](../../principles/understandable_principle.md#324-consistent-identification-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -145,38 +140,9 @@ Example 3: While a search icon benefits from having a consistent label, a check 
 
 Note: Certain elements may require context-specific labels to convey their functions accurately, balancing consistency with clarity to enhance user understanding
 
----
+## [3.3 Input Assistance](../../principles/understandable_principle.md#33-input-assistance)
 
-### Consistent Navigation (WCAG 3.2.3 - Level AA)
-
-For users, it is important to have a consistent navigation experience throughout the app (on all screens). With that satisfied, users can easily predict where they are and where they can go next.
-
-#### ✅ Success technique(s)
-
-To satisfy this criterion, try to keep the navigation structure consistent, with elements like the toolbar, bottom navigation, search bar or any other repeated elements always in the same place, read out in the same order and with the same functionality.
-
-Visually, this is mostly the responsibility of the design, but it is important to make sure that consistent ordering is preserved when using assistive technologies (e.g. TalkBack) as well.
-
-If there is a need to manually adjust ordering of elements to make them consistent across multiple screens, the same techniques described in [Meaningful sequence guideline](guideline_percievable_android.md#meaningful-sequence-wcag-132---level-a) can be applied.
-
-#### 🚫 Failures
-
-Usually, when reusing the same components across multiple screens, the ordering will be preserved automatically. However, there are certain cases where other elements might come "in-between" and there could be some inconsistencies when mixing technologies on the same screen (e.g. the toolbar is a `View`, while all of the other screen contents are in Compose), so pay special attention to those.
-
-- TalkBack: Two screens share the same bottom navigation bar. On the first screen, the bottom bar items are read out last, after all the other content. On the second screen, the bottom bar items are read out after the toolbar and before any other screen content.
-- TalkBack: An app has multiple screens that contain a toolbar with a title and a navigation button. On some screens, the navigation button is read out first and, on others, the title is read out before the navigation button.
-
----
-
-## Input Assistance (WCAG 3.3)
-
-Help users avoid and correct mistakes.
-
-### Error identification (WCAG 3.3.1 - Level A)
-
-If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.
-
-> This technique covers point *3.3.1 Error Identification - Level A of the WCAG standard.*
+### [3.3.1 Error Identification (Level A)](../../principles/understandable_principle.md#331-error-identification-level-a)
 
 #### ✅ Success technique(s)
 
@@ -231,11 +197,7 @@ Ensure `androidx.compose.ui.semantics.error` is present when using the error fun
 
 - Preventing further actions without communicating the issue and necessary corrections to the user.
 
----
-
-### Labels or Instructions (WCAG 3.3.2 - Level A)
-
-> This technique covers point *3.3.2 Labels or Instructions - Level A of the WCAG standard.*
+### [3.3.2 Labels or Instructions (Level A)](../../principles/understandable_principle.md#332-labels-or-instructions-level-a)
 
 #### ✅ Success technique(s)
 
@@ -279,11 +241,7 @@ TextField(
 
 - Not providing enough context for the views / composables that expect user interaction.
 
-### Error Suggestion (WCAG 3.3.3 - Level AA)
-
-To provide the best user experience, the application should suggest solutions for input errors when they are detected, unless doing so compromises security or the content's purpose.
-
-> This technique covers point *3.3.3 Error Suggestion - Level AA of the WCAG standard.*
+### [3.3.3 Error Suggestion (Level AA)](../../principles/understandable_principle.md#333-error-suggestion-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -293,11 +251,7 @@ One of the possibilities is using an alert dialog since it ensures that users se
 
 Regardless of the method used, the error message should indicate the location of the error and provide a clear explanation of the issue.
 
-### Error Prevention (Legal, Financial, Data) (WCAG 3.3.4 - Level AA)
-
-To prevent users from making mistakes, the application should provide a mechanism before finalizing a transaction that involves legal, financial, or data-sensitive actions.
-
-> This technique covers point *3.3.4 Error Prevention (Legal, Financial, Data) - Level AA of the WCAG standard.*
+### [3.3.4 Error Prevention (Legal, Financial, Data) (Level AA)](../../principles/understandable_principle.md#334-error-prevention-legal-financial-data-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -317,11 +271,7 @@ App should enable users to recover deleted information by temporarily marking it
 
 Failures are not defined by the WCAG at the time of writing this.
 
-### Redundant Entry (WCAG 3.3.7 - Level A)
-
-Ensure that multi-step processes are user-friendly by not requesting the same information multiple times in a session, as this can be challenging for those with cognitive disabilities. This approach enhances accessibility by reducing memory load and simplifying tasks.
-
-> This technique covers point *3.3.7 Redundant Entry - Level A of the WCAG standard.*
+### [3.3.7 Redundant Entry (Level A)](../../principles/understandable_principle.md#337-redundant-entry-level-a)
 
 #### ✅ Success technique(s)
 
@@ -343,18 +293,7 @@ Techniques mentioned above does not apply to the following cases:
   
 Failures are not defined by the WCAG at the time of writing this.
 
----
-
-### Accessible Authentication (Minimum) (WCAG 3.3.8 - Level AA)
-
-This guideline covers point [3.3.8 Accessible Authentication (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#accessible-authentication-minimum) of the WCAG standard.
-
-To make authentication accessible to all users, the application should not require a cognitive function (such as remembering a password or solving a puzzle) test unless that step provides at least one of the following:
-
-- **Alternative**: Another authentication method that does not rely on a cognitive function test.
-- **Mechanism**: A mechanism is available to assist the user in completing the cognitive function test.
-- **Object Recognition**: The cognitive function test is to recognize objects.
-- **Personal Content**: The cognitive function test is to identify non-text content the user provided to the application.
+### [3.3.8 Accessible Authentication (Minimum) (Level AA)](../../principles/understandable_principle.md#338-accessible-authentication-minimum-level-aa)
 
 #### ✅ Success technique(s)
 
@@ -372,21 +311,3 @@ Some examples:
 
 - Write 2nd and 5th character of your password
 - Write every character of the verification code in a separate field
-
----
-
-## Other understandable guidelines
-
-This section contains guidelines that may not applicable for the mobile (Android) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
-
-- [WCAG 3.2.6 Consistent Help - Level A](https://www.w3.org/WAI/WCAG22/quickref/#consistent-help)
-
-## Sources
-
-- [Google Support Page](https://support.google.com/accessibility/android)
-- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
-
-
----
-
-[← Understandable principle](../../principles/understandable_principle.md "Understandable principle")

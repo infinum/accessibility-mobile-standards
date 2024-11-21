@@ -38,6 +38,20 @@ This document contains a checklist of guidelines that should be followed when de
 - [ ] [2.5.7 Dragging Movements (Level AA)](principles/operable_principle.md#257-dragging-movements-level-aa)
 - [ ] [2.5.8 Target Size (Minimum) (Level AA)](principles/operable_principle.md#258-target-size-minimum-level-aa)
 
+## Understandable
+
+- [ ] [3.1.1 Language of Page (Level A](principles/understandable_principle.md#331-error-identification-level-a)
+- [ ] [3.1.2 Language of Parts (Level AA)](principles/understandable_principle.md#312-language-of-parts-level-aa)
+- [ ] [3.2.1-3.2.2 On Focus & On Input (Level A)](principles/understandable_principle.md#321-322-on-focus--on-input-level-a)
+- [ ] [3.2.3 Consistent Navigation (Level AA)](principles/understandable_principle.md#323-consistent-navigation-level-aa)
+- [ ] [3.2.4 Consistent Identification (Level AA)](principles/understandable_principle.md#324-consistent-identification-level-aa)
+- [ ] [3.3.1 Error Identification (Level A)](principles/understandable_principle.md#331-error-identification-level-a)
+- [ ] [3.3.2 Labels or Instructions (Level A)](principles/understandable_principle.md#332-labels-or-instructions-level-a)
+- [ ] [3.3.3 Error Suggestion (Level AA)](principles/understandable_principle.md#333-error-suggestion-level-aa)
+- [ ] [3.3.4 Error Prevention (Legal, Financial, Data) (Level AA)](principles/understandable_principle.md#334-error-prevention-legal-financial-data-level-aa)
+- [ ] [3.3.7 Redundant Entry (Level A)](principles/understandable_principle.md#337-redundant-entry-level-a)
+- [ ] [3.3.8 Accessible Authentication (Minimum) (Level AA)](principles/understandable_principle.md#338-accessible-authentication-minimum-level-aa)
+
 -- OLD
 
 ## Content
