@@ -14,8 +14,9 @@ Make all functionality available from a keyboard.
 
 *This guideline covers point 2.1.1 Keyboard - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#211-keyboard-level-a), [Flutter](../platforms/flutter/techniques_operable_flutter.md#211-keyboard-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#211-keyboard-level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#211-keyboard-level-a)
 
 ## 2.2 Enough Time
 
@@ -27,8 +28,10 @@ The user can turn off, adjust, or extend each time limit set by the content.
 
 > This guideline covers point *2.2.1 Timing Adjustable - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#221-timing-adjustable-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#221-timing-adjustable-level-a), [Flutter](../platforms/flutter/techniques_operable_flutter.md#221-timing-adjustable-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#221-timing-adjustable-level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#221-timing-adjustable-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#221-timing-adjustable-level-a)
 
 
 ### 2.2.2 Pause, Stop, Hide (Level A)
@@ -37,8 +40,10 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 
 > This guideline covers point *2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#222-pause-stop-hide-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#222-pause-stop-hide-level-a), [Flutter](../platforms/flutter/techniques_operable_flutter.md#222-pause-stop-hide-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#222-pause-stop-hide-level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#222-pause-stop-hide-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#222-pause-stop-hide-level-a)
 
 ## 2.3 Seizures and Physical Reactions
 
@@ -50,8 +55,10 @@ Apps should not contain any element that flashes more than three times in one se
 
 > This guideline covers point *2.3.1 - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#231-three-flashed-or-below-threshold-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#231-three-flashed-or-below-threshold-level-a), [Flutter](../platforms/flutter/techniques_operable_flutter.md#231-three-flashed-or-below-threshold-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#231-three-flashed-or-below-threshold-level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#231-three-flashed-or-below-threshold-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#231-three-flashed-or-below-threshold-level-a)
 
 ## 2.4 Navigable
 
@@ -63,8 +70,10 @@ A skip mechanism is available to bypass blocks of content that are repeated in t
 
 > This guideline covers point *2.4.1 Bypass Blocks - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#241-bypass-blocks-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#241-bypass-blocks-level-a), [Flutter](../platforms/flutter/techniques_operable_flutter.md#241-bypass-blocks-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#241-bypass-blocks-level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#241-bypass-blocks-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#241-bypass-blocks-level-a)
 
 ### 2.4.2 Page Titled (Level A)
 
@@ -72,8 +81,10 @@ Screens have a clear, descriptive, and possibly unique title that describes the 
 
 > This guideline covers point *2.4.2 Page Titled - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#242-page-titled-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#242-page-titled-level-a), [Flutter](../platforms/flutter/techniques_operable_flutter.md#242-page-titled-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#242-page-titled-level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#242-page-titled-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#242-page-titled-level-a)
 
 ### 2.4.3 Focus Order (Level A)
 
@@ -81,8 +92,9 @@ Ensure that information is read (VoiceOver, TalkBack) in an order consistent wit
 
 > This guideline covers point *2.4.3 Focus Order - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#243-focus-order-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#243-focus-order-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#243-focus-order-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#243-focus-order-level-a)
 
 ### 2.4.4 Link Purpose (Level A)
 
@@ -90,8 +102,10 @@ The purpose of a button or link action is clear and easily understandable by all
 
 > This guideline covers point *2.4.4 Link Purpose (In Context) - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#244-link-purpose-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#244-link-purpose-level-a), [Flutter](../platforms/flutter/techniques_operable_flutter.md#244-link-purpose-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#244-link-purpose-level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#244-link-purpose-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#244-link-purpose-level-a)
 
 ### 2.4.6 Heading and Labels (Level AA)
 
@@ -99,8 +113,9 @@ Based on this guideline, the user should be able to understand the purpose of th
 
 > This guideline covers point *2.4.6 Headings and Labels - Level AA of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#246-heading-and-labels-level-aa), [iOS](../platforms/ios/techniques_operable_ios.md#246-heading-and-labels-level-aa)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#246-heading-and-labels-level-aa)
+* [iOS](../platforms/ios/techniques_operable_ios.md#246-heading-and-labels-level-aa)
 
 ### 2.4.7 Focus Visibility (Level AA)
 
@@ -108,8 +123,9 @@ This guideline states that the user should be able to see the focus on the eleme
 
 > This guideline covers point *2.4.7 Focus Visible - Level AA of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#247-focus-visibility-level-aa), [iOS](../platforms/ios/techniques_operable_ios.md#247-focus-visibility-level-aa)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#247-focus-visibility-level-aa)
+* [iOS](../platforms/ios/techniques_operable_ios.md#247-focus-visibility-level-aa)
 
 
 ### 2.4.11 Focus Not Obscured (Minimum) (Level AA)
@@ -118,8 +134,9 @@ When the user navigates through the app, the focus should not be obscured by oth
 
 > This guideline covers point *2.4.11 Focus Not Obscured (Minimum) - Level AA of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#2411-focus-not-obscured-minimum-level-aa), [iOS](../platforms/ios/techniques_operable_ios.md#2411-focus-not-obscured-minimum-level-aa)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#2411-focus-not-obscured-minimum-level-aa)
+* [iOS](../platforms/ios/techniques_operable_ios.md#2411-focus-not-obscured-minimum-level-aa)
 
 ## 2.5 Input modalities
 
@@ -131,8 +148,9 @@ All user interface components that are defined as labels should contain the name
 
 > This guideline covers point *2.5.3 Label in Name - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#253-label-in-name-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#253-label-in-name-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#253-label-in-name-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#253-label-in-name-level-a)
 
 ### 2.5.4 Motion Actuation (Level A)
 
@@ -140,8 +158,9 @@ We need to ensure that content does not rely on device motion for control, as so
 
 > This guideline covers point *2.5.4 Motion Actuation - Level A of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#254-motion-actuation-level-a), [iOS](../platforms/ios/techniques_operable_ios.md#254-motion-actuation-level-a)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#254-motion-actuation-level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#254-motion-actuation-level-a)
 
 ### 2.5.7 Dragging Movements (Level AA)
 
@@ -149,8 +168,9 @@ Due to different disabilities, some users may have difficulty performing draggin
 
 > This guideline covers point *2.5.7 Dragging Movements - Level AA of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#257-dragging-movements-level-aa), [iOS](../platforms/ios/techniques_operable_ios.md#257-dragging-movements-level-aa)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#257-dragging-movements-level-aa)
+* [iOS](../platforms/ios/techniques_operable_ios.md#257-dragging-movements-level-aa)
 
 ### 2.5.8 Target Size (Minimum) (Level AA)
 
@@ -158,18 +178,19 @@ This guideline tries to ensure that the target size of the elements is large eno
 
 > This guideline covers point *2.5.8 Target Size (Minimum) - Level AA of the WCAG standard.*
 
-**Techniques**\
-[Android](../platforms/android/techniques_operable_android.md#258-target-size-minimum-level-aa), [iOS](../platforms/ios/techniques_operable_ios.md#258-target-size-minimum-level-aa)
+#### Implementation techniques
+* [Android](../platforms/android/techniques_operable_android.md#258-target-size-minimum-level-aa)
+* [iOS](../platforms/ios/techniques_operable_ios.md#258-target-size-minimum-level-aa)
 
 ## Other operable guidelines
 
 This section contains guidelines that may not applicable for the mobile (iOS) platform, or its criteria is a not the responsibility of the mobile team. Still, take into account that those guidelines needs to be satisfied.
 
-- [WCAG 2.1.2 No Keyboard Trap - Level A](https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap)
-- [WCAG 2.1.4 Character Key Shortcuts - Level A](https://www.w3.org/WAI/WCAG22/quickref/#character-key-shortcuts)
-- [WCAG 2.4.5 Multiple Ways - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways)
-- [WCAG 2.5.1 Pointer Gestures - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-gestures)
-- [WCAG 2.5.2 Pointer Cancellation - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-cancellation)
+- [2.1.2 No Keyboard Trap - Level A](https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap)
+- [2.1.4 Character Key Shortcuts - Level A](https://www.w3.org/WAI/WCAG22/quickref/#character-key-shortcuts)
+- [2.4.5 Multiple Ways - Level AA](https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways)
+- [2.5.1 Pointer Gestures - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-gestures)
+- [2.5.2 Pointer Cancellation - Level A](https://www.w3.org/WAI/WCAG22/quickref/#pointer-cancellation)
 
 ⎯
 
