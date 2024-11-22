@@ -6,10 +6,10 @@ Because of that, we defined our guidelines to help mobile developers to satisfy 
 
 In the following chapters, information about satisfying accessibility guidelines will be provided with descriptions and techniques:
 
-* [Perceivable principle](principles/perceivable_principle.md)
-* [Operable principle](principles/operable_principle.md)
-* [Understandable principle](principles/understandable_principle.md)
-* [Robust principle](principles/robust_principle.md)
+* [Perceivable guidelines](principles/perceivable_principle.md)
+* [Operable guidelines](principles/operable_principle.md)
+* [Understandable guidelines](principles/understandable_principle.md)
+* [Robust guidelines](principles/robust_principle.md)
 
 Alongside the guidelines and examples, you can check the list of requirements that should be satisfied for each guideline:
 
