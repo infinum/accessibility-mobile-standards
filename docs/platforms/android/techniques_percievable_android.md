@@ -1,8 +1,8 @@
-# [1. Perceivable principle](../../principles/perceivable_principle.md#1-perceivable-principle)
+# [Perceivable principle](../../principles/perceivable_principle.md#perceivable-principle)
 
-## [1.1 Text alternatives](../../principles/perceivable_principle.md#11-text-alternatives)
+## [Text alternatives (WCAG 1.1)](../../principles/perceivable_principle.md#text-alternatives-wcag-11)
 
-### [1.1.1 Non-text content (Level A)](../../principles/perceivable_principle.md#111-non-text-content-level-a)
+### [Non-text content (WCAG 1.1.1 - Level A)](../../principles/perceivable_principle.md#non-text-content-wcag-111---level-a)
 
 #### ✅ Success technique(s)
 
@@ -49,9 +49,9 @@ private fun MyCustomButton(onClick: () -> Unit) {
 - Not providing descriptions of elements presented on the screen that do not exist only for decorative purposes.
 - Setting content description to non-functional or decorative elements. In those cases, labeling the elements may confuse the user and should be avoided.
 
-## [1.2 Time-based Media](../../principles/perceivable_principle.md#12-time-based-media)
+## [Time-based Media (WCAG 1.2)](../../principles/perceivable_principle.md#time-based-media-wcag-12)
 
-### [1.2.1-1.2.2 Captions support for prerecorded media (Level A)](../../principles/perceivable_principle.md#121-122-captions-support-for-prerecorded-media-level-a)
+### [Captions support for prerecorded media (WCAG 1.2.1-1.2.2 - Level A)](../../principles/perceivable_principle.md#captions-support-for-prerecorded-media-wcag-121-122---level-a)
 
 #### ✅ Success technique(s)
 
@@ -83,7 +83,7 @@ class CaptionUtils(context: Context) {
 }
 ```
 
-### [1.2.3 Audio Description or Media Alternative (Level A)](../../principles/perceivable_principle.md#123-audio-description-or-media-alternative-level-a)
+### [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](../../principles/perceivable_principle.md#audio-description-or-media-alternative-wcag-123---level-a)
 
 #### ✅ Success technique(s)
 
@@ -104,7 +104,7 @@ A text alternative provides a written description of both the audio and visual c
 
 If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
 
-### [1.2.4 Captions support for live media (Level AA)](../../principles/perceivable_principle.md#124-captions-support-for-live-media-level-aa)
+### [Captions support for live media (WCAG 1.2.4 - Level AA)](../../principles/perceivable_principle.md#captions-support-for-live-media-wcag-124---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -115,7 +115,7 @@ All live media in the application should offer captions through the user interfa
 
 The second approach is more customizable and can offer more flexibility than embedded captions, though it requires additional client-side work. For further details, please refer to the [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A) section](#captions-support-for-prerecorded-media-wcag-121-and-122---level-a) and the [ExoPlayer documentation on live streaming](https://developer.android.com/media/media3/exoplayer/live-streaming), which provides more information about HTTP Live Streaming (HLS) on the Android platform.
 
-### [1.2.5 Audio Description for Prerecorded Media (Level AA)](../../principles/perceivable_principle.md#125-audio-description-for-prerecorded-media-level-aa)
+### [Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)](../../principles/perceivable_principle.md#audio-description-for-prerecorded-media-wcag-125---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -132,9 +132,9 @@ This guideline closely aligns with the [Audio Description or Media Alternative (
 
 In `ExoPlayer`, you can query the available audio and video tracks using `player.currentTracks`. This allows you to present users with options, such as regular audio and an audio description track. You can implement functionality for users to select their preferred track from the available options.
 
-## [1.3 Adaptable](../../principles/perceivable_principle.md#13-adaptable)
+## [Adaptable (WCAG 1.3)](../../principles/perceivable_principle.md#adaptable-wcag-13)
 
-### [1.3.1 Element information and relationship (Level A)](../../principles/perceivable_principle.md#131-element-information-and-relationship-level-a)
+### [Element information and relationship (WCAG 1.3.1 - Level A)](../../principles/perceivable_principle.md#element-information-and-relationship-wcag-131---level-a)
 
 #### Element information
 
@@ -248,7 +248,7 @@ fun FestivalEventTable() {
 
 - It is not clear which parts of the screen are contextually connected.
 
-### [1.3.2 Meaningful sequence (Level A)](../../principles/perceivable_principle.md#132-meaningful-sequence-level-a)
+### [Meaningful sequence (WCAG 1.3.2 - Level A)](../../principles/perceivable_principle.md#meaningful-sequence-wcag-132---level-a)
 
 #### ✅ Success technique(s)
 
@@ -357,7 +357,7 @@ _**Note.** When modifying the traversal order, make sure that it is done in a wa
 
 - Elements displayed on the screen break consistency of the navigation. For example, having sudden jumps to unrelated components in the middle of a sequence of similar elements.
 
-### [1.3.3 Sensory characteristics (Level A)](../../principles/perceivable_principle.md#133-sensory-characteristics-level-a)
+### [Sensory characteristics (WCAG 1.3.3 - Level A)](../../principles/perceivable_principle.md#sensory-characteristics-wcag-133---level-a)
 
 #### ✅ Success technique(s)
 
@@ -376,7 +376,7 @@ That way, users with visual impairments will be able to understand the button's 
 
 _Important to note is that this guideline primarily depends on accessible design._
 
-### [1.3.4 Orientation (Level AA)](../../principles/perceivable_principle.md#134-orientation-level-aa)
+### [Orientation (WCAG 1.3.4 - Level AA)](../../principles/perceivable_principle.md#orientation-wcag-134---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -428,7 +428,7 @@ More information on how to manually handle orientation changes in the traditiona
 - [Google Support Page](https://support.google.com/accessibility/android)
 - [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
 
-### [1.3.5 Identify input purpose (Level AA)](../../principles/perceivable_principle.md#135-identify-input-purpose-level-aa)
+### [Identify input purpose (WCAG 1.3.5 - Level AA)](../../principles/perceivable_principle.md#identify-input-purpose-wcag-135---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -471,9 +471,9 @@ TextField(
 
 If the wrong input layout (e.g., keyboard type) is used for the input field, the user may have issues with entering the data. This can lead to a bad user experience and a failure of this guideline.
 
-## [1.4 Distinguishable](../../principles/perceivable_principle.md#14-distinguishable)
+## [Distinguishable (WCAG 1.4)](../../principles/perceivable_principle.md#distinguishable-wcag-14)
 
-### [1.4.1 Use of Color (Level A)](../../principles/perceivable_principle.md#141-use-of-color-level-a)
+### [Use of Color (WCAG 1.4.1 - Level A)](../../principles/perceivable_principle.md#use-of-color-wcag-141---level-a)
 
 #### ✅ Success technique(s)
 
@@ -485,7 +485,7 @@ If the wrong input layout (e.g., keyboard type) is used for the input field, the
 
 _Important to note is that this guideline primarily depends on accessible design._
 
-### [1.4.2 Audio control (Level A)](../../principles/perceivable_principle.md#142-audio-control-level-a)
+### [Audio control (WCAG 1.4.2 - Level A)](../../principles/perceivable_principle.md#audio-control-wcag-142---level-a)
 
 #### ✅ Success technique(s)
 
@@ -502,7 +502,7 @@ Also, Android media controls can additionally enhance your app experience by int
 
 _Important to note is that this guideline also depends on the accessible design._
 
-### [1.4.4 Resizeable text (Level AA)](../../principles/perceivable_principle.md#144-resizeable-text-level-aa)
+### [Resizeable text (WCAG 1.4.4 - Level AA)](../../principles/perceivable_principle.md#resizeable-text-wcag-144---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -596,7 +596,7 @@ Box(modifier = Modifier
 }
 ```
 
-### [1.4.5 Images of text (Level AA)](../../principles/perceivable_principle.md#145-images-of-text-level-aa)
+### [Images of text (WCAG 1.4.5 - Level AA)](../../principles/perceivable_principle.md#images-of-text-wcag-145---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -616,7 +616,7 @@ Mobile apps should avoid using images of text unless the text is **part of a log
 - Cutoff Content: Text in images cannot be resized and becomes cut off or unreadable when enlarged.
 - Fixed Sizes: Images of text have fixed dimensions that do not adapt to user-defined text sizes, reducing accessibility.
 
-### [1.4.10 Reflow (Level AA)](../../principles/perceivable_principle.md#1410-reflow-level-aa)
+### [Reflow (WCAG 1.4.10 - Level AA)](../../principles/perceivable_principle.md#reflow-wcag-1410---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -637,7 +637,7 @@ The content should also never become scrollable in both directions --- having sc
 
 Content becomes unusable on a device with a smaller screen, when changing the orientation or when increasing font/display size. For example, the elements go off the screen, start overlapping or important parts of some text are cut off (e.g. ellipsized).
 
-### [1.4.12 Text Spacing (Level AA)](../../principles/perceivable_principle.md#1412-text-spacing-level-aa)
+### [Text Spacing (WCAG - 1.4.12 - Level AA)](../../principles/perceivable_principle.md#text-spacing-wcag---1412---level-aa)
 
 #### ✅ Success technique(s)
 

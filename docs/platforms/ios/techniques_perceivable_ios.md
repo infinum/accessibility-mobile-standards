@@ -1,8 +1,8 @@
-# [1. Perceivable principle](../../principles/perceivable_principle.md#1-perceivable-principle)
+# [Perceivable principle](../../principles/perceivable_principle.md#perceivable-principle)
 
-## [1.1 Text alternatives](../../principles/perceivable_principle.md#11-text-alternatives)
+## [Text alternatives (WCAG 1.1)](../../principles/perceivable_principle.md#text-alternatives-wcag-11)
 
-### [1.1.1 Non-text content (Level A)](../../principles/perceivable_principle.md#111-non-text-content-level-a)
+### [Non-text content (WCAG 1.1.1 - Level A)](../../principles/perceivable_principle.md#non-text-content-wcag-111---level-a)
 
 #### ✅ Success technique(s)
 
@@ -30,9 +30,9 @@ addButton.accessibilityHint = "Adds a new task"
 
 Sometimes it is not a good idea to give accessibility labels to all screen elements. Some elements may only be defined as decorative elements that do not affect the screen functionality (e.g. small elements like images used for screen decoration). In that case, labeling elements like that may confuse the user.
 
-## [1.2 Time-based Media](../../principles/perceivable_principle.md#12-time-based-media)
+## [Time-based Media (WCAG 1.2)](../../principles/perceivable_principle.md#time-based-media-wcag-12)
 
-### [1.2.1-1.2.2 Captions support for prerecorded media (Level A)](../../principles/perceivable_principle.md#121-122-captions-support-for-prerecorded-media-level-a)
+### [Captions support for prerecorded media (WCAG 1.2.1-1.2.2 - Level A)](../../principles/perceivable_principle.md#captions-support-for-prerecorded-media-wcag-121-122---level-a)
 
 #### ✅ Success technique(s)
 
@@ -84,7 +84,7 @@ final class VideoViewController: UIViewController {
 The details about adding captions to the `AVPlayer` (from `AVFoundation`) can be found in the [documentation](https://developer.apple.com/documentation/avfoundation/media_assets_playback_and_editing/adding_subtitles_and_alternative_audio_tracks).
 
 
-### [1.2.3 Audio Description or Media Alternative (Level A)](../../principles/perceivable_principle.md#123-audio-description-or-media-alternative-level-a)
+### [Audio Description or Media Alternative (WCAG 1.2.3 - Level A)](../../principles/perceivable_principle.md#meaningful-sequence-wcag-132---level-a)
 
 #### ✅ Success technique(s)
 
@@ -114,7 +114,7 @@ Supplying transcripts is another way of providing users with information in prer
 
 If none of provided success criteria are met, the user may have issues understanding the content of the video. This can lead to a bad user experience and a lack of information, and in the end, the failure of this guideline.
 
-### [1.2.4 Captions support for live media (Level AA)](../../principles/perceivable_principle.md#124-captions-support-for-live-media-level-aa)
+### [Captions support for live media (WCAG 1.2.4 - Level AA)](../../principles/perceivable_principle.md#captions-support-for-live-media-wcag-124---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -125,7 +125,7 @@ For every live media that is used in the application, we should provide captions
 
 The second approach is much more customizable, and can provide much more than embedded captions. Still, this approach requires work on the client side to make it work. Please check documentation mentioned in the [Captions support for prerecorded media (WCAG 1.2.1 and 1.2.2 - Level A)](#wcag-121-and-122) and [here](https://developer.apple.com/streaming/) for more information about HTTP live streaming on Apple platforms.
 
-### [1.2.5 Audio Description for Prerecorded Media (Level AA)](../../principles/perceivable_principle.md#125-audio-description-for-prerecorded-media-level-aa)
+### [Audio Description for Prerecorded Media (WCAG 1.2.5 - Level AA)](../../principles/perceivable_principle.md#audio-description-for-prerecorded-media-wcag-125---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -135,9 +135,9 @@ This can be done in the main track (media) or by providing an additional audio t
 
 *Note: Based on the guideline itself, if all of the information in the video track is already provided in the audio track, no audio description is necessary. This applies to both guidelines (1.2.3 and 1.2.5).*
 
-## [1.3 Adaptable](../../principles/perceivable_principle.md#13-adaptable)
+## [Adaptable (WCAG 1.3)](../../principles/perceivable_principle.md#adaptable-wcag-13)
 
-### [1.3.1 Element information and relationship (Level A)](../../principles/perceivable_principle.md#131-element-information-and-relationship-level-a)
+### [Element information and relationship (WCAG 1.3.1 - Level A)](../../principles/perceivable_principle.md#element-information-and-relationship-wcag-131---level-a)
 
 #### Element information
 
@@ -204,7 +204,7 @@ Also, if there is a need to define actions or gestures inside components like th
 
 By not connecting or adding context to the elements or inner elements of the component, there is a chance to create a bad user experience and confusion in the app usage.
 
-### [1.3.2 Meaningful sequence (Level A)](../../principles/perceivable_principle.md#132-meaningful-sequence-level-a)
+### [Meaningful sequence (WCAG 1.3.2 - Level A)](../../principles/perceivable_principle.md#meaningful-sequence-wcag-132---level-a)
 
 #### ✅ Success technique(s)
 
@@ -245,7 +245,7 @@ In this example, we changed the order of how elements will be read, and we’ve 
 
 Even if we, as developers, control the order of the elements, try not to make sequences that are not logical or to produce "jumps" between UI components.
 
-### [1.3.3 Sensory characteristics (Level A)](../../principles/perceivable_principle.md#133-sensory-characteristics-level-a)
+### [Sensory characteristics (WCAG 1.3.3 - Level A)](../../principles/perceivable_principle.md#sensory-characteristics-wcag-133---level-a)
 
 #### ✅ Success technique(s)
 
@@ -303,7 +303,7 @@ Some of the failures regarding this aspect are:
 * Creating elements that are not identifiable by design (e.g., a label and a button without a shape)
 * Not applying design changes when user preferences change in system settings
 
-### [1.3.4 Orientation (Level AA)](../../principles/perceivable_principle.md#134-orientation-level-aa)
+### [Orientation (WCAG 1.3.4 - Level AA)](../../principles/perceivable_principle.md#orientation-wcag-134---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -320,7 +320,7 @@ While thinking about orientation, the following implementations can be considere
 * not supporting both horizontal and vertical orientations
 * forcing user to re-orient the device to use it normally (e.g. usage of alert)
 
-### [1.3.5 Identify input purpose (Level AA)](../../principles/perceivable_principle.md#135-identify-input-purpose-level-aa)
+### [Identify input purpose (WCAG 1.3.5 - Level AA)](../../principles/perceivable_principle.md#identify-input-purpose-wcag-135---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -330,9 +330,9 @@ To support type of the input and different keyboard state, always define the `ke
 
 If the wrong input layout (e.g., keyboard type) is used for the input field, the user may have issues with entering the data. This can lead to a bad user experience and a failure of this guideline.
 
-## [1.4 Distinguishable](../../principles/perceivable_principle.md#14-distinguishable)
+## [Distinguishable (WCAG 1.4)](../../principles/perceivable_principle.md#distinguishable-wcag-14)
 
-### [1.4.4 Resizeable text (Level AA)](../../principles/perceivable_principle.md#144-resizeable-text-level-aa)
+### [Resizeable text (WCAG 1.4.4 - Level AA)](../../principles/perceivable_principle.md#resizeable-text-wcag-144---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -354,7 +354,7 @@ As a part of this guideline, the following failures can be considered:
 * Not supporting the dynamic type
 * The content is not resizable up to 200%
 
-### [1.4.5 Images of text (Level AA)](../../principles/perceivable_principle.md#145-images-of-text-level-aa)
+### [Images of text (WCAG 1.4.5 - Level AA)](../../principles/perceivable_principle.md#images-of-text-wcag-145---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -364,7 +364,7 @@ Try to use text instead of images of text to make the component more flexible an
 
 If the image of text is used without a text alternative, that will result in a failure of this guideline.
 
-### [1.4.10 Reflow (Level AA)](../../principles/perceivable_principle.md#1410-reflow-level-aa)
+### [Reflow (WCAG 1.4.10 - Level AA)](../../principles/perceivable_principle.md#reflow-wcag-1410---level-aa)
 
 #### ✅ Success technique(s)
 

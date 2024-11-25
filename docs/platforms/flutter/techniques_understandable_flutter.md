@@ -1,8 +1,8 @@
-# [3. Understandable principle](../../principles/understandable_principle.md#3-understandable-principle)
+# [Understandable principle](../../principles/understandable_principle.md#understandable-principle)
 
-## [3.1 Readable](../../principles/understandable_principle.md#31-readable)
+## [Readable (WCAG 3.1)](../../principles/understandable_principle.md#readable-wcag-31)
 
-### [3.1.1 Language of Page (Level A)](../../principles/understandable_principle.md#311-language-of-page-level-a)
+### [Language of Page (WCAG 3.1.1 - Level A)](../../principles/understandable_principle.md#error-identification-wcag-331---level-a)
 
 #### ✅ Success technique(s)
 
@@ -23,9 +23,9 @@ Hard-coding a language code and labels inside an app should be avoided.
 
 Also, every app should be developed as a localizable app, even if it seems like it makes no sense at the start, or all of the intended audience speak a single language, it can still happen that some users will not be able to use that language and there is always a possibility that your app will scale to different language regions or that parts of your code will be reused on different projects which _do_ use localization.
 
-## [3.2 Predictable](../../principles/understandable_principle.md#32-predictable)
+## [Predictable (WCAG 3.2)](../../principles/understandable_principle.md#predictable-wcag-32)
 
-### [3.2.1-3.2.2 On Focus & On Input (Level A)](../../principles/understandable_principle.md#321-322-on-focus--on-input-level-a)
+### [On Focus & On Input (WCAG 3.2.1-3.2.2 - Level A)](../../principles/understandable_principle.md#on-focus--on-input-wcag-321-322---level-a)
 
 #### ✅ Success technique(s)
 
@@ -50,9 +50,9 @@ Showing programmatically pre-planned popups, modals, or any unusual navigation n
 - A form is submitted automatically when a certain UI element receives focus.
 - Focus is automatically moved to a different UI element when a give UI receives focus.
 
-## [3.3 Input Assistance](../../principles/understandable_principle.md#33-input-assistance)
+## [Input Assistance (WCAG 3.3)](../../principles/understandable_principle.md#input-assistance-wcag-33)
 
-### [3.3.1 Error Identification (Level A)](../../principles/understandable_principle.md#331-error-identification-level-a)
+### [Error Identification (WCAG 3.3.1 - Level A)](../../principles/understandable_principle.md#error-identification-wcag-331---level-a)
 
 #### ✅ Success technique(s)
 
@@ -77,7 +77,7 @@ TextFormField(
 
 Preventing some action or flow from continuing because an error was detected but not communicating to the user how/when the error was made and/or what needs to be done to correct it.
 
-### [3.3.2 Labels or Instructions (Level A)](../../principles/understandable_principle.md#332-labels-or-instructions-level-a)
+### [Labels or Instructions (WCAG 3.3.2 - Level A)](../../principles/understandable_principle.md#labels-or-instructions-wcag-332---level-a)
 
 #### ✅ Success technique(s)
 

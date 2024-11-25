@@ -1,8 +1,8 @@
-# [3. Understandable principle](../../principles/understandable_principle.md#3-understandable-principle)
+# [Understandable principle](../../principles/understandable_principle.md#understandable-principle)
 
-## [3.1 Readable](../../principles/understandable_principle.md#31-readable)
+## [Readable (WCAG 3.1)](../../principles/understandable_principle.md#readable-wcag-31)
 
-### [3.1.1 Language of Page (Level A)](../../principles/understandable_principle.md#311-language-of-page-level-a)
+### [Language of Page (WCAG 3.1.1 - Level A)](../../principles/understandable_principle.md#language-of-page-wcag-311---level-a)
 
 #### ✅ Success technique(s)
 
@@ -47,7 +47,7 @@ fun setLocaleEn(context: Context): Context {
 }
 ```
 
-### [3.1.2 Language of Parts (Level AA)](../../principles/understandable_principle.md#312-language-of-parts-level-aa)
+### [Language of Parts (WCAG 3.1.2 - Level AA)](../../principles/understandable_principle.md#language-of-parts-wcag-312---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -80,9 +80,9 @@ val annotatedText = buildAnnotatedString {
 Text(text = annotatedText)
 ```
 
-## [3.2 Predictable](../../principles/understandable_principle.md#32-predictable)
+## [Predictable (WCAG 3.2)](../../principles/understandable_principle.md#predictable-wcag-32)
 
-### [3.2.1-3.2.2 On Focus & On Input (Level A)](../../principles/understandable_principle.md#321-322-on-focus--on-input-level-a)
+### [On Focus & On Input (WCAG 3.2.1-3.2.2 - Level A)](../../principles/understandable_principle.md#on-focus--on-input-wcag-321-322---level-a)
 
 #### ✅ Success technique(s)
 
@@ -105,7 +105,7 @@ Some examples of actions that _are_ considered a change of context and would vio
 - Automatically submitting a form when a certain field gets focus or input. For example, in a login form, the user is automatically logged in when checking the "Remember me" checkbox, without pressing the "Log in" button.
 - Showing an alert dialogs when an element receives focus. For example, an input field receives focus and a help alert dialog describing a field appears. The user would first have to close the dialog before continuing with input, and the dialog would appear any time the user might want to edit their input.
 
-### [3.2.3 Consistent Navigation (Level AA)](../../principles/understandable_principle.md#323-consistent-navigation-level-aa)
+### [Consistent Navigation (WCAG 3.2.3 - Level AA)](../../principles/understandable_principle.md#consistent-navigation-wcag-323---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -122,7 +122,7 @@ Usually, when reusing the same components across multiple screens, the ordering 
 - TalkBack: Two screens share the same bottom navigation bar. On the first screen, the bottom bar items are read out last, after all the other content. On the second screen, the bottom bar items are read out after the toolbar and before any other screen content.
 - TalkBack: An app has multiple screens that contain a toolbar with a title and a navigation button. On some screens, the navigation button is read out first and, on others, the title is read out before the navigation button.
 
-### [3.2.4 Consistent Identification (Level AA)](../../principles/understandable_principle.md#324-consistent-identification-level-aa)
+### [Consistent Identification (WCAG 3.2.4 - Level AA)](../../principles/understandable_principle.md#consistent-identification-wcag-324---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -140,9 +140,9 @@ Example 3: While a search icon benefits from having a consistent label, a check 
 
 Note: Certain elements may require context-specific labels to convey their functions accurately, balancing consistency with clarity to enhance user understanding
 
-## [3.3 Input Assistance](../../principles/understandable_principle.md#33-input-assistance)
+## [Input Assistance (WCAG 3.3)](../../principles/understandable_principle.md#input-assistance-wcag-33)
 
-### [3.3.1 Error Identification (Level A)](../../principles/understandable_principle.md#331-error-identification-level-a)
+### [Error Identification (WCAG 3.3.1 - Level A)](../../principles/understandable_principle.md#error-identification-wcag-331---level-a)
 
 #### ✅ Success technique(s)
 
@@ -197,7 +197,7 @@ Ensure `androidx.compose.ui.semantics.error` is present when using the error fun
 
 - Preventing further actions without communicating the issue and necessary corrections to the user.
 
-### [3.3.2 Labels or Instructions (Level A)](../../principles/understandable_principle.md#332-labels-or-instructions-level-a)
+### [Labels or Instructions (WCAG 3.3.2 - Level A)](../../principles/understandable_principle.md#labels-or-instructions-wcag-332---level-a)
 
 #### ✅ Success technique(s)
 
@@ -241,7 +241,7 @@ TextField(
 
 - Not providing enough context for the views / composables that expect user interaction.
 
-### [3.3.3 Error Suggestion (Level AA)](../../principles/understandable_principle.md#333-error-suggestion-level-aa)
+### [Error Suggestion (WCAG 3.3.3 - Level AA)](../../principles/understandable_principle.md#error-suggestion-wcag-333---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -251,7 +251,7 @@ One of the possibilities is using an alert dialog since it ensures that users se
 
 Regardless of the method used, the error message should indicate the location of the error and provide a clear explanation of the issue.
 
-### [3.3.4 Error Prevention (Legal, Financial, Data) (Level AA)](../../principles/understandable_principle.md#334-error-prevention-legal-financial-data-level-aa)
+### [Error Prevention (Legal, Financial, Data) (WCAG 3.3.4 - Level AA)](../../principles/understandable_principle.md#error-prevention-legal-financial-data-wcag-334---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -271,7 +271,7 @@ App should enable users to recover deleted information by temporarily marking it
 
 Failures are not defined by the WCAG at the time of writing this.
 
-### [3.3.7 Redundant Entry (Level A)](../../principles/understandable_principle.md#337-redundant-entry-level-a)
+### [Redundant Entry (WCAG 3.3.7 Level A)](../../principles/understandable_principle.md#redundant-entry-wcag-337-level-a)
 
 #### ✅ Success technique(s)
 
@@ -293,7 +293,7 @@ Techniques mentioned above does not apply to the following cases:
   
 Failures are not defined by the WCAG at the time of writing this.
 
-### [3.3.8 Accessible Authentication (Minimum) (Level AA)](../../principles/understandable_principle.md#338-accessible-authentication-minimum-level-aa)
+### [Accessible Authentication (Minimum) (WCAG 3.3.8 - Level AA)](../../principles/understandable_principle.md#accessible-authentication-minimum-wcag-338---level-aa)
 
 #### ✅ Success technique(s)
 

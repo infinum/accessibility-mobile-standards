@@ -1,8 +1,8 @@
-# [1. Perceivable principle](../../principles/perceivable_principle.md#1-perceivable-principle)
+# [Perceivable principle](../../principles/perceivable_principle.md#perceivable-principle)
 
-## [1.1 Text alternatives](../../principles/perceivable_principle.md#11-text-alternatives)
+## [Text alternatives (WCAG 1.1)](../../principles/perceivable_principle.md#text-alternatives-wcag-11)
 
-### [1.1.1 Non-text content (Level A)](../../principles/perceivable_principle.md#111-non-text-content-level-a)
+### [Non-text content (WCAG 1.1.1 - Level A)](../../principles/perceivable_principle.md#non-text-content-wcag-111---level-a)
 
 #### ✅ Success technique(s)
 
@@ -22,9 +22,9 @@ Image(image: AssetImage('assets/settings.png'), semanticLabel: 'Open settings')
 
 - Do not provide semantics of elements that only exist for a decorative person. This will make navigation with screen readers harder.
 
-## [1.2 Time-based Media](../../principles/perceivable_principle.md#12-time-based-media)
+## [Time-based Media (WCAG 1.2)](../../principles/perceivable_principle.md#time-based-media-wcag-12)
 
-### [1.2.1-1.2.2 Captions support for prerecorded media (Level A)](../../principles/perceivable_principle.md#121-122-captions-support-for-prerecorded-media-level-a)
+### [Captions support for prerecorded media (WCAG 1.2.1-1.2.2 - Level A)](../../principles/perceivable_principle.md#captions-support-for-prerecorded-media-wcag-121-122---level-a)
 
 #### ✅ Success technique(s)
 
@@ -38,9 +38,9 @@ If the app you are building includes media content such as video clips or audio 
 
 - all media is presented to the user without the possibility to change some of the controls (slow down, pause, volume up etc.)
 
-## [1.3 Adaptable](../../principles/perceivable_principle.md#13-adaptable)
+## [Adaptable (WCAG 1.3)](../../principles/perceivable_principle.md#adaptable-wcag-13)
 
-### [1.3.1 Element information and relationship (Level A)](../../principles/perceivable_principle.md#131-element-information-and-relationship-level-a)
+### [Element information and relationship (WCAG 1.3.1 - Level A)](../../principles/perceivable_principle.md#element-information-and-relationship-wcag-131---level-a)
 
 #### ✅ Success technique(s)
 
@@ -62,7 +62,7 @@ That way users of accessibility services can choose to navigate between headings
 
 - it is not clear which parts of the screen are contextually connected to each other
 
-### [1.3.2 Meaningful sequence (Level A)](../../principles/perceivable_principle.md#132-meaningful-sequence-level-a)
+### [Meaningful sequence (WCAG 1.3.2 - Level A)](../../principles/perceivable_principle.md#meaningful-sequence-wcag-132---level-a)
 
 #### ✅ Success technique(s)
 
@@ -92,7 +92,7 @@ Row(
 );
 ```
 
-### [1.3.3 Sensory characteristics (Level A)](../../principles/perceivable_principle.md#133-sensory-characteristics-level-a)
+### [Sensory characteristics (WCAG 1.3.3 - Level A)](../../principles/perceivable_principle.md#sensory-characteristics-wcag-133---level-a)
 
 #### ✅ Success technique(s)
 

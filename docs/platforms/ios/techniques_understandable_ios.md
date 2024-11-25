@@ -1,8 +1,8 @@
-# [3. Understandable principle](../../principles/understandable_principle.md#3-understandable-principle)
+# [Understandable principle](../../principles/understandable_principle.md#understandable-principle)
 
-## [3.1 Readable](../../principles/understandable_principle.md#31-readable)
+## [Readable (WCAG 3.1)](../../principles/understandable_principle.md#readable-wcag-31)
 
-### [3.1.1 Language of Page (Level A)](../../principles/understandable_principle.md#311-language-of-page-level-a)
+### [Language of Page (WCAG 3.1.1 - Level A)](../../principles/understandable_principle.md#language-of-page-wcag-311---level-a)
 
 #### ✅ Success technique(s)
 
@@ -31,7 +31,7 @@ Bundle.setLanguage(language)
 
 Also, every app should be developed as a localizable app. Even if it seems that it makes no sense in the beginning or that all of the intended audience speak a single language, it can still happen that some users will not be able to use that language. here is always a possibility that your app will scale to different language regions or parts of your code will be reused on different projects which _do_ use localization.
 
-### [3.1.2 Language of Parts (Level AA)](../../principles/understandable_principle.md#312-language-of-parts-level-aa)
+### [Language of Parts (WCAG 3.1.2 - Level AA)](../../principles/understandable_principle.md#language-of-parts-wcag-312---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -48,9 +48,9 @@ let attributedString = NSAttributedString(
 
 If the whole text (label) is using the same language, the `accessibilityLanguage` property can be set in that case instead.
 
-## [3.2 Predictable](../../principles/understandable_principle.md#32-predictable)
+## [Predictable (WCAG 3.2)](../../principles/understandable_principle.md#predictable-wcag-32)
 
-### [3.2.1-3.2.2 On Focus & On Input (Level A)](../../principles/understandable_principle.md#321-322-on-focus--on-input-level-a)
+### [On Focus & On Input (WCAG 3.2.1-3.2.2 - Level A)](../../principles/understandable_principle.md#on-focus--on-input-wcag-321-322---level-a)
 
 #### ✅ Success technique(s)
 
@@ -102,7 +102,7 @@ func textFieldDidBeginEditing(_ textField: UITextField) {
 }
 ```
 
-### [3.2.3 Consistent Navigation (Level AA)](../../principles/understandable_principle.md#323-consistent-navigation-level-aa)
+### [Consistent Navigation (WCAG 3.2.3 - Level AA)](../../principles/understandable_principle.md#consistent-navigation-wcag-323---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -112,7 +112,7 @@ To satisfy this criterion, try to keep the navigation structure consistent, with
 
 Changing the position of elements or making the app behaviour unconsistent can confuse users and make it harder for them to navigate through the app, which results in failure to satisfy this criterion.
 
-### [3.2.4 Consistent Identification (Level AA)](../../principles/understandable_principle.md#324-consistent-identification-level-aa)
+### [Consistent Identification (WCAG 3.2.4 - Level AA)](../../principles/understandable_principle.md#consistent-identification-wcag-324---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -124,9 +124,9 @@ To simplify this, try to think about a simple download icon, which should have t
 
 As a failure, we can consider components and elements that have different identification across the application. This can confuse users and make it harder for them to use the application.
 
-## [3.3 Input Assistance](../../principles/understandable_principle.md#33-input-assistance)
+## [Input Assistance (WCAG 3.3)](../../principles/understandable_principle.md#input-assistance-wcag-33)
 
-### [3.3.1 Error Identification (Level A)](../../principles/understandable_principle.md#331-error-identification-level-a)
+### [Error Identification (WCAG 3.3.1 - Level A)](../../principles/understandable_principle.md#error-identification-wcag-331---level-a)
 
 #### ✅ Success technique(s)
 
@@ -165,7 +165,7 @@ generator.notificationOccurred(.success)
 
 Preventing some action or flow from continuing because an error was detected but not communicating to the user how/when the error was made and/or what needed to be done to correct it.
 
-### [3.3.2 Labels or Instructions (Level A)](../../principles/understandable_principle.md#332-labels-or-instructions-level-a)
+### [Labels or Instructions (WCAG 3.3.2 - Level A)](../../principles/understandable_principle.md#labels-or-instructions-wcag-332---level-a)
 
 #### ✅ Success technique(s)
 
@@ -190,7 +190,7 @@ usernameHolderView.shouldGroupAccessibilityChildren = true
 
 A user enters some data into a user interface element without knowing what the end result is and/or triggering an unannounced change of context in the process.
 
-### [3.3.3 Error Suggestion (Level AA)](../../principles/understandable_principle.md#333-error-suggestion-level-aa)
+### [Error Suggestion (WCAG 3.3.3 - Level AA)](../../principles/understandable_principle.md#error-suggestion-wcag-333---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -200,7 +200,7 @@ This is not just an accessibility feature, but also a usability feature, as it h
 
 *Note: This should be avoided if the error suggestion would jeopardize the security or purpose of the content.*
 
-### [3.3.4 Error Prevention (Legal, Financial, Data) (Level AA)](../../principles/understandable_principle.md#334-error-prevention-legal-financial-data-level-aa)
+### [Error Prevention (Legal, Financial, Data) (WCAG 3.3.4 - Level AA)](../../principles/understandable_principle.md#error-prevention-legal-financial-data-wcag-334---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -212,7 +212,7 @@ To satisfy this criterion, the app should provide at least one of the following 
 
 Based on the type of the application, the mechanism should be implemented in a way that is most suitable for the user and the application's purpose.
 
-### [3.3.7 Redundant Entry (Level A)](../../principles/understandable_principle.md#337-redundant-entry-level-a)
+### [Redundant Entry (WCAG 3.3.7 Level A)](../../principles/understandable_principle.md#redundant-entry-wcag-337-level-a)
 
 #### ✅ Success technique(s)
 
@@ -227,7 +227,7 @@ Techniques mentioned above does not apply to the following cases:
 - when the information is required to ensure the security of the content, or
 - when previously entered information is no longer valid.
 
-### [3.3.8 Accessible Authentication (Minimum) (Level AA)](../../principles/understandable_principle.md#338-accessible-authentication-minimum-level-aa)
+### [Accessible Authentication (Minimum) (WCAG 3.3.8 - Level AA)](../../principles/understandable_principle.md#accessible-authentication-minimum-wcag-338---level-aa)
 
 #### ✅ Success technique(s)
 

@@ -1,8 +1,8 @@
-# [2. Operable principle](../../principles/operable_principle.md#2-operable-principle)
+# [Operable principle](../../principles/operable_principle.md#operable-principle)
 
-## [2.2 Enough Time](../../principles/operable_principle.md#22-enough-time)
+## [Enough Time (WCAG 2.2)](../../principles/operable_principle.md#enough-time-wcag-22)
 
-### [2.2.1 Timing Adjustable (Level A)](../../principles/operable_principle.md#221-timing-adjustable-level-a)
+### [Timing Adjustable (WCAG 2.2.1  - Level A)](../../principles/operable_principle.md#timing-adjustable-wcag-221----level-a)
 
 #### ✅ Success technique(s)
 
@@ -19,7 +19,7 @@
 - Logging a user out of their session with no prior warning.
 - Not providing enough time or time extensions to react to an incoming action in the app.
 
-### [2.2.2 Pause, Stop, Hide (Level A)](../../principles/operable_principle.md#222-pause-stop-hide-level-a)
+### [Pause, Stop, Hide (WCAG 2.2.2 - Level A)](../../principles/operable_principle.md#pause-stop-hide-wcag-222---level-a)
 
 #### ✅ Success technique(s)
 
@@ -31,9 +31,9 @@
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
-## [2.3 Seizures and Physical Reactions](../../principles/operable_principle.md#23-seizures-and-physical-reactions)
+## [Seizures and Physical Reactions (WCAG 2.3)](../../principles/operable_principle.md#seizures-and-physical-reactions-wcag-23)
 
-### [2.3.1 Three Flashed or Below Threshold (Level A)](../../principles/operable_principle.md#231-three-flashed-or-below-threshold-level-a)
+### [Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)](../../principles/operable_principle.md#three-flashed-or-below-threshold-wcag-231---level-a)
 
 #### ✅ Success technique(s)
 
@@ -46,9 +46,9 @@
 - Using rapidly flashing elements to catch the user's attention.
 - Having a larger area of screen flashing more than three times per second.
 
-## [2.4 Navigable](../../principles/operable_principle.md#24-navigable)
+## [2.4 Navigable (WCAG 2.4)](../../principles/operable_principle.md#navigable-wcag-24)
 
-### [2.4.1 Bypass Blocks (Level A)](../../principles/operable_principle.md#241-bypass-blocks-level-a)
+### [Bypass Blocks (WCAG 2.4.1 - Level A)](../../principles/operable_principle.md#bypass-blocks-wcag-241---level-a)
 
 #### ✅ Success technique(s)
 
@@ -85,7 +85,7 @@ Please check more information about custom rotors in [this](https://developer.ap
 
 Not providing a way for the user to quickly skip over sections with numerous items.
 
-### [2.4.2 Page Titled (Level A)](../../principles/operable_principle.md#242-page-titled-level-a)
+### [Page Titled (WCAG 2.4.2 - Level A)](../../principles/operable_principle.md#page-titled-wcag-242--level-a)
 
 #### ✅ Success technique(s)
 
@@ -123,7 +123,7 @@ Not providing a way for the user to quickly skip over sections with numerous ite
   - file names like "report.pdf" or "DSC_0123.jpeg"
   - placeholder text like "Enter title..." or "Search..."
 
-### [2.4.3 Focus Order (Level A)](../../principles/operable_principle.md#243-focus-order-level-a)
+### [Focus Order (WCAG 2.4.3 - Level A)](../../principles/operable_principle.md#focus-order-wcag-243---level-a)
 
 #### ✅ Success technique(s)
 
@@ -172,7 +172,7 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
     }
 ```
 
-### [2.4.4 Link Purpose (Level A)](../../principles/operable_principle.md#244-link-purpose-level-a)
+### [Link Purpose (WCAG 2.4.4 - Level A)](../../principles/operable_principle.md#link-purpose-wcag-244---level-a)
 
 #### ✅ Success technique(s)
 
@@ -216,7 +216,7 @@ Keep in mind: when placed outside a stack view, elements positioned closer to th
 - Using generic and confusing button titles for canceling actions, for example: _"Are you sure you want to cancel your booking? This action is irreversible" ▸ OK  ▸ Cancel_
 - Button titles with an unclear result like "Ready to publish?"
 
-### [2.4.6 Heading and Labels (Level AA)](../../principles/operable_principle.md#246-heading-and-labels-level-aa)
+### [Heading and Labels (WCAG 2.4.6 - Level AA)](../../principles/operable_principle.md#heading-and-labels-wcag-246---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -242,13 +242,13 @@ The following should be avoided:
 - Not providing a title or label for the content that follows
 - Providing a missing or incorrect title or label
 
-### [2.4.7 Focus Visibility (Level AA)](../../principles/operable_principle.md#247-focus-visibility-level-aa)
+### [Focus Visibility (WCAG 2.4.7 - Level AA)](../../principles/operable_principle.md#focus-visibility-wcag-247---level-aa)
 
 #### ✅ Success technique(s)
 
 Even though, the system automatically handles this, think about selection and focus on custom elements; make sure that the focus is visible in a correct way and that the user can see which element is currently selected, especially if the component contains "inner" elements.
 
-### [2.4.11 Focus Not Obscured (Minimum) (Level AA)](../../principles/operable_principle.md#2411-focus-not-obscured-minimum-level-aa)
+### [Focus Not Obscured (Minimum) (WCAG 2.4.11 - Level AA)](../../principles/operable_principle.md#focus-not-obscured-minimum-wcag-2411---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -267,9 +267,9 @@ The following should be avoided:
 - The focus is obscured by other elements
 - Element is hidden due to inability to scroll or another element of the screen (e.g. sticky footer or floating element)
 
-## [2.5 Input modalities](../../principles/operable_principle.md#25-input-modalities)
+## [Input modalities (WCAG 2.5)](../../principles/operable_principle.md#input-modalities-wcag-25)
 
-### [2.5.3 Label in Name (Level A)](../../principles/operable_principle.md#253-label-in-name-level-a)
+### [Label in Name (WCAG 2.5.3 - Level A)](../../principles/operable_principle.md#label-in-name-wcag-253---level-a)
 
 #### ✅ Success technique(s)
 
@@ -291,7 +291,7 @@ As a failure to this criterion, the following should be avoided:
 - not including the text of the visible label as a part of the accessibility label
 - words of visible label and accessibility label not matching (e.g. not the same order)
 
-### [2.5.4 Motion Actuation (Level A)](../../principles/operable_principle.md#254-motion-actuation-level-a)
+### [Motion Actuation (WCAG 2.5.4 - Level A)](../../principles/operable_principle.md#motion-actuation-wcag-254---level-a)
 
 #### ✅ Success technique(s)
 
@@ -301,7 +301,7 @@ To satisfy this criterion, the application should provide an alternative way to 
 
 The application should avoid using only one way of input to perform an action - in case when that is not a standard way of input (e.g. device motion).
 
-### [2.5.7 Dragging Movements (Level AA)](../../principles/operable_principle.md#257-dragging-movements-level-aa)
+### [Dragging Movements (WCAG 2.5.7  - Level AA)](../../principles/operable_principle.md#dragging-movements-wcag-257----level-aa)
 
 #### ✅ Success technique(s)
 
@@ -322,7 +322,7 @@ Examples for custom actions can be found in applications like Mail where the use
 
 If the application does not provide an alternative way to perform the action that is not based on dragging movements, it will fail to satisfy this criterion.
 
-### [2.5.8 Target Size (Minimum) (Level AA)](../../principles/operable_principle.md#258-target-size-minimum-level-aa)
+### [Target Size (Minimum) (WCAG 2.5.8 - Level AA)](../../principles/operable_principle.md#target-size-minimum-wcag-258---level-aa)
 
 #### ✅ Success technique(s)
 

@@ -1,8 +1,8 @@
-# [2. Operable principle](../../principles/operable_principle.md#2-operable-principle)
+# [Operable principle](../../principles/operable_principle.md#operable-principle)
 
-## [2.1. Keyboard Accessible](../../principles/operable_principle.md#21-keyboard-accessible)
+## [Keyboard Accessible (WCAG 2.1)](../../principles/operable_principle.md#keyboard-accessible-wcag-21)
 
-## [2.1.1 Keyboard (Level A)](../../principles/operable_principle.md#211-keyboard-level-a)
+## [Keyboard (WCAG 2.1.1 - Level A)](../../principles/operable_principle.md#keyboard-wcag-211---level-a)
 
 #### ✅ Success technique(s)
 
@@ -45,9 +45,9 @@ FocusTraversalGroup(
 
 More about focus traversal you can at [Controlling what gets focus](https://docs.flutter.dev/development/ui/advanced/focus#controlling-what-gets-focus) from Flutter documentation.
 
-## [2.2 Enough Time](../../principles/operable_principle.md#22-enough-time)
+## [Enough Time (WCAG 2.2)](../../principles/operable_principle.md#enough-time-wcag-22)
 
-### [2.2.1 Timing Adjustable (Level A)](../../principles/operable_principle.md#221-timing-adjustable-level-a)
+### [Timing Adjustable (WCAG 2.2.1  - Level A)](../../principles/operable_principle.md#timing-adjustable-wcag-221----level-a)
 
 #### ✅ Success technique(s)
 
@@ -63,7 +63,7 @@ All users should have the ability to interact with the content displayed on the 
 
 - define time-limited actions in the app with no ability to extend that limit
 
-### [2.2.2 Pause, Stop, Hide (Level A)](../../principles/operable_principle.md#222-pause-stop-hide-level-a)
+### [Pause, Stop, Hide (WCAG 2.2.2 - Level A)](../../principles/operable_principle.md#pause-stop-hide-wcag-222---level-a)
 
 #### ✅ Success technique(s)
 
@@ -75,9 +75,9 @@ All users should have the ability to interact with the content displayed on the 
 
 - Using an auto-updating or auto-scrolling view that can't be paused/stopped.
 
-## [2.3 Seizures and Physical Reactions](../../principles/operable_principle.md#23-seizures-and-physical-reactions)
+## [Seizures and Physical Reactions (WCAG 2.3)](../../principles/operable_principle.md#seizures-and-physical-reactions-wcag-23)
 
-### [2.3.1 Three Flashed or Below Threshold (Level A)](../../principles/operable_principle.md#231-three-flashed-or-below-threshold-level-a)
+### [Three Flashed or Below Threshold (WCAG 2.3.1 - Level A)](../../principles/operable_principle.md#three-flashed-or-below-threshold-wcag-231---level-a)
 
 #### ✅ Success technique(s)
 
@@ -93,9 +93,9 @@ All users should have the ability to interact with the content displayed on the 
 
 - Having a larger area of screen flashing more than three times per second
 
-## [2.4 Navigable](../../principles/operable_principle.md#24-navigable)
+## [2.4 Navigable (WCAG 2.4)](../../principles/operable_principle.md#navigable-wcag-24)
 
-### [2.4.1 Bypass Blocks (Level A)](../../principles/operable_principle.md#241-bypass-blocks-level-a)
+### [Bypass Blocks (WCAG 2.4.1 - Level A)](../../principles/operable_principle.md#bypass-blocks-wcag-241---level-a)
 
 #### ✅ Success technique(s)
 
@@ -111,7 +111,7 @@ To accomplish this use `Semantics(container: true, label: 'Stories', child: ...)
 
 Not providing a way for user to quickly skip over sections with numerous items.
 
-### [2.4.2 Page Titled (Level A)](../../principles/operable_principle.md#242-page-titled-level-a)
+### [Page Titled (WCAG 2.4.2 - Level A)](../../principles/operable_principle.md#page-titled-wcag-242--level-a)
 
 #### ✅ Success technique(s)
 
@@ -124,7 +124,7 @@ If you're setting AppBar in `Scaffold(appBar: ...)` then the title will be read 
 - Leaving the title empty
 - Using a custom title view or custom navigation bar without ensuring it's readable by screen reader
 
-### [2.4.4 Link Purpose (Level A)](../../principles/operable_principle.md#244-link-purpose-level-a)
+### [Link Purpose (WCAG 2.4.4 - Level A)](../../principles/operable_principle.md#link-purpose-wcag-244---level-a)
 
 #### ✅ Success technique(s)
 
