@@ -52,6 +52,11 @@ This document contains a checklist of guidelines that should be followed when de
 - [ ] [Redundant Entry (WCAG 3.3.7 Level A)](principles/understandable_principle.md#redundant-entry-wcag-337-level-a)
 - [ ] [Accessible Authentication (Minimum) (WCAG 3.3.8 - Level AA)](principles/understandable_principle.md#accessible-authentication-minimum-wcag-338---level-aa)
 
+## Robust
+
+- [ ] [Name, Role, Value (WCAG 4.1.2 - Level A)](principles/robust_principle.md#name-role-value-wcag-412---level-a)
+- [ ] [Status messages (WCAG 4.1.3 - Level AA)](principles/robust_principle.md#status-messages-wcag-413---level-aa)
+
 -- OLD
 
 ## Content

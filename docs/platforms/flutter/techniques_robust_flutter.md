@@ -1,12 +1,8 @@
- [🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️  Robust principle](../../principles/robust_principle.md "Robust principle")
+# [Robust principle](../../principles/robust_principle.md#robust-principle)
 
-# Robust guidelines for Flutter
+## [Compatible (WCAG 4.1)](../../principles/robust_principle.md#compatible-wcag-41)
 
-## Compatible
-
-### Name, Role, Value
-
-*This guideline covers point 4.1.2 Name, Role, Value - Level A of the WCAG standard.*
+### [Name, Role, Value (WCAG 4.1.2 - Level A)](../../principles/robust_principle.md#name-role-value-wcag-412---level-a)
 
 #### ✅ Success technique(s)
 
@@ -60,7 +56,3 @@ And several other fields.
 Implementing custom controls which are unfamiliar to the users and don't carry the necessary accessibility identifying information as defined in this guideline.
 
 Changing the value or role of a user interface element without adjusting it's identifier programmatically.
-
-⎯
-
-[← Robust principle](../../principles/robust_principle.md "Robust principle")

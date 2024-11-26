@@ -1,25 +1,8 @@
-[🔼 Accessibility principles and examples](../../principles/accessibility_principles_and_examples.md  "Accessibility principles and examples") | [⬅️ Robust principle](../../principles/robust_principle.md "Robust principle")
+# [Robust principle](../../principles/robust_principle.md#robust-principle)
 
-# Robust guidelines for Android
+## [Compatible (WCAG 4.1)](../../principles/robust_principle.md#compatible-wcag-41)
 
-Content must be robust enough that it can be interpreted by a wide variety of mobile devices, including those which use accessibility
-features.
-
-## Compatible (WCAG 4.1)
-
-Maximize compatibility with current and future devices, taking into account the accessibility features that they might be using.
-
-### Name, Role, Value (WCAG 4.1.2 - Level A)
-
-User interface elements should be clearly defined by their
-name ([content description](https://developer.android.com/reference/android/view/View.html#attr_android:contentDescription) & [accessibility action](https://developer.android.com/reference/android/view/accessibility/AccessibilityNodeInfo.AccessibilityAction)),
-the role that they have (
-AccessibilityNodeInfoCompat's [class name](https://developer.android.com/reference/androidx/core/view/accessibility/AccessibilityNodeInfoCompat#setClassName(java.lang.CharSequence)) & [role description](https://developer.android.com/reference/androidx/core/view/accessibility/AccessibilityNodeInfoCompat#setRoleDescription(java.lang.CharSequence))),
-and the value they carry(e.g. progress value, checked state, ...). The app should be able to notify the user if any of these parameters
-change programmatically without user input (or the changes should be reflected in the element's accessibility attributes) so that the user
-remains aware of what this element does at all times.
-
-> This guideline covers point *4.1.2 Name, Role, Value - Level A of the WCAG standard.*
+### [Name, Role, Value (WCAG 4.1.2 - Level A)](../../principles/robust_principle.md#name-role-value-wcag-412---level-a)
 
 #### ✅ Success technique(s)
 
@@ -165,14 +148,7 @@ in this guideline.
 
 Changing the value or role of a user interface element without adjusting its identifier programmatically.
 
-### Status messages (WCAG 4.1.3 - Level AA)
-
-The guideline states that status messages should be programmatically determinable by the user.
-This means that the user should be able to know the status of the app at any given time without having to interact with it.
-
-On mobile this means that the user should be able to know if the current state has been changed - which is especially important for users who rely on screen readers.
-
-> This guideline covers point *4.1.3 Status messages - Level AA of the WCAG standard.*
+### [Status messages (WCAG 4.1.3 - Level AA)](../../principles/robust_principle.md#status-messages-wcag-413---level-aa)
 
 #### ✅ Success technique(s)
 
@@ -208,14 +184,3 @@ CookingCountdownTimer(
 Not providing a way for the user to know the current status of the application at any given time.
 
 Using assertive live region mode for content which is not important and time-sensitive. 
-
----
-
-## Sources
-
-- [Google Support Page](https://support.google.com/accessibility/android)
-- [Official Documentation](https://developer.android.com/guide/topics/ui/accessibility)
-
----
-
-[← Robust principle](../../principles/robust_principle.md "Robust principle")
