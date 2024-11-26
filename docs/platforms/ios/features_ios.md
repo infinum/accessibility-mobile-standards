@@ -1,4 +1,4 @@
-[← Accessibility features per mobile platform](features_mobile_platforms.md "Accessibility features per mobile platform")
+[⬅️ Features per mobile platform](../features_per_mobile_platform.md)
 
 # Accessibility features on iOS
 
@@ -185,4 +185,4 @@ The state of this feature can be checked via `UIAccessibility.isSwitchControlRun
 
 ⎯
 
-[← Accessibility features per mobile platform](features_mobile_platforms.md "Accessibility features per mobile platform")
+[← Features per mobile platform](../features_per_mobile_platform.md)

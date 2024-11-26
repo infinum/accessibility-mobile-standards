@@ -14,4 +14,4 @@ Currently, there is no standardization for most used platforms or frameworks whe
 
 ⎯
 
-[Guidelines →](accessibility_guidelines.md)
+[Features per mobile platform →](platforms/features_per_mobile_platform.md)

@@ -78,6 +78,4 @@ For automated testing, main approach is writing widget tests and inspecting that
 
 ⎯
 
-[← Accessibility principles and examples](../guidelines/principles/accessibility_principles_and_examples.md "Accessibility principles and examples")
-│
-[Conclusion →](../general/conclusion.md "Conclusion")
+[← Principles and guidelines](accessibility_principles_and_guidelines.md) | [Conclusion →](conclusion.md)

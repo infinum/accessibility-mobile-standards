@@ -5,7 +5,7 @@ This repository contains mobile standards created for mobile platforms. It inclu
 ## Table of contents
 
 1. [Introduction](docs/introduction.md)
-2. [Platforms specifics](docs/platforms/features_mobile_platforms.md)
+2. [Features per mobile platform](docs/platforms/features_per_mobile_platform.md)
     * [Android](docs/platforms/android/features_android.md)
     * [iOS](docs/platforms/ios/features_ios.md)
     * [Flutter](docs/platforms/flutter/features_flutter.md)
@@ -16,5 +16,5 @@ This repository contains mobile standards created for mobile platforms. It inclu
     * [Operable](docs/principles/operable_principle.md)
     * [Understandable](docs/principles/understandable_principle.md)
     * [Robust](docs/principles/robust_principle.md)
-6. [Testing accessibility](docs/accessibility_testing.md)
+6. [Testing accessibility features](docs/accessibility_testing.md)
 7. [Conclusion](docs/conclusion.md)

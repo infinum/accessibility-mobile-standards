@@ -49,6 +49,4 @@ In the following chapters, every principle with its guidelines will be described
 
 ⎯
 
-[← Intriduction](introduction.md)
-|
-[Checklist →](accessibility_checklist.md)
+[← Features per mobile platform](platforms/features_per_mobile_platform.md) | [Checklist →](accessibility_checklist.md)

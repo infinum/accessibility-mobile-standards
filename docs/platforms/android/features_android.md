@@ -1,4 +1,4 @@
-[← Accessibility features per mobile platform](features_mobile_platforms.md "Accessibility features per mobile platform")
+[⬅️ Features per mobile platform](../features_per_mobile_platform.md)
 
 # Accessibility features on Android
 
@@ -110,5 +110,6 @@ There are three different types of switches:
 
 A detailed description of all Switch Access configurations can be found on the official [Android Accessibility Help - Switch Access page](https://support.google.com/accessibility/android/answer/6122836?hl=en&ref_topic=6151780).
 
+⎯
 
-[← Accessibility features per mobile platform](features_mobile_platforms.md "Accessibility features per mobile platform")
+[← Features per mobile platform](../features_per_mobile_platform.md)

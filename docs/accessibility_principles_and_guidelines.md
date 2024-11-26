@@ -17,4 +17,4 @@ Alongside the guidelines and examples, you can check the list of requirements th
 
 ⎯
 
-[← Accessibility checklist](accessibility_checklist.md) | [Perceivable principle →](principles/perceivable_principle.md)
+[← Checklist](accessibility_checklist.md) | [Perceivable principle →](principles/perceivable_principle.md)
