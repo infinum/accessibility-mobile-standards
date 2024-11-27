@@ -66,7 +66,7 @@ In this document, the usage of component identifiers like `accessibilityIdentifi
 ## Testing for Flutter
 
 Flutter apps can be tested for accessibility in the same way as native apps.
-On Android with the Accessibility Scanner, and on iOS with Accessibility Inspector.
+On Android with the Accessibility Scanner, and on iOS with [Accessibility Inspector](#accessibility-inspector).
 
 ⎯
 
