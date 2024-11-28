@@ -4,32 +4,54 @@
 
 ## Determining accessibility
 
-Flutter provides a way to view the accessibility features of the underlying platform. We can obtain the [AccessibilityFeatures](https://api.flutter.dev/flutter/dart-ui/AccessibilityFeatures-class.html) class from the [WidgetsBinding](https://api.flutter.dev/flutter/widgets/WidgetsBinding-mixin.html) or form the top-level [window](https://api.flutter.dev/flutter/dart-ui/window.html) property. By adding an observer to `WidgetsBinding` we can listen to changes.
+There are multiple ways to view the accessibility settings of the underlying platform.
+
+* [AccessibilityFeatures](https://api.flutter.dev/flutter/dart-ui/AccessibilityFeatures-class.html) object:
 
 ```dart
 final accessibilityFeatures = WidgetsBinding.instance!.accessibilityFeatures;
-
 accessibilityFeatures.accessibleNavigation;
 accessibilityFeatures.boldText;
-accessibilityFeatures.disableAnimations;
 //...
+
+// Listening to AccessibilityFeatures changes
+final observer = AccessibilityObserver();
+WidgetsBinding.instance.addObserver(observer);
+
+class AccessibilityObserver extends WidgetsBindingObserver {
+  @override
+  void didChangeAccessibilityFeatures() {
+    // ...
+  }
+}
 ```
 
-Some accessibility features (`boldText`, `highContrast`...) are only supported on iOS.
-
-There are some discrepancies between platforms:
-
-* `accessibleNavigation`: on iOS checks whether VoiceOver or Switch Control are enabled. On Android it checks if the user enabled an accessibility app that provides [touchExploration](https://developer.android.com/reference/android/view/accessibility/AccessibilityManager#isTouchExplorationEnabled()), meaning that with TalkBack, the property will be `true`, but `false` when using Switch Access.
-* When reduce motion is enabled on iOS, `reduceMotion` in Flutter is `true` and `disableAnimation` is `false`. When animations are disabled on Android, `reduceMotion` is `false`, and `disableAnimations` is `true`.
-
-Another accessibility setting, the [textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html), is not provided in `AccessibilityFeatures`. We can instead, obtain it from the `WidgetsBinding` or `MediaQuery`.
+* Properties on [MediaQuery](https://api.flutter.dev/flutter/widgets/MediaQuery-class.html):
 
 ```dart
-WidgetsBinding.instance!.platformDispatcher.textScaleFactor;
-MediaQuery.of(context).textScaleFactor;
-
-// Some accessibility features are also provided by MediaQuery
 MediaQuery.of(context).accessibleNavigation;
+MediaQuery.of(context).boldText;
+// ...
+
+MediaQuery.accessibleNavigationOf(context);
+MediaQuery.boldTextOf(context);
+// ...
+```
+
+Not all accessibility settings are available on all platforms. For example, [boldText](https://api.flutter.dev/flutter/dart-ui/AccessibilityFeatures/boldText.html) is only available on iOS and newer versions of Android, while [highContrast](https://api.flutter.dev/flutter/dart-ui/AccessibilityFeatures/highContrast.html) is only available on iOS.
+
+Some accessibility settings are not exposed to Flutter (e.g. [button shapes](https://support.apple.com/en-lk/guide/iphone/iph3c076905a/ios) on iOS). Instead, those can be obtained by using [platform-channels](https://docs.flutter.dev/platform-integration/platform-channels).
+
+In general, Fluttery will try to respect the platform accessibility setting.
+For example, `boldText` will automatically increase the font weight, while `highContrast` will automatically switch to the [MaterialApp.highContrastTheme](https://api.flutter.dev/flutter/material/MaterialApp/highContrastTheme.html).
+
+
+Another accessibility setting is text scaling. The [TextScaler](https://api.flutter.dev/flutter/painting/TextScaler-class.html) can be obtained from `MediaQuery`.\
+While text scaling is usually linear, Futter is planning to add support for non-linear text scaling, which means the [textScaleFactor](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html) property is now deprecated.
+
+```dart
+MediaQuery.of(context).textScaler;
+MediaQuery.textScalerOf(context);
 ```
 
 ## Accessibility in Flutter
