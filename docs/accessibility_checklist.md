@@ -19,7 +19,7 @@ This document contains a checklist of guidelines that should be followed when de
 - [ ] [Resizeable text (WCAG 1.4.4 - Level AA)](principles/perceivable_principle.md#resizeable-text-wcag-144---level-aa)
 - [ ] [Images of text (WCAG 1.4.5 - Level AA)](principles/perceivable_principle.md#images-of-text-wcag-145---level-aa)
 - [ ] [Reflow (WCAG 1.4.10 - Level AA)](principles/perceivable_principle.md#reflow-wcag-1410---level-aa)
-- [ ] [1.4.12 Text Spacing (Level AA)](principles/perceivable_principle.md#text-spacing-wcag---1412---level-aa)
+- [ ] [Text Spacing (WCAG 1.4.12 - Level AA)](principles/perceivable_principle.md#text-spacing-wcag-1412---level-aa)
 
 ## Operable
 
@@ -40,7 +40,7 @@ This document contains a checklist of guidelines that should be followed when de
 
 ## Understandable
 
-- [ ] [3.1.1 Language of Page (Level A](principles/understandable_principle.md#language-of-page-wcag-311---level-a)
+- [ ] [Language of Page (WCAG 3.1.1 - Level A)](principles/understandable_principle.md#language-of-page-wcag-311---level-a)
 - [ ] [Language of Parts (WCAG 3.1.2 - Level AA)](principles/understandable_principle.md#language-of-parts-wcag-312---level-aa)
 - [ ] [On Focus & On Input (WCAG 3.2.1-3.2.2 - Level A)](principles/understandable_principle.md#on-focus--on-input-wcag-321-322---level-a)
 - [ ] [Consistent Navigation (WCAG 3.2.3 - Level AA)](principles/understandable_principle.md#consistent-navigation-wcag-323---level-aa)

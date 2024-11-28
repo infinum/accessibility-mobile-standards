@@ -15,23 +15,23 @@ Make all functionality available from a keyboard.
 *This guideline covers point 2.1.1 Keyboard - Level A of the WCAG standard.*
 
 #### Implementation techniques
-* [Android](../platforms/android/techniques_operable_android.md#211-keyboard-level-a)
-* [Flutter](../platforms/flutter/techniques_operable_flutter.md#211-keyboard-level-a)
+* [Android](../platforms/android/techniques_operable_android.md#keyboard-wcag-211---level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#keyboard-wcag-211---level-a)
 
 ## Enough Time (WCAG 2.2)
 
 Some users might have trouble grasping and interacting with the content that is available only for a limited time or is auto-updating. If possible, there should be a way to extend, pause or disable the timing.
 
-### Timing Adjustable (WCAG 2.2.1  - Level A)
+### Timing Adjustable (WCAG 2.2.1 - Level A)
 
 The user can turn off, adjust, or extend each time limit set by the content.
 
 > This guideline covers point *2.2.1 Timing Adjustable - Level A of the WCAG standard.*
 
 #### Implementation techniques
-* [Android](../platforms/android/techniques_operable_android.md#221-timing-adjustable-level-a)
-* [Flutter](../platforms/flutter/techniques_operable_flutter.md#221-timing-adjustable-level-a)
-* [iOS](../platforms/ios/techniques_operable_ios.md#221-timing-adjustable-level-a)
+* [Android](../platforms/android/techniques_operable_android.md#timing-adjustable-wcag-221---level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#timing-adjustable-wcag-221---level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#timing-adjustable-wcag-221---level-a)
 
 
 ### Pause, Stop, Hide (WCAG 2.2.2 - Level A)
@@ -41,9 +41,9 @@ Moving, blinking, or scrolling, or auto-updating content in the app.
 > This guideline covers point *2.2.2 Pause, Stop Hide - Level A of the WCAG standard.*
 
 #### Implementation techniques
-* [Android](../platforms/android/techniques_operable_android.md#222-pause-stop-hide-level-a)
-* [Flutter](../platforms/flutter/techniques_operable_flutter.md#222-pause-stop-hide-level-a)
-* [iOS](../platforms/ios/techniques_operable_ios.md#222-pause-stop-hide-level-a)
+* [Android](../platforms/android/techniques_operable_android.md#pause-stop-hide-wcag-222---level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#pause-stop-hide-wcag-222---level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#pause-stop-hide-wcag-222---level-a)
 
 ## Seizures and Physical Reactions (WCAG 2.3)
 
@@ -56,9 +56,9 @@ Apps should not contain any element that flashes more than three times in one se
 > This guideline covers point *2.3.1 - Level A of the WCAG standard.*
 
 #### Implementation techniques
-* [Android](../platforms/android/techniques_operable_android.md#231-three-flashed-or-below-threshold-level-a)
-* [Flutter](../platforms/flutter/techniques_operable_flutter.md#231-three-flashed-or-below-threshold-level-a)
-* [iOS](../platforms/ios/techniques_operable_ios.md#231-three-flashed-or-below-threshold-level-a)
+* [Android](../platforms/android/techniques_operable_android.md#three-flashed-or-below-threshold-wcag-231---level-a)
+* [Flutter](../platforms/flutter/techniques_operable_flutter.md#three-flashed-or-below-threshold-wcag-231---level-a)
+* [iOS](../platforms/ios/techniques_operable_ios.md#three-flashed-or-below-threshold-wcag-231---level-a)
 
 ## Navigable (WCAG 2.4)
 
@@ -162,15 +162,15 @@ We need to ensure that content does not rely on device motion for control, as so
 * [Android](../platforms/android/techniques_operable_android.md#motion-actuation-wcag-254---level-a)
 * [iOS](../platforms/ios/techniques_operable_ios.md#motion-actuation-wcag-254---level-a)
 
-### Dragging Movements (WCAG 2.5.7  - Level AA)
+### Dragging Movements (WCAG 2.5.7 - Level AA)
 
 Due to different disabilities, some users may have difficulty performing dragging movements. This guideline states that the application should provide an alternative way to perform the action that is not based on dragging movements.
 
 > This guideline covers point *2.5.7 Dragging Movements - Level AA of the WCAG standard.*
 
 #### Implementation techniques
-* [Android](../platforms/android/techniques_operable_android.md#dragging-movements-wcag-257----level-aa)
-* [iOS](../platforms/ios/techniques_operable_ios.md#dragging-movements-wcag-257----level-aa)
+* [Android](../platforms/android/techniques_operable_android.md#dragging-movements-wcag-257---level-aa)
+* [iOS](../platforms/ios/techniques_operable_ios.md#dragging-movements-wcag-257---level-aa)
 
 ### Target Size (Minimum) (WCAG 2.5.8 - Level AA)
 

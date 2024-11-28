@@ -2,7 +2,7 @@
 
 ## [Readable (WCAG 3.1)](../../principles/understandable_principle.md#readable-wcag-31)
 
-### [Language of Page (WCAG 3.1.1 - Level A)](../../principles/understandable_principle.md#error-identification-wcag-331---level-a)
+### [Language of Page (WCAG 3.1.1 - Level A)](../../principles/understandable_principle.md#language-of-page-wcag-311---level-a)
 
 #### ✅ Success technique(s)
 

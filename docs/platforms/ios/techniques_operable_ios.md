@@ -2,7 +2,7 @@
 
 ## [Enough Time (WCAG 2.2)](../../principles/operable_principle.md#enough-time-wcag-22)
 
-### [Timing Adjustable (WCAG 2.2.1  - Level A)](../../principles/operable_principle.md#timing-adjustable-wcag-221----level-a)
+### [Timing Adjustable (WCAG 2.2.1 - Level A)](../../principles/operable_principle.md#timing-adjustable-wcag-221---level-a)
 
 #### ✅ Success technique(s)
 
@@ -301,7 +301,7 @@ To satisfy this criterion, the application should provide an alternative way to 
 
 The application should avoid using only one way of input to perform an action - in case when that is not a standard way of input (e.g. device motion).
 
-### [Dragging Movements (WCAG 2.5.7  - Level AA)](../../principles/operable_principle.md#dragging-movements-wcag-257----level-aa)
+### [Dragging Movements (WCAG 2.5.7 - Level AA)](../../principles/operable_principle.md#dragging-movements-wcag-257---level-aa)
 
 #### ✅ Success technique(s)
 

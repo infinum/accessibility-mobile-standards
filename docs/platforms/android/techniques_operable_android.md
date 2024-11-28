@@ -69,7 +69,7 @@ When the user is navigating through the app **using the arrow keys on the keyboa
 
 ## [Enough Time (WCAG 2.2)](../../principles/operable_principle.md#enough-time-wcag-22)
 
-### [Timing Adjustable (WCAG 2.2.1  - Level A)](../../principles/operable_principle.md#timing-adjustable-wcag-221----level-a)
+### [Timing Adjustable (WCAG 2.2.1 - Level A)](../../principles/operable_principle.md#timing-adjustable-wcag-221---level-a)
 
 #### ✅ Success technique(s)
 
@@ -366,7 +366,7 @@ An app that requires motion actuation (e.g., shaking or tilting) for core functi
 
 Example: A mobile app that only allows form submission by shaking the device, with no button for submission, would fail this criterion.
 
-### [Dragging Movements (WCAG 2.5.7  - Level AA)](../../principles/operable_principle.md#dragging-movements-wcag-257----level-aa)
+### [Dragging Movements (WCAG 2.5.7 - Level AA)](../../principles/operable_principle.md#dragging-movements-wcag-257---level-aa)
 
 #### ✅ Success technique(s)
 

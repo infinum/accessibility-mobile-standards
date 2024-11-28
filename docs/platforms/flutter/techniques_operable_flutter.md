@@ -47,7 +47,7 @@ More about focus traversal you can at [Controlling what gets focus](https://docs
 
 ## [Enough Time (WCAG 2.2)](../../principles/operable_principle.md#enough-time-wcag-22)
 
-### [Timing Adjustable (WCAG 2.2.1  - Level A)](../../principles/operable_principle.md#timing-adjustable-wcag-221----level-a)
+### [Timing Adjustable (WCAG 2.2.1 - Level A)](../../principles/operable_principle.md#timing-adjustable-wcag-221---level-a)
 
 #### ✅ Success technique(s)
 

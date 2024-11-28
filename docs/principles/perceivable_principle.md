@@ -157,7 +157,7 @@ If any audio plays automatically for more than 3 seconds, there should be [an op
 
 The text should be resizeable up to 200% without loss of content or functionality. This applies to every text content on the screen except captions and images of text.
 
-> This guideline with provided techniques covers the **1.4.4 Resizeable Text - Level AA of the WCAG standard.*
+> This guideline with provided techniques covers the *1.4.4 Resizeable Text - Level AA of the WCAG standard.*
 
 #### Implementation techniques
 * [Android](../platforms/android/techniques_percievable_android.md#resizeable-text-wcag-144---level-aa)
@@ -188,12 +188,12 @@ The reflow is basically another name to responsible design in this context. The 
 * [iOS](../platforms/ios/techniques_perceivable_ios.md#reflow-wcag-1410---level-aa)
 
 
-### Text Spacing (WCAG - 1.4.12 - Level AA)
+### Text Spacing (WCAG 1.4.12 - Level AA)
 
 To ensure consistent accessibility, these text spacing requirements should be incorporated directly into design specifications. Designers and developers should collaborate to confirm that the line height, paragraph spacing, letter spacing, and word spacing meet the standards across all text elements.
 
 #### Implementation techniques
-* [Android](../platforms/android/techniques_percievable_android.md#text-spacing-wcag---1412---level-aa)
+* [Android](../platforms/android/techniques_percievable_android.md#text-spacing-wcag-1412---level-aa)
 
 ## Other perceivable guidelines
 

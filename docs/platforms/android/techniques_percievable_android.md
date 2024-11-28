@@ -637,7 +637,7 @@ The content should also never become scrollable in both directions --- having sc
 
 Content becomes unusable on a device with a smaller screen, when changing the orientation or when increasing font/display size. For example, the elements go off the screen, start overlapping or important parts of some text are cut off (e.g. ellipsized).
 
-### [Text Spacing (WCAG - 1.4.12 - Level AA)](../../principles/perceivable_principle.md#text-spacing-wcag---1412---level-aa)
+### [Text Spacing (WCAG 1.4.12 - Level AA)](../../principles/perceivable_principle.md#text-spacing-wcag-1412---level-aa)
 
 #### ✅ Success technique(s)
 
