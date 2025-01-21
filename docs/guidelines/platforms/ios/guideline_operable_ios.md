@@ -394,11 +394,11 @@ This guideline tries to ensure that the target size of the elements is large eno
 
 #### ✅ Success technique(s)
 
-Even though this is mostly a design guideline, it is important that from the development side, the application provide enough space for the elements to be easily operable by touch. The minimum target size is set to 24x24 pixels.
+Even though this is mostly a design guideline, it is important that from the development side, the application provides enough space for the elements to be easily operable by touch. The minimum target size is set to 48x48 points.
 
 Still, there are some exceptions to this rule:
 
-- **Spacing**: Undersized targets (those less than 24 by 24 CSS pixels) are positioned so that if a 24 CSS pixel diameter circle is centered on the bounding box of each, the circles do not intersect another target or the circle for another undersized target;
+- **Spacing**: Undersized targets (those less than 48 by 48 points pixels) are positioned so that if a 48-point diameter circle is centred on the bounding box of each, the circles do not intersect another target or the circle for another undersized target;
 - **Equivalent**: The function can be achieved through a different control on the same page that meets this criterion;
 - **Inline**: The target is in a sentence or its size is otherwise constrained by the line-height of non-target text;
 - **User agent control**: The size of the target is determined by the user agent and is not modified by the author;
