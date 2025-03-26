@@ -70,4 +70,4 @@ On Android with the Accessibility Scanner, and on iOS with [Accessibility Inspec
 
 ⎯
 
-[← Principles and guidelines](accessibility_principles_and_guidelines.md) | [Conclusion →](conclusion.md)
+[← Platform specifics](accessibility_platform_specifics.md) | [Conclusion →](conclusion.md)
