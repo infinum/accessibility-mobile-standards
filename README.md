@@ -16,5 +16,6 @@ This repository contains mobile standards created for mobile platforms. It inclu
     * [Operable](docs/principles/operable_principle.md)
     * [Understandable](docs/principles/understandable_principle.md)
     * [Robust](docs/principles/robust_principle.md)
-6. [Testing accessibility features](docs/accessibility_testing.md)
-7. [Conclusion](docs/conclusion.md)
+6. [Platform specifics](docs/accessibility_platform_specifics.md)
+7. [Testing accessibility features](docs/accessibility_testing.md)
+8. [Conclusion](docs/conclusion.md)

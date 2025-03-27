@@ -34,4 +34,4 @@ On mobile this means that the user should be able to know if the current state h
 * [Android](../platforms/android/techniques_robust_android.md#status-messages-wcag-413---level-aa)
 * [iOS](../platforms/ios/techniques_robust_ios.md#status-messages-wcag-413---level-aa)
 
-[← Understandable](understandable_principle.md) | [Testing accessibility features →](../accessibility_testing.md)
+[← Understandable](understandable_principle.md) | [Platform specifics →](../accessibility_platform_specifics.md)
